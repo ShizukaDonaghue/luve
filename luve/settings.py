@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-shizukadonaghue-luve-eucao6y48df.ws-eu98.gitpod.io', 'luve.herokuapp.com']
+ALLOWED_HOSTS = ['8000-shizukadonaghue-luve-eucao6y48df.ws-eu98.gitpod.io', 'luve.herokuapp.com']  # noqa
 
 
 # Application definition
@@ -68,7 +68,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
+            TEMPLATES_DIR,
             os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
@@ -164,6 +164,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
