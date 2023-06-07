@@ -33,7 +33,7 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
+.btn-main {
     background: black;
     color: white;
 }
@@ -41,15 +41,19 @@ body {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-main:hover,
+.btn-main:active,
+.btn-main:focus {
     background: #222;
     color: white;
 }
 
-.text-black {
+.text-main {
     color: #000 !important;
+}
+
+.bg-main {
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */

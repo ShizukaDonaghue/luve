@@ -1,0 +1,41 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item">All Products</a>
+                <a href="" class="dropdown-item">Body</a>
+                <a href="" class="dropdown-item">Face</a>
+                <a href="" class="dropdown-item">Lips</a>
+                <a href="" class="dropdown-item">Baby &amp; Kids</a>
+                <a href="" class="dropdown-item">After Sun</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown border-0">
+            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="#" id="all-brands-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Brands
+            </a>
+            <div class="dropdown-menu" aria-labelledby="all-brands-link">
+                {% for brand in brands %}
+                <a class="dropdown-item" href="">{{ brand.display_name }}</a>
+                {% endfor %}
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="" id="articles-link">Articles</a>
+        </li>
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="" id="contact-link">Contact</a>
+        </li>
+    </ul>
+
+</div>
