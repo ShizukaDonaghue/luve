@@ -3,9 +3,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
-    """
-    A model for the category of product
-    """
+    """ A model for the category of product """
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -29,9 +27,7 @@ class Category(models.Model):
 
 
 class Brand(models.Model):
-    """
-    A model for the brand of product
-    """
+    """ A model for the brand of product """
 
     name = models.CharField(max_length=50)
     display_name = models.CharField(max_length=50, null=True, blank=True)
@@ -44,9 +40,7 @@ class Brand(models.Model):
 
 
 class Type(models.Model):
-    """
-    A model for the application type of product
-    """
+    """ A model for the application type of product """
 
     APPLICATION_TYPES = (
         ('Lotion', 'Lotion'),
@@ -66,9 +60,7 @@ class Type(models.Model):
 
 
 class Product(models.Model):
-    """
-    A model for all products
-    """
+    """ A model for all products """
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.ForeignKey(
