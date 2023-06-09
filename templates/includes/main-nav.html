@@ -19,12 +19,12 @@
                 <a href="" class="dropdown-item">After Sun</a>
             </div>
         </li>
-        <li class="nav-item dropdown border-0">
+        <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-main mr-5" href="#" id="all-brands-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Brands
             </a>
-            <div class="dropdown-menu" aria-labelledby="all-brands-link">
+            <div class="dropdown-menu border-0" aria-labelledby="all-brands-link">
                 {% for brand in brands %}
                 <a class="dropdown-item" href="">{{ brand.display_name }}</a>
                 {% endfor %}
