@@ -66,7 +66,7 @@ body {
     z-index: -1;
 }
 
-.card-img-top {
+.list-image {
     height: 18vw;
     object-fit: cover;
     min-height: 200px;
@@ -93,5 +93,16 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

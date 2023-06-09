@@ -27,12 +27,16 @@
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
-
                         {% if "placeholder" in product.image.url %}
-                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder-image_mrk4gi.png"
-                            class="card-img-top img-fluid" alt="placeholder image">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder-image_mrk4gi.png"
+                                class="card-img-top img-fluid list-image" alt="Image of {{ product.name }}">
+                        </a>
                         {% else %}
-                        <img src=" {{ product.image.url }}" class="card-img-top img-fluid" alt="image of {{ product.name }}">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src=" {{ product.image.url }}" class="card-img-top img-fluid list-image"
+                                alt="Image of {{ product.name }}">
+                        </a>
                         {% endif %}
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ product.name }}</p>
