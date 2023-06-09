@@ -22,7 +22,6 @@ class ProductAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the category of products """
     list_display = (
-        'display_name',
         'name',
     )
 
@@ -30,7 +29,6 @@ class CategoryAdmin(admin.ModelAdmin):
 class BrandAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the brand of products """
     list_display = (
-        'display_name',
         'name',
     )
 
@@ -40,7 +38,6 @@ class BrandAdmin(admin.ModelAdmin):
 class TypeAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the application type of products """
     list_display = (
-        'display_name',
         'name',
     )
 
