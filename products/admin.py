@@ -23,7 +23,10 @@ class CategoryAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the category of products """
     list_display = (
         'name',
+        'display_name',
     )
+
+    ordering = ('name',)
 
 
 class BrandAdmin(admin.ModelAdmin):
@@ -39,6 +42,7 @@ class TypeAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the application type of products """
     list_display = (
         'name',
+        'display_name',
     )
 
 

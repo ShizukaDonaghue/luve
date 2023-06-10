@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.views import generic, View
@@ -28,6 +28,20 @@ class AllProductsView(generic.ListView):
                 description__icontains=query)
             context['products'] = Product.objects.filter(queries)
             context['search_term'] = query
+
+        # Checks for product category selected and set context
+        if "category" in self.request.GET:
+            categories = self.request.GET.get('category').split(',')
+            context['products'] = Product.objects.filter(
+                category__name__in=categories)
+            context['current_categories'] = Category.objects.filter(
+                name__in=categories)
+
+        # Checks for brand selected and set context
+        if 'brand' in self.request.GET:
+            brands = self.request.GET.get('brand').split(',')
+            context['products'] = Product.objects.filter(
+                brand__name__in=brands)
 
         return context
 

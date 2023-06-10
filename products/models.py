@@ -9,19 +9,20 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     CATEGORY_CHOICES = (
-        ('Baby & Kids', 'Baby & Kids'),
-        ('Body', 'Body'),
-        ('Face', 'Face'),
-        ('Lips', 'Lips'),
-        ('After Sun', 'After Sun'),
+        ('baby_kids', 'Baby & Kids'),
+        ('body', 'Body'),
+        ('face', 'Face'),
+        ('lips', 'Lips'),
+        ('after_sun', 'After Sun'),
     )
 
     name = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
+    display_name = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
+    def get_display_name(self):
         return self.display_name
 
 
@@ -33,26 +34,24 @@ class Brand(models.Model):
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
-        return self.display_name
-
 
 class Type(models.Model):
     """ A model for the application type of product """
 
     APPLICATION_TYPES = (
-        ('Lotion', 'Lotion'),
-        ('Spray', 'Spray'),
-        ('Stick', 'Stick'),
-        ('Roll-On', 'Roll-On'),
+        ('lotion', 'Lotion'),
+        ('spray', 'Spray'),
+        ('stick', 'Stick'),
+        ('roll-on', 'Roll-On'),
     )
 
     name = models.CharField(max_length=30, choices=APPLICATION_TYPES)
+    display_name = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
+    def get_display_name(self):
         return self.display_name
 
 

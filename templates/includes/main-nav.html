@@ -12,11 +12,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="" class="dropdown-item">Baby &amp; Kids</a>
-                <a href="" class="dropdown-item">Body</a>
-                <a href="" class="dropdown-item">Face</a>
-                <a href="" class="dropdown-item">Lips</a>
-                <a href="" class="dropdown-item">After Sun</a>
+                <a href="{% url 'products' %}?category=baby_kids" class="dropdown-item">Baby &amp; Kids</a>
+                <a href="{% url 'products' %}?category=body" class="dropdown-item">Body</a>
+                <a href="{% url 'products' %}?category=face" class="dropdown-item">Face</a>
+                <a href="{% url 'products' %}?category=lips" class="dropdown-item">Lips</a>
+                <a href="{% url 'products' %}?category=after_sun" class="dropdown-item">After Sun</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -25,8 +25,8 @@
                 Brands
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-brands-link">
-                {% for brand in brands %}
-                <a class="dropdown-item" href="">{{ brand.display_name }}</a>
+                {% for brand in brands_list %}
+                <a href="{% url 'products' %}?brand={{brand.name}}" class="dropdown-item">{{ brand.name }}</a>
                 {% endfor %}
             </div>
         </li>
