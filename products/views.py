@@ -30,7 +30,7 @@ class AllProductsView(generic.ListView):
             context['search_term'] = query
 
         # Checks for product category selected and set context
-        if "category" in self.request.GET:
+        if 'category' in self.request.GET:
             categories = self.request.GET.get('category').split(',')
             context['products'] = Product.objects.filter(
                 category__name__in=categories)
@@ -42,6 +42,11 @@ class AllProductsView(generic.ListView):
             brands = self.request.GET.get('brand').split(',')
             context['products'] = Product.objects.filter(
                 brand__name__in=brands)
+
+        if 'type' in self.request.GET:
+            types = self.request.GET.get('type').split(',')
+            context['products'] = Product.objects.filter(
+                type__name__in=types)
 
         return context
 

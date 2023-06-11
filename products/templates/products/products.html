@@ -24,75 +24,100 @@
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
             <div class="row">
-                {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
-                        {% if "placeholder" in product.image.url %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder-image_mrk4gi.png"
-                                class="card-img-top img-fluid list-image" alt="Image of {{ product.name }}">
+                <div class="col-md-12 col-lg-2">
+                    <div class="pb-5">
+                        <a href="{% url 'products' %}" class="text-decoration-none">Reset Filter/Sort</a>
+                    </div>
+
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle text-decoration-none" href="#" role="button" id="application-types-link"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Application Type
                         </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img src=" {{ product.image.url }}" class="card-img-top img-fluid list-image"
-                                alt="Image of {{ product.name }}">
-                        </a>
-                        {% endif %}
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+
+                        <div class="dropdown-menu border-0" aria-labelledby="application-types-link">
+                            <a href="{% url 'products' %}?type=lotion" class="dropdown-item">Lotion</a>
+                            <a href="{% url 'products' %}?type=spray" class="dropdown-item">Spray</a>
+                            <a href="{% url 'products' %}?type=stick" class="dropdown-item">Stick</a>
+                            <a href="{% url 'products' %}?type=roll-on" class="dropdown-item">Roll-On</a>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                    </div>
 
-                                    {% comment %}
+                </div>
+                <div class="col-md-12 col-lg-10">
+                    <div class="row">
+                        {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                {% if "placeholder" in product.image.url %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder-image_mrk4gi.png"
+                                        class="card-img-top img-fluid list-image" alt="Image of {{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src=" {{ product.image.url }}" class="card-img-top img-fluid list-image"
+                                        alt="Image of {{ product.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
 
-                                    {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% if request.user.is_staff %}
-                                    <small class="ml-3">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </small>
-                                    {% endif %}
+                                            {% comment %}
 
-                                    {% endcomment %}
+                                            {% if product.category %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted"
+                                                    href="{% url 'products' %}?category={{ product.category.name }}">
+                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
+                                            {% if request.user.is_staff %}
+                                            <small class="ml-3">
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                                <a class="text-danger"
+                                                    href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                            {% endif %}
+
+                                            {% endcomment %}
 
 
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        {% if forloop.counter|divisibleby:1 %}
+                        <div class="col-12 d-sm-none mb-5">
+                            <hr>
+                        </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <hr>
+                        </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <hr>
+                        </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                        <div class="col-12 d-none d-xl-block mb-5">
+                            <hr>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% endfor %}
             </div>
         </div>
     </div>
