@@ -1,3 +1,9 @@
+/* Root variable for colours */
+:root {
+    --grey: #555;
+    --white: #FFFFFF;
+}
+
 html {
     height: 100%;
 }
@@ -6,7 +12,7 @@ body {
     background: url('https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: var(--grey);
     font-family: 'Alegreya Sans', sans-serif;
 }
 
@@ -28,14 +34,14 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: var(--grey);
+    color: var(--white);
     min-width: 260px;
 }
 
 .btn-main {
-    background: black;
-    color: white;
+    background: var(--grey);
+    color: var(--white);
 }
 
 .shop-now-button:hover,
@@ -44,16 +50,16 @@ body {
 .btn-main:hover,
 .btn-main:active,
 .btn-main:focus {
-    background: #222;
-    color: white;
+    background: var(--grey);
+    color: var(--white);
 }
 
 .text-main {
-    color: #000 !important;
+    color: var(--grey) !important;
 }
 
 .bg-main {
-    background: #000 !important;
+    background: var(--grey) !important;
 }
 
 .overlay {
@@ -62,7 +68,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: var(--white);
     z-index: -1;
 }
 

@@ -17,6 +17,15 @@
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
+            <div class="justify-content-center d-none d-sm-block" role="group" id="category-links">
+                <a href="{% url 'products' %}" class="btn btn-outline-secondary mx-1">All Products</a>
+                <a href="{% url 'products' %}?category=baby_kids" class="btn btn-outline-secondary mx-1">Baby &amp; Kids</a>
+                <a href="{% url 'products' %}?category=body" class="btn btn-outline-secondary mx-1">Body</a>
+                <a href="{% url 'products' %}?category=face" class="btn btn-outline-secondary mx-1">Face</a>
+                <a href="{% url 'products' %}?category=lips" class="btn btn-outline-secondary mx-1">Lips</a>
+                <a href="{% url 'products' %}?category=after_sun" class="btn btn-outline-secondary mx-1">After Sun</a>
+            </div>
+
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -30,8 +39,9 @@
                     </div>
 
                     <div class="dropdown show">
-                        <a class="dropdown-toggle text-decoration-none" href="#" role="button" id="application-types-link"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle text-decoration-none" href="#" role="button"
+                            id="application-types-link" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             Application Type
                         </a>
 
@@ -67,17 +77,29 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-
-                                            {% comment %}
-
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted"
                                                     href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.display_name }}
                                                 </a>
                                             </p>
                                             {% endif %}
+                                            {% if product.type %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted"
+                                                    href="{% url 'products' %}?type={{ product.type.name }}">
+                                                    <i
+                                                        class="fa-solid fa-hand-dots mr-1"></i>{{ product.type.display_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
+
+
+
+
+                                            {% comment %}
+
                                             {% if request.user.is_staff %}
                                             <small class="ml-3">
                                                 <a href="{% url 'edit_product' product.id %}">Edit</a> |
@@ -122,4 +144,23 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $(document).ready(function() {
+    let urlParams = new URLSearchParams(window.location.search);
+    let categoryParam = urlParams.get('category');
+
+    if (categoryParam) {
+        $('#category-links .btn').removeClass('btn-secondary').addClass('btn-outline-secondary');
+        $('#category-links .btn[href*="' + categoryParam + '"]').removeClass('btn-outline-secondary').addClass(
+            'btn-secondary');
+    } else {
+        $('#category-links .btn[href="{% url "products" %}"]').removeClass('btn-outline-secondary')
+            .addClass('btn-secondary');
+    }
+});
+</script>
 {% endblock %}

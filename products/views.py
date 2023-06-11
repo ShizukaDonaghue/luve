@@ -43,6 +43,7 @@ class AllProductsView(generic.ListView):
             context['products'] = Product.objects.filter(
                 brand__name__in=brands)
 
+        # Checks for application type selected and set context
         if 'type' in self.request.GET:
             types = self.request.GET.get('type').split(',')
             context['products'] = Product.objects.filter(
