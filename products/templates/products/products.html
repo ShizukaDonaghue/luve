@@ -15,20 +15,30 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
-            <div class="justify-content-center d-none d-sm-block" role="group" id="category-links">
-                <a href="{% url 'products' %}" class="btn btn-outline-secondary mx-1">All Products</a>
-                <a href="{% url 'products' %}?category=baby_kids" class="btn btn-outline-secondary mx-1">Baby &amp; Kids</a>
-                <a href="{% url 'products' %}?category=body" class="btn btn-outline-secondary mx-1">Body</a>
-                <a href="{% url 'products' %}?category=face" class="btn btn-outline-secondary mx-1">Face</a>
-                <a href="{% url 'products' %}?category=lips" class="btn btn-outline-secondary mx-1">Lips</a>
-                <a href="{% url 'products' %}?category=after_sun" class="btn btn-outline-secondary mx-1">After Sun</a>
-            </div>
+        <div class="col-12">
+            {% if not current_categories and not current_brands %}
+            <h1 class="text-center pt-3">Products</h1>
+            {% endif %}
 
-            <hr class="w-50 mb-1">
+            {% if not current_categories %}
+            {% elif current_categories %}
+            {% for c in current_categories %}
+            <h1 class="text-center pt-3">{{ c.display_name }}</h1>
+            {% endfor %}
+            {% endif %}
+
+            {% if not current_brands %}
+            {% elif current_brands %}
+            {% for b in current_brands %}
+            <h1 class="text-center pt-3">{{ b.name }}</h1>
+            {% endfor %}
+            {% else %}
+            <h1 class="text-center pt-3">Brands</h1>
+            {% endif %}
         </div>
     </div>
+    
+
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
@@ -144,23 +154,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-<script>
-    $(document).ready(function() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let categoryParam = urlParams.get('category');
-
-    if (categoryParam) {
-        $('#category-links .btn').removeClass('btn-secondary').addClass('btn-outline-secondary');
-        $('#category-links .btn[href*="' + categoryParam + '"]').removeClass('btn-outline-secondary').addClass(
-            'btn-secondary');
-    } else {
-        $('#category-links .btn[href="{% url "products" %}"]').removeClass('btn-outline-secondary')
-            .addClass('btn-secondary');
-    }
-});
-</script>
 {% endblock %}

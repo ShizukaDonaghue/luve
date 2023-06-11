@@ -1,6 +1,6 @@
 /* Root variable for colours */
 :root {
-    --grey: #555;
+    --grey: #474D53;
     --white: #FFFFFF;
 }
 
@@ -104,6 +104,10 @@ body {
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
+    .navbar-toggler {
+        border: none;
+    }
+
     .header-container {
         padding-top: 116px;
     }
