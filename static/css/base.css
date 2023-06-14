@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Catamaran&family=Nunito:wght@400;600;700&family=Rubik&family=Signika&display=swap');
+
 /* Root variable for colours */
 :root {
     --grey: #474D53;
@@ -13,7 +16,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: var(--grey);
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Signika', sans-serif;
 }
 
 /* from Bulma */
