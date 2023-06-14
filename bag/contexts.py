@@ -3,6 +3,10 @@ from django.conf import settings
 
 
 def bag_contents(request):
+    """
+    Makes the contents of the shopping bag available to all templates
+    Calculates delivery costs and grand total including the delivery
+    """
 
     bag_items = []
     total = 0

@@ -4,6 +4,7 @@
 /* Root variable for colours */
 :root {
     --grey: #474D53;
+    --light-grey: #72777C;
     --white: #FFFFFF;
 }
 
@@ -42,9 +43,28 @@ body {
     min-width: 260px;
 }
 
+#keep-shopping {
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
 .btn-main {
     background: var(--grey);
     color: var(--white);
+    border: 1px solid var(--grey);
+}
+
+.btn-outline-main {
+    background: var(--white);
+    color: var(--grey) !important;
+    border: 1px solid var(--grey);
+}
+
+.btn-outline-main:hover,
+.btn-outline-main:active,
+.btn-outline-main:focus {
+    background: var(--light-grey);
+    color: var(--white) !important;
 }
 
 .shop-now-button:hover,
@@ -53,8 +73,9 @@ body {
 .btn-main:hover,
 .btn-main:active,
 .btn-main:focus {
-    background: var(--grey);
+    background: var(--light-grey);
     color: var(--white);
+    border: 1px solid var(--light-grey);
 }
 
 .text-main {
