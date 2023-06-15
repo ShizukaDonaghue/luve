@@ -42,7 +42,11 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            <p class="my-0 small text-muted"><span class="icon"><i
+                                        class="fa-brands fa-gratipay"></i></span>{{ item.product.brand }}</p>
+                            <p class="my-0 small text-muted"><span class="icon"><i
+                                        class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
+                            </p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.product.price }}</p>
