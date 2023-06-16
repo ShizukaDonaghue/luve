@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -41,6 +41,12 @@ def all_products(request):
             brands = request.GET['brand'].split(',')
             products = products.filter(brand__name__in=brands)
             current_brands = Brand.objects.filter(name__in=brands)
+
+        # Checks if product type selected
+        if 'type' in request.GET:
+            types = request.GET['type'].split(',')
+            products = products.filter(type__name__in=types)
+            current_types = Type.objects.filter(name__in=types)
 
         # Checks if sorting order selected
         if 'sort' in request.GET:

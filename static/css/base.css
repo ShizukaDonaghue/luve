@@ -123,6 +123,14 @@ body {
     background-color: #33c297;
 }
 
+.bag-item-link {
+    color: var(--grey)
+}
+
+.bag-item-link:hover {
+    color: var(--light-grey)
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

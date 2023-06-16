@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-shizukadonaghue-luve-eucao6y48df.ws-eu99.gitpod.io', 'luve.herokuapp.com']  # noqa
+ALLOWED_HOSTS = ['8000-shizukadonaghue-luve-eucao6y48df.ws-eu100.gitpod.io', 'luve.herokuapp.com']  # noqa
 
 
 # Application definition
