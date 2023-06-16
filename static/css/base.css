@@ -70,9 +70,7 @@ body {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-main:hover,
-.btn-main:active,
-.btn-main:focus {
+.btn-main:hover {
     background: var(--light-grey);
     color: var(--white);
     border: 1px solid var(--light-grey);
