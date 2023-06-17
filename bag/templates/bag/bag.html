@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -42,7 +43,8 @@
                         </td>
                         <td class="py-3">
                             <p class="my-1">
-                                <a class="text-decoration-none bag-item-link" href="{% url 'product_detail' item.product.id %}"><strong>{{ item.product.name }}</strong></a>
+                                <a class="text-decoration-none bag-item-link"
+                                    href="{% url 'product_detail' item.product.id %}"><strong>{{ item.product.name }}</strong></a>
                             </p>
                             <p class="my-0 small">
                                 <a class="text-muted" href="{% url 'products' %}?brand={{ item.product.brand }}">
@@ -60,10 +62,10 @@
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-10">
-                            <form class="form update-form" method="POST" action="">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group input-group-{{ item.item_id }}">
+                                <div class="form-group input-group-{{ item.item_id }}">
+                                    <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button
                                                 class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
@@ -89,21 +91,18 @@
                                 </div>
                             </form>
                         </td>
-                        <td class="py-3">
-                            <a class="update-link text-decoration-none text-secondary">
-                                <span class="icon"><i class="fa-solid fa-rotate"></i></span>
-                            </a>
-                            <a class="remove-item text-decoration-none text-secondary">
-                                <span class="icon"><i class="fa-solid fa-trash-can"></i></span>
-                            </a>
+                        <td class="py-3 pl-5">
+                            <a class="update-link text-info p-0 m-0"><i class="fa-solid fa-rotate"></i></a>
+                            <a class="remove-item text-danger p-0 m-0 float-right mx-0" id="remove_{{ item.item_id }}"><i
+                                    class="fa-solid fa-trash-can"></i></a>
                         </td>
                         <td class="py-3 text-center">
-                            <p class="my-0">€{{ item.product.price }}</p>
+                            <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="6" class="pt-5 text-right">
                             <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -115,7 +114,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
+                        <td colspan="6" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-main btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -149,8 +148,8 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
     })
 </script>
 
@@ -158,22 +157,24 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
-        let form = $(this).prev('.update-form');
+    $('.update-link').click(function (e) {
+        let form = $(this).parent().siblings().children('.update-form');
         form.submit();
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('id').split('remove_')[1];
         let url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        let data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 

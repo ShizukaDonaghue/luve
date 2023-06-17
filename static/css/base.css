@@ -131,6 +131,10 @@ body {
     color: var(--light-grey)
 }
 
+.border-main {
+    border: 1px solid var(--grey);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
