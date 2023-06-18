@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-12">
             {% if current_categories %}
@@ -76,11 +76,11 @@
                         {% if "placeholder" in product.image.url %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder-image_mrk4gi.png"
-                                class="card-img-top img-fluid list-image" alt="Image of {{ product.name }}">
+                                class="card-img-top img-fluid" alt="Image of {{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img src=" {{ product.image.url }}" class="card-img-top img-fluid list-image"
+                            <img src=" {{ product.image.url }}" class="card-img-top img-fluid"
                                 alt="Image of {{ product.name }}">
                         </a>
                         {% endif %}

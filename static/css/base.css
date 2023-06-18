@@ -94,12 +94,6 @@ body {
     z-index: -1;
 }
 
-.list-image {
-    height: 18vw;
-    object-fit: cover;
-    min-height: 200px;
-}
-
 .btt-button {
     height: 42px;
     width: 42px;
@@ -133,6 +127,23 @@ body {
 
 .border-main {
     border: 1px solid var(--grey);
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* -------------------------------- Media Queries */
