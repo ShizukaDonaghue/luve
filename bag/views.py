@@ -20,12 +20,22 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
+    # If the order quantity is less than 1
+    if quantity < 1:
+        messages.success(
+            request, f'Sorry, the order quantity must be 1 or more. \
+                Please try again!')
+    # If the order quantity is greater than 20
+    elif quantity > 20:
+        messages.success(
+            request, f'Sorry, the maximum quantity per order is 20. \
+                Please try again!')
     # If the item is already in the shopping bag
-    if item_id in list(bag.keys()):
+    elif item_id in list(bag.keys()):
         # If the total order quantity is greater than 20
         if bag[item_id] + quantity > 20:
             messages.success(
-                request, f'Sorry, the maximum order quantity per order is 20. \
+                request, f'Sorry, the maximum quantity per order is 20. \
                     Please try again!')
         # If the total order quantity does not exceed 20
         else:
@@ -35,16 +45,9 @@ def add_to_bag(request, item_id):
                     {bag[item_id]}!')
     # If the item is not yet in the shopping bag
     else:
-        # If the order quantity is greater than 20
-        if quantity > 20:
-            messages.success(
-                request, f'Sorry, the maximum quantity per order is 20. \
-                    Please try again!')
-        # If the order quantity does not exceed 20
-        else:
-            bag[item_id] = quantity
-            messages.success(
-                request, f'{product.name} has been added to your bag!')
+        bag[item_id] = quantity
+        messages.success(
+            request, f'{product.name} has been added to your bag!')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -62,15 +65,15 @@ def adjust_bag(request, item_id):
         messages.success(
             request, f'Sorry, the maximum quantity per order is 20. \
                 Please try again!')
-    # If the order quantity is greater than 0, but not exceeding 20
-    elif quantity > 0:
+    # If the order quantity is greater than or equal to 1
+    elif quantity >= 1:
         bag[item_id] = quantity
         messages.success(
                 request, f'Updated {product.name} quantity to {bag[item_id]}!')
     # If the order quantity is less than 0
     elif quantity < 0:
         messages.success(
-                request, f'Sorry, the order quantity must be greater than 0. \
+                request, f'Sorry, the order quantity must be 1 or more. \
                     Please try again!')
     # If the order quantity is 0, the item is removed from the shopping bag
     else:
