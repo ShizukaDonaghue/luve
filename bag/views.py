@@ -20,12 +20,31 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
+    # If the item is already in the shopping bag
     if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+        # If the total order quantity is greater than 20
+        if bag[item_id] + quantity > 20:
+            messages.success(
+                request, f'Sorry, the maximum order quantity per order is 20. \
+                    Please try again!')
+        # If the total order quantity does not exceed 20
+        else:
+            bag[item_id] += quantity
+            messages.success(
+                request, f'Updated {product.name} quantity to \
+                    {bag[item_id]}!')
+    # If the item is not yet in the shopping bag
     else:
-        bag[item_id] = quantity
-        messages.success(
-            request, f'{product.name} has been added to your bag!')
+        # If the order quantity is greater than 20
+        if quantity > 20:
+            messages.success(
+                request, f'Sorry, the maximum quantity per order is 20. \
+                    Please try again!')
+        # If the order quantity does not exceed 20
+        else:
+            bag[item_id] = quantity
+            messages.success(
+                request, f'{product.name} has been added to your bag!')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -38,10 +57,26 @@ def adjust_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
-    if quantity > 0:
+    # If the order quantity is greater than 20
+    if quantity > 20:
+        messages.success(
+            request, f'Sorry, the maximum quantity per order is 20. \
+                Please try again!')
+    # If the order quantity is greater than 0, but not exceeding 20
+    elif quantity > 0:
         bag[item_id] = quantity
+        messages.success(
+                request, f'Updated {product.name} quantity to {bag[item_id]}!')
+    # If the order quantity is less than 0
+    elif quantity < 0:
+        messages.success(
+                request, f'Sorry, the order quantity must be greater than 0. \
+                    Please try again!')
+    # If the order quantity is 0, the item is removed from the shopping bag
     else:
         bag.pop(item_id)
+        messages.success(
+            request, f'{product.name} has been removed from your bag.')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -55,6 +90,8 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
 
         bag.pop(item_id)
+        messages.success(
+            request, f'{product.name} has been removed from your bag.')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
