@@ -22,19 +22,19 @@ def add_to_bag(request, item_id):
 
     # If the order quantity is less than 1
     if quantity < 1:
-        messages.success(
+        messages.error(
             request, f'Sorry, the order quantity must be 1 or more. \
                 Please try again!')
     # If the order quantity is greater than 20
     elif quantity > 20:
-        messages.success(
+        messages.error(
             request, f'Sorry, the maximum quantity per order is 20. \
                 Please try again!')
     # If the item is already in the shopping bag
     elif item_id in list(bag.keys()):
         # If the total order quantity is greater than 20
         if bag[item_id] + quantity > 20:
-            messages.success(
+            messages.error(
                 request, f'Sorry, the maximum quantity per order is 20. \
                     Please try again!')
         # If the total order quantity does not exceed 20
@@ -57,32 +57,36 @@ def adjust_bag(request, item_id):
     """ Adjust the quantity of the product in the shopping bag"""
 
     product = get_object_or_404(Product, pk=item_id)
-    # To prevent 500 server error when a floating-point number is entered
-    quantity_input = float(request.POST.get('quantity'))
-    # To conver the quantity to an integer
-    quantity = int(quantity_input)
+    quantity_input = request.POST.get('quantity')
     bag = request.session.get('bag', {})
 
-    # If the order quantity is greater than 20
-    if quantity > 20:
-        messages.success(
-            request, f'Sorry, the maximum quantity per order is 20. \
-                Please try again!')
-    # If the order quantity is greater than or equal to 1
-    elif quantity >= 1:
-        bag[item_id] = quantity
-        messages.success(
-                request, f'Updated {product.name} quantity to {bag[item_id]}!')
-    # If the order quantity is less than 0
-    elif quantity < 0:
-        messages.success(
-                request, f'Sorry, the order quantity must be 1 or more. \
+    # If the order quantity is a positive integer
+    if quantity_input.isdigit():
+        quantity = int(request.POST.get('quantity'))
+        # If the order quantity is greater than 20
+        if quantity > 20:
+            messages.error(
+                request, f'Sorry, the maximum quantity per order is 20. \
                     Please try again!')
-    # If the order quantity is 0, the item is removed from the shopping bag
+        # If the order quantity is greater than or equal to 1
+        elif quantity >= 1:
+            bag[item_id] = quantity
+            messages.success(
+                request, f'Updated {product.name} quantity to {bag[item_id]}!')
+        # If the order quantity is 0, the item is removed from the shopping bag
+        else:
+            bag.pop(item_id)
+            messages.success(
+                request, f'{product.name} has been removed from your bag.')
+    # If the order quantity is less than 0
+    elif quantity_input.startswith('-'):
+        messages.error(
+            request, f'Sorry, the order quantity must be 1 or more. \
+                Please try again!')
+    # If the order quantity is a floating-point number
     else:
-        bag.pop(item_id)
-        messages.success(
-            request, f'{product.name} has been removed from your bag.')
+        messages.error(
+            request, f'Please enter a whole number!')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
