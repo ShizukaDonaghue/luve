@@ -57,7 +57,10 @@ def adjust_bag(request, item_id):
     """ Adjust the quantity of the product in the shopping bag"""
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    # To prevent 500 server error when a floating-point number is entered
+    quantity_input = float(request.POST.get('quantity'))
+    # To conver the quantity to an integer
+    quantity = int(quantity_input)
     bag = request.session.get('bag', {})
 
     # If the order quantity is greater than 20
