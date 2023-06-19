@@ -54,7 +54,7 @@ def add_to_bag(request, item_id):
 
 
 def adjust_bag(request, item_id):
-    """ Adjust the quantity of the product in the shopping bag"""
+    """ Adjust the quantity of the products in the shopping bag"""
 
     product = get_object_or_404(Product, pk=item_id)
     quantity_input = request.POST.get('quantity')
@@ -83,7 +83,7 @@ def adjust_bag(request, item_id):
         messages.error(
             request, f'Sorry, the order quantity must be 1 or more. \
                 Please try again!')
-    # If the order quantity is a floating-point number
+    # If the order quantity is a floating-point number or other invalid input
     else:
         messages.error(
             request, f'Please enter a whole number!')
@@ -93,7 +93,7 @@ def adjust_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """ Remove the item from the shopping bag """
+    """ Remove an item from the shopping bag """
 
     try:
         product = get_object_or_404(Product, pk=item_id)
