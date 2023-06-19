@@ -40,20 +40,20 @@
         </div>
         <div class="row">
             <div class="col">
-                <p class="text-main m-1"><strong>Subtotal:</strong></p>
+                <p class="text-main mt-3 ml-1 mb-1"><strong>Subtotal:</strong></p>
                 <p class="text-main m-1">Shipping:</p>
-                <h6 class="text-main ml-1 mt-2 mb-1"><strong>Grand Total:</strong></h6>
+                <h6 class="text-main ml-1 mt-2 mb-2"><strong>Grand Total:</strong></h6>
             </div>
             <div class="col text-right">
-                <p class="text-main m-1"><strong>€{{ total|floatformat:2 }}</strong></p>
+                <p class="text-main mt-3 mb-1 mr-1"><strong>€{{ total|floatformat:2 }}</strong></p>
                 <p class="text-main m-1">{% if delivery == 0 %}Free{% else %}€{{ delivery|floatformat:2 }}{% endif %}</p>
-                <h6 class="text-main mt-2 mb-1 mr-1"><strong>€{{ grand_total|floatformat:2 }}</strong></h6>
+                <h6 class="text-main mt-2 mb-2 mr-1"><strong>€{{ grand_total|floatformat:2 }}</strong></h6>
             </div>
         </div>
         <div class="row">
             <div class="col">    
                 {% if free_delivery_delta > 0 %}
-                <p class="mb-0 p-2 text-info text-center">
+                <p class="mt-0 mb-2 text-info text-center">
                     Spend <strong>€{{ free_delivery_delta }}</strong> more to get free delivery!
                 </p>
                 {% endif %}
