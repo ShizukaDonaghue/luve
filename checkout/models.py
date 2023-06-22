@@ -62,6 +62,10 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
+    def order_date_format(self):
+        """ Date formatting for order dates """
+        return self.date.strftime('%d %b %Y %H:%M')
+
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False,
