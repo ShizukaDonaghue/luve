@@ -129,6 +129,11 @@ body {
     border: 1px solid var(--grey);
 }
 
+.order-summary {
+    background-color: #dcf8f4;
+    border-radius: 5px;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
