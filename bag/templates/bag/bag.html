@@ -33,7 +33,7 @@
                             <th scope="col" class="text-center">Price</th>
                             <th scope="col">Qty</th>
                             <th scope="col"></th>
-                            <th scope="col" class="text-center">Subtotal</th>
+                            <th scope="col" class="text-center">Item Total</th>
                         </tr>
                     </thead>
                     {% for item in bag_items %}
@@ -113,9 +113,9 @@
                     {% endfor %}
                     <tr>
                         <td colspan="6" class="pt-5 text-main text-right">
-                            <h5><strong>Order Total: €{{ total|floatformat:2 }}</strong></h5>
-                            <h6>Shipping: {% if delivery == 0 %}Free{% else %}€{{ delivery|floatformat:2 }}{% endif %}</h6>
-                            <h4 class="mt-2"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            <h5><strong>Subtotal: €{{ total|floatformat:2 }}</strong></h5>
+                            <h5>Shipping: {% if delivery == 0 %}Free{% else %}€{{ delivery|floatformat:2 }}{% endif %}</h5>
+                            <h4 class="mt-2"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-info">
                                 Spend <strong>€{{ free_delivery_delta }}</strong> more to get free delivery!

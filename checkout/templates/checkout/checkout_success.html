@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Thank you!</h2>
+            <h2 class="logo-font mb-4">Thank you for your order!</h2>
             <hr>
             <p class="text-main">Your order information is below. A confirmation email will be sent to
                 <strong>{{ order.email}}</strong>.</p>
@@ -31,7 +31,7 @@
             <div class="order-confirmation-wrapper p-2 border rounded">
                 <div class="row">
                     <div class="col">
-                        <span class="text-muted">Order Info:</span>
+                        <span class="text-muted text-uppercase">Order Info:</span>
                     </div>
                 </div>
                 <div class="row">
@@ -53,7 +53,7 @@
 
                 <div class="row mt-2">
                     <div class="col">
-                        <span class="text-muted">Order Details:</span>
+                        <span class="text-muted text-uppercase">Order Details:</span>
                     </div>
                 </div>
                 {% for item in order.lineitems.all %}
@@ -71,7 +71,7 @@
 
                 <div class="row mt-2">
                     <div class="col">
-                        <span class="text-muted">Delivering To:</span>
+                        <span class="text-muted text-uppercase">Delivering To:</span>
                     </div>
                 </div>
                 <div class="row">
@@ -154,12 +154,12 @@
 
                 <div class="row mt-2">
                     <div class="col">
-                        <span class="text-muted">Billing Info:</span>
+                        <span class="text-muted text-uppercase">Billing Info:</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <p class="mb-0 text-main">Order Total</p>
+                        <p class="mb-0 text-main">Subtotal</p>
                     </div>
                     <div class="col-12 col-md-6 text-md-right">
                         <p class="mb-0">€{{ order.order_total }}</p>
@@ -175,7 +175,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <p class="mb-0 text-main">Grand Total</p>
+                        <p class="mb-0 text-main">Total</p>
                     </div>
                     <div class="col-12 col-md-6 text-md-right">
                         <p class="mb-0">€{{ order.grand_total }}</p>
