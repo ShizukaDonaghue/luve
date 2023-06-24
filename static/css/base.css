@@ -6,6 +6,7 @@
     --grey: #474D53;
     --light-grey: #72777C;
     --white: #FFFFFF;
+    --light-green: #dcf8f4;
 }
 
 html {
@@ -130,7 +131,7 @@ body {
 }
 
 .order-summary {
-    background-color: #dcf8f4;
+    background-color: var(--light-green);
     border-radius: 5px;
 }
 

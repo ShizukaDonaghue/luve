@@ -61,9 +61,19 @@
             </div>
         </div>
         <div class="row">
+            <div class="col mb-2">
+                <a href="{% url 'view_bag' %}" class="btn btn-outline-main btn-block">
+                    <span class="text-uppercase">View Bag</span>
+                    <span class="icon">
+                        <i class="fas fa-shopping-bag fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
                 <a href="{% url 'checkout' %}" class="btn btn-main btn-block">
-                    <span class="text-uppercase">Go To Secure Checkout</span>
+                    <span class="text-uppercase">Secure Checkout</span>
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>
