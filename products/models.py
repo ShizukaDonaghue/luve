@@ -31,6 +31,10 @@ class Brand(models.Model):
 
     name = models.CharField(max_length=50)
 
+    class Meta:
+        """ Ordering of brands in alphabetical order """
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
