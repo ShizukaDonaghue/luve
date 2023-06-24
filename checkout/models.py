@@ -64,7 +64,7 @@ class Order(models.Model):
 
     def order_date_format(self):
         """ Date formatting for order dates """
-        return self.date.strftime('%d %b %Y %H:%M')
+        return self.date.strftime('%d %b %Y')
 
 
 class OrderLineItem(models.Model):
@@ -73,8 +73,6 @@ class OrderLineItem(models.Model):
                               related_name='lineitems')
     product = models.ForeignKey(
         Product, null=False, blank=False, on_delete=models.CASCADE)
-    product_size = models.CharField(
-        max_length=2, null=True, blank=True)  # XS, S, M, L, XL
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2,
