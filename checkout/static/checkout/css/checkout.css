@@ -2,7 +2,7 @@
   --grey: #474D53;
   --light-grey: #72777C;
   --white: #FFFFFF;
-  --light-green: #e6f8f5;
+  --placeholder-grey: #AAB7C4;
 }
 
 .StripeElement,
@@ -29,7 +29,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: var(--placeholder-grey);
 }
 
 .fieldset-label {
@@ -50,7 +50,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: #aab7c4 !important;
+    color: var(--placeholder-grey) !important;
 }
 
 #loading-overlay {
