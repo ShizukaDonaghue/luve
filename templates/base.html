@@ -87,7 +87,7 @@
                             <a href="" class="dropdown-item">Customer Queries</a>
                             {% endif %}
                             <!-- End of staff menue -->
-                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             <!-- If the user is not logged in -->
                             {% else %}

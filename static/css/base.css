@@ -6,7 +6,8 @@
     --grey: #474D53;
     --light-grey: #72777C;
     --white: #FFFFFF;
-    --light-green: #e6f8f5;
+    --light-green: #E6F8F5;
+    --placeholder-grey: #AAB7C4;
 }
 
 html {
@@ -113,6 +114,10 @@ body {
     text-decoration: none !important;
 }
 
+input[name='q']::placeholder {
+    color: var(--placeholder-grey);
+}
+
 .btt-link:hover {
     border-radius: 50%;
     background-color: #33c297;
@@ -156,6 +161,29 @@ body {
     height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: var(--light-grey); /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: var(--grey);
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: var(--placeholder-grey);
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
 }
 
 /* -------------------------------- Media Queries */
