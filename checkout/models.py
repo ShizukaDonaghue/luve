@@ -70,7 +70,7 @@ class Order(models.Model):
 
     def order_date_format(self):
         """ Date formatting for order dates """
-        return self.date.strftime('%d %b %Y')
+        return self.date.strftime('%d %b %y')
 
 
 class OrderLineItem(models.Model):
