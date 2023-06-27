@@ -188,6 +188,12 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Media Queries */
 
+@media (min-width: 768px) {
+    #product-info {
+        margin-bottom: 2rem;
+    }
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
