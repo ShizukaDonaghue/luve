@@ -120,13 +120,13 @@
                         </div>
                         <div class="d-none col-sm-12 d-sm-block d-md-none"> 
                             <div class="d-flex justify-content-between text-center my-auto px-1">
-                                <a class="update-link text-info"><i class="fa-solid fa-rotate"></i></a>
+                                <a class="update-link-small text-info"><i class="fa-solid fa-rotate"></i></a>
                                 <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
                                         class="fa-solid fa-trash-can"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- End of prices and quantity selector for screen sizes ≥576px -->
+                    <!-- End of unit price, subtotal and quantity selector for screen sizes ≥576px -->
                 </div>
                 <div class="d-none d-md-block col-md-2 text-center">
                     <p class="my-0">€{{ item.product.price }}</p>
@@ -169,8 +169,7 @@
                     <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
-
-            <!-- Prices and quantity selector for screen sizes <576px -->
+            <!-- Unit price, subtotal and quantity selector for screen sizes <576px -->
             <div class="row mt-1 mb-2 d-sm-none">
                 <div class="col-6">
                     <p class="my-0">Price €{{ item.product.price }}</p>
@@ -211,23 +210,18 @@
                 </div>
                 <div class="col-12 text-center my-auto">
                     <div class="d-flex justify-content-between px-1">
-                        <a class="update-link text-info"><i class="fa-solid fa-rotate"></i></a>
+                        <a class="update-link-small text-info"><i class="fa-solid fa-rotate"></i></a>
                         <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
                                 class="fa-solid fa-trash-can"></i></a>
                     </div>
                 </div>
             </div>
-           
-
-
-
-
-
+            <!-- End of unit price, subtotal and quantity selector for screen sizes <576px -->
             {% endfor %}
             <!-- If the shopping bag is empty -->
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-main">
+            <a href="{% url 'products' %}" class="btn btn-main">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -299,11 +293,17 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-    // Update quantity on click
+    // update quantity on click for screen sizes <576px and ≥576px
+    $('.update-link-small').click(function (e) {
+        let form = $(this).parent().parent().prev().children('.update-form');
+        form.submit();
+    });
+    
+    // Update quantity on click for screen sizes ≥768px
     $('.update-link').click(function (e) {
         let form = $(this).parent().prev('.update-form');
         form.submit();
-    })
+    })    
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
