@@ -42,7 +42,7 @@
                     <!-- If product image is not available -->
                     {% if "placeholder" in item.product.image.url %}
                     <a href="{% url 'product_detail' item.product.id %}">
-                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder-image_mrk4gi.png"
+                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                             class="card-img-top img-fluid list-image" alt="Image of {{ item.product.name }}">
                     </a>
                     <!-- If product image is available -->
