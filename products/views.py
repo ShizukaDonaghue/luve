@@ -110,6 +110,7 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'on_add_product_page': True
     }
 
     return render(request, template, context)
