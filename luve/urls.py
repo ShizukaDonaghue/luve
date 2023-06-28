@@ -25,3 +25,5 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
 ]
+
+handler404 = 'luve.views.handler404'
