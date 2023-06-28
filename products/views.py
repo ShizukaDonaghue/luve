@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Brand, Type
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -18,7 +19,7 @@ def all_products(request):
     direction = None
 
     if request.GET:
-        # Checks for search query
+        # Check for search query
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -30,25 +31,25 @@ def all_products(request):
                 description__icontains=query)
             products = products.filter(queries)
 
-        # Checks if product category selected
+        # Check if product category selected
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             current_categories = Category.objects.filter(name__in=categories)
 
-        # Checks if product brand selected
+        # Check if product brand selected
         if 'brand' in request.GET:
             brands = request.GET['brand'].split(',')
             products = products.filter(brand__name__in=brands)
             current_brands = Brand.objects.filter(name__in=brands)
 
-        # Checks if product type selected
+        # Check if product type selected
         if 'type' in request.GET:
             types = request.GET['type'].split(',')
             products = products.filter(type__name__in=types)
             current_types = Type.objects.filter(name__in=types)
 
-        # Checks if sorting order selected
+        # Check if sorting order selected
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -88,3 +89,15 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
