@@ -43,10 +43,10 @@ class Type(models.Model):
     """ A model for the application type of product """
 
     APPLICATION_TYPES = (
-        ('lotion', 'Lotion'),
-        ('spray', 'Spray'),
-        ('stick', 'Stick'),
-        ('roll-on', 'Roll-On'),
+        ('Lotion', 'Lotion'),
+        ('Spray', 'Spray'),
+        ('Stick', 'Stick'),
+        ('Roll-On', 'Roll-On'),
     )
 
     name = models.CharField(max_length=30, choices=APPLICATION_TYPES)
