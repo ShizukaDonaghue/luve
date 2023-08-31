@@ -91,6 +91,7 @@ TEMPLATES = [
                 'home.contexts.brands_list',
                 'bag.contexts.bag_contents',
                 'wishlist.contexts.wishlist_count',
+                'wishlist.contexts.user_wishlist',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',

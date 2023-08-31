@@ -19,39 +19,32 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
-    """ A view to add a product to wishlist """
+    """ Add a product to wishlist """
     if request.method == 'POST':
         product = get_object_or_404(Product, id=product_id)
+        Wishlist.objects.create(user=request.user, product=product)
+        messages.success(
+            request, f'{product.name} has been added to your wishlist!')
 
-        try:
-            wishlist = Wishlist.objects.get(
-                user=request.user, product=product)
-            if wishlist:
-                messages.info(
-                    request, f'{product.name} is already in your wishlist!')
-        except Wishlist.DoesNotExist:
-            Wishlist.objects.create(user=request.user, product=product)
-            messages.success(
-                request, f'{product.name} has been added to your wishlist!')
-        finally:
-            return redirect(request.META.get('HTTP_REFERER'))
+    return redirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required
 def remove_from_wishlist(request, wishlist_id):
-    """ A view to remove a product from wishlist on wishlist page """
+    """ Remove a product from wishlist on wishlist page """
     if request.method == 'POST':
         wishlist = Wishlist.objects.get(id=wishlist_id)
         wishlist.delete()
         messages.success(request, f'{wishlist.product.name} \
             has been removed from your wishlist.')
+
     return redirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required
 def remove_from_wishlist_all(request, product_id):
     """
-    A view to remove a product from wishlist on all products page
+    Remove a product from wishlist on all products and product details pages
     """
     if request.method == 'POST':
         product = Product.objects.get(id=product_id)
@@ -60,4 +53,5 @@ def remove_from_wishlist_all(request, product_id):
         wishlist.delete()
         messages.success(request, f'{product.name} \
             has been removed from your wishlist.')
+
     return redirect(request.META.get('HTTP_REFERER'))
