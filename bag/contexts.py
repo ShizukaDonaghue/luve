@@ -6,9 +6,9 @@ from products.models import Product
 
 def bag_contents(request):
     """
-    Makes the contents of the shopping bag available to all templates
-    Creates a session variable 'bag' to store all the items in the bag
-    Calculates delivery costs and grand total including the delivery
+    Make the contents of the shopping bag available to all templates
+    Create a session variable 'bag' to store all the items in the bag
+    Calculate delivery costs and grand total including the delivery
     """
 
     bag_items = []
