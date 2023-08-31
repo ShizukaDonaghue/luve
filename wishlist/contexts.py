@@ -20,9 +20,8 @@ def user_wishlist(request):
     """
     Create a wishlist for the user
     """
-    user = request.user
     user_wishlist = []
-    if user.is_authenticated:
+    if request.user.is_authenticated:
         wishlist = Wishlist.objects.filter(user=request.user)
         for item in wishlist:
             user_wishlist.append(item.product)

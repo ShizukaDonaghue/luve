@@ -17,15 +17,17 @@ def wishlist(request):
     return render(request, template, context)
 
 
-@login_required
 def add_to_wishlist(request, product_id):
     """ Add a product to wishlist """
-    if request.method == 'POST':
-        product = get_object_or_404(Product, id=product_id)
-        Wishlist.objects.create(user=request.user, product=product)
-        messages.success(
-            request, f'{product.name} has been added to your wishlist!')
-
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            product = get_object_or_404(Product, id=product_id)
+            Wishlist.objects.create(user=request.user, product=product)
+            messages.success(
+                request, f'{product.name} has been added to your wishlist!')
+    else:
+        messages.info(
+            request, 'Please log in to add an item to your wishlist!')
     return redirect(request.META.get('HTTP_REFERER'))
 
 
