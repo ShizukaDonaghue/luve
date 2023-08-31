@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Asap&family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600&display=swap');
 
 /* Root variable for colours */
 :root {
@@ -8,6 +8,10 @@
     --white: #FFFFFF;
     --light-green: #E6F8F5;
     --placeholder-grey: #AAB7C4;
+    --light-turquoise: #33c297;
+    --turquoise: #0f917f;
+    --light-pink: #FD8A9D;
+    --pink: #F56B8E;
 }
 
 html {
@@ -78,6 +82,14 @@ body {
     border: 1px solid var(--light-grey);
 }
 
+.card {
+    box-shadow: 0px 0px 10px 1px #d1d1d1 !important;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 1px #868686 !important;
+}
+
 .text-main {
     color: var(--grey) !important;
 }
@@ -140,6 +152,66 @@ input[name='q']::placeholder {
 .order-summary {
     background-color: var(--light-green);
     border-radius: 5px;
+}
+
+/* Wishlist styling */
+.item-count-container {
+    position: relative;
+    margin-bottom: -0.2rem;
+}
+
+.item-count {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 5px !important;
+    right: 5px !important;
+}
+
+.wishlist-parent-container {
+    position: relative;
+}
+
+.wishlist-btn-container {
+    position: absolute;
+    top: 5px;
+    text-align: right !important;
+}
+
+.wishlist-btn-small {
+    font-size: 1.2rem; 
+}
+
+.wishlist-btn {
+    font-size: 1.7rem;
+}
+
+.wishlist-btn-large {
+    font-size: 2rem;
+}
+
+.wishlist-heart {
+    font-size: 1.2rem;
+}
+
+.heart-pink {
+    color: var(--pink);
+}
+
+.wishlist-btn i.fa-solid:hover,
+.wishlist-btn-large i.fa-solid:hover {
+    font-weight: 400;
+}
+
+.wishlist-btn i.fa-regular:hover,
+.wishlist-btn-large i.fa-regular:hover {
+    font-weight: 800;
+    transform: scale(1.2);
+}
+
+/* Image sizing */
+.product-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* ------------------------------- bootstrap toasts */

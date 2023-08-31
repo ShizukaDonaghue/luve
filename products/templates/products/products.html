@@ -13,24 +13,26 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
+<div class="container mb-2">
     <div class="row">
         <div class="col-12">
+            <hr>
             {% if current_categories %}
             {% for c in current_categories %}
-            <h1 class="text-center pt-3">{{ c.display_name }}</h1>
+            <h2 class="logo-font mb-3">{{ c.display_name }}</h2>
             {% endfor %}
             {% elif current_brands %}
             {% for b in current_brands %}
-            <h1 class="text-center pt-3">{{ b.name }}</h1>
+            <h2 class="logo-font mb-3">{{ b.name }}</h2>
             {% endfor %}
             {% else %}
-            <h1 class="text-center pt-3">Products</h1>
+            <h2 class="logo-font mb-3">All Products</h2>
             {% endif %}
+            <hr>
         </div>
     </div>
     <div class="row">
-        <div class="product-container col-10 offset-1">
+        <div class="product-container col-12">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
@@ -53,7 +55,8 @@
                             <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
                                 Category (A to Z)
                             </option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                            <option value="category_desc"
+                                {% if current_sorting == 'category_desc' %}selected{% endif %}>
                                 Category (Z to A)
                             </option>
                         </select>
@@ -62,7 +65,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_brands or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                        <span><a href="{% url 'products' %}" class="text-muted text-decoration-none link">All Products</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -71,76 +74,117 @@
             </div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="card flex-fill h-100 border-0 wishlist-parent-container">
+                        <!-- Product image -->
                         {% if "placeholder" in product.image.url %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
-                                class="card-img-top img-fluid" alt="Image of {{ product.name }}">
+                                class="card-img-top img-fluid product-img" alt="Image of {{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img src=" {{ product.image.url }}" class="card-img-top img-fluid"
+                            <img src=" {{ product.image.url }}" class="card-img-top img-fluid product-img"
                                 alt="Image of {{ product.name }}">
                         </a>
                         {% endif %}
+                        <!-- End of product image -->
+                        <!-- Wishlist buttons -->
+                        {% if product in user_wishlist %}
+                        <!-- Remove from wishlist -->
+                        <div class="col wishlist-btn-container">
+                            <form class="form" action="{% url 'remove_from_wishlist_all' product.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit" class="btn wishlist-btn p-0"
+                                    aria-label="Remove from wishlist button">
+                                    <i class="fa-solid fa-heart heart-pink"></i>
+                                </button>
+                            </form>
+                        </div>
+                        {% else %}
+                        <!-- Add to wishlist -->
+                        <div class="col wishlist-btn-container">
+                            <form class="form" action="{% url 'add_to_wishlist' product.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit" class="btn wishlist-btn p-0"
+                                    aria-label="Add to wishlist button">
+                                    <i class="fa-regular fa-heart heart-pink"></i>
+                                </button>
+                            </form>
+                        </div>
+                        {% endif %}
+                        <!-- End of wishlist buttons -->                   
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ product.name | capfirst }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    <p class="mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                                     {% if current_brands %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <span class="icon"><i class="fas fa-tag mr-1"></i></span>{{ product.category.display_name }}
+                                            <span class="icon"><i
+                                                    class="fas fa-tag mr-1"></i></span>{{ product.category.display_name }}
                                         </a>
                                     </p>
                                     {% else %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
-                                            href="{% url 'products' %}?brand={{ product.brand.name }}">  
-                                            <span class="icon"><i class="fa-brands fa-gratipay"></i></span>{{ product.brand.name }}
+                                            href="{% url 'products' %}?brand={{ product.brand.name }}">
+                                            <span class="icon"><i
+                                                    class="fa-brands fa-gratipay"></i></span>{{ product.brand.name }}
                                         </a>
                                     </p>
                                     {% endif %}
                                     {% if product.type %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted" href="{% url 'products' %}?type={{ product.type.name }}">
-                                            <span class="icon"><i class="fa-solid fa-hand-dots mr-1"></i></span>{{ product.type.display_name }}
+                                            <span class="icon"><i
+                                                    class="fa-solid fa-hand-dots mr-1"></i></span>{{ product.type.display_name }}
                                         </a>
                                     </p>
                                     {% endif %}
                                     {% if request.user.is_staff %}
-                                    <small class="ml-3">
+                                    <small class="ml-1 mt-2 mb-2">
                                         <a href="{% url 'edit_product' product.id %}">Edit</a> |
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                     {% endif %}
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col">
+                                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="quantity" value="1">
+                                        <input type="submit" class="btn btn-main text-uppercase w-100 mt-2"
+                                            value="Add To Bag">
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
+                <div class="col-12 d-sm-none my-2">
                     <hr>
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none my-2">
                     <hr>
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                <div class="col-12 d-none d-lg-block d-xl-none my-2">
                     <hr>
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
+                <div class="col-12 d-none d-xl-block my-2">
                     <hr>
                 </div>
                 {% endif %}
