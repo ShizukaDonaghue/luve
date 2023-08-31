@@ -73,6 +73,17 @@ body {
     color: var(--white) !important;
 }
 
+.btn-pink {
+    background: var(--white);
+    color: var(--pink) !important;
+    border: 1px solid var(--pink);
+}
+
+.btn-pink:hover {
+    background: var(--light-pink);
+    color: var(--white) !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
