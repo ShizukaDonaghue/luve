@@ -16,38 +16,49 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity_input = request.POST.get('quantity')
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
-    # If the order quantity is less than 1
-    if quantity < 1:
-        messages.error(
-            request, f'Sorry, the order quantity must be 1 or more. \
-                Please try again!')
-    # If the order quantity is greater than 20
-    elif quantity > 20:
-        messages.error(
-            request, f'Sorry, the maximum quantity per order is 20. \
-                Please try again!')
-    # If the item is already in the shopping bag
-    elif item_id in list(bag.keys()):
-        # If the total order quantity is greater than 20
-        if bag[item_id] + quantity > 20:
+    if quantity_input.isdigit():
+        quantity = int(request.POST.get('quantity'))
+        # If the order quantity is less than 1
+        if quantity < 1:
+            messages.error(
+                request, f'Sorry, the order quantity must be 1 or more. \
+                    Please try again!')
+        # If the order quantity is greater than 20
+        elif quantity > 20:
             messages.error(
                 request, f'Sorry, the maximum quantity per order is 20. \
                     Please try again!')
-        # If the total order quantity does not exceed 20
+        # If the item is already in the shopping bag
+        elif item_id in list(bag.keys()):
+            # If the total order quantity is greater than 20
+            if bag[item_id] + quantity > 20:
+                messages.error(
+                    request, f'Sorry, the maximum quantity per order is 20. \
+                        Please try again!')
+            # If the total order quantity does not exceed 20
+            else:
+                bag[item_id] += quantity
+                messages.success(
+                    request, f'Updated {product.name} quantity to \
+                        {bag[item_id]}!')
+        # If the item is not yet in the shopping bag
         else:
-            bag[item_id] += quantity
+            bag[item_id] = quantity
             messages.success(
-                request, f'Updated {product.name} quantity to \
-                    {bag[item_id]}!')
-    # If the item is not yet in the shopping bag
+                request, f'{product.name} has been added to your bag!')
+    # If the order quantity is less than 0
+    elif quantity_input.startswith('-'):
+        messages.error(
+            request, f'Sorry, the order quantity must be 1 or more. \
+                Please try again!')
+    # If the order quantity is a floating-point number or other invalid input
     else:
-        bag[item_id] = quantity
-        messages.success(
-            request, f'{product.name} has been added to your bag!')
+        messages.error(
+            request, f'Please enter a whole number!')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
