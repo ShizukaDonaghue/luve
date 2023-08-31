@@ -13,11 +13,60 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
-        {% if grand_total and not on_profile_page and not on_add_product_page %}
-        <p class="font-weight-bold bg-white text-main py-1">Shopping Bag ({{ product_count }} items)</p>
+        <!-- Toast for wishlist -->
+        {% if 'wishlist' in message|stringformat:'s' %}
+        <p class="font-weight-bold bg-white text-main py-1">My Wishlist ({{ wishlist_count }})</p>
+        <div class="bag-notification-wrapper">
+            {% for item in user_wishlist %}
+            <div class="row mb-2">
+                <div class="col-3 my-1">
+                    {% if "placeholder" in item.image.url %}
+                    <a href="{% url 'product_detail' item.id %}">
+                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
+                            class="card-img-top img-fluid" alt="Image of {{ item.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' item.id %}">
+                        <img src=" {{ item.image.url }}" class="card-img-top img-fluid"
+                            alt="Image of {{ item.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col-9">
+                    <p class="my-0 font-weight-bold">{{ item.name }}</p>
+                    <p class="my-0 small text-muted">Unit Price: {{ item.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <hr class="p-0 m-0">
+        <div class="row">
+            <div class="col mb-2">
+                <a href="{% url 'products' %}" class="btn btn-sm btn-outline-main btn-block">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Continue Shopping</span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-2">
+                <a href="{% url 'wishlist' %}" class="btn btn-sm btn-pink btn-block">
+                    <span class="text-uppercase">View Wishlist</span>
+                    <span class="icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Toast for shopping bag -->
+        {% elif grand_total and not on_profile_page and not on_add_product_page %}
+        <p class="font-weight-bold bg-white text-main py-1">Shopping Bag ({{ product_count }})</p>
         <div class="bag-notification-wrapper">
             {% for item in bag_items %}
-            <div class="row">
+            <div class="row mb-2">
                 <div class="col-3 my-1">
                     {% if "placeholder" in item.product.image.url %}
                     <a href="{% url 'product_detail' item.product.id %}">
@@ -32,8 +81,9 @@
                     {% endif %}
                 </div>
                 <div class="col-9">
-                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 small text-muted">Unit Price: {{ item.product.price }}</p>
                 </div>
             </div>
             {% endfor %}
