@@ -90,6 +90,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'home.contexts.brands_list',
                 'bag.contexts.bag_contents',
+                'wishlist.contexts.wishlist_count',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',

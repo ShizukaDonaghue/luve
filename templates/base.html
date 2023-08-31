@@ -97,6 +97,21 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
+                        <a class="text-main nav-link" href="{% url 'wishlist' %}">
+                            <div class="text-center">
+                                <div class="item-count-container">
+                                    <i class="fa-solid fa-heart wishlist-heart"></i>
+                                    {% if wishlist_count > 0 %}
+                                    <span class="item-count">{{wishlist_count}}</span>
+                                    {% endif %}
+                                </div>
+                                <p class="my-0 icon-title">
+                                    Wishlist
+                                </p>
+                            </div>
+                        </a>
+                    </li>                    
+                    <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-main{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
