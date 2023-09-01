@@ -1,3 +1,75 @@
 from django.shortcuts import render
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
+from .forms import ContactForm
 
-# Create your views here.
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                'Your message has been received. Thank you!')
+
+            query_type = request.POST.get('query_type')
+            cust_name = request.POST.get('name')
+            cust_email = request.POST.get('email')
+            message = request.POST.get('message')
+
+            # Send the user a confirmation email
+            subject = render_to_string(
+                'contact/confirmation_emails/confirmation_email_subject.txt'
+            )
+            body = render_to_string(
+                'contact/confirmation_emails/confirmation_email_body.txt',
+                {'cust_name': cust_name}
+            )
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+            )
+
+            # Send the store a notification email
+            subject = render_to_string(
+                'contact/confirmation_emails/customer_query_subject.txt',
+                {'query_type': query_type,
+                 'cust_name': cust_name}
+            )
+            body = render_to_string(
+                'contact/confirmation_emails/customer_query_body.txt',
+                {'query_type': query_type,
+                 'cust_name': cust_name,
+                 'cust_email': cust_email,
+                 'message': message}
+            )
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.DEFAULT_FROM_EMAIL]
+            )
+            return render(request, 'contact/contact_success.html')
+        else:
+            messages.error(request, 'Failed to send message. \
+                Please ensure the form is completed fully and try again!')
+
+    else:
+        if request.user.is_authenticated:
+            # Prepopulate the form with their name and email address
+            form = ContactForm(initial={
+                'name': request.user.username,
+                'email': request.user.email,
+                })
+        else:
+            form = ContactForm()
+        template = 'contact/contact.html'
+        context = {
+            'form': form,
+        }
+    return render(request, template, context)
