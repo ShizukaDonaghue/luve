@@ -18,7 +18,7 @@ def contact(request):
             form.save()
             messages.success(
                 request,
-                f"Your message has been received. Thank you { cust_name }!")
+                f"Your message has been received. Thank you {cust_name}!")
 
             # Send the user a confirmation email
             subject = render_to_string(
@@ -61,7 +61,7 @@ def contact(request):
 
     else:
         if request.user.is_authenticated:
-            # Prepopulate the form with their name and email address
+            # Prepopulate the form with the user name and email address
             form = ContactForm(initial={
                 'name': request.user.username,
                 'email': request.user.email,
