@@ -44,7 +44,7 @@
                 <!-- If the user is staff  -->
                 {% if request.user.is_staff %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                <a href="" class="dropdown-item">Article Management</a>
+                <a href="" class="dropdown-item">Article Dashboard</a>
                 {% endif %}
                 <!-- End of staff menu -->
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
