@@ -1,0 +1,1 @@
+New Message: {{ query_type }} from {{ cust_name }}

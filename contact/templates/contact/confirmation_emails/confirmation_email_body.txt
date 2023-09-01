@@ -1,0 +1,12 @@
+Hello {{ cust_name }},
+
+Thank you very much for your message!
+
+We will be in touch with you as soon as possible.
+
+
+Thank you!
+
+Sincerely,
+
+LUVE

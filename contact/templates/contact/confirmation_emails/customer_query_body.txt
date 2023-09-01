@@ -1,0 +1,17 @@
+Hi there!
+
+We've received the following message:
+
+
+Query Type: {{ query_type }}
+
+Name: {{ cust_name }}
+
+Email: {{ cust_email }}
+
+Message: {{ message }}
+
+
+Please respond as soon as possible.
+
+Thank you!

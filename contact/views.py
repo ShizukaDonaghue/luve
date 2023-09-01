@@ -10,15 +10,15 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            messages.success(
-                request,
-                'Your message has been received. Thank you!')
-
             query_type = request.POST.get('query_type')
             cust_name = request.POST.get('name')
             cust_email = request.POST.get('email')
             message = request.POST.get('message')
+
+            form.save()
+            messages.success(
+                request,
+                f"Your message has been received. Thank you { cust_name }!")
 
             # Send the user a confirmation email
             subject = render_to_string(
