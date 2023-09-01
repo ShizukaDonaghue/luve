@@ -1,0 +1,13 @@
+.contact-us::placeholder {
+    color: var(--placeholder-grey) !important;
+}
+
+select,
+select option {
+    color: var(--grey);
+}
+
+select:invalid,
+select option[value=""] {
+    color: var(--placeholder-grey) !important;
+}
