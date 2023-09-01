@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} | Contact Us{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-3">Contact Us</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 mt-4">
+            <p>Thank you very much for your message! We will be in touch with you as soon as possible.
+            </p>
+            <div class="mt-5">
+                <a class="btn btn-outline-main text-uppercase" href="{%  url 'home' %}">Home</a>
+                <a href="{% url 'products' %}" class="btn btn-main text-uppercase">Continue Shopping!</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
