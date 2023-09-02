@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django_resized import ResizedImageField
+from .validators import textfield_not_empty
 
 
 # Status choices for the Article model
@@ -20,7 +21,7 @@ class Article(models.Model):
     )
     description = models.TextField(max_length=500)
     created_on = models.DateTimeField(auto_now_add=True)
-    content = models.TextField(null=False, blank=False)
+    content = models.TextField(validators=[textfield_not_empty])
     image = ResizedImageField(
         size=[600, None], quality=75,
         upload_to='articles/',
