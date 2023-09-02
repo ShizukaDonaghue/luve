@@ -125,3 +125,17 @@ def edit_article(request, slug):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_article(request, slug):
+    """ Delete an article """
+    if not request.user.is_staff:
+        messages.error(
+            request, 'Sorry, you are not authorised to delete articles.')
+        return redirect(reverse('home'))
+
+    article = get_object_or_404(Article, slug=slug)
+    article.delete()
+    messages.success(request, f'{article.title} has been deleted.')
+    return redirect(reverse('articles'))
