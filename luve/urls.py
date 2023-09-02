@@ -27,6 +27,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('wishlist/', include('wishlist.urls')),
     path('contact/', include('contact.urls')),
+    path('articles/', include('articles.urls')),
 ]
 
 handler404 = 'luve.views.handler404'
