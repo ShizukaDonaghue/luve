@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.template.defaultfilters import slugify
 from .models import Article
+from .forms import ArticleForm
 
 
 def all_articles(request):
@@ -56,3 +57,36 @@ def article_dashboard(request):
     }
 
     return render(request, 'articles/article_dashboard.html', context)
+
+
+@login_required
+def add_article(request):
+    """ Add an article """
+    if not request.user.is_staff:
+        messages.error(
+            request, 'Sorry, you are not authorised to post articles.')
+        return redirect(reverse('home'))
+
+    else:
+        if request.method == 'POST':
+            form = ArticleForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.instance.author = request.user
+                form.instance.slug = slugify(form.instance.title)
+                article = form.save()
+                messages.success(
+                    request, f'{article.title} has been added successfully!')
+                return redirect(reverse('article_detail', args=[article.slug]))
+            else:
+                messages.error(request, 'Failed to add an article. \
+                    Please ensure the form is completed fully and try again!')
+        else:
+            form = ArticleForm()
+
+    template = 'articles/add_article.html'
+    context = {
+        'form': form,
+        'on_add_article_page': True
+    }
+
+    return render(request, template, context)
