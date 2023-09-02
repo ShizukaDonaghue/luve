@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} | {{ article.title }}{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+            <!-- If an image is not loaded by the user -->
+            {% if "Placeholder" in article.image.url %}
+            <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
+                class="card-img-top img-fluid article-img" alt="Placeholder image">
+            {% else %}
+            <img src=" {{ article.image.url }}" class="card-img-top img-fluid article-img"
+                alt="Image of {{ article.title }}">
+            {% endif %}
+        </div>
+        <div class="col-12 col-lg-6 col-xl-5">
+
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <h5 class="article-title-detail-page font-weight-bold">{{ article.title | capfirst }}</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <p class="mt-1 mb-0 article-author">By {{ article.author }}</p>
+                </div>
+                <div class="col-2 pl-0 text-right">
+                    <!-- If the article is published -->
+                    {% if article.status == 1 %}
+                    <form class="d-inline" action="{% url 'article_like' article.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="articlepost_id" value="{{article.slug}}"
+                            class="like-btn text-main mt-1 p-0 m-0 border-0"
+                            aria-label="Like button indicating it is already liked">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+                        {% else %}
+                        <button type="submit" name="articlepost_id" value="{{article.slug}}"
+                            class="like-btn text-main mt-1 p-0 m-0 border-0" aria-label="Like button">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                        </button>
+                        {% endif %}
+                    </form>
+                    <span class="text-secondary fw-bold mt-1 ml-0 p-0"> {{ article.number_of_likes }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12 col-xl-10 offset-xl-1 article-content text-justify">
+            {{ article.article | safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
