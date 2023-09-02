@@ -77,6 +77,24 @@ ROOT_URLCONF = 'luve.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Summernote configurations
+SUMMERNOTE_CONFIG = {
+   'summernote': {
+        'height': '400',
+        'width': '100%',
+        'toolbar': [
+          ['undo', ['undo']],
+          ['redo', ['redo']],
+          ['font', ['bold', 'italic', 'underline', 'clear']],
+          ['para', ['ul', 'ol']],
+        ],
+        'fontNames': ['Signika'],
+        'fontNamesIgnoreCheck': ['Signika'],
+        'fontSizes': ['14'],
+        'fontSizeUnits': ['px'],
+    },
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
