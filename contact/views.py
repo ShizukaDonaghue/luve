@@ -7,6 +7,8 @@ from .forms import ContactForm
 
 
 def contact(request):
+    """A view to show the contact page"""
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -18,7 +20,7 @@ def contact(request):
             form.save()
             messages.success(
                 request,
-                f"Your message has been received. Thank you {cust_name}!")
+                f'Your message has been received. Thank you {cust_name}!')
 
             # Send the user a confirmation email
             subject = render_to_string(
@@ -68,8 +70,10 @@ def contact(request):
                 })
         else:
             form = ContactForm()
-        template = 'contact/contact.html'
-        context = {
-            'form': form,
-        }
-    return render(request, template, context)
+
+    context = {
+        'form': form,
+        'on_contact_page': True
+    }
+
+    return render(request, 'contact/contact.html', context)
