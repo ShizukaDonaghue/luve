@@ -44,7 +44,7 @@ def add_to_bag(request, item_id):
                 bag[item_id] += quantity
                 messages.success(
                     request, f'Updated {product.name} quantity to \
-                        {bag[item_id]}!')
+                        {bag[item_id]} in your bag!')
         # If the item is not yet in the shopping bag
         else:
             bag[item_id] = quantity
