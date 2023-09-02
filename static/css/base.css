@@ -267,7 +267,7 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 
-/* ------------------------------- bootstrap toasts ----------------- */
+/* Bootstrap toasts  */
 
 .message-container {
     position: fixed;
@@ -289,6 +289,13 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* Error message for forms */
+label.error {
+    color: #B02A37;
+    font-size: 14px !important;
+    font-weight: bold;
+}   
 
 /* Allauth form formatting */
 
