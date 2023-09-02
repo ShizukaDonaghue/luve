@@ -46,3 +46,13 @@ def article_like(request, slug):
 
     return HttpResponseRedirect(
             reverse('article_detail', args=[slug]))
+
+
+def article_dashboard(request):
+    """ A view to show all articles in the dashboard"""
+    articles = Article.objects.order_by('-created_on')
+    context = {
+        'articles': articles,
+    }
+
+    return render(request, 'articles/article_dashboard.html', context)
