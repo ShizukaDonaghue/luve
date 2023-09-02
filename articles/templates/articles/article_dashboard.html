@@ -19,6 +19,15 @@
             <hr class="{% if not articles %}invisible{% endif %}">
             <h2 class="logo-font mb-3">Article Dashboard</h2>
             <hr class="{% if not articles %}invisible{% endif %}">
+            
+            <div class="row my-3">
+                <div class="col-12 col-sm-6 col-lg-3 text-center">
+                    <a href="{% url 'add_article' %}" class="btn btn-post-article w-100">
+                        <span class="text-uppercase font-weight-bold">Post Article</span>
+                    </a>
+                </div>
+                <div class="d-none col-sm-6 col-lg-9"></div>
+            </div>
             <!-- If there are articles to display -->
             <div class="row">
                 <div class="product-container col-12">
@@ -42,11 +51,17 @@
                                     <div class="row">
                                         <div class="d-inline col-10">
                                             {% if article.status == 0 %}
-                                            <h5 class="mb-0 article-title">{{ article.title | capfirst }}
-                                                <span class="text-danger">[Draft]</span>
-                                            </h5>
+                                            <a href="{% url 'article_detail' article.slug %}"
+                                                class="text-decoration-none text-main">
+                                                <h5 class="mb-0 article-title">{{ article.title | capfirst }}
+                                                    <span class="text-danger">[Draft]</span>
+                                                </h5>
+                                            </a>
                                             {% else %}
-                                            <h5 class="mb-0 article-title">{{ article.title | capfirst }}</h5>
+                                            <a href="{% url 'article_detail' article.slug %}"
+                                                class="text-decoration-none text-main">
+                                                <h5 class="mb-0 article-title">{{ article.title | capfirst }}</h5>
+                                            </a>
                                             {% endif %}
                                         </div>
                                         <div class="d-inline col-2 d-flex pl-0 justify-content-end">
@@ -55,10 +70,18 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <p class="small mt-1 mb-3">
-                                        <a class="text-muted stretched-link"
-                                            href="{% url 'article_detail' article.slug %}"></a>
-                                    </p>
+                                    <div class="row mt-2 mb-3">
+                                        <div class="col-6 pr-1">
+                                            <a href="{% url 'edit_article' article.slug %}" class="btn btn-edit w-100">
+                                                <span class="text-uppercase text-main">Edit</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 pl-1">
+                                            <a href="" class="btn btn-delete w-100">
+                                                <span class="text-uppercase text-main">Delete</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,12 +104,6 @@
                         <!-- If there are no articles -->
                         {% else %}
                         <p class="lead mb-5">There are no articles yet. Let's post an article!</p>
-                        <a href=" " class="btn btn-main">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Post an article</span>
-                        </a>
                         {% endif %}
                     </div>
                 </div>

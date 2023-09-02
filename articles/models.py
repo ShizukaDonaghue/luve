@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django_resized import ResizedImageField
+from cloudinary.models import CloudinaryField
 from .validators import textfield_not_empty
 
 
@@ -22,13 +22,7 @@ class Article(models.Model):
     description = models.TextField(max_length=500)
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField(validators=[textfield_not_empty])
-    image = ResizedImageField(
-        size=[600, None], quality=75,
-        upload_to='articles/',
-        force_format='WEBP',
-        blank=False, null=False,
-        default='Placeholder'
-    )
+    image = CloudinaryField('image', default='v1686206490/placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User,

@@ -1,0 +1,77 @@
+<p class="font-weight-bold bg-white text-main py-1">Shopping Bag ({{ product_count }})</p>
+<div class="bag-notification-wrapper">
+    {% for item in bag_items %}
+    <div class="row mb-2">
+        <div class="col-3 my-1">
+            {% if "placeholder" in item.product.image.url %}
+            <a href="{% url 'product_detail' item.product.id %}">
+                <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
+                    class="card-img-top img-fluid" alt="Image of {{ item.product.name }}">
+            </a>
+            {% else %}
+            <a href="{% url 'product_detail' item.product.id %}">
+                <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid"
+                    alt="Image of {{ item.product.name }}">
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-9">
+            <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
+            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+            <p class="my-0 small text-muted">Unit Price: {{ item.product.price }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<hr class="p-0 m-0">
+<div class="row">
+    <div class="col">
+        <p class="text-main mt-2 ml-1 mb-1"><strong>Subtotal:</strong></p>
+        <p class="text-main m-1">Shipping:</p>
+        <h6 class="text-main ml-1 mt-2 mb-2"><strong>Total:</strong></h6>
+    </div>
+    <div class="col text-right">
+        <p class="text-main mt-2 mb-1 mr-1"><strong>€{{ total|floatformat:2 }}</strong></p>
+        <p class="text-main m-1">{% if delivery == 0 %}Free{% else %}€{{ delivery|floatformat:2 }}{% endif %}</p>
+        <h6 class="text-main mt-2 mb-2 mr-1"><strong>€{{ grand_total|floatformat:2 }}</strong></h6>
+    </div>
+</div>
+<div class="row">
+    <div class="col">    
+        {% if free_delivery_delta > 0 %}
+        <p class="mt-0 mb-2 text-info text-center">
+            Spend <strong>€{{ free_delivery_delta }}</strong> more for free shipping!
+        </p>
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col mb-2">
+        <a href="{% url 'products' %}" class="btn btn-sm btn-outline-main btn-block">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Continue Shopping</span>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col mb-2">
+        <a href="{% url 'view_bag' %}" class="btn btn-sm btn-outline-main btn-block">
+            <span class="text-uppercase">View Bag</span>
+            <span class="icon">
+                <i class="fas fa-shopping-bag fa-lg"></i>
+            </span>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <a href="{% url 'checkout' %}" class="btn btn-sm btn-main btn-block">
+            <span class="text-uppercase">Secure Checkout</span>
+            <span class="icon">
+                <i class="fas fa-lock"></i>
+            </span>
+        </a>
+    </div>
+</div>

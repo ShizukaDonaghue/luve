@@ -28,12 +28,12 @@
                         <div class="col-lg-6 col-xl-4">
                             <div class="card h-100 border-0">
                                 {% if "Placeholder" in article.image.url %}
-                                <a href="{% url 'article_detail' article.slug %}">
+                                <a href="{% url 'article_detail' article.slug %}" class="stretched-link">
                                     <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                                         class="card-img-top img-fluid article-img" alt="Placeholder image">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'article_detail' article.slug %}">
+                                <a href="{% url 'article_detail' article.slug %}" class="stretched-link">
                                     <img src=" {{ article.image.url }}" class="card-img-top img-fluid article-img"
                                         alt="Image of {{ article.title }}">
                                 </a>
@@ -51,10 +51,6 @@
                                     </div>
                                     <p class="text-left mt-2 mb-3 article-description">
                                         {{ article.description | capfirst | truncatechars:70 }}</p>
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted stretched-link"
-                                            href="{% url 'article_detail' article.slug %}"></a>
-                                    </p>
                                 </div>
                             </div>
                         </div>

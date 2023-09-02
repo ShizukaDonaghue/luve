@@ -89,12 +89,12 @@ body {
 
 .btn-pink {
     background: var(--white);
-    color: var(--pink) !important;
+    color: #E4446C !important;
     border: 1px solid var(--pink);
 }
 
 .btn-pink:hover {
-    background: var(--light-pink);
+    background: var(--pink);
     color: var(--white) !important;
 }
 
@@ -227,12 +227,14 @@ input[name='q']::placeholder {
 }
 
 .wishlist-btn i.fa-solid:hover,
-.wishlist-btn-large i.fa-solid:hover {
+.wishlist-btn-large i.fa-solid:hover,
+.like-btn i.fa-solid:hover {
     font-weight: 400;
 }
 
 .wishlist-btn i.fa-regular:hover,
-.wishlist-btn-large i.fa-regular:hover {
+.wishlist-btn-large i.fa-regular:hover,
+.like-btn i.fa-regular:hover {
     font-weight: 800;
     transform: scale(1.2);
 }
@@ -254,6 +256,37 @@ input[name='q']::placeholder {
 
 .article-description, .article-author, .article-content {
     font-size: 95%
+}
+
+.btn-post-article {
+    background-color: #0F5491;
+    color: var(--white);
+}
+
+.btn-post-article:hover {
+    opacity: 90%;
+    color: var(--white);
+    border: 1px solid #0F5491;
+}
+
+.btn-edit {
+    background-color: var(--light-turquoise);
+}
+
+.btn-delete {
+    background-color: var(--light-pink);
+}
+
+.btn-edit:hover {
+    opacity: 90%;
+    color: #000000;
+    border: 1px solid var(--turquoise)
+}
+
+.btn-delete:hover {
+    opacity: 90%;
+    color: #000000;
+    border: 1px solid var(--pink)
 }
 
 /* Image sizing */

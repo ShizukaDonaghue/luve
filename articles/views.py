@@ -86,7 +86,42 @@ def add_article(request):
     template = 'articles/add_article.html'
     context = {
         'form': form,
-        'on_add_article_page': True
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_article(request, slug):
+    """ Edit an article """
+    if not request.user.is_staff:
+        messages.error(
+            request, 'Sorry, you are not authorised to edit articles.')
+        return redirect(reverse('home'))
+
+    else:
+        article = get_object_or_404(Article, slug=slug)
+        if request.method == 'POST':
+            form = ArticleForm(request.POST, request.FILES, instance=article)
+            if form.is_valid():
+                form.instance.slug = slugify(form.instance.title)
+                form.save()
+                messages.success(
+                    request, f'{article.title} has been updated successfully!')
+                return redirect(reverse('article_detail', args=[article.slug]))
+            else:
+                messages.error(
+                    request, 'Failed to update the article. \
+                        Please ensure the form is completed fully \
+                        and try again!')
+        else:
+            form = ArticleForm(instance=article)
+            messages.info(request, f'You are editing {article.title}.')
+
+    template = 'articles/edit_article.html'
+    context = {
+        'form': form,
+        'article': article,
     }
 
     return render(request, template, context)

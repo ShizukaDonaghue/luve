@@ -62,10 +62,7 @@
         </div>
 
         <!-- Toast for shopping bag -->
-        {% elif grand_total and not on_profile_page %}
-        {% elif grand_total and not on_add_product_page %}
-        {% elif grand_total and not on_add_article_page %}
-        {% elif grand_total and not on_contact_page %}
+        {% elif grand_total and 'bag' in message|stringformat:'s' %}
         <p class="font-weight-bold bg-white text-main py-1">Shopping Bag ({{ product_count }})</p>
         <div class="bag-notification-wrapper">
             {% for item in bag_items %}
