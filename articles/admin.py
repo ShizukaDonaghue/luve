@@ -15,7 +15,7 @@ class ArticleAdmin(SummernoteModelAdmin):
     )
     list_filter = ('status',)
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('article')
+    summernote_fields = ('content')
 
     ordering = ('-created_on',)
 
