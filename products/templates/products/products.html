@@ -65,7 +65,8 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_brands or current_sorting != 'None_None' %}
-                        <span><a href="{% url 'products' %}" class="text-muted text-decoration-none link">All Products</a> | </span>
+                        <span><a href="{% url 'products' %}" class="text-muted text-decoration-none link">All
+                                Products</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -106,21 +107,23 @@
                         <div class="col wishlist-btn-container">
                             <form class="form" action="{% url 'add_to_wishlist' product.id %}" method="POST">
                                 {% csrf_token %}
-                                <button type="submit" class="btn wishlist-btn p-0"
-                                    aria-label="Add to wishlist button">
+                                <button type="submit" class="btn wishlist-btn p-0" aria-label="Add to wishlist button">
                                     <i class="fa-regular fa-heart heart-pink"></i>
                                 </button>
                             </form>
                         </div>
                         {% endif %}
-                        <!-- End of wishlist buttons -->                   
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name | capfirst }}</p>
+                        <!-- End of wishlist buttons -->
+                        <div class="card-body pb-1">
+                            <a href="{% url 'product_detail' product.id %}"
+                                class="text-decoration-none text-main font-weight-bold">
+                                <p class="mb-0">{{ product.name | capfirst }}</p>
+                            </a>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    <p class="mb-0 text-left">€{{ product.price }}</p>
                                     {% if current_brands %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
