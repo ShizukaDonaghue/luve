@@ -83,7 +83,8 @@ def adjust_bag(request, item_id):
         elif quantity >= 1:
             bag[item_id] = quantity
             messages.success(
-                request, f'Updated {product.name} quantity to {bag[item_id]}!')
+                request, f'Updated {product.name} quantity to \
+                    {bag[item_id]} in your bag!')
         # If the order quantity is 0, the item is removed from the shopping bag
         else:
             bag.pop(item_id)
