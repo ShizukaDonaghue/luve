@@ -89,7 +89,6 @@
                                 alt="Image of {{ product.name }}">
                         </a>
                         {% endif %}
-                        <!-- End of product image -->
                         <!-- Wishlist buttons -->
                         {% if product in user_wishlist %}
                         <!-- Remove from wishlist -->
@@ -150,10 +149,10 @@
                                     </p>
                                     {% endif %}
                                     {% if request.user.is_staff %}
-                                    <small class="ml-1 mt-2 mb-2">
+                                    <p class="ml-1 mt-2 mb-2">
                                         <a href="{% url 'edit_product' product.id %}">Edit</a> |
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </small>
+                                    </p>
                                     {% endif %}
                                 </div>
                             </div>

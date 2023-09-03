@@ -27,18 +27,19 @@
                         {% for item in wishlist %}
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card h-100 flex-fill border-0">
+                                <!-- Product image -->
                                 {% if "placeholder" in item.product.image.url %}
                                 <a href="{% url 'product_detail' item.product.id %}">
                                     <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
-                                        class="card-img-top img-fluid" alt="Image of {{ item.product.name }}">
+                                        class="card-img-top img-fluid product-img" alt="Placeholder image">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'product_detail' item.product.id %}">
-                                    <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid"
+                                    <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid product-img"
                                         alt="Image of {{ item.product.name }}">
                                 </a>
                                 {% endif %}
-                                <!-- Remove from wishlist button -->                              
+                                <!-- Remove from wishlist button -->
                                 <div class="col wishlist-btn-container">
                                     <form class="form" action="{% url 'remove_from_wishlist' item.id %}" method="POST">
                                         {% csrf_token %}
@@ -49,13 +50,16 @@
                                     </form>
                                 </div>
                                 <!-- End of remove from wishlist button -->
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ item.product.name | capfirst }}</p>
+                                <div class="card-body pb-1">
+                                    <a href="{% url 'product_detail' item.product.id %}"
+                                        class="text-decoration-none text-main font-weight-bold">
+                                        <p class="mb-0">{{ item.product.name | capfirst }}</p>
+                                    </a>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="mb-0 text-left font-weight-bold">€{{ item.product.price }}</p>
+                                            <p class="mb-0 text-left">€{{ item.product.price }}</p>
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted"
                                                     href="{% url 'products' %}?brand={{ item.product.brand.name }}">
