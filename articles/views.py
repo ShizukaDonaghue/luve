@@ -129,4 +129,3 @@ def delete_article(request, slug):
     article.delete()
     messages.success(request, f'{article.title} has been deleted.')
     return redirect(reverse('articles'))
-
