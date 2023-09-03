@@ -10,10 +10,8 @@ class ArticleAdmin(SummernoteModelAdmin):
         'title',
         'author',
         'description',
-        'status',
         'created_on',
     )
-    list_filter = ('status',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content')
 

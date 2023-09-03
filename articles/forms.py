@@ -13,7 +13,6 @@ class ArticleForm(forms.ModelForm):
             'description',
             'content',
             'image',
-            'status',
         )
         widgets = {
             'content': SummernoteWidget(),

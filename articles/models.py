@@ -4,13 +4,6 @@ from cloudinary.models import CloudinaryField
 from .validators import textfield_not_empty
 
 
-# Status choices for the Article model
-STATUS = (
-    (0, 'Save as Draft'),
-    (1, 'Publish Now!')
-)
-
-
 class Article(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -23,7 +16,6 @@ class Article(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField(validators=[textfield_not_empty])
     image = CloudinaryField('image', default='v1686206490/placeholder')
-    status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User,
         related_name='article_likes',

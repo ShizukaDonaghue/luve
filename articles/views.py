@@ -9,7 +9,7 @@ from .forms import ArticleForm
 
 def all_articles(request):
     """ A view to show all articles which are publised"""
-    articles = Article.objects.filter(status=1).order_by('-created_on')
+    articles = Article.objects.order_by('-created_on')
     context = {
         'articles': articles,
     }
@@ -47,16 +47,6 @@ def article_like(request, slug):
 
     return HttpResponseRedirect(
             reverse('article_detail', args=[slug]))
-
-
-def article_dashboard(request):
-    """ A view to show all articles in the dashboard"""
-    articles = Article.objects.order_by('-created_on')
-    context = {
-        'articles': articles,
-    }
-
-    return render(request, 'articles/article_dashboard.html', context)
 
 
 @login_required
@@ -129,7 +119,7 @@ def edit_article(request, slug):
 
 @login_required
 def delete_article(request, slug):
-    """ Delete an article """
+    """ Delete an article from product detail page """
     if not request.user.is_staff:
         messages.error(
             request, 'Sorry, you are not authorised to delete articles.')
@@ -139,3 +129,4 @@ def delete_article(request, slug):
     article.delete()
     messages.success(request, f'{article.title} has been deleted.')
     return redirect(reverse('articles'))
+
