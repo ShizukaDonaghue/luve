@@ -8,8 +8,8 @@ class Article(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
+        User, null=False, blank=False,
+        on_delete=models.SET_DEFAULT, default=1,
         related_name='article_posts'
     )
     description = models.TextField(max_length=500)
