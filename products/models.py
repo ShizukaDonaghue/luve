@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
@@ -61,6 +62,7 @@ class Type(models.Model):
 
 class Product(models.Model):
     """ A model for all products """
+
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.ForeignKey(
@@ -76,3 +78,37 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ProductReview(models.Model):
+    """ A model for product reviews """
+
+    RATINGS = (
+        (5, '5'),
+        (4, '4'),
+        (3, '3'),
+        (2, '2'),
+        (1, '1'),
+    )
+
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reviews')
+    name = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='reviews')
+    title = models.CharField(max_length=100, blank=True, null=True)
+    content = models.TextField(blank=True, null=True)
+    rating = models.IntegerField(choices=RATINGS, default=3)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        """ Ordering of creation date in ascending order """
+        ordering = ['created_on']
+
+    def __str__(self):
+        """ Returns review content and user name """
+        return f"Review {self.content} by {self.name}"
+
+    def date_format_created_on(self):
+        """ Date formatting for creation dates """
+        return self.created_on.strftime('%d %b %Y')

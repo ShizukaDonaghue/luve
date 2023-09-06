@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Product, Category, Brand, Type
+from .models import Product, Category, Brand, Type, ProductReview
 
 
+@admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     """ Admin panel configuration for products """
     search_fields = ['name', 'category', 'brand', 'type']
@@ -19,6 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('brand',)
 
 
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the category of products """
     list_display = (
@@ -29,6 +31,7 @@ class CategoryAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
+@admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the brand of products """
     list_display = (
@@ -38,6 +41,7 @@ class BrandAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
+@admin.register(Type)
 class TypeAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the application type of products """
     list_display = (
@@ -45,8 +49,18 @@ class TypeAdmin(admin.ModelAdmin):
         'display_name',
     )
 
+    ordering = ('name',)
 
-admin.site.register(Product, ProductAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Brand, BrandAdmin)
-admin.site.register(Type, TypeAdmin)
+
+@admin.register(ProductReview)
+class ReviewAdmin(admin.ModelAdmin):
+    """ Admin panel configuration for product reviews """
+    list_display = (
+        'product', 'name', 'title', 'rating', 'created_on'
+    )
+    list_filter = (
+        'rating',
+    )
+    search_fields = ['name', 'product', 'rating', 'content']
+
+    ordering = ('-created_on',)
