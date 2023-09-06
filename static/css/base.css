@@ -183,7 +183,21 @@ input[name='q']::placeholder {
     border-radius: 5px;
 }
 
-/* Wishlist styling */
+/* Product details */
+.product-description {
+    font-size: 95%
+}
+
+.qty-box {
+    width: 150px;
+}
+
+.product-name {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+/* Wishlist */
 .item-count-container {
     position: relative;
     margin-bottom: -0.2rem;
@@ -239,7 +253,7 @@ input[name='q']::placeholder {
     transform: scale(1.2);
 }
 
-/* Articles styling */
+/* Articles */
 .like-btn {
     background-color: transparent;
     font-size: 1.2rem;
@@ -301,7 +315,6 @@ input[name='q']::placeholder {
 }
 
 /* Bootstrap toasts  */
-
 .message-container {
     position: fixed;
     top: 72px;
@@ -396,8 +409,13 @@ label.error {
         font-size: 135%
     }
 
-    .article-description, .article-author, .article-content {
+    .article-description, .article-author,
+    .article-content, .product-description {
         font-size: 100%
+    }
+
+    .qty-box {
+        width: 180px;
     }
 }
 

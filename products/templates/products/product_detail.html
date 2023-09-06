@@ -219,17 +219,20 @@
                                 class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i>
                             {% elif review.rating == 2 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            {% elif review.rating == 1 %}<i class="fa-regular fa-star"></i><i
-                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i>
+                            {% elif review.rating == 1 %}
                             <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i>
                             {% endif %}
-                            {% if review.title == True %}
+                            {% if review.title %}
                             <p class="review-text">{{ review.title | capfirst }}</p>
                             {% endif %}
+                            {% if review.content %}
                             <p class="review-text">{{ review.content | capfirst }}</p>
+                            {% endif %}
                         </div>
                         <div class="d-inline col-1"></div>
                     </div>

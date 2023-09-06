@@ -159,6 +159,22 @@ def edit_review(request, review_id):
 
 
 @login_required
+def delete_review(request, review_id):
+    """ A view to delete a product review """
+
+    review = get_object_or_404(ProductReview, pk=review_id)
+
+    if review.name == request.user:
+        review.delete()
+        messages.success(request, 'Your review has been deleted successfully.')
+        return redirect(reverse('product_detail', args=[review.product.id]))
+    else:
+        messages.error(
+            request, 'Sorry, you are not authorised to delete this review.')
+        return redirect(reverse('product_detail', args=[review.product.id]))
+
+
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_staff:
