@@ -122,6 +122,43 @@ def add_review(request, product_id):
 
 
 @login_required
+def edit_review(request, review_id):
+    """ A view to edit a product review """
+
+    review = get_object_or_404(ProductReview, pk=review_id)
+
+    if not review.name == request.user:
+        messages.error(
+            request, 'Sorry, you are not authorised to edit this review.')
+        return redirect(reverse('product_detail', args=[review.product.id]))
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Your review has been updated successfully!')
+            return HttpResponseRedirect(
+                reverse('product_detail', args=[review.product.id]))
+        else:
+            messages.error(request, 'Failed to update your review. \
+                Please check the details and try again!')
+    else:
+        form = ReviewForm(instance=review)
+        messages.info(
+            request, f'You are editing your review for {review.product.name}'
+            )
+
+    template = 'products/edit_review.html'
+    context = {
+        'review': review,
+        'form': form
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_staff:
