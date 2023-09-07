@@ -115,8 +115,8 @@
                         <!-- End of wishlist buttons -->
                         <div class="card-body pb-1">
                             <a href="{% url 'product_detail' product.id %}"
-                                class="text-decoration-none text-main font-weight-bold">
-                                <p class="mb-0">{{ product.name | capfirst }}</p>
+                                class="text-decoration-none text-main">
+                                <h5 class="mb-0 product-name">{{ product.name | capfirst }}</h5>
                             </a>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">

@@ -401,11 +401,11 @@ label.error {
         font-size: 1.1rem;
     }
 
-    .article-title {
+    .article-title, .product-name {
         font-size: 125%;
     }
     
-    .article-title-detail-page {
+    .article-title-detail-page, .product-name-detail-page {
         font-size: 135%
     }
 
@@ -437,7 +437,7 @@ label.error {
         margin-top: 0 !important;
     }
 
-    .article-title-detail-page {
+    .article-title-detail-page, .product-name-detail-page {
         font-size: 150%;
         margin-bottom: 1rem;
     }
@@ -460,7 +460,7 @@ label.error {
     height: calc(100vh - 138px);
     }
 
-    .article-title-detail-page {
+    .article-title-detail-page, .product-name-detail-page {
         font-size: 170%;
         margin-bottom: 1.2rem;
     }
@@ -487,7 +487,7 @@ label.error {
         font-size: 1.25rem;
     }
 
-    .article-title-detail-page {
+    .article-title-detail-page, .product-name-detail-page {
         margin-top: 15%;
     }
 
