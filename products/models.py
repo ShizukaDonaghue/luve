@@ -111,4 +111,4 @@ class ProductReview(models.Model):
 
     def date_format_created_on(self):
         """ Date formatting for creation dates """
-        return self.created_on.strftime('%d %b %Y')
+        return self.created_on.strftime('%d %b %y')
