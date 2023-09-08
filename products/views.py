@@ -185,17 +185,17 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
+            form.save()
             messages.success(
                 request, f'{product.name} has been added successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Please double-check the details and try again!')
+                request, 'Failed to add a product. \
+                    Please double-check the details and try again!')
     else:
         form = ProductForm()
 
-    form = ProductForm()
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -216,13 +216,14 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(
                 request, f'{product.name} has been updated successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Please double-check the details and try again!')
+                request, 'Failed to edit the product. \
+                    Please double-check the details and try again!')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}.')

@@ -46,3 +46,24 @@ $(document).ready(function() {
         }
     });
 });
+
+// Validate product forms and raise error messages where required
+$(document).ready(function() {
+    $('#product-form').validate({
+        rules: {
+            name: 'required',
+            description: 'required',
+            price: 'required',
+        },
+
+        messages: {
+            name: 'Please enter the product name.',
+            description: 'Please enter the product description.',
+            price: 'Please enter a unit price greater than 0.01.',
+        },
+
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
+});
