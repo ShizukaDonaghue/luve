@@ -29,12 +29,14 @@
                             <div class="card h-100 border-0">
                                 <!-- Article image -->
                                 {% if "Placeholder" in article.image.url %}
-                                <a href="{% url 'article_detail' article.slug %}" {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
+                                <a href="{% url 'article_detail' article.slug %}"
+                                    {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
                                     <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                                         class="card-img-top img-fluid article-img" alt="Placeholder image">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'article_detail' article.slug %}" {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
+                                <a href="{% url 'article_detail' article.slug %}"
+                                    {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
                                     <img src=" {{ article.image.url }}" class="card-img-top img-fluid article-img"
                                         alt="Image of {{ article.title }}">
                                 </a>
@@ -43,7 +45,8 @@
                                 <div class="card-body pb-0">
                                     <div class="row">
                                         <div class="d-inline col-10">
-                                            <a href="{% url 'article_detail' article.slug %}" class="text-decoration-none text-main">
+                                            <a href="{% url 'article_detail' article.slug %}"
+                                                class="text-decoration-none text-main">
                                                 <h5 class="mb-0 article-title">{{ article.title | capfirst }}</h5>
                                             </a>
                                         </div>
@@ -63,12 +66,13 @@
                                         <a href="{% url 'edit_article' article.slug %}"><i
                                                 class="fa-regular fa-pen-to-square pr-1"></i>
                                             Edit</a>
-                                        <a class="text-danger" data-toggle="modal" data-target="#ArticleModal-{{article.slug}}"><i
+                                        <a class="text-danger" data-toggle="modal"
+                                            data-target="#ArticleModal-{{article.slug}}"><i
                                                 class="fa-regular fa-trash-can px-1"></i> Delete</a>
                                     </p>
                                     <!-- Modal confirm deletion of an article -->
-                                    <div class="modal fade" id="ArticleModal-{{article.slug}}" tabindex="-1" role="dialog"
-                                        aria-labelledby="ArticleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="ArticleModal-{{article.slug}}" tabindex="-1"
+                                        role="dialog" aria-labelledby="ArticleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -98,6 +102,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Horizontal rules to separate each row -->
                         {% if forloop.counter|divisibleby:1 %}
                         <div class="col-12 d-lg-none my-2">
                             <hr>
