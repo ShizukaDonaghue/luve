@@ -114,8 +114,7 @@
                         {% endif %}
                         <!-- End of wishlist buttons -->
                         <div class="card-body pb-1">
-                            <a href="{% url 'product_detail' product.id %}"
-                                class="text-decoration-none text-main">
+                            <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-main">
                                 <h5 class="mb-0 product-name">{{ product.name | capfirst }}</h5>
                             </a>
                         </div>
@@ -150,8 +149,10 @@
                                     {% endif %}
                                     {% if request.user.is_staff %}
                                     <p class="ml-1 mt-2 mb-2">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        <a href="{% url 'edit_product' product.id %}"><i
+                                                class="fa-regular fa-pen-to-square px-1"></i> Edit</a> 
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}"><i
+                                                class="fa-regular fa-trash-can px-1"></i> Delete</a>
                                     </p>
                                     {% endif %}
                                 </div>

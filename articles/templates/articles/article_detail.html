@@ -60,8 +60,10 @@
                 <div class="col-12">
                     {% if request.user.is_staff %}
                     <p class="m-o">
-                        <a href="{% url 'edit_article' article.slug %}">Edit</a> |
-                        <a class="text-danger" data-toggle="modal" data-target="#ArticleModal">Delete</a>
+                        <a href="{% url 'edit_article' article.slug %}"><i class="fa-regular fa-pen-to-square px-1"></i>
+                            Edit</a> 
+                        <a class="text-danger" data-toggle="modal" data-target="#ArticleModal"><i
+                                class="fa-regular fa-trash-can px-1"></i> Delete</a>
                     </p>
                     {% endif %}
                 </div>
