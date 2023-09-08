@@ -152,7 +152,7 @@
                                     {% if request.user.is_staff %}
                                     <p class="ml-1 mt-2 mb-2">
                                         <a href="{% url 'edit_product' product.id %}"><i
-                                                class="fa-regular fa-pen-to-square px-1"></i> Edit</a>
+                                                class="fa-regular fa-pen-to-square pr-1"></i> Edit</a>
                                         <a class="text-danger" data-toggle="modal"
                                             data-target="#ProductModal-{{product.id}}"><i
                                                 class="fa-regular fa-trash-can px-1"></i> Delete</a>
@@ -171,7 +171,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>Are you sure you want to delete {{ product.name }}?</p>
+                                                    <p>Are you sure you want to delete {{ product.name | capfirst }}?</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
