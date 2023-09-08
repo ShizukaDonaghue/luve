@@ -34,6 +34,7 @@
     <div class="row">
         <div class="product-container col-12">
             <div class="row mt-1 mb-2">
+                <!-- Product sorting -->
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
@@ -112,7 +113,7 @@
                             </form>
                         </div>
                         {% endif %}
-                        <!-- End of wishlist buttons -->
+                        <!-- Product information -->
                         <div class="card-body pb-1">
                             <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-main">
                                 <h5 class="mb-0 product-name">{{ product.name | capfirst }}</h5>
@@ -147,56 +148,48 @@
                                         </a>
                                     </p>
                                     {% endif %}
+                                    <!-- Edit and delete buttons for staff -->
                                     {% if request.user.is_staff %}
                                     <p class="ml-1 mt-2 mb-2">
                                         <a href="{% url 'edit_product' product.id %}"><i
                                                 class="fa-regular fa-pen-to-square px-1"></i> Edit</a>
-
-                                        <a class="text-danger" data-toggle="modal" data-target="#ProductModal-{{product.id}}"><i
+                                        <a class="text-danger" data-toggle="modal"
+                                            data-target="#ProductModal-{{product.id}}"><i
                                                 class="fa-regular fa-trash-can px-1"></i> Delete</a>
-
-                                        {% comment %}
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}"><i
-                                                class="fa-regular fa-trash-can px-1"></i> Delete</a>
-                                        {% endcomment %}
-
-                                        <!-- Modal confirm deletion of a product -->
-                                        <div class="modal fade" id="ProductModal-{{product.id}}" tabindex="-1" role="dialog"
-                                            aria-labelledby="ProductModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="ProductModalLabel">Delete Product
-                                                        </h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Are you sure you want to delete {{ product.name }}?</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Cancel</button>
-                                                        <form method="POST"
-                                                            action="{% url 'delete_product' product.id %}">
-                                                            {% csrf_token %}
-                                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                                        </form>
-                                                    </div>
+                                    </p>
+                                    <!-- Modal confirm deletion of a product -->
+                                    <div class="modal fade" id="ProductModal-{{product.id}}" tabindex="-1" role="dialog"
+                                        aria-labelledby="ProductModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="ProductModalLabel">Delete Product
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Are you sure you want to delete {{ product.name }}?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                    <form method="POST" action="{% url 'delete_product' product.id %}">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-                                    </p>
+                                    </div>
                                     {% endif %}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
+                                    <!-- Add to bag button -->
                                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                                         {% csrf_token %}
                                         <input type="hidden" name="quantity" value="1">
@@ -234,6 +227,7 @@
         </div>
     </div>
 </div>
+<!-- Back to top button -->
 <div class="btt-button shadow-sm">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
@@ -243,12 +237,14 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Script for back to top functionality -->
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
 
+<!-- Script for sorting functionality -->
 <script type="text/javascript">
     $('#sort-selector').change(function () {
         let selector = $(this);
