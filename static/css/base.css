@@ -241,6 +241,12 @@ input[name='q']::placeholder {
     font-size: 0.95rem;
 }
 
+.fa-comment-dots {
+    transform: scaleX(-1);
+    font-size: 120%;
+    margin-right: 0.5rem;
+}
+
 .star i {
     font-size: 80%;
 }

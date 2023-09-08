@@ -91,7 +91,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="ProductModalLabel">Delete Article</h5>
+                                    <h5 class="modal-title" id="ProductModalLabel">Delete Product</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -160,19 +160,19 @@
     <!-- Product details section -->
     <div class="row mt-2 mt-md-4">
         <div class="col-12 col-xl-8 offset-xl-2">
-            <h5 class="font-weight-bold product-details my-0">Product Details</h5>
+            <h5 class="font-weight-bold product-details my-0 mt-md-2 mt-xl-3">Product Details</h5>
             <p class="mt-3 product-description text-justify">{{ product.description }}</p>
         </div>
     </div>
     <!-- Product reviews section -->
     <div class="row mt-1">
-        <div class="col-12 col-md-6 col-xl-4 offset-xl-2">
-            <h5 class="font-weight-bold product-review mt-0 mb-3">Customer Reviews</h5>
+        <div class="col-12 col-md-6 col-xl-4 offset-xl-2 pr-md-4">
+            <h5 class="font-weight-bold product-review mt-0 mb-3 mt-md-2 mt-xl-3">Customer Reviews</h5>
             <!-- If there is a review/are reviews, loop through the review(s) -->
             {% for review in product.reviews.all %}
             <div class="row">
                 <div class="col-7 my-0">
-                    <p class="my-0 review-content"><i class="fa-solid fa-droplet pr-2"></i>{{ review.name }}</p>
+                    <p class="my-0 review-content"><i class="fa-solid fa-comment-dots"></i>{{ review.name }}</p>
                 </div>
                 <div class="col-4 text-right pr-1">
                     <small>{{ review.date_format_created_on }}</small>
@@ -259,7 +259,7 @@
 
         </div>
         <div class="col-12 col-md-6 col-xl-4">
-            <h5 class="font-weight-bold product-review mt-0 mb-3">Leave a Review</h5>
+            <h5 class="font-weight-bold product-review mt-0 mb-3 mt-md-2 mt-xl-3">Leave a Review</h5>
             <!-- If the user is logged in -->
             {% if user.is_authenticated %}
             <p class="posting-as mb-2">Posting as: {{ user.username }}</p>
