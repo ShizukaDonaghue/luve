@@ -27,21 +27,25 @@
                         {% for article in articles %}
                         <div class="col-lg-6 col-xl-4">
                             <div class="card h-100 border-0">
+                                <!-- Article image -->
                                 {% if "Placeholder" in article.image.url %}
-                                <a href="{% url 'article_detail' article.slug %}" class="stretched-link">
+                                <a href="{% url 'article_detail' article.slug %}" {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
                                     <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                                         class="card-img-top img-fluid article-img" alt="Placeholder image">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'article_detail' article.slug %}" class="stretched-link">
+                                <a href="{% url 'article_detail' article.slug %}" {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
                                     <img src=" {{ article.image.url }}" class="card-img-top img-fluid article-img"
                                         alt="Image of {{ article.title }}">
                                 </a>
                                 {% endif %}
+                                <!-- Article information -->
                                 <div class="card-body pb-0">
                                     <div class="row">
                                         <div class="d-inline col-10">
-                                            <h5 class="mb-0 article-title">{{ article.title | capfirst }}</h5>
+                                            <a href="{% url 'article_detail' article.slug %}" class="text-decoration-none text-main">
+                                                <h5 class="mb-0 article-title">{{ article.title | capfirst }}</h5>
+                                            </a>
                                         </div>
                                         <div class="d-inline col-2 d-flex pl-0 justify-content-end">
                                             <p class="text-secondary m-0 p-0 like-btn-main-page">
@@ -49,8 +53,48 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <p class="text-left mt-2 mb-3 article-description">
+                                    <p class="text-left my-2 article-description">
                                         {{ article.description | capfirst | truncatechars:70 }}</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-1">
+                                    <!-- Edit and delete buttons for staff -->
+                                    {% if request.user.is_staff %}
+                                    <p class="m-0">
+                                        <a href="{% url 'edit_article' article.slug %}"><i
+                                                class="fa-regular fa-pen-to-square pr-1"></i>
+                                            Edit</a>
+                                        <a class="text-danger" data-toggle="modal" data-target="#ArticleModal-{{article.slug}}"><i
+                                                class="fa-regular fa-trash-can px-1"></i> Delete</a>
+                                    </p>
+                                    <!-- Modal confirm deletion of an article -->
+                                    <div class="modal fade" id="ArticleModal-{{article.slug}}" tabindex="-1" role="dialog"
+                                        aria-labelledby="ArticleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="ArticleModalLabel">Delete Article</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Are you sure you want to delete {{ article.title | capfirst }}?
+                                                    </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                    <form method="POST"
+                                                        action="{% url 'delete_article' article.slug %}">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
