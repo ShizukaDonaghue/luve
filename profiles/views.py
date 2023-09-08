@@ -21,8 +21,7 @@ def profile(request):
                 request, 'Your profile has been updated successfully!')
         else:
             messages.error(
-                request, 'Oops! Something has gone wrong. \
-                    Please double-check the details!')
+                request, 'Please double-check the details and try again!')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -37,6 +36,7 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
