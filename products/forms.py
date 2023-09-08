@@ -18,8 +18,6 @@ class ProductForm(forms.ModelForm):
         display_names = [(c.id, c.get_display_name()) for c in categories]
 
         self.fields['category'].choices = display_names
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-main'
 
 
 class ReviewForm(forms.ModelForm):
