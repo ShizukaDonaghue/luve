@@ -191,8 +191,7 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Oops! Something has gone wrong. \
-                    Please double-check the details!')
+                request, 'Please double-check the details and try again!')
     else:
         form = ProductForm()
 
@@ -223,8 +222,7 @@ def edit_product(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Oops! Something has gone wrong. \
-                    Please double-check the details!')
+                request, 'Please double-check the details and try again!')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}.')

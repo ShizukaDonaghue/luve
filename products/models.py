@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
+from decimal import Decimal
 from cloudinary.models import CloudinaryField
 
 
@@ -73,7 +75,9 @@ class Product(models.Model):
                            blank=True, unique=True)
     name = models.CharField(max_length=60)
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(
+        max_digits=6, decimal_places=2,
+        validators=[MinValueValidator(Decimal('0.01'))])
     image = CloudinaryField('image', default='v1686206490/placeholder')
 
     def __str__(self):
