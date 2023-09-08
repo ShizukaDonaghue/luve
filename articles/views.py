@@ -66,7 +66,8 @@ def add_article(request):
                 article = form.save()
                 messages.success(
                     request, f'{article.title} has been added successfully!')
-                return redirect(reverse('article_detail', args=[article.slug]))
+                return HttpResponseRedirect(
+                    reverse('article_detail', args=[article.slug]))
             else:
                 messages.error(request, 'Failed to add an article. \
                     Please ensure the form is completed fully and try again!')
@@ -98,7 +99,8 @@ def edit_article(request, slug):
                 form.save()
                 messages.success(
                     request, f'{article.title} has been updated successfully!')
-                return redirect(reverse('article_detail', args=[article.slug]))
+                return HttpResponseRedirect(
+                    reverse('article_detail', args=[article.slug]))
             else:
                 messages.error(
                     request, 'Failed to update the article. \
