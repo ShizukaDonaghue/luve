@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %} | {{ product.name }}{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -79,7 +81,7 @@
                 {% endif %}
                 {% if request.user.is_staff %}
                 <div class="mt-2">
-                    <p>
+                    <p class="mb-0">
                         <a href="{% url 'edit_product' product.id %}"><i class="fa-regular fa-pen-to-square pr-1"></i>
                             Edit</a>
                         <a class="text-danger" data-toggle="modal" data-target="#ProductModal"><i
@@ -115,7 +117,7 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <p class="mb-1"><strong>Quantity:</strong></p>
+                            <p class="mb-1 mt-2"><strong>Quantity:</strong></p>
                             <div class="form-group qty-box">
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
