@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row mt-3">
         <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
-            <!-- If an image is not loaded by the user -->
+            <!-- Product image -->
             {% if "Placeholder" in article.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                 class="card-img-top img-fluid article-img" alt="Placeholder image">
@@ -25,8 +25,8 @@
                 alt="Image of {{ article.title }}">
             {% endif %}
         </div>
+        <!-- Product information -->
         <div class="col-12 col-lg-6 col-xl-5">
-
             <div class="row">
                 <div class="col-12 mt-4">
                     <h5 class="article-title-detail-page font-weight-bold">{{ article.title | capfirst }}</h5>
@@ -37,7 +37,6 @@
                     <p class="mt-1 mb-0 article-author">By {{ article.author }}</p>
                 </div>
                 <div class="col-2 pl-0 text-right">
-                    <!-- If the article is published -->
                     <form class="d-inline" action="{% url 'article_like' article.slug %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
@@ -58,6 +57,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
+                    <!-- Edit and delete buttons for staff -->
                     {% if request.user.is_staff %}
                     <p class="m-o">
                         <a href="{% url 'edit_article' article.slug %}"><i class="fa-regular fa-pen-to-square px-1"></i>
