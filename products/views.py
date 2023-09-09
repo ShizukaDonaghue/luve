@@ -21,37 +21,37 @@ def all_products(request):
     direction = None
 
     if request.GET:
-        # Check for search query
+        # Check for a search query
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(
-                    request, "Please enter your search criteria!")
+                    request, 'Please enter your search criteria!')
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
 
-        # Check if product category selected
+        # Check if a product category selected
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             current_categories = Category.objects.filter(name__in=categories)
 
-        # Check if product brand selected
+        # Check if a product brand selected
         if 'brand' in request.GET:
             brands = request.GET['brand'].split(',')
             products = products.filter(brand__name__in=brands)
             current_brands = Brand.objects.filter(name__in=brands)
 
-        # Check if product type selected
+        # Check if a product type selected
         if 'type' in request.GET:
             types = request.GET['type'].split(',')
             products = products.filter(type__name__in=types)
             current_types = Type.objects.filter(name__in=types)
 
-        # Check if sorting order selected
+        # Check if a sorting order selected
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
