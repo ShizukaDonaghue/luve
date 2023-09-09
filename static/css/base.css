@@ -196,7 +196,7 @@ input[name='q']::placeholder {
 }
 
 .bag-item-link:hover {
-    color: var(--light-grey)
+    color: var(--turquoise)
 }
 
 .link:hover {
@@ -225,7 +225,7 @@ input[name='q']::placeholder {
     width: 150px;
 }
 
-.product-name {
+.product-name, .product-name-bag {
     font-size: 1.15rem;
     font-weight: 500;
 }
@@ -574,6 +574,10 @@ label.error {
 
     .icon-title {
         font-size: 90%;
+    }
+
+    .product-name-bag {
+        font-size: 1.05rem;
     }
 }
 

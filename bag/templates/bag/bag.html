@@ -59,7 +59,8 @@
                     <div>
                         <p class="my-1">
                             <a class="text-decoration-none bag-item-link"
-                                href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}</a>
+                                href="{% url 'product_detail' item.product.id %}">
+                                <h5 class="product-name-bag">{{ item.product.name }}</h5></a>
                         </p>
                         <p class="my-0 small">
                             <a class="text-muted" href="{% url 'products' %}?brand={{ item.product.brand }}">
