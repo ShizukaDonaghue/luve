@@ -333,6 +333,10 @@ input[name='q']::placeholder {
     font-weight: 500;
 }
 
+.article-title:hover {
+    color: var(--turquoise);
+}
+
 .article-description, .article-author, .article-content {
     font-size: 95%
 }
