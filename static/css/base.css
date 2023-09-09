@@ -53,6 +53,19 @@ body {
     width: fit-content;
 }
 
+.luve-logo {
+    width: 5rem;
+}
+
+.luve-logo-mobile {
+    width: 3.5rem;
+    margin-top: -0.5rem;
+}
+
+.icon-title-mobile {
+    display: none;
+}
+
 #delivery-banner h5 {
     font-size: 1rem;
 }
@@ -443,6 +456,16 @@ label.error {
 }
 
 @media (min-width: 375px) {
+    .luve-logo-mobile {
+        width: 4.5rem;
+        margin-top: -0.2rem;
+    }
+
+    .icon-title-mobile {
+        display: block;
+        font-size: 80%;
+    }
+
     #delivery-banner h5 {
         font-size: 1.1rem;
     }
@@ -477,7 +500,15 @@ label.error {
 
     body {
         height: calc(100vh - 101px);
-        }
+    }
+
+    .luve-logo-mobile {
+        width: 5rem;
+    }
+
+    .icon-title-mobile {
+        font-size: 100%;
+    }
 
     #delivery-banner h5 {
         font-size: 1.2rem;
