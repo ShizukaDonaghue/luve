@@ -56,7 +56,7 @@
     <title>LUVE{% block extra_title %} | Safe Sunblock{% endblock %}</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-md-2 d-none d-md-flex">
             <div class="col-12 col-md-3 my-auto py-1 py-md-0 text-center text-md-left">
@@ -180,6 +180,38 @@
 
     {% block content %}
     {% endblock %}
+
+    <div class="mt-auto">
+        <!-- Horizontal line separating the footer from contents above -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="container footer-container">
+            <div class="d-flex justify-content-center">
+                <a href="https://facebook.com" target="_blank" rel="noopener nofollow"
+                    aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener nofollow"
+                    aria-label="Visit our Twitter page (opens in a new tab)"><i
+                        class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener nofollow"
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/ShizukaDonaghue" target="_blank" rel="noopener nofollow"
+                    aria-label="Visit my GitHub page (opens in a new tab)"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shizukadonaghue/" target="_blank" rel="noopener nofollow"
+                    aria-label="Visit my Linkedin page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="text-center my-3">
+                <p>For educational purposes only. Any orders placed will not be processed.</p>
+            </div>
+        </footer>
+    </div>
+
 
     {% block postloadjs %}
     <script type="text/javascript">
