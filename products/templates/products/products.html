@@ -19,14 +19,14 @@
             <hr>
             {% if current_categories %}
             {% for c in current_categories %}
-            <h2 class="logo-font mb-3 text-center text-md-left">{{ c.display_name }}</h2>
+            <h2 class="logo-font mb-3 text-center text-md-left page-title">{{ c.display_name }}</h2>
             {% endfor %}
             {% elif current_brands %}
             {% for b in current_brands %}
-            <h2 class="logo-font mb-3 text-center text-md-left">{{ b.name }}</h2>
+            <h2 class="logo-font mb-3 text-center text-md-left page-title">{{ b.name }}</h2>
             {% endfor %}
             {% else %}
-            <h2 class="logo-font mb-3 text-center text-md-left">All Products</h2>
+            <h2 class="logo-font mb-3 text-center text-md-left page-title">All Products</h2>
             {% endif %}
             <hr>
         </div>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-left">
+                    <p class="text-muted my-2 text-center text-md-left product-total">
                         {% if search_term or current_categories or current_brands or current_sorting != 'None_None' %}
                         <span><a href="{% url 'products' %}" class="text-muted text-decoration-none link">All
                                 Products</a> | </span>

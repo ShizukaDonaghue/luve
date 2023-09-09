@@ -188,10 +188,10 @@
                             data-title="More" aria-label="Dropdown menu for edit and delete buttons">
                             <i class="fas fa-ellipsis-v text-main"></i>
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right p-0 m-0" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item px-3" href="{% url 'edit_review' review.id %}">
+                        <div class="dropdown-menu dropdown-menu-right p-0 m-0" id="menu-review" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item dropdown-item-review px-3" href="{% url 'edit_review' review.id %}">
                                 <i class="fa-regular fa-pen-to-square px-1"></i> Edit</a>
-                            <a class="dropdown-item px-3" data-toggle="modal" data-target="#ReviewModal-{{review.id}}">
+                            <a class="dropdown-item dropdown-item-review px-3" data-toggle="modal" data-target="#ReviewModal-{{review.id}}">
                                 <i class="fa-regular fa-trash-can px-1"></i> Delete</a>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="category-link">
+            <div class="dropdown-menu dropdown-mobile border-0" aria-labelledby="category-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?category=baby_kids" class="dropdown-item">Baby &amp; Kids</a>
                 <a href="{% url 'products' %}?category=body" class="dropdown-item">Body</a>
@@ -19,7 +19,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Brands
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-brands-link">
+            <div class="dropdown-menu dropdown-mobile border-0" aria-labelledby="all-brands-link">
                 {% for brand in brands_list %}
                 <a href="{% url 'products' %}?brand={{brand.name}}" class="dropdown-item">{{ brand.name }}</a>
                 {% endfor %}
@@ -37,7 +37,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 My Account
             </a>
-            <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu dropdown-mobile dropdown-menu-right border-0" aria-labelledby="user-options">
                 <!-- If the user is logged in  -->
                 {% if request.user.is_authenticated %}
                 <!-- If the user is staff  -->

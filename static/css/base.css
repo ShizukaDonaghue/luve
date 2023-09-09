@@ -21,13 +21,13 @@ html {
 body {
     background: url('https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 92px);
+    height: calc(100vh - 90px);
     color: var(--grey);
     font-family: 'Signika', sans-serif;
 }
 
 .header-container {
-    padding-top: 92px;
+    padding-top: 90px;
 }
 
 .navbar-toggler {
@@ -66,8 +66,24 @@ body {
     display: none;
 }
 
+.dropdown-mobile {
+    padding-top: 0rem;
+}
+
 #delivery-banner h5 {
     font-size: 1rem;
+}
+
+.page-title{
+    font-size: 1.5rem;
+}
+
+.page-title-small {
+    font-size: 1.3rem;
+}
+
+.checkout-title {
+    font-size: 1.3rem;
 }
 
 .shop-now-button {
@@ -253,11 +269,11 @@ input[name='q']::placeholder {
     visibility: hidden;
 }
 
-.dropdown-menu {
+.dropdown-menu-right {
     min-width: inherit;
 }
 
-.dropdown-item {
+.dropdown-item-review {
     font-size: 0.95rem;
 }
 
@@ -456,6 +472,14 @@ label.error {
 }
 
 @media (min-width: 375px) {
+    .header-container {
+        padding-top: 96px;
+    }
+
+    body {
+        height: calc(100vh - 96px);
+    }
+
     .luve-logo-mobile {
         width: 4.5rem;
         margin-top: -0.2rem;
@@ -468,6 +492,18 @@ label.error {
 
     #delivery-banner h5 {
         font-size: 1.1rem;
+    }
+
+    .page-title{
+        font-size: 1.65rem;
+    }
+
+    .page-title-small {
+        font-size: 1.4rem;
+    }
+
+    .checkout-title {
+        font-size: 1.4rem;
     }
 
     .article-title, .product-name {
@@ -513,7 +549,15 @@ label.error {
     #delivery-banner h5 {
         font-size: 1.2rem;
     }
-       
+ 
+    .page-title{
+        font-size: 1.85rem;
+    }
+
+    .checkout-title {
+        font-size: 1.5rem;
+    }
+
     .like-btn {
         font-size: 1.4rem;
         margin-top: 0 !important;
@@ -539,11 +583,19 @@ label.error {
     }
 
     .header-container {
-        padding-top: 138px;
+        padding-top: 143px;
     }
 
     body {
-    height: calc(100vh - 138px);
+    height: calc(100vh - 143px);
+    }
+
+    .page-title{
+        font-size: 2rem;
+    }
+
+    .checkout-title {
+        font-size: 1.6rem;
     }
 
     .article-title-detail-page, .product-name-detail-page {
@@ -570,11 +622,11 @@ label.error {
     }
 
     .header-container {
-        padding-top: 158px;
+        padding-top: 163px;
     }
 
     body {
-    height: calc(100vh - 158px);
+    height: calc(100vh - 163px);
     }
 
     #delivery-banner h5 {

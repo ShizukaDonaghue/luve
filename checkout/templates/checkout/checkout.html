@@ -22,14 +22,14 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4 text-center text-md-left">Checkout</h2>
+            <h2 class="logo-font mb-4 text-center text-md-left page-title">Checkout</h2>
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <h4 class="text-muted text-uppercase">Order Summary ({{ product_count }})</h4>
+            <h4 class="text-muted text-uppercase checkout-title">Order Summary ({{ product_count }})</h4>
             <div class="row">
                 <div class="col-8">
                     <p class="mb-1 mt-0 font-weight-bold text-muted">Item</p>
@@ -78,12 +78,12 @@
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="order-form">
                 {% csrf_token %}
                 <fieldset class="mb-2">
-                    <legend class="fieldset-label text-uppercase text-muted mx-2">Contact Details</legend>
+                    <legend class="fieldset-label text-uppercase text-muted mx-2 checkout-title">Contact Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
                 <fieldset class="mb-2">
-                    <legend class="fieldset-label text-uppercase text-muted mx-2 w-auto">Shipping Address</legend>
+                    <legend class="fieldset-label text-uppercase text-muted mx-2 w-auto checkout-title">Shipping Address</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
@@ -106,7 +106,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="mt-1">
-                    <legend class="fieldset-label text-uppercase text-muted mx-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label text-uppercase text-muted mx-2 w-auto checkout-title">Payment</legend>
                     <!-- A Stripe card element -->
                     <div class="mb-3" id="card-element"></div>
 
