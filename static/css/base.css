@@ -201,6 +201,10 @@ input[name='q']::placeholder {
     font-weight: 500;
 }
 
+.product-name:hover {
+    color: var(--turquoise);
+}
+
 .product-details, .product-review {
     font-size: 1.15rem;
 }
