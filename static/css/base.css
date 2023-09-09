@@ -12,6 +12,7 @@
     --turquoise: #17A2B8;
     --light-pink: #FD8A9D;
     --pink: #F56B8E;
+    --dark-pink: #E4446C;
 }
 
 html {
@@ -66,6 +67,21 @@ body {
     display: none;
 }
 
+.pink-heart-dark {
+    color: var(--dark-pink) !important;
+}
+
+#nav-link-bag:hover,
+#nav-link-wishlist:hover {
+    color: var(--pink) !important;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+    color: var(--turquoise) !important;
+    background-color: transparent;
+}
+
 .dropdown-mobile {
     padding-top: 0rem;
 }
@@ -118,7 +134,7 @@ body {
 
 .btn-pink {
     background: var(--white);
-    color: #E4446C !important;
+    color: var(--dark-pink) !important;
     border: 1px solid var(--pink);
 }
 
