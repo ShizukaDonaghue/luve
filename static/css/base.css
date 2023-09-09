@@ -175,7 +175,10 @@ input[name='q']::placeholder {
 }
 
 .border-main {
-    border: 1px solid var(--grey);
+    border: 1px solid var(--light-grey);
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .order-summary {
@@ -406,7 +409,10 @@ label.error {
 }
 
 .allauth-form-inner-content input {
-    border-color: var(--grey);
+    border-color: var(--light-grey);
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {

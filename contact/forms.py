@@ -31,3 +31,5 @@ class ContactForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'contact-us'
             self.fields[field].label = False
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-main'
