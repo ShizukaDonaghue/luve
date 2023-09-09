@@ -67,12 +67,10 @@ body {
     display: none;
 }
 
-.pink-heart-dark {
-    color: var(--dark-pink) !important;
-}
-
 #nav-link-bag:hover,
-#nav-link-wishlist:hover {
+#nav-link-wishlist:hover,
+#nav-link-bag-mobile:hover,
+#nav-link-wishlist-mobile:hover {
     color: var(--pink) !important;
 }
 
@@ -80,6 +78,10 @@ body {
 .dropdown-item:hover {
     color: var(--turquoise) !important;
     background-color: transparent;
+}
+
+.active {
+    color: var(--turquoise) !important;
 }
 
 .dropdown-mobile {

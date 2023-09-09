@@ -28,7 +28,7 @@
     </a>
 </li>
 <li class="list-inline-item">
-    <a class="text-main nav-link d-block d-md-none" href="{% url 'wishlist' %}">
+    <a class="text-main nav-link d-block d-md-none" href="{% url 'wishlist' %}" id="nav-link-wishlist-mobile">
         <div class="text-center">
             <div class="item-count-container">
                 <span class="icon wishlist-heart">
@@ -46,7 +46,7 @@
 </li>
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-main{% endif %} nav-link d-block d-md-none"
-        href="{% url 'view_bag' %}">
+        id="nav-link-bag-mobile" href="{% url 'view_bag' %}">
         <div class="text-center">
             <span class="icon">
                 <i class="fas fa-shopping-bag fa-lg"></i>
