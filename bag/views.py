@@ -25,19 +25,19 @@ def add_to_bag(request, item_id):
         # If the order quantity is less than 1
         if quantity < 1:
             messages.error(
-                request, f'Sorry, the order quantity must be 1 or more. \
+                request, 'Sorry, the order quantity must be 1 or more. \
                     Please try again!')
         # If the order quantity is greater than 20
         elif quantity > 20:
             messages.error(
-                request, f'Sorry, the maximum quantity per order is 20. \
+                request, 'Sorry, the maximum quantity per order is 20. \
                     Please try again!')
         # If the item is already in the shopping bag
         elif item_id in list(bag.keys()):
             # If the total order quantity is greater than 20
             if bag[item_id] + quantity > 20:
                 messages.error(
-                    request, f'Sorry, the maximum quantity per order is 20. \
+                    request, 'Sorry, the maximum quantity per order is 20. \
                         Please try again!')
             # If the total order quantity does not exceed 20
             else:
@@ -53,12 +53,12 @@ def add_to_bag(request, item_id):
     # If the order quantity is less than 0
     elif quantity_input.startswith('-'):
         messages.error(
-            request, f'Sorry, the order quantity must be 1 or more. \
+            request, 'Sorry, the order quantity must be 1 or more. \
                 Please try again!')
     # If the order quantity is a floating-point number or other invalid input
     else:
         messages.error(
-            request, f'Please enter a whole number!')
+            request, 'Please enter a whole number!')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -77,7 +77,7 @@ def adjust_bag(request, item_id):
         # If the order quantity is greater than 20
         if quantity > 20:
             messages.error(
-                request, f'Sorry, the maximum quantity per order is 20. \
+                request, 'Sorry, the maximum quantity per order is 20. \
                     Please try again!')
         # If the order quantity is greater than or equal to 1
         elif quantity >= 1:
@@ -93,12 +93,12 @@ def adjust_bag(request, item_id):
     # If the order quantity is less than 0
     elif quantity_input.startswith('-'):
         messages.error(
-            request, f'Sorry, the order quantity must be 1 or more. \
+            request, 'Sorry, the order quantity must be 1 or more. \
                 Please try again!')
     # If the order quantity is a floating-point number or other invalid input
     else:
         messages.error(
-            request, f'Please enter a whole number!')
+            request, 'Please enter a whole number!')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
