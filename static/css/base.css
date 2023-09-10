@@ -493,6 +493,17 @@ footer i:hover {
     color: var(--turquoise);
 }
 
+/* Error pages */
+.error-image {
+    width: 130px;
+    margin-bottom: 1.5rem;
+}
+
+.error-message h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 /* -------------------------------- Media Queries */
 @media (min-width: 335px) {
     .btn-shop-bag {
@@ -566,6 +577,14 @@ footer i:hover {
         font-size: 150%;
         padding: 0.5rem 0.8rem ;
     }
+
+    .error-image {
+        width: 200px;
+    }
+
+    .error-message h2 {
+        margin-bottom: 1rem;
+    }
 }
 
 @media (min-width: 576px) {
@@ -621,6 +640,18 @@ footer i:hover {
 
     footer i {
         font-size: 170%;
+    }
+
+    .error-message h2 {
+        font-size: 1.3rem;
+    }
+
+    .error-message {
+        margin-bottom: 1.5rem;
+    }
+
+    .error-message h2 {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -691,6 +722,10 @@ footer i:hover {
 
     .article-content {
         margin-top: 0.5rem;
+    }
+
+    .error-image {
+        width: 300px;
     }
 }
 
