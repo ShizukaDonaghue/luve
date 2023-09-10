@@ -44,9 +44,9 @@
                     <a href="{% url 'product_detail' item.product.id %}">
                         {% if "placeholder" in item.product.image.url %}
                         <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
-                            class="card-img-top img-fluid list-image" alt="Image of {{ item.product.name }}">
+                            class="card-img-top img-fluid list-image product-img" alt="Image of {{ item.product.name }}">
                         {% else %}
-                        <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid list-image"
+                        <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid list-image product-img"
                             alt="Image of {{ item.product.name }}">
                         {% endif %}
                     </a>
