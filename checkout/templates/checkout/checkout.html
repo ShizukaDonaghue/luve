@@ -22,13 +22,13 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4 text-center text-md-left page-title">Checkout</h2>
+            <h2 class="logo-font mb-3 text-center text-md-left page-title">Checkout</h2>
             <hr>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
+        <div class="col-12 col-lg-6 order-lg-last mb-4">
             <h4 class="text-muted text-uppercase checkout-title">Order Summary ({{ product_count }})</h4>
             <div class="row">
                 <div class="col-8">
@@ -116,7 +116,7 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret" class="test">
                 </fieldset>
 
-                <div class="submit-button mt-5 mb-2">
+                <div class="submit-button mt-2 mb-2">
                     <div class="row">
                         <div class="col-sm-6 mb-2">
                             <a href="{% url 'view_bag' %}" class="btn btn-outline-main w-100">
@@ -135,7 +135,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="row mt-1">
+                    <div class="row mt-1 mb-4">
                         <div class="col text-right">
                             <p class="small text-danger my-0">
                                 <span class="icon">
