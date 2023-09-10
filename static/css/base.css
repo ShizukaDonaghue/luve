@@ -479,9 +479,8 @@ label.error {
 }
 
 /* Footer */
-.footer-container {
-    margin-top: -0.4rem;
-    margin-bottom: 0.8rem;
+.footer-parent-container {
+    background-color: var(--white);
 }
 
 footer i {
