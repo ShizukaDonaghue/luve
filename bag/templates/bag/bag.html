@@ -41,13 +41,12 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-2 mb-2">
-                    <!-- If product image is not available -->
+                    <!-- Product image -->
                     {% if "placeholder" in item.product.image.url %}
                     <a href="{% url 'product_detail' item.product.id %}">
                         <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
-                            class="card-img-top img-fluid list-image" alt="Image of {{ item.product.name }}">
+                            class="card-img-top img-fluid list-image" alt="Placeholder image">
                     </a>
-                    <!-- If product image is available -->
                     {% else %}
                     <a href="{% url 'product_detail' item.product.id %}">
                         <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid list-image"
@@ -56,6 +55,7 @@
                     {% endif %}
                 </div>
                 <div class="col-12 col-sm-6 col-md-4" id="product-info">
+                    <!-- Product information -->
                     <div>
                         <p class="my-1">
                             <a class="text-decoration-none bag-item-link"
@@ -232,7 +232,7 @@
             </a>
             {% endif %}
         </div>
-        <!-- Order summery section -->
+        <!-- Order summary section -->
         <div class="col-xl-4">
             {% if bag_items %}
             <div class="order-summary pb-3 pl-3 pr-3">
@@ -280,11 +280,6 @@
                 </div>
                 {% endif %}
             </div>
-        </div>
-        <div class="btt-button shadow-sm">
-            <a class="btt-link d-flex h-100">
-                <i class="fas fa-arrow-up mx-auto my-auto"></i>
-            </a>	
         </div>
     </div>
 </div>
