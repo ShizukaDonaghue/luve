@@ -25,7 +25,7 @@
                     {% if wishlist %}
                     <div class="row">
                         {% for item in wishlist %}
-                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-5">
                             <div class="card h-100 flex-fill border-0">
                                 <!-- Product image -->
                                 {% if "placeholder" in item.product.image.url %}
@@ -97,27 +97,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Horizontal rules to separate each row -->
-                        {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none my-2">
-                            <hr>
-                        </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none my-2">
-                            <hr>
-                        </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none my-2">
-                            <hr>
-                        </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 d-none d-xl-block my-2">
-                            <hr>
-                        </div>
-                        {% endif %}
                         {% endfor %}
                         <!-- If there are no items in wishlist -->
                         {% else %}
@@ -128,7 +107,7 @@
                             </span>
                             <span class="text-uppercase">Continue Shopping</span>
                         </a>
-                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>

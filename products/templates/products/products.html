@@ -76,7 +76,7 @@
             </div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-5">
                     <div class="card flex-fill h-100 border-0 wishlist-parent-container">
                         <!-- Product image -->
                         {% if "placeholder" in product.image.url %}
@@ -202,27 +202,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Horizontal rules to separate each row -->
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none my-2">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none my-2">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none my-2">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block my-2">
-                    <hr>
-                </div>
-                {% endif %}
                 {% endfor %}
             </div>
         </div>
