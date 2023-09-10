@@ -60,7 +60,7 @@ body {
 
 .luve-logo-mobile {
     width: 3.5rem;
-    margin-top: -0.5rem;
+    margin-top: -0.8rem;
 }
 
 .icon-title-mobile {
@@ -84,8 +84,16 @@ body {
     padding-top: 0rem;
 }
 
+.mobile-menu {
+    font-size: 90%;
+}
+
 #delivery-banner h5 {
     font-size: 1rem;
+}
+
+.display-4.logo-font.text-main {
+    font-size: 2rem;
 }
 
 .page-title{
@@ -479,10 +487,6 @@ label.error {
 }
 
 /* Footer */
-.footer-parent-container {
-    background-color: var(--white);
-}
-
 footer i {
     font-size: 130%;
     padding: 0.5rem 0.6rem ;
@@ -491,6 +495,10 @@ footer i {
 
 footer i:hover {
     color: var(--turquoise);
+}
+
+.disclaimer {
+    font-size: 90%;
 }
 
 /* Error pages */
@@ -522,7 +530,7 @@ footer i:hover {
 
     .luve-logo-mobile {
         width: 4.5rem;
-        margin-top: -0.2rem;
+        margin-top: -0.4rem;
     }
 
     .icon-title-mobile {
@@ -576,6 +584,10 @@ footer i:hover {
     footer i {
         font-size: 150%;
         padding: 0.5rem 0.8rem ;
+    }
+
+    .mobile-menu, .disclaimer {
+        font-size: 100%;
     }
 
     .error-image {
@@ -715,6 +727,14 @@ footer i:hover {
         font-size: 1.25rem;
     }
 
+    .nav-link {
+        font-size: 110%;
+    }
+
+    .display-4.logo-font.text-main {
+        font-size: 2.5rem;
+    }
+
     .article-title-detail-page,
     .product-details, .product-review {
         margin-top: 15%;
@@ -733,14 +753,17 @@ footer i:hover {
     .container {
         max-width: 80%;
     }
+
+    .luve-logo {
+        width: 7rem;
+    }
+
+    .nav-link {
+        font-size: 115%;
+    }
 }
 
 @media (max-width: 991px) {
-
-    .display-4.logo-font.text-main {
-        font-size: 2rem;
-    }
-
     .nav-link {
         padding: 0.2rem;
     }

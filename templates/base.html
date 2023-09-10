@@ -58,14 +58,14 @@
 
 <body class="d-flex flex-column min-vh-100">
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-md-2 d-none d-md-flex">
-            <div class="col-12 col-md-3 my-auto py-1 py-md-0 text-center text-md-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+        <div id="topnav" class="row bg-white d-none d-md-flex">
+            <div class="col-12 col-md-3 my-auto text-center text-md-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link pb-0">
                     <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1694256439/logo_hkssmf.jpg"
                         alt="LUVE logo" class="luve-logo">
                 </a>
             </div>
-            <div class="col-12 col-md-5 my-auto py-1 py-md-0">
+            <div class="col-12 col-md-5 my-auto">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border" type="text" name="q" placeholder="Search...">
@@ -79,7 +79,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-md-4 my-auto py-1 py-md-0">
+            <div class="col-12 col-md-4 my-auto">
                 <ul class="list-inline list-unstyled text-center text-md-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-main nav-link" href="#" id="user-options" data-toggle="dropdown"
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div class="row bg-white">
-            <nav class="navbar navbar-expand-md navbar-light w-100">
+            <nav class="navbar navbar-expand-md navbar-light w-100 pt-lg-0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -181,14 +181,16 @@
     {% block content %}
     {% endblock %}
 
-    <div class="mt-auto container-fluid footer-parent-container">
-        <div class="row">
+    <div class="mt-auto container-fluid">
+        <div class="row bg-transparent">
             <div class="col">
-                <hr>
+                <hr class="m-0">
             </div>
         </div>
+    </div>
+    <div class="container-fluid bg-white pt-3">
         <!-- Footer -->
-        <footer class="container footer-container">
+        <footer class="footer-container">
             <div class="d-flex justify-content-center">
                 <a href="https://facebook.com" target="_blank" rel="noopener nofollow"
                     aria-label="Visit our Facebook page (opens in a new tab)"><i
@@ -204,8 +206,8 @@
                 <a href="https://www.linkedin.com/in/shizukadonaghue/" target="_blank" rel="noopener nofollow"
                     aria-label="Visit my Linkedin page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="text-center mt-1">
-                <p>For educational purposes only. Any orders placed will not be processed.</p>
+            <div class="text-center">
+                <p class="disclaimer">For educational purposes only. Any orders placed will not be processed.</p>
             </div>
         </footer>
     </div>

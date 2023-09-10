@@ -1,39 +1,39 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="#" id="category-link"
+            <a class="logo-font font-weight-bold nav-link text-main mr-5 mobile-menu" href="#" id="category-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
             </a>
             <div class="dropdown-menu dropdown-mobile border-0" aria-labelledby="category-link">
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="{% url 'products' %}?category=baby_kids" class="dropdown-item">Baby &amp; Kids</a>
-                <a href="{% url 'products' %}?category=body" class="dropdown-item">Body</a>
-                <a href="{% url 'products' %}?category=face" class="dropdown-item">Face</a>
-                <a href="{% url 'products' %}?category=lips" class="dropdown-item">Lips</a>
-                <a href="{% url 'products' %}?category=after_sun" class="dropdown-item">After Sun</a>
+                <a href="{% url 'products' %}" class="dropdown-item mobile-menu">All Products</a>
+                <a href="{% url 'products' %}?category=baby_kids" class="dropdown-item mobile-menu">Baby &amp; Kids</a>
+                <a href="{% url 'products' %}?category=body" class="dropdown-item mobile-menu">Body</a>
+                <a href="{% url 'products' %}?category=face" class="dropdown-item mobile-menu">Face</a>
+                <a href="{% url 'products' %}?category=lips" class="dropdown-item mobile-menu">Lips</a>
+                <a href="{% url 'products' %}?category=after_sun" class="dropdown-item mobile-menu">After Sun</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="#" id="all-brands-link"
+            <a class="logo-font font-weight-bold nav-link text-main mr-5 mobile-menu" href="#" id="all-brands-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Brands
             </a>
             <div class="dropdown-menu dropdown-mobile border-0" aria-labelledby="all-brands-link">
                 {% for brand in brands_list %}
-                <a href="{% url 'products' %}?brand={{brand.name}}" class="dropdown-item">{{ brand.name }}</a>
+                <a href="{% url 'products' %}?brand={{brand.name}}" class="dropdown-item mobile-menu">{{ brand.name }}</a>
                 {% endfor %}
             </div>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="{% url 'articles' %}" id="articles-link">Articles</a>
+            <a class="logo-font font-weight-bold nav-link text-main mr-5 mobile-menu" href="{% url 'articles' %}" id="articles-link">Articles</a>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-main mr-5" href="{% url 'contact' %}" id="contact-link">Contact</a>
+            <a class="logo-font font-weight-bold nav-link text-main mr-5 mobile-menu" href="{% url 'contact' %}" id="contact-link">Contact</a>
         </li>
         <li class="nav-item dropdown d-block d-md-none">
             <hr class="w-100 my-1">
-            <a class="logo-font font-weight-bold nav-link text-main" href="#" id="user-options"
+            <a class="logo-font font-weight-bold nav-link text-main mobile-menu" href="#" id="user-options"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 My Account
             </a>
@@ -42,16 +42,16 @@
                 {% if request.user.is_authenticated %}
                 <!-- If the user is staff  -->
                 {% if request.user.is_staff %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                <a href="{% url 'add_article' %}" class="dropdown-item">Article Management</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item mobile-menu">Product Management</a>
+                <a href="{% url 'add_article' %}" class="dropdown-item mobile-menu">Article Management</a>
                 {% endif %}
                 <!-- End of staff menu -->
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item mobile-menu">Logout</a>
                 <!-- If the user is not logged in -->
                 {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                <a href="{% url 'account_signup' %}" class="dropdown-item mobile-menu">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item mobile-menu">Login</a>
                 {% endif %}
             </div>
         </li>
