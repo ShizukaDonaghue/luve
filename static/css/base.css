@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background: url('https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg') no-repeat center center fixed;
+    /* background: url('https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg') no-repeat center center fixed; */
     background-size: cover;
     height: calc(100vh - 90px);
     color: var(--grey);
@@ -92,11 +92,7 @@ body {
     font-size: 1rem;
 }
 
-.display-4.logo-font.text-main {
-    font-size: 2rem;
-}
-
-.page-title{
+.page-title {
     font-size: 1.5rem;
 }
 
@@ -106,12 +102,6 @@ body {
 
 .checkout-title {
     font-size: 1.3rem;
-}
-
-.shop-now-button {
-    background: var(--grey);
-    color: var(--white);
-    min-width: 260px;
 }
 
 #keep-shopping {
@@ -149,6 +139,38 @@ body {
     color: var(--white) !important;
 }
 
+/* Landing page */
+.hero-image {
+    padding-top: 200px;
+    background-image: url("https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 25%;
+}
+
+.display-4.logo-font.text-main {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.what-is {
+    font-size: 1.2rem;
+}
+
+.shop-now-button {
+    background: var(--grey);
+    color: var(--white);
+    font-size: 1rem;
+    min-width: 150px;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -158,6 +180,19 @@ body {
     border: 1px solid var(--light-grey);
 }
 
+.introduction {
+    font-size: 95%;
+}
+
+.impact {
+    font-size: 1rem !important;
+}
+
+.btn-article {
+    min-width: 150px;
+}
+
+/* Cards */
 .card {
     box-shadow: 0px 0px 10px 1px #d1d1d1 !important;
 }
@@ -238,8 +273,10 @@ input[name='q']::placeholder {
 }
 
 /* Products */
-.product-description, .posting-as,
-.review-content, .review-form label {
+.product-description,
+.posting-as,
+.review-content,
+.review-form label {
     font-size: 95%
 }
 
@@ -247,7 +284,8 @@ input[name='q']::placeholder {
     width: 150px;
 }
 
-.product-name, .product-name-bag {
+.product-name,
+.product-name-bag {
     font-size: 1.15rem;
     font-weight: 500;
 }
@@ -256,7 +294,8 @@ input[name='q']::placeholder {
     color: var(--turquoise);
 }
 
-.product-details, .product-review {
+.product-details,
+.product-review {
     font-size: 1.15rem;
 }
 
@@ -277,7 +316,7 @@ input[name='q']::placeholder {
     content: attr(data-title);
     background-color: var(--grey);
     border: 1px solid var(--grey);
-    border-radius: 5px;    
+    border-radius: 5px;
     color: #ffffff;
     font-size: 0.9rem;
     position: absolute;
@@ -337,7 +376,7 @@ input[name='q']::placeholder {
 }
 
 .wishlist-btn-small {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 
 .wishlist-btn {
@@ -388,7 +427,9 @@ input[name='q']::placeholder {
     color: var(--turquoise);
 }
 
-.article-description, .article-author, .article-content {
+.article-description,
+.article-author,
+.article-content {
     font-size: 95%
 }
 
@@ -408,7 +449,7 @@ label.error {
     color: #B02A37;
     font-size: 14px !important;
     font-weight: bold;
-}   
+}
 
 /* Product & Article forms */
 
@@ -463,8 +504,10 @@ label.error {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: var(--light-grey); /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: var(--light-grey);
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -483,13 +526,14 @@ label.error {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
 /* Footer */
 footer i {
     font-size: 130%;
-    padding: 0.5rem 0.6rem ;
+    padding: 0.5rem 0.6rem;
     color: var(--grey)
 }
 
@@ -542,7 +586,32 @@ footer i:hover {
         font-size: 1.1rem;
     }
 
-    .page-title{
+    .hero-image {
+        padding-top: 240px;
+    }
+
+    .protect {
+        font-size: 1.2rem;
+    }
+
+    .display-4.logo-font.text-main {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .what-is {
+        font-size: 1.3rem;
+    }
+
+    .introduction {
+        font-size: 100%;
+    }
+
+    .impact {
+        font-size: 1.1rem !important;
+    }
+
+    .page-title {
         font-size: 1.65rem;
     }
 
@@ -554,21 +623,28 @@ footer i:hover {
         font-size: 1.4rem;
     }
 
-    .article-title, .product-name {
+    .article-title,
+    .product-name {
         font-size: 115%;
     }
-    
-    .article-title-detail-page, .product-name-detail-page {
+
+    .article-title-detail-page,
+    .product-name-detail-page {
         font-size: 135%
     }
 
-    .product-details, .product-review {
+    .product-details,
+    .product-review {
         font-size: 120%;
     }
 
-    .article-description, .article-author,
-    .article-content, .product-description,
-    .posting-as, .review-content, .review-form label {
+    .article-description,
+    .article-author,
+    .article-content,
+    .product-description,
+    .posting-as,
+    .review-content,
+    .review-form label {
         font-size: 100%
     }
 
@@ -580,13 +656,14 @@ footer i:hover {
         margin-top: -0.2rem;
         margin-bottom: 1rem;
     }
-    
+
     footer i {
         font-size: 150%;
-        padding: 0.5rem 0.8rem ;
+        padding: 0.5rem 0.8rem;
     }
 
-    .mobile-menu, .disclaimer {
+    .mobile-menu,
+    .disclaimer {
         font-size: 100%;
     }
 
@@ -599,13 +676,19 @@ footer i:hover {
     }
 }
 
+@media (min-width: 450px) {
+    .hero-image {
+        padding-top: 260px;
+    }
+}
+
 @media (min-width: 576px) {
     .header-container {
-        padding-top: 101px;
+        padding-top: 100px;
     }
 
     body {
-        height: calc(100vh - 101px);
+        height: calc(100vh - 100px);
     }
 
     .luve-logo-mobile {
@@ -619,8 +702,20 @@ footer i:hover {
     #delivery-banner h5 {
         font-size: 1.2rem;
     }
- 
-    .page-title{
+
+    .hero-image {
+        padding-top: 280px;
+    }
+
+    .protect {
+        font-size: 1.3rem;
+    }
+
+    .display-4.logo-font.text-main {
+        font-size: 1.8rem;
+    }
+
+    .page-title {
         font-size: 1.85rem;
     }
 
@@ -633,12 +728,14 @@ footer i:hover {
         margin-top: 0 !important;
     }
 
-    .article-title-detail-page, .product-name-detail-page {
+    .article-title-detail-page,
+    .product-name-detail-page {
         font-size: 150%;
         margin-bottom: 1rem;
     }
 
-    .product-details, .product-review {
+    .product-details,
+    .product-review {
         font-size: 130%;
     }
 
@@ -673,14 +770,41 @@ footer i:hover {
     }
 
     .header-container {
-        padding-top: 143px;
+        padding-top: 131px;
     }
 
     body {
-    height: calc(100vh - 143px);
+        height: calc(100vh - 131px);
     }
 
-    .page-title{
+    .hero-image {
+        padding-top: 400px;
+    }
+
+    .hero-text {
+        top: 35%;
+        left: 4%;
+    }
+
+    .protect {
+        font-size: 1.5rem;
+    }
+
+    .display-4.logo-font.text-main {
+        font-size: 2.2rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .shop-now-button {
+        font-size: 1.5rem;
+        min-width: 200px;
+    }
+
+    .btn-article {
+        min-width: 200px;
+    }
+
+    .page-title {
         font-size: 2rem;
     }
 
@@ -688,12 +812,14 @@ footer i:hover {
         font-size: 1.6rem;
     }
 
-    .article-title-detail-page, .product-name-detail-page {
+    .article-title-detail-page,
+    .product-name-detail-page {
         font-size: 170%;
         margin-bottom: 1.2rem;
     }
 
-    .product-details, .product-review {
+    .product-details,
+    .product-review {
         font-size: 150%;
     }
 
@@ -702,7 +828,7 @@ footer i:hover {
     }
 
     footer i {
-        padding: 0.5rem 1.4rem ;
+        padding: 0.5rem 1.4rem;
     }
 }
 
@@ -716,11 +842,11 @@ footer i:hover {
     }
 
     .header-container {
-        padding-top: 163px;
+        padding-top: 148px;
     }
 
     body {
-    height: calc(100vh - 163px);
+        height: calc(100vh - 148px);
     }
 
     #delivery-banner h5 {
@@ -731,12 +857,26 @@ footer i:hover {
         font-size: 110%;
     }
 
+    .wishlist-heart {
+        font-size: 120% !important;
+        margin-top: -0.5rem;
+    }
+
+    .hero-image {
+        padding-top: 450px;
+    }
+
+    .protect {
+        font-size: 1.7rem;
+    }
+
     .display-4.logo-font.text-main {
         font-size: 2.5rem;
     }
 
     .article-title-detail-page,
-    .product-details, .product-review {
+    .product-details,
+    .product-review {
         margin-top: 15%;
     }
 
@@ -750,8 +890,24 @@ footer i:hover {
 }
 
 @media (min-width: 1200px) {
+    .header-container {
+        padding-top: 163px;
+    }
+
+    body {
+        height: calc(100vh - 163px);
+    }
+
     .container {
         max-width: 80%;
+    }
+
+    .hero-image {
+        padding-top: 480px;
+    }
+
+    .hero-text {
+        left: 5%;
     }
 
     .luve-logo {
@@ -760,6 +916,24 @@ footer i:hover {
 
     .nav-link {
         font-size: 115%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-image {
+        padding-top: 600px;
+    }
+
+    .hero-text {
+        top: 40%;
+    }
+
+    .protect {
+        font-size: 2rem;
+    }
+
+    .display-4.logo-font.text-main {
+        font-size: 2.8rem;
     }
 }
 
@@ -772,7 +946,8 @@ footer i:hover {
         font-size: 1.2rem;
     }
 
-    .increment-qty, .decrement-qty {
+    .increment-qty,
+    .decrement-qty {
         padding: .25rem .5rem !important;
     }
 }
