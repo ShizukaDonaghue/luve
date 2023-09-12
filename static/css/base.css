@@ -55,12 +55,12 @@ body {
 }
 
 .luve-logo {
-    width: 5rem;
+    width: 6.5rem;
 }
 
 .luve-logo-mobile {
-    width: 3.5rem;
-    margin-top: -0.8rem;
+    width: 4.2rem;
+    margin-top: -0.2rem;
 }
 
 .icon-title-mobile {
@@ -641,8 +641,8 @@ footer i:hover,
     }
 
     .luve-logo-mobile {
-        width: 4.5rem;
-        margin-top: -0.4rem;
+        width: 6.5rem;
+        margin-top: -0.2rem;
     }
 
     .icon-title-mobile {
@@ -773,7 +773,7 @@ footer i:hover,
     }
 
     .luve-logo-mobile {
-        width: 5rem;
+        width: 7.7rem;
     }
 
     .icon-title-mobile {
@@ -851,11 +851,11 @@ footer i:hover,
     }
 
     .header-container {
-        padding-top: 131px;
+        padding-top: 127px;
     }
 
     body {
-        height: calc(100vh - 131px);
+        height: calc(100vh - 127px);
     }
 
     .hero-image {
@@ -926,12 +926,17 @@ footer i:hover,
         z-index: 1030;
     }
 
+    .luve-logo {
+        width: 7.7rem;
+        margin-top: -0.4rem;
+    }
+
     .header-container {
-        padding-top: 148px;
+        padding-top: 145px;
     }
 
     body {
-        height: calc(100vh - 148px);
+        height: calc(100vh - 145px);
     }
 
     #delivery-banner h5 {
@@ -939,7 +944,7 @@ footer i:hover,
     }
 
     .nav-link {
-        font-size: 110%;
+        font-size: 105%;
     }
 
     .wishlist-heart {
@@ -976,11 +981,11 @@ footer i:hover,
 
 @media (min-width: 1200px) {
     .header-container {
-        padding-top: 163px;
+        padding-top: 152px;
     }
 
     body {
-        height: calc(100vh - 163px);
+        height: calc(100vh - 152px);
     }
 
     .container {
@@ -996,7 +1001,7 @@ footer i:hover,
     }
 
     .luve-logo {
-        width: 7rem;
+        width: 8rem;
     }
 
     .nav-link {
