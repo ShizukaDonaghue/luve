@@ -22,13 +22,13 @@ html {
 body {
     /* background: url('https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg') no-repeat center center fixed; */
     background-size: cover;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 96px);
     color: var(--grey);
     font-family: 'Signika', sans-serif;
 }
 
 .header-container {
-    padding-top: 90px;
+    padding-top: 96px;
 }
 
 .navbar-toggler {
@@ -86,6 +86,10 @@ body {
 
 .mobile-menu {
     font-size: 90%;
+}
+
+#delivery-banner {
+    border-bottom: 5px solid var(--turquoise);
 }
 
 #delivery-banner h5 {
@@ -771,11 +775,11 @@ footer i:hover,
 
 @media (min-width: 576px) {
     .header-container {
-        padding-top: 100px;
+        padding-top: 105px;
     }
 
     body {
-        height: calc(100vh - 100px);
+        height: calc(100vh - 105px);
     }
 
     .luve-logo-mobile {
@@ -857,11 +861,11 @@ footer i:hover,
     }
 
     .header-container {
-        padding-top: 127px;
+        padding-top: 131px;
     }
 
     body {
-        height: calc(100vh - 127px);
+        height: calc(100vh - 131px);
     }
 
     .hero-image {
@@ -938,11 +942,11 @@ footer i:hover,
     }
 
     .header-container {
-        padding-top: 145px;
+        padding-top: 150px;
     }
 
     body {
-        height: calc(100vh - 145px);
+        height: calc(100vh - 150px);
     }
 
     #delivery-banner h5 {
@@ -987,11 +991,11 @@ footer i:hover,
 
 @media (min-width: 1200px) {
     .header-container {
-        padding-top: 152px;
+        padding-top: 157px;
     }
 
     body {
-        height: calc(100vh - 152px);
+        height: calc(100vh - 157px);
     }
 
     .container {
