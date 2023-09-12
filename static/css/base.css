@@ -159,7 +159,7 @@ body {
 
 /* Landing page */
 .hero-image {
-    padding-top: 200px;
+    padding-top: 155px;
     background-image: url("https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -170,23 +170,32 @@ body {
 .hero-text {
     text-align: left;
     position: absolute;
-    top: 25%;
+    top: 22%;
+    padding-left: 0.4rem;
+}
+
+.protect {
+    font-size: 95%;
 }
 
 .display-4.logo-font.text-main {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .what-is {
     font-size: 1.2rem;
 }
 
+.introduction h6 {
+    font-size: 1.1rem;
+}
+
 .shop-now-button {
     background: var(--grey);
     color: var(--white);
     font-size: 1rem;
-    min-width: 150px;
+    min-width: 110px;
 }
 
 .shop-now-button:hover,
@@ -207,7 +216,7 @@ body {
 }
 
 .btn-article {
-    min-width: 150px;
+    min-width: 110px;
 }
 
 /* Cards */
@@ -665,16 +674,21 @@ footer i:hover,
     }
 
     .hero-image {
-        padding-top: 240px;
+        padding-top: 200px;
     }
 
     .protect {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .display-4.logo-font.text-main {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .shop-now-button,
+    .btn-article {
+        width: 130px;
     }
 
     .what-is {
@@ -771,6 +785,20 @@ footer i:hover,
     .hero-image {
         padding-top: 260px;
     }
+
+    .hero-text {
+        top: 30%;
+        padding-left: 1rem;
+    }
+
+    .display-4.logo-font.text-main {
+        margin-bottom: 1.2rem;
+    }
+
+    .shop-now-button,
+    .btn-article {
+        width: 150px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -804,6 +832,11 @@ footer i:hover,
 
     .display-4.logo-font.text-main {
         font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .shop-now-button {
+        font-size: 1.1rem;
     }
 
     .page-title {
@@ -873,7 +906,7 @@ footer i:hover,
     }
 
     .hero-text {
-        top: 35%;
+        top: 30%;
         left: 4%;
     }
 
@@ -883,11 +916,10 @@ footer i:hover,
 
     .display-4.logo-font.text-main {
         font-size: 2.2rem;
-        margin-bottom: 2.2rem;
+        margin-bottom: 2.5rem;
     }
 
     .shop-now-button {
-        font-size: 1.5rem;
         min-width: 200px;
     }
 
@@ -963,7 +995,7 @@ footer i:hover,
     }
 
     .hero-image {
-        padding-top: 450px;
+        padding-top: 500px;
     }
 
     .protect {
@@ -1002,6 +1034,14 @@ footer i:hover,
         max-width: 80%;
     }
 
+    .luve-logo {
+        width: 8rem;
+    }
+
+    .nav-link {
+        font-size: 115%;
+    }
+
     .hero-image {
         padding-top: 480px;
     }
@@ -1010,12 +1050,8 @@ footer i:hover,
         left: 5%;
     }
 
-    .luve-logo {
-        width: 8rem;
-    }
-
-    .nav-link {
-        font-size: 115%;
+    .shop-now-button {
+        font-size: 1.5rem;
     }
 }
 
@@ -1025,7 +1061,7 @@ footer i:hover,
     }
 
     .hero-text {
-        top: 40%;
+        top: 25%;
     }
 
     .protect {
@@ -1034,6 +1070,7 @@ footer i:hover,
 
     .display-4.logo-font.text-main {
         font-size: 2.8rem;
+        margin-bottom: 7rem;
     }
 }
 
