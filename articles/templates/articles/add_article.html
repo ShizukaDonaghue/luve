@@ -25,7 +25,7 @@
 
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
-            <form method="POST" action="{% url 'add_article' %}" class="form mb-2 article-form" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_article' %}" class="form mb-5 article-form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                     {% if field.name != 'image' %}

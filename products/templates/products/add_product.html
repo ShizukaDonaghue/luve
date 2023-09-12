@@ -22,10 +22,9 @@
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
-            <form method="POST" action="{% url 'add_product' %}" class="form mb-4 product-form"
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-5 product-form"
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
