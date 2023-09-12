@@ -215,10 +215,6 @@ body {
     font-size: 1rem !important;
 }
 
-.btn-article {
-    min-width: 110px;
-}
-
 /* Cards */
 .card {
     box-shadow: 0px 0px 10px 1px #d1d1d1 !important;
@@ -686,8 +682,7 @@ footer i:hover,
         margin-bottom: 1rem;
     }
 
-    .shop-now-button,
-    .btn-article {
+    .shop-now-button {
         width: 130px;
     }
 
@@ -795,8 +790,7 @@ footer i:hover,
         margin-bottom: 1.2rem;
     }
 
-    .shop-now-button,
-    .btn-article {
+    .shop-now-button {
         width: 150px;
     }
 }
@@ -920,10 +914,6 @@ footer i:hover,
     }
 
     .shop-now-button {
-        min-width: 200px;
-    }
-
-    .btn-article {
         min-width: 200px;
     }
 
