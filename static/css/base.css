@@ -534,15 +534,36 @@ label.error {
 footer i {
     font-size: 130%;
     padding: 0.5rem 0.6rem;
-    color: var(--grey)
+    color: var(--white)
 }
 
-footer i:hover {
-    color: var(--turquoise);
+.footer-info {
+    color: var(--white) !important;
+}
+
+footer i:hover,
+.footer-info:hover {
+    color: var(--turquoise) !important;
 }
 
 .disclaimer {
-    font-size: 90%;
+    font-size: 80%;
+}
+
+/* Mailchimp */
+#mc_embed_signup form {
+    padding: 0;
+}
+
+#mce-success-response, 
+#mce-error-response {
+    margin: 0 !important;
+    padding: 0 0 0.7rem 0 !important;
+}
+
+#mce-responses.clear.foot {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Error pages */
@@ -664,7 +685,7 @@ footer i:hover {
 
     .mobile-menu,
     .disclaimer {
-        font-size: 100%;
+        font-size: 90%;
     }
 
     .error-image {
@@ -828,7 +849,7 @@ footer i:hover {
     }
 
     footer i {
-        padding: 0.5rem 1.4rem;
+        padding: 0.5rem 0.5rem;
     }
 }
 
