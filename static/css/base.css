@@ -568,6 +568,15 @@ footer i:hover,
     font-size: 90%;
 }
 
+.subscribe-container {
+    padding-left: 0;
+}
+
+.contact-information {
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
 .disclaimer {
     font-size: 80%;
     margin-bottom: 1.5rem;
@@ -586,9 +595,6 @@ footer i:hover,
     font-size: 0.9rem;
 }
 
-.contact-information {
-    margin-bottom: 1rem;
-}
 #mce-success-response, 
 #mce-error-response {
     margin: 0 !important;
