@@ -550,7 +550,6 @@ label.error {
 
 .allauth-form-inner-content a {
     color: #17a2b8;
-    /* text-info */
 }
 
 /* Footer */
@@ -637,6 +636,10 @@ footer i:hover,
 .error-message h2 {
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.error-image {
+    padding-top: 205px;
 }
 
 /* -------------------------------- Media Queries */
@@ -774,6 +777,10 @@ footer i:hover,
     .error-message h2 {
         margin-bottom: 1rem;
     }
+
+    .error-image {
+        padding-top: 250px;
+    }
 }
 
 @media (min-width: 450px) {
@@ -792,6 +799,10 @@ footer i:hover,
 
     .shop-now-button {
         width: 150px;
+    }
+
+    .error-image {
+        padding-top: 310px;
     }
 }
 
@@ -880,6 +891,10 @@ footer i:hover,
     .error-message h2 {
         margin-bottom: 1.5rem;
     }
+
+    .error-image {
+        padding-top: 330px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -947,6 +962,10 @@ footer i:hover,
     #mc-embedded-subscribe.button {
         margin-top: 32px;
     }
+
+    .error-image {
+        padding-top: 450px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1009,6 +1028,10 @@ footer i:hover,
     .error-image {
         width: 300px;
     }
+
+    .error-image {
+        padding-top: 550px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1043,6 +1066,10 @@ footer i:hover,
     .shop-now-button {
         font-size: 1.5rem;
     }
+
+    .error-image {
+        padding-top: 530px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -1061,6 +1088,10 @@ footer i:hover,
     .display-4.logo-font.text-main {
         font-size: 2.8rem;
         margin-bottom: 7rem;
+    }
+
+    .error-image {
+        padding-top: 650px;
     }
 }
 
