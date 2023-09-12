@@ -124,8 +124,8 @@ body {
 .btn-outline-main:hover,
 .btn-outline-main:active,
 .btn-outline-main:focus {
-    background: var(--light-grey);
-    color: var(--white) !important;
+    color: var(--turquoise) !important;
+    border: 1px solid var(--turquoise);
 }
 
 .btn-pink {
@@ -175,9 +175,9 @@ body {
 .shop-now-button:active,
 .shop-now-button:focus,
 .btn-main:hover {
-    background: var(--light-grey);
+    background: var(--turquoise);
     color: var(--white);
-    border: 1px solid var(--light-grey);
+    border: 1px solid var(--turquoise);
 }
 
 .introduction {
@@ -566,6 +566,16 @@ footer i:hover,
     padding: 0 !important;
 }
 
+#mc-embedded-subscribe.button {
+    height: 42px;
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+#mc-embedded-subscribe.button:hover {
+    background-color: var(--turquoise);
+}
+
 /* Error pages */
 .error-image {
     width: 130px;
@@ -850,6 +860,10 @@ footer i:hover,
 
     footer i {
         padding: 0.5rem 0.5rem;
+    }
+
+    #mc-embedded-subscribe.button {
+        margin-top: 39px;
     }
 }
 
