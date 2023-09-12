@@ -868,6 +868,14 @@ footer i:hover,
         font-size: 170%;
     }
 
+    .subscribe-container {
+        padding-left: 1rem;
+    }
+    
+    .contact-information {
+        padding-left: 1rem;
+    }
+
     .error-message h2 {
         font-size: 1.3rem;
     }
