@@ -964,10 +964,6 @@ footer i:hover,
     #mc-embedded-subscribe.button {
         margin-top: 32px;
     }
-
-    .error-image {
-        width: 500px;
-    }
 }
 
 @media (min-width: 992px) {
