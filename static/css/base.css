@@ -468,7 +468,8 @@ input[name='q']::placeholder {
 }
 
 /* Error message for forms */
-label.error {
+label.error,
+#card-errors {
     color: #B02A37;
     font-size: 14px !important;
     font-weight: bold;
