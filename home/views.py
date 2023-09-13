@@ -3,7 +3,12 @@ from django.views.generic import TemplateView
 
 
 class Home(TemplateView):
-    """
-    Display the home page
-    """
+    """ A view to display the home page """
+
     template_name = 'home/index.html'
+
+
+class PrivacyPolicy(TemplateView):
+    """ A view to display the privacy policy """
+
+    template_name = 'home/privacy_policy.html'
