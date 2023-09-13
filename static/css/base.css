@@ -1050,6 +1050,14 @@ footer i:hover,
     .shop-now-button {
         font-size: 1.5rem;
     }
+
+    .subscribe-container {
+        padding-left: 0;
+    }
+    
+    .contact-information {
+        padding-left: 0;
+    }
 }
 
 @media (min-width: 1400px) {
