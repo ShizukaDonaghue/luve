@@ -687,7 +687,7 @@ footer i:hover,
     }
 
     .shop-now-button {
-        width: 130px;
+        min-width: 130px;
     }
 
     .what-is {
@@ -795,7 +795,7 @@ footer i:hover,
     }
 
     .shop-now-button {
-        width: 150px;
+        min-width: 150px;
     }
 }
 
