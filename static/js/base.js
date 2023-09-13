@@ -24,33 +24,6 @@ $(document).ready(function() {
     });
 });
 
-// Validate order forms and raise error messages where required
-$(document).ready(function() {
-    $('.order-form').validate({
-        rules: {
-            full_name: 'required',
-            email: 'required',
-            phone_number: 'required',
-            street_address1: 'required',
-            town_or_city: 'required',
-            country: 'required',
-        },
-
-        messages: {
-            full_name: 'Please enter your name.',
-            email: 'Please enter your email address.',
-            phone_number: 'Please enter your phone number.',
-            street_address1: 'Please enter your street address.',
-            town_or_city: 'Please enter you town or city.',
-            country: 'Please select your country.',
-        },
-
-        submitHandler: function(form) {
-            form.submit();
-        }
-    });
-});
-
 // Validate contact forms and raise error messages where required
 $(document).ready(function() {
     $('#contact-form').validate({
