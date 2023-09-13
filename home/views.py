@@ -12,3 +12,9 @@ class PrivacyPolicy(TemplateView):
     """ A view to display the privacy policy """
 
     template_name = 'home/privacy_policy.html'
+
+
+class TermsConditions(TemplateView):
+    """ A view to display the terms and conditions """
+
+    template_name = 'home/terms_conditions.html'
