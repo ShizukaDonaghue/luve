@@ -1,1 +1,1 @@
-Confirmation of your LUVE order # {{ order.order_number }}
+LUVE: Order Confirmation # {{ order.order_number }}
