@@ -634,6 +634,10 @@ footer i:hover,
     margin-bottom: 0.5rem;
 }
 
+.error-message h1 {
+    font-size: 2rem;
+}
+
 .error-message h2 {
     font-size: 1.2rem;
     font-weight: 600;
@@ -877,15 +881,16 @@ footer i:hover,
         padding-left: 1rem;
     }
 
-    .error-message h2 {
-        font-size: 1.3rem;
+    .error-message h1 {
+        font-size: 2.1rem;
     }
 
-    .error-message {
+    .error-message h2 {
+        font-size: 1.3rem;
         margin-bottom: 1.5rem;
     }
 
-    .error-message h2 {
+    .error-message {
         margin-bottom: 1.5rem;
     }
 
@@ -1020,11 +1025,6 @@ footer i:hover,
 
     .article-content {
         margin-top: 0.5rem;
-    }
-
-    .error-image {
-        width: 600px;
-        margin-bottom: 2rem;
     }
 }
 
