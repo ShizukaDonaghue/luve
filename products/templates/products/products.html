@@ -163,7 +163,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="ProductModalLabel">Delete Product
+                                                    <h5 class="modal-title" id="ProductModalLabel-{{product.id}}">Delete Product
                                                     </h5>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
@@ -218,14 +218,14 @@
 {% block postloadjs %}
 {{ block.super }}
 <!-- Script for back to top functionality -->
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
 
 <!-- Script for sorting functionality -->
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function () {
         let selector = $(this);
         let currentUrl = new URL(window.location);
