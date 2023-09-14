@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -78,10 +78,11 @@ SUMMERNOTE_CONFIG = {
           ['redo', ['redo']],
           ['font', ['bold', 'italic', 'underline', 'clear']],
           ['para', ['ul', 'ol']],
+          ['fontsize', ['fontsize']],
         ],
         'fontNames': ['Signika'],
         'fontNamesIgnoreCheck': ['Signika'],
-        'fontSizes': ['14'],
+        'fontSizes': ['14', '18', '20', '24'],
         'fontSizeUnits': ['px'],
     },
 }
@@ -153,16 +154,16 @@ WSGI_APPLICATION = 'luve.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 
 # Password validation
