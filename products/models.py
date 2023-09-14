@@ -80,6 +80,10 @@ class Product(models.Model):
         validators=[MinValueValidator(Decimal('0.01'))])
     image = CloudinaryField('image', default='v1686206490/placeholder')
 
+    class Meta:
+        """ Ordering of products in alphabetical order """
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
