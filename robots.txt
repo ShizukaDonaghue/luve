@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profiles/
+Disallow: /admin/
+Sitemap: https://luve.herokuapp.com/sitemap.xml
