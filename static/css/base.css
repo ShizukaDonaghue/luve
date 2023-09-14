@@ -92,6 +92,10 @@ body {
     font-size: 90%;
 }
 
+.mobile-top {
+    display: contents;
+}
+
 #delivery-banner {
     border-bottom: 5px solid var(--turquoise);
 }
