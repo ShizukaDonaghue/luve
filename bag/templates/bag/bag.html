@@ -57,22 +57,23 @@
                 <div class="col-12 col-sm-6 col-md-4" id="product-info">
                     <!-- Product information -->
                     <div>
-                        <p class="my-1">
+                        <div class="my-1">
                             <a class="text-decoration-none bag-item-link"
                                 href="{% url 'product_detail' item.product.id %}">
-                                <h5 class="product-name-bag">{{ item.product.name }}</h5></a>
-                        </p>
-                        <p class="my-0 small">
+                                <p class="product-name-bag">{{ item.product.name }}</p>
+                            </a>
+                        </div>
+                        <div class="my-0 small">
                             <a class="text-muted" href="{% url 'products' %}?brand={{ item.product.brand }}">
-                                <span class="icon">
-                                    <i class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}</p>
-                        </a>
-                        <p class="my-0 small">
+                                <span class="icon"><i
+                                        class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}</a>
+                        </div>
+                        <div class="my-0 small">
                             <a class="text-muted" href="{% url 'products' %}?type={{ item.product.type }}">
-                                <span class="icon">  <i
+                                <span class="icon"> <i
                                         class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
                             </a>
-                        </p>
+                        </div>
                     </div>
                     <!-- Prices and quantity selector for screen sizes ≥576px -->
                     <div class="row">
@@ -98,7 +99,8 @@
                                 <div class="form-group input-group-{{ item.item_id }} mb-1">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
+                                            <button
+                                                class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
                                                 data-item_id="{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -110,7 +112,8 @@
                                             type="number" name="quantity" value="{{ item.quantity }}" min="1" max="20"
                                             data-item_id="{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
+                                            <button
+                                                class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
                                                 data-item_id="{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -121,7 +124,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="d-none col-sm-12 d-sm-block d-md-none"> 
+                        <div class="d-none col-sm-12 d-sm-block d-md-none">
                             <div class="d-flex justify-content-between text-center my-auto px-1">
                                 <a class="update-link-small text-info"><i class="fa-solid fa-rotate"></i></a>
                                 <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
@@ -301,12 +304,12 @@
         let form = $(this).parent().parent().prev().children('.update-form');
         form.submit();
     });
-    
+
     // Update quantity on click for screen sizes ≥768px
     $('.update-link').click(function (e) {
         let form = $(this).parent().prev('.update-form');
         form.submit();
-    })    
+    })
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
