@@ -64,7 +64,7 @@
                                                 <a class="text-muted"
                                                     href="{% url 'products' %}?brand={{ item.product.brand.name }}">
                                                     <span class="icon"><i
-                                                            class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.name }}
+                                                            class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}
                                                 </a>
                                             </p>
                                             {% if item.product.type %}

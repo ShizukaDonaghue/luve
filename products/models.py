@@ -33,6 +33,7 @@ class Brand(models.Model):
     """ A model for the brand of product """
 
     name = models.CharField(max_length=50)
+    display_name = models.CharField(max_length=30, null=True, blank=True)
 
     class Meta:
         """ Ordering of brands in alphabetical order """
@@ -40,6 +41,9 @@ class Brand(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_display_name(self):
+        return self.display_name
 
 
 class Type(models.Model):

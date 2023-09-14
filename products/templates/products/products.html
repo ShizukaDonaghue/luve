@@ -23,7 +23,7 @@
             {% endfor %}
             {% elif current_brands %}
             {% for b in current_brands %}
-            <h2 class="logo-font mb-3 text-center text-md-left page-title">{{ b.name }}</h2>
+            <h2 class="logo-font mb-3 text-center text-md-left page-title">{{ b.display_name }}</h2>
             {% endfor %}
             {% else %}
             <h2 class="logo-font mb-3 text-center text-md-left page-title">All Products</h2>
@@ -136,7 +136,7 @@
                                         <a class="text-muted"
                                             href="{% url 'products' %}?brand={{ product.brand.name }}">
                                             <span class="icon"><i
-                                                    class="fa-brands fa-gratipay"></i></span>{{ product.brand.name }}
+                                                    class="fa-brands fa-gratipay"></i></span>{{ product.brand.display_name }}
                                         </a>
                                     </p>
                                     {% endif %}

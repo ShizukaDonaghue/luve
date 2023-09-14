@@ -36,6 +36,7 @@ class BrandAdmin(admin.ModelAdmin):
     """ Admin panel configuration for the brand of products """
     list_display = (
         'name',
+        'display_name',
     )
 
     ordering = ('name',)
