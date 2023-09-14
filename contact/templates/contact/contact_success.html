@@ -30,7 +30,12 @@
             </p>
             <div class="mt-5 mb-4">
                 <a class="btn btn-outline-main text-uppercase" href="{%  url 'home' %}">Home</a>
-                <a href="{% url 'products' %}" class="btn btn-main text-uppercase">Continue Shopping!</a>
+                <a href="{% url 'products' %}" class="btn btn-main">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Continue Shopping!</span>
+                </a>
             </div>
         </div>
     </div>
