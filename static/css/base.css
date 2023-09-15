@@ -22,13 +22,13 @@ html {
 body {
     /* background: url('https://res.cloudinary.com/dio3rjgik/image/upload/v1685989507/homepage-background_vhfus9.jpg') no-repeat center center fixed; */
     background-size: cover;
-    height: calc(100vh - 96px);
+    height: calc(100vh - 95px);
     color: var(--grey);
     font-family: 'Signika', sans-serif;
 }
 
 .header-container {
-    padding-top: 96px;
+    padding-top: 95px;
 }
 
 .navbar-toggler {
@@ -101,7 +101,7 @@ body {
 }
 
 #delivery-banner h5 {
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .page-title {
@@ -658,6 +658,12 @@ footer i:hover,
 }
 
 /* -------------------------------- Media Queries */
+@media (min-width: 325px) {
+    #delivery-banner h5 {
+        font-size: 1rem;
+    }
+}
+
 @media (min-width: 335px) {
     .btn-shop-bag {
         font-size: 100%;
