@@ -16,9 +16,9 @@
 <div class="container">
     <div class="row mb-1">
         <div class="col-12">
-            <hr class="{% if not articles %}invisible{% endif %}">
+            <hr>
             <h2 class="logo-font mb-3 text-center text-md-left page-title">Articles</h2>
-            <hr class="{% if not articles %}invisible{% endif %}">
+            <hr>
             <!-- If there are articles to display -->
             <div class="row">
                 <div class="product-container col-12">
@@ -30,13 +30,13 @@
                                 <!-- Article image -->
                                 {% if "Placeholder" in article.image.url %}
                                 <a href="{% url 'article_detail' article.slug %}"
-                                    {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
+                                    {% if not request.user.is_staff %}class="stretched-link" {% endif %}>
                                     <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                                         class="card-img-top img-fluid article-img" alt="Placeholder image">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'article_detail' article.slug %}"
-                                    {% if not request.user.is_staff %}class="stretched-link"{% endif %}>
+                                    {% if not request.user.is_staff %}class="stretched-link" {% endif %}>
                                     <img src=" {{ article.image.url }}" class="card-img-top img-fluid article-img"
                                         alt="Image of {{ article.title }}">
                                 </a>
@@ -72,11 +72,13 @@
                                     </p>
                                     <!-- Modal confirm deletion of an article -->
                                     <div class="modal fade" id="ArticleModal-{{article.slug}}" tabindex="-1"
-                                        role="dialog" aria-labelledby="ArticleModalLabel-{{article.slug}}" aria-hidden="true">
+                                        role="dialog" aria-labelledby="ArticleModalLabel-{{article.slug}}"
+                                        aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="ArticleModalLabel-{{article.slug}}">Delete Article</h5>
+                                                    <h5 class="modal-title" id="ArticleModalLabel-{{article.slug}}">
+                                                        Delete Article</h5>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
@@ -105,13 +107,18 @@
                         {% endfor %}
                         <!-- If there are no articles -->
                         {% else %}
-                        <p class="lead mb-5">There are no articles yet. Please come back to check!</p>
-                        <a href="{% url 'products' %}" class="btn btn-main">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Continue Shopping</span>
-                        </a>
+                        <div class="row">
+                            <div class="col-12 text-center text-md-left">
+                                <p class="lead mt-3 mb-4 mb-md-5 ">There are no articles yet. Please come back to check!
+                                </p>
+                                <a href="{% url 'products' %}" class="btn btn-main mb-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Continue Shopping</span>
+                                </a>
+                            </div>
+                        </div>
                         {% endif %}
                     </div>
                 </div>
