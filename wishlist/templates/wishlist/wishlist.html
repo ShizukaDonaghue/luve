@@ -15,109 +15,108 @@
 <div class="overlay"></div>
 <div class="container mb-2">
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <hr>
             <h2 class="logo-font mb-3 text-center text-md-left page-title">Wishlist</h2>
             <hr>
-            <!-- If there is an item/are items in the wishlist -->
+        </div>
+    </div>
+    <!-- If there is an item/are items in the wishlist -->
+    <div class="row">
+        <div class="product-container col-12">
+            {% if wishlist %}
             <div class="row">
-                <div class="product-container col-12">
-                    {% if wishlist %}
-                    <div class="row">
-                        {% for item in wishlist %}
-                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-5">
-                            <div class="card h-100 flex-fill border-0">
-                                <!-- Product image -->
-                                {% if "placeholder" in item.product.image.url %}
-                                <a href="{% url 'product_detail' item.product.id %}">
-                                    <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
-                                        class="card-img-top img-fluid product-img" alt="Placeholder image">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' item.product.id %}">
-                                    <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid product-img"
-                                        alt="Image of {{ item.product.name }}">
-                                </a>
-                                {% endif %}
-                                <!-- Remove from wishlist button -->
-                                <div class="col wishlist-btn-container">
-                                    <form class="form" action="{% url 'remove_from_wishlist' item.id %}" method="POST">
-                                        {% csrf_token %}
-                                        <button type="submit" class="btn p-0 text-main wishlist-btn-small"
-                                            aria-label="Remove from wishlist button">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                                <!-- End of remove from wishlist button -->
-                                <div class="card-body pb-1">
-                                    <a href="{% url 'product_detail' item.product.id %}"
-                                        class="text-decoration-none text-main font-weight-bold">
-                                        <p class="mb-0">{{ item.product.name | capfirst }}</p>
-                                    </a>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                {% for item in wishlist %}
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-5">
+                    <div class="card h-100 flex-fill border-0">
+                        <!-- Product image -->
+                        {% if "placeholder" in item.product.image.url %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
+                                class="card-img-top img-fluid product-img" alt="Placeholder image">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid product-img"
+                                alt="Image of {{ item.product.name }}">
+                        </a>
+                        {% endif %}
+                        <!-- Remove from wishlist button -->
+                        <div class="col wishlist-btn-container">
+                            <form class="form" action="{% url 'remove_from_wishlist' item.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit" class="btn p-0 text-main wishlist-btn-small"
+                                    aria-label="Remove from wishlist button">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- End of remove from wishlist button -->
+                        <div class="card-body pb-1">
+                            <a href="{% url 'product_detail' item.product.id %}"
+                                class="text-decoration-none text-main font-weight-bold">
+                                <h5 class="mb-0 product-name">{{ item.product.name | capfirst }}</h5>
+                            </a>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="mb-0 text-left">€{{ item.product.price }}</p>
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?brand={{ item.product.brand.name }}">
+                                            <span class="icon"><i
+                                                    class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}
+                                        </a>
+                                    </p>
+                                    {% if item.product.type %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?type={{ item.product.type.name }}">
+                                            <span class="icon"><i
+                                                    class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
                                     <div class="row">
                                         <div class="col">
-                                            <p class="mb-0 text-left">€{{ item.product.price }}</p>
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted"
-                                                    href="{% url 'products' %}?brand={{ item.product.brand.name }}">
-                                                    <span class="icon"><i
-                                                            class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}
-                                                </a>
-                                            </p>
-                                            {% if item.product.type %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted"
-                                                    href="{% url 'products' %}?type={{ item.product.type.name }}">
-                                                    <span class="icon"><i
-                                                            class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            <div class="row">
-                                                <div class="col">
-                                                    <form class="form" action="{% url 'add_to_bag' item.product.id %}"
-                                                        method="POST">
-                                                        {% csrf_token %}
-                                                        <select class="d-none" name="quantity">
-                                                            <option>1</option>
-                                                        </select>
-                                                        <input type="submit"
-                                                            class="btn btn-main text-uppercase w-100 mt-2"
-                                                            value="Add To Bag">
-                                                        <input type="hidden" name="redirect_url"
-                                                            value="{{ request.path }}">
-                                                    </form>
-                                                </div>
-                                            </div>
+                                            <form class="form" action="{% url 'add_to_bag' item.product.id %}"
+                                                method="POST">
+                                                {% csrf_token %}
+                                                <select class="d-none" name="quantity">
+                                                    <option>1</option>
+                                                </select>
+                                                <input type="submit" class="btn btn-main text-uppercase w-100 mt-2"
+                                                    value="Add To Bag">
+                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
-                        <!-- If there are no items in wishlist -->
-                        {% else %}
-                        <div class="row">
-                            <div class="col-12 text-center text-md-left">
-                                <p class="lead mt-3 mb-4 mb-md-5 ">Your wishlist is empty.</p>
-                                <a href="{% url 'products' %}" class="btn btn-main mb-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Continue Shopping</span>
-                                </a>
-                            </div>
-                        </div>
-                    {% endif %}
                     </div>
                 </div>
+                {% endfor %}
+                <!-- If there are no items in wishlist -->
+                {% else %}
+                <div class="row">
+                    <div class="col-12 text-center text-md-left">
+                        <p class="lead mt-3 mb-4 mb-md-5 ">Your wishlist is empty.</p>
+                        <a href="{% url 'products' %}" class="btn btn-main mb-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Continue Shopping</span>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
 
 {% block postloadjs %}
