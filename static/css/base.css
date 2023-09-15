@@ -292,6 +292,10 @@ input[name='q']::placeholder {
     color: var(--turquoise)
 }
 
+.bag-price {
+    font-size: 95%;
+}
+
 .link:hover {
     color: var(--turquoise) !important;
 }
@@ -326,8 +330,13 @@ input[name='q']::placeholder {
     font-weight: 500;
 }
 
-.product-name:hover {
+.product-name:hover,
+.product-name-bag:hover {
     color: var(--turquoise);
+}
+
+.price-xsm {
+    font-size: 95%;
 }
 
 .product-details,
@@ -542,9 +551,7 @@ label.error,
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    /* mt-4 */
     color: var(--light-grey);
-    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -713,7 +720,7 @@ footer i:hover,
         font-size: 1.3rem;
     }
 
-    .introduction {
+    .introduction, .bag-price {
         font-size: 100%;
     }
 
@@ -745,6 +752,10 @@ footer i:hover,
     .article-title,
     .product-name {
         font-size: 115%;
+    }
+
+    .price-xsm {
+        font-size: 100%;
     }
 
     .article-title-detail-page,
@@ -900,10 +911,6 @@ footer i:hover,
         font-size: 90%;
     }
 
-    .product-name-bag {
-        font-size: 1.05rem;
-    }
-
     footer i {
         font-size: 170%;
     }
@@ -935,10 +942,6 @@ footer i:hover,
 }
 
 @media (min-width: 768px) {
-    #product-info {
-        margin-bottom: 2rem;
-    }
-
     .header-container {
         padding-top: 135px;
     }
@@ -1002,6 +1005,14 @@ footer i:hover,
 
     .product-name-detail-page {
         margin-top: 10%;
+    }
+
+    .bag-price {
+        font-size: 90%;
+    }
+
+    .bag-total {
+        margin-top: 1.3rem;
     }
 
     footer i {
@@ -1073,6 +1084,10 @@ footer i:hover,
         padding-bottom: 0.2rem;
     }
 
+    .bag-price {
+        font-size: 100%;
+    }
+
     .article-title-detail-page,
     .product-details,
     .product-review {
@@ -1120,6 +1135,14 @@ footer i:hover,
 
     .shop-now-button {
         font-size: 1.5rem;
+    }
+
+    .product-name-bag {
+        font-size: 1.3rem;
+    }
+
+    .bag-total {
+        margin-top: 1.4rem;
     }
 
     .subscribe-container {

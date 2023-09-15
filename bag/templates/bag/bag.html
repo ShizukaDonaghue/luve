@@ -14,278 +14,190 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container mb-2">
-    <div class="row">
-        <!-- Shopping bag section -->
-        <div class="col-xl-8">
-            <hr class="{% if not bag_items %}invisible{% endif %}">
-            <h2 class="logo-font mb-3 text-center text-md-left page-title">Shopping Bag</h2>
-            <hr class="{% if not bag_items %}invisible{% endif %}">
-            <!-- If there is an item/are items in the shopping bag -->
-            {% if bag_items %}
-            <div class="row">
-                <div class="d-none col-md-2 d-md-block font-weight-bold text-center">
-                    <p>Product</p>
-                </div>
-                <div class="d-none col-md-4 d-md-block"></div>
-                <div class="d-none col-md-2 d-md-block text-center font-weight-bold">
-                    <p>Price</p>
-                </div>
-                <div class="d-none col-md-2 d-md-block text-center font-weight-bold m-0 p-0">
-                    <p>Qty</p>
-                </div>
-                <div class="d-none col-md-2 d-md-block text-center font-weight-bold">
-                    <p>Total</p>
-                </div>
-            </div>
-            {% for item in bag_items %}
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-2 mb-2 mb-sm-4">
-                    <!-- Product image -->
-                    {% if "placeholder" in item.product.image.url %}
-                    <a href="{% url 'product_detail' item.product.id %}">
-                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
-                            class="card-img-top img-fluid list-image product-img" alt="Placeholder image">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'product_detail' item.product.id %}">
-                        <img src=" {{ item.product.image.url }}" class="card-img-top img-fluid list-image product-img"
-                            alt="Image of {{ item.product.name }}">
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="col-12 col-sm-6 col-md-4" id="product-info">
-                    <!-- Product information -->
-                    <div>
-                        <div class="my-1">
-                            <a class="text-decoration-none bag-item-link"
-                                href="{% url 'product_detail' item.product.id %}">
-                                <p class="product-name-bag">{{ item.product.name }}</p>
-                            </a>
-                        </div>
-                        <div class="my-0 small">
-                            <a class="text-muted" href="{% url 'products' %}?brand={{ item.product.brand }}">
-                                <span class="icon"><i
-                                        class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}</a>
-                        </div>
-                        <div class="my-0 small">
-                            <a class="text-muted" href="{% url 'products' %}?type={{ item.product.type }}">
-                                <span class="icon"> <i
-                                        class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Prices and quantity selector for screen sizes ≥576px -->
-                    <div class="row">
-                        <div class="d-none col-sm-6 d-sm-block d-md-none mt-2">
-                            <p class="my-0 small">Price</p>
-                        </div>
-                        <div class="d-none col-sm-6 d-sm-block d-md-none text-right small">
-                            <p class="my-0">€{{ item.product.price }}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-none col-sm-6 d-sm-block d-md-none">
-                            <p class="my-0 small">Subtotal</p>
-                        </div>
-                        <div class="d-none col-sm-6 d-sm-block d-md-none text-right small">
-                            <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                        </div>
-                    </div>
-                    <div class="row d-none d-sm-block d-md-none mt-3">
-                        <div class="col-sm-12">
-                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                                {% csrf_token %}
-                                <div class="form-group input-group-{{ item.item_id }} mb-1">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button
-                                                class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
-                                                data-item_id="{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input
-                                            class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} text-center"
-                                            type="number" name="quantity" value="{{ item.quantity }}" min="1" max="20"
-                                            data-item_id="{{ item.item_id }}">
-                                        <div class="input-group-append">
-                                            <button
-                                                class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
-                                                data-item_id="{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="d-none col-sm-12 d-sm-block d-md-none">
-                            <div class="d-flex justify-content-between text-center my-auto px-1">
-                                <a class="update-link-small text-info"><i class="fa-solid fa-rotate"></i></a>
-                                <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
-                                        class="fa-solid fa-trash-can"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of unit price, subtotal and quantity selector for screen sizes ≥576px -->
-                </div>
-                <div class="d-none d-md-block col-md-2 text-center">
-                    <p class="my-0">€{{ item.product.price }}</p>
-                </div>
-                <div class="d-none d-md-block col-md-2 text-center m-0 p-0">
-                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                        {% csrf_token %}
-                        <div class="form-group input-group-{{ item.item_id }} mb-1">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
-                                        data-item_id="{{ item.item_id }}">
-                                        <span>
-                                            <i class="fas fa-minus fa-sm"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                                <input
-                                    class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} text-center"
-                                    type="number" name="quantity" value="{{ item.quantity }}" min="1" max="20"
-                                    data-item_id="{{ item.item_id }}">
-                                <div class="input-group-append">
-                                    <button class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
-                                        data-item_id="{{ item.item_id }}">
-                                        <span>
-                                            <i class="fas fa-plus fa-sm"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="d-flex justify-content-between px-1">
-                        <a class="update-link text-info"><i class="fa-solid fa-rotate"></i></a>
-                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
-                                class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                </div>
-                <div class="d-none d-md-block col-md-2 text-center mb-1">
-                    <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                </div>
-            </div>
-            <!-- Unit price, subtotal and quantity selector for screen sizes <576px -->
-            <div class="row mt-1 mb-2 d-sm-none">
-                <div class="col-6">
-                    <p class="my-0">Price €{{ item.product.price }}</p>
-                </div>
-                <div class="col-6 text-right">
-                    <p class="my-0">Subtotal €{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                </div>
-            </div>
-            <div class="row mb-3 d-sm-none ">
-                <div class="col-12 text-center">
-                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                        {% csrf_token %}
-                        <div class="form-group input-group-{{ item.item_id }} mb-1">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
-                                        data-item_id="{{ item.item_id }}">
-                                        <span>
-                                            <i class="fas fa-minus fa-sm"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                                <input
-                                    class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} text-center"
-                                    type="number" name="quantity" value="{{ item.quantity }}" min="1" max="20"
-                                    data-item_id="{{ item.item_id }}">
-                                <div class="input-group-append">
-                                    <button class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
-                                        data-item_id="{{ item.item_id }}">
-                                        <span>
-                                            <i class="fas fa-plus fa-sm"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-12 text-center my-auto">
-                    <div class="d-flex justify-content-between px-1">
-                        <a class="update-link-small text-info"><i class="fa-solid fa-rotate"></i></a>
-                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
-                                class="fa-solid fa-trash-can"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End of unit price, subtotal and quantity selector for screen sizes <576px -->
-            {% endfor %}
-            <!-- If the shopping bag is empty -->
-            {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-main mb-5">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Continue Shopping</span>
-            </a>
-            {% endif %}
-        </div>
-        <!-- Order summary section -->
-        <div class="col-xl-4">
-            {% if bag_items %}
-            <div class="order-summary pb-3 pl-3 pr-3 mb-4">
-                <hr class="invisible">
-                <h2 class="logo-font mb-4 text-center text-md-left page-title">Order Summary</h2>
-                <hr>
+<div class="container mb-5">
+    <div class="row px-3">
+        <!-- If there is an item/are items in the shopping bag -->
+        {% if bag_items %}
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-7">
                 <div class="row">
-                    <div class="col-6">
-                        <p>Subtotal:</p>
-                        <p>Shipping:</p>
-                        <p><strong>Total:</strong></p>
-                    </div>
-                    <div class="col-6 text-right">
-                        <p>€{{ total|floatformat:2 }}</p>
-                        <p>{% if delivery == 0 %}Free{% else %}€{{ delivery|floatformat:2 }}{% endif %}</p>
-                        <p><strong>€{{ grand_total|floatformat:2 }}</strong></p>
+                    <div class="col-12">
+                        <hr>
+                        <h2 class="logo-font mb-3 text-center text-md-left page-title">Shopping Bag</h2>
+                        <hr>
                     </div>
                 </div>
+                {% for item in bag_items %}
                 <div class="row">
-                    <div class="col text-center">
-                        {% if free_delivery_delta > 0 %}
-                        <p class="mb-1 text-info">
-                            Spend <strong>€{{ free_delivery_delta }}</strong> more for free shipping!
-                        </p>
+                    <div class="col-12 col-sm-6 mb-2 mb-sm-4">
+                        <!-- Product image -->
+                        {% if "placeholder" in item.product.image.url %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
+                                class="card-img-top img-fluid list-image product-img" alt="Placeholder image">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img src=" {{ item.product.image.url }}"
+                                class="card-img-top img-fluid list-image product-img"
+                                alt="Image of {{ item.product.name }}">
+                        </a>
                         {% endif %}
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6 col-xl-12 mb-2">
-                        <a href="{% url 'products' %}" class="btn btn-outline-torquoise w-100">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Continue Shopping</span>
-                        </a>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- Product information -->
+                                <div class="mb-1 mb-sm-2 mb-md-0 mb-lg-2">
+                                    <div class="my-1 mb-md-0">
+                                        <a class="text-decoration-none bag-item-link"
+                                            href="{% url 'product_detail' item.product.id %}">
+                                            <p class="product-name-bag mb-0 mb-sm-2 mb-md-0 mb-lg-2">{{ item.product.name }}</p>
+                                        </a>
+                                    </div>
+                                    <div class="my-0 small">
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?brand={{ item.product.brand }}">
+                                            <span class="icon"><i
+                                                    class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}</a>
+                                    </div>
+                                    <div class="my-0 small">
+                                        <a class="text-muted" href="{% url 'products' %}?type={{ item.product.type }}">
+                                            <span class="icon"> <i
+                                                    class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="my-0 pl-1 pl-sm-0 bag-price">Unit Price</p>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p class="my-0 pr-1 pr-sm-0 bag-price">€{{ item.product.price }}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-1 mb-sm-2 mb-md-1 mb-lg-3">
+                            <div class="col-6">
+                                <p class="my-0 py-0 pl-1 pl-sm-0 bag-price">Subtotal</p>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p class="my-0 py-0 pr-1 pr-sm-0 bag-price">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="form update-form" method="POST"
+                                    action="{% url 'adjust_bag' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group input-group-{{ item.item_id }} mb-1">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button
+                                                    class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
+                                                    data-item_id="{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input
+                                                class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} text-center"
+                                                type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                                max="20" data-item_id="{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button
+                                                    class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
+                                                    data-item_id="{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between text-center my-auto px-1">
+                                    <a class="update-link text-info"><i class="fa-solid fa-rotate"></i></a>
+                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
+                                            class="fa-solid fa-trash-can"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-xl-12">
-                        <a href="{% url 'checkout' %}" class="btn btn-main w-100">
-                            <span class="text-uppercase">Secure Checkout</span>
-                            <span class="icon">
-                                <i class="fas fa-lock"></i>
-                            </span>
-                        </a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-12 col-md-5 col-lg-5 order-summary-container">
+                <div class="order-summary pb-3 pl-3 pr-3">
+                    <hr class="invisible">
+                    <h2 class="logo-font mb-3 text-center d-md-none d-lg-block text-lg-left page-title">Order Summary</h2>
+                    <h2 class="logo-font mb-3 text-center d-none d-md-block text-md-left d-lg-none page-title">Bag Summary</h2>
+                    <hr>
+                    <div class="row bag-total">
+                        <div class="col-6">
+                            <p class="mb-2">Subtotal:</p>
+                            <p class="mb-2">Shipping:</p>
+                            <p class="mb-2"><strong>Total:</strong></p>
+                        </div>
+                        <div class="col-6 text-right">
+                            <p class="mb-2">€{{ total|floatformat:2 }}</p>
+                            <p class="mb-2">{% if delivery == 0 %}Free{% else %}€{{ delivery|floatformat:2 }}{% endif %}</p>
+                            <p class="mb-2"><strong>€{{ grand_total|floatformat:2 }}</strong></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            {% if free_delivery_delta > 0 %}
+                            <p class="mb-1 text-info">
+                                Spend <strong>€{{ free_delivery_delta }}</strong> more for free shipping!
+                            </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6 col-md-12 mb-2">
+                            <a href="{% url 'products' %}" class="btn btn-outline-torquoise w-100">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Continue Shopping</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-md-12">
+                            <a href="{% url 'checkout' %}" class="btn btn-main w-100">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                {% endif %}
             </div>
         </div>
+        {% else %}
+        <!-- If the shopping bag is empty -->
+        <div class="row">
+            <div class="col-12">
+                <p class="lead mb-5">Your bag is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-main mb-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Continue Shopping</span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -299,17 +211,11 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script>
-    // update quantity on click for screen sizes <576px and ≥576px
-    $('.update-link-small').click(function (e) {
-        let form = $(this).parent().parent().prev().children('.update-form');
+    // update quantity on click
+    $('.update-link').click(function (e) {
+        let form = $(this).parent().parent().parent().prev().children().children('.update-form');
         form.submit();
     });
-
-    // Update quantity on click for screen sizes ≥768px
-    $('.update-link').click(function (e) {
-        let form = $(this).parent().prev('.update-form');
-        form.submit();
-    })
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
