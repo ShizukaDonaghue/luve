@@ -1007,7 +1007,7 @@ footer i:hover,
         margin-top: 10%;
     }
 
-    .bag-price {
+    .bag-price, .delivery-balance {
         font-size: 90%;
     }
 
@@ -1084,7 +1084,7 @@ footer i:hover,
         padding-bottom: 0.2rem;
     }
 
-    .bag-price {
+   .bag-price, .delivery-balance {
         font-size: 100%;
     }
 
