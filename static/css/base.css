@@ -140,15 +140,15 @@ body {
     border: 1px solid var(--turquoise);
 }
 
-.btn-outline-torquoise {
+.btn-outline-turquoise {
     background: var(--white);
     color: var(--turquoise) !important;
     border: 1px solid var(--turquoise);
 }
 
-.btn-outline-torquoise:hover,
-.btn-outline-torquoise:active,
-.btn-outline-torquoise:focus {
+.btn-outline-turquoise:hover,
+.btn-outline-turquoise:active,
+.btn-outline-turquoise:focus {
     background: var(--turquoise);
     color: var(--white) !important;
     border: 1px solid var(--turquoise);
