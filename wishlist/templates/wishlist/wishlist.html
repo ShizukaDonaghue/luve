@@ -16,9 +16,9 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr class="{% if not wishlist %}invisible{% endif %}">
+            <hr>
             <h2 class="logo-font mb-3 text-center text-md-left page-title">Wishlist</h2>
-            <hr class="{% if not wishlist %}invisible{% endif %}">
+            <hr>
             <!-- If there is an item/are items in the wishlist -->
             <div class="row">
                 <div class="product-container col-12">
@@ -100,13 +100,17 @@
                         {% endfor %}
                         <!-- If there are no items in wishlist -->
                         {% else %}
-                        <p class="lead mb-5">Your wishlist is empty!</p>
-                        <a href="{% url 'products' %}" class="btn btn-main">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Continue Shopping</span>
-                        </a>
+                        <div class="row">
+                            <div class="col-12 text-center text-md-left">
+                                <p class="lead mt-3 mb-4 mb-md-5 ">Your wishlist is empty.</p>
+                                <a href="{% url 'products' %}" class="btn btn-main mb-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Continue Shopping</span>
+                                </a>
+                            </div>
+                        </div>
                     {% endif %}
                     </div>
                 </div>
