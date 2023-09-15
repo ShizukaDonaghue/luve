@@ -46,36 +46,30 @@
                 {% endif %}
             </div>
             {% for order in orders %}
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-5 col-sm-7 col-md-8">
                     <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"
-                        class="text-decoration-none text-info">
+                        class="text-decoration-none text-info order-history">
                         {{ order.order_number|truncatechars:10 }}
                     </a>
                 </div>
-                <div class="col-4 col-sm-3 col-md-2 text-center">{{ order.order_date_format }}</div>
-                <div class="col-3 col-sm-2 col-md-2 text-right">€{{ order.grand_total }}</div>
+                <div class="col-4 col-sm-3 col-md-2 text-center order-history">{{ order.order_date_format }}</div>
+                <div class="col-3 col-sm-2 col-md-2 text-right order-history">€{{ order.grand_total }}</div>
             </div>
+            {% for item in order.lineitems.all %}
             <div class="row">
-                <div class="col">
-                    <ul class="list-unstyled">
-                        {% for item in order.lineitems.all %}
-                        <div class="row">
-                            <div class="col-10">
-                                <li>
-                                    {{ item.product.name }}
-                                </li>
-                            </div>
-                            <div class="col-2 text-right">
-                                <li>
-                                    x {{ item.quantity }}
-                                </li>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </ul>
+                <div class="col-10">
+                    <p class="p-0 m-0 order-history">
+                        {{ item.product.name }}
+                    </p>
+                </div>
+                <div class="col-2 text-right">
+                    <p class="p-0 m-0 order-history">
+                        x {{ item.quantity }}
+                    </p>
                 </div>
             </div>
+            {% endfor %}
             {% empty %}
             <p class="lead mt-3">No orders yet!</p>
             <a href="{% url 'products' %}" class="btn btn-main mb-5">

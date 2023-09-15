@@ -335,13 +335,13 @@ input[name='q']::placeholder {
     color: var(--turquoise);
 }
 
-.price-xsm {
-    font-size: 95%;
-}
-
 .product-details,
 .product-review {
     font-size: 1.15rem;
+}
+
+.order-history {
+    font-size: 95%;
 }
 
 .btn-shop-bag {
@@ -720,7 +720,7 @@ footer i:hover,
         font-size: 1.3rem;
     }
 
-    .introduction, .bag-price {
+    .introduction, .bag-price, .order-history {
         font-size: 100%;
     }
 
