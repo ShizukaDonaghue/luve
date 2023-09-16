@@ -1097,6 +1097,17 @@ Shop Now Link | Click | Navigates to Products page | PASS
 Articles Link | Click | Navigates to Articles page | PASS
 
 ### Products Page
+
+#### Sorting Functionality
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Price (Low to High) | Click | Sorts the product listing by price in ascending order | PASS
+Price (High to Low) | Click | Sorts the product listing by price in descending order | PASS
+Name (A to Z) | Click | Sorts the product listing by product name in ascending order | PASS
+Name (Z to A) | Click | Sorts the product listing by product name in descending order | PASS
+Category (A to Z ) | Click | Sorts the product listing by category name in ascending order | PASS
+Category (Z to A ) | Click | Sorts the product listing by category name in descending order | PASS
+
 #### Product Cards
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
@@ -1120,8 +1131,8 @@ Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | P
 #### Add to Bag 
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Add to Bag Link | Click | Once clicked, the item is added to the shopping bag if the total order quantity of the item is not greater than the maximum order quantity of 20 | PASS
-Add to Bag Link | Click | If the total order quantity of the item is already at the maximum order quantity of 20, the item is not added to the shopping bag | PASS
+Add to Bag Button | Click | Once clicked, the item is added to the shopping bag if the total order quantity of the item is not greater than the maximum order quantity of 20 | PASS
+Add to Bag Button | Click | If the total order quantity of the item is already at the maximum order quantity of 20, the item is not added to the shopping bag | PASS
 Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
 Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
@@ -1184,7 +1195,7 @@ Alert | Display | If the total order quantity of the item is not between 1 and t
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 All Products Link | Click | Navigates to Products page | PASS
-Continue Shopping Link | Click | Navigates back to the Products page | PASS
+Continue Shopping Button | Click | Navigates back to the Products page | PASS
 
 #### Customer Reviews
 Feature | Action | Expected Result | PASS/FAIL
@@ -1205,9 +1216,9 @@ Delete Review Button | Click | a modal is displayed to confirm deletion | PASS
 ### Edit Review Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Access the Page by Changing URL | Navigates the user to Log In page | PASS
-Defensive Measure | Logged-in and Try to Access Another User's Review by Changing URL | An error message is displayed notifying the user that they are not authorised to edit the review | PASS
-Edit Review| Display | Edit review form contains the original details from the database | PASS
+Defensive Measure | Not Logged-in and Try to Access the Edit Review Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | Logged-in and Try to Access Another User's Review by Entering the URL | An error message is displayed notifying the user that they are not authorised to edit the review | PASS
+Edit Review Form | Display | The details in the form are populated from the database | PASS
 Review Field | Leave Empty | The content field can be left blank if the user would like to rate the product only | PASS
 Edite Review | Click | Review is updated and displayed in the review section | PASS
 Alert | Display | Success message is displayed confirming that the review has been updated successfully | PASS
@@ -1220,4 +1231,76 @@ Delete Review| Submit | Once the user confirms deletion in the modal, the review
 Alert | Display | Success message is displayed confirming that the review has been deleted | PASS
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS 
+
+### Add Product Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Add Product Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | Logged-in and Try to Access the Add Product Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add products | PASS
+Category | Not Selected | Defaults to "Baby & Kids and Kids" and the product form submits as this is not a required field | PASS
+Brand | Leave Empty | The product form submits as this is not a required field | PASS
+Type | Leave Empty | The product form submits as this is not a required field | PASS
+SKU | Leave Empty | The product form submits as this is not a required field | PASS
+Product Name | Leave Empty | The product form does not submit | PASS
+Product Name | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Product Name | Enter an Empty String | The product form does not submit | PASS
+Product Name | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Leave Empty | The product form does not submit | PASS
+Description | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Enter an Empty String | The form does not submit | PASS
+Description | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Price | Enter a Price less than 0.01 | The product form does not submit | PASS
+Price | Enter a Price less than 0.01 | An error message is displayed to the user notifying them that the price must be greater than or equal to 0.01 | PASS
+Image | Not Uploaded | The product form submits as this is not a required field | PASS
+Image | Click to Upload | Opens a file explorer to select an image from | PASS
+Image | Click to Upload | The name of the image selected is displayed under the "Select Image" button | PASS
+Add Product | Submit | Displays the Product Details page which has been generated | PASS
+Alert | Display | Success message is displayed confirming [Product Name] has been added successfully | PASS
+Cancel Button | Click | Navigates back to Products page | PASS
+
+### Edit Product Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Not Logged-in and Try to Access the Edit Product Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | Logged-in and Try to Access the Edit Product Page by Entering the URL without Superuser or Staff Permission | An error message is displayed notifying the user that they are not authorised to edit products | PASS
+Edit Product Form | Display | The details in the form are populated from the database | PASS
+Category | Not Selected | Defaults to "Baby & Kids and Kids" and the product form submits as this is not a required field | PASS
+Brand | Leave Empty | The product form submits as this is not a required field | PASS
+Type | Leave Empty | The product form submits as this is not a required field | PASS
+SKU | Leave Empty | The product form submits as this is not a required field | PASS
+Product Name | Leave Empty | The product form does not submit | PASS
+Product Name | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Product Name | Enter an Empty String | The product form does not submit | PASS
+Product Name | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Leave Empty | The product form does not submit | PASS
+Description | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Enter an Empty String | The form does not submit | PASS
+Description | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Price | Enter a Price less than 0.01 | The product form does not submit | PASS
+Price | Enter a Price less than 0.01 | An error message is displayed to the user notifying them that the price must be greater than or equal to 0.01 | PASS
+Image | Not Uploaded | The product form submits as this is not a required field | PASS
+Image | Click to Upload | Opens a file explorer to select an image from | PASS
+Image | Click to Upload | The name of the image selected is displayed under the "Select Image" button | PASS
+Edit Product | Submit | Displays the Product Details page which has been generated | PASS
+Alert | Display | Success message is displayed confirming [Product Name] has been updated successfully | PASS
+Cancel Button | Click | Navigates back to Products page | PASS
+Update Product | Submit | Displays the Product Details page which has been updated | PASS
+Alert | Submit | Success message is displayed confirming the [Product title] has been updated successfully | PASS
+Cancel Button | Navigates back to Product Detail page | PASS
+
+### Delete Product Modal
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Delete Product from Products Page | Submit | Once the user confirms deletion in the modal, the Product is deleted | PASS
+Delete Product from Product Detail Page | Submit | Once the user confirms deletion in the modal, the Product is deleted | PASS
+Delete Product | Submit | Once the product is deleted, navigates back to Products page | PASS
+Alert | Display | Success message is displayed confirming that the Product has been deleted | PASS
+Cancel Button | Click | Modal is closed | PASS
+Modal Closure | Click Outside Menu | Modal is closed | PASS
+
+
+
+
+
+
 
