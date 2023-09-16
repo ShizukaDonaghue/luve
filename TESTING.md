@@ -934,11 +934,30 @@ Browser compatibility was checked for the following browsers and no issues were 
   
 </details>
 
-## User Stories Testing
-User stories were tested and addressed as follows.
+## Features Testing
+Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
 
-### **EPIC: User Account & Profile**
-* **_As a Site User, I can log out of my account so that I can keep my account secure._**  
-
-The following user stories were not implemented.
-
+### Browser Tab
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Favicon | Display | Favicon is displayed correctly in the browser tab | PASS
+Title | Display | "LUVE | Safe Sunblock" is displayed as the title of the page for Home page | PASS
+Title | Display | "LUVE | Products" is displayed as the title of the page for Products and Brands page | PASS
+Title | Display | The name of the product is displayed as the title of the page for each Product Details page | PASS
+Title | Display | "LUVE | Articles" is displayed as the title of the page for Articels | PASS
+Title | Display | The name of the article is displayed as the title of the page for each Article Details page | PASS
+Title | Display | "LUVE | Contact Us" is displayed as the title of the page for Contact page | PASS
+Title | Display | "LUVE | Thank you!" is displayed as the title of the page for Contact Success page | PASS
+Title | Display | "LUVE | Product Management" is displayed as the title of the page for Add Product page | PASS
+Title | Display | "LUVE | Edit Product" is displayed as the title of the page for Edit Prodcut page | PASS
+Title | Display | "LUVE | Edit Review" is displayed as the title of the page for Edit Review page | PASS
+Title | Display | "LUVE | Article Management" is displayed as the title of the page for Add Article page | PASS
+Title | Display | "LUVE | Edit Article" is displayed as the title of the page for Edit Article page | PASS
+Title | Display | "LUVE | My Profile" is displayed as the title of the page for My Profile page | PASS
+Title | Display | "LUVE | Wishlist" is displayed as the title of the page for Wishlist page | PASS
+Title | Display | "LUVE | Shopping Bag" is displayed as the title of the page for Shopping Bag page | PASS
+Title | Display | "LUVE | Checkout" is displayed as the title of the page for Checkout page | PASS
+Title | Display | "LUVE | Thank you!" is displayed as the title of the page for Checkout Success page | PASS
+Title | Display | "LUVE | Sign Up" is displayed as the title of the page for Sign Up page | PASS
+Title | Display | "LUVE | Log In" is displayed as the title of the page for Log In page | PASS
+Title | Display | "LUVE | Log Out" is displayed as the title of the page for Log Out page | PASS
