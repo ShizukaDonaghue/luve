@@ -883,6 +883,13 @@ The application was tested manually on the following devices and no issues were 
 </details>
 
 <details>
+  <summary>iPhone 11</summary>
+
+  <img src="docs/images/testing/device-iphone11.png" width=300>
+  
+</details>
+
+<details>
   <summary>iPad 8</summary>
 
   <img src="docs/images/testing/device-ipad.png" width=700>
