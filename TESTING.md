@@ -941,23 +941,148 @@ Manual testing was performed using Google Chrome to verify that all the features
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Favicon | Display | Favicon is displayed correctly in the browser tab | PASS
-Title | Display | "LUVE | Safe Sunblock" is displayed as the title of the page for Home page | PASS
-Title | Display | "LUVE | Products" is displayed as the title of the page for Products and Brands page | PASS
+Title | Display | "Safe Sunblock" is displayed as the title of the page for Home page | PASS
+Title | Display | "Products" is displayed as the title of the page for Products and Brands page | PASS
 Title | Display | The name of the product is displayed as the title of the page for each Product Details page | PASS
-Title | Display | "LUVE | Articles" is displayed as the title of the page for Articels | PASS
+Title | Display | "Articles" is displayed as the title of the page for Articels | PASS
 Title | Display | The name of the article is displayed as the title of the page for each Article Details page | PASS
-Title | Display | "LUVE | Contact Us" is displayed as the title of the page for Contact page | PASS
-Title | Display | "LUVE | Thank you!" is displayed as the title of the page for Contact Success page | PASS
-Title | Display | "LUVE | Product Management" is displayed as the title of the page for Add Product page | PASS
-Title | Display | "LUVE | Edit Product" is displayed as the title of the page for Edit Prodcut page | PASS
-Title | Display | "LUVE | Edit Review" is displayed as the title of the page for Edit Review page | PASS
-Title | Display | "LUVE | Article Management" is displayed as the title of the page for Add Article page | PASS
-Title | Display | "LUVE | Edit Article" is displayed as the title of the page for Edit Article page | PASS
-Title | Display | "LUVE | My Profile" is displayed as the title of the page for My Profile page | PASS
-Title | Display | "LUVE | Wishlist" is displayed as the title of the page for Wishlist page | PASS
-Title | Display | "LUVE | Shopping Bag" is displayed as the title of the page for Shopping Bag page | PASS
-Title | Display | "LUVE | Checkout" is displayed as the title of the page for Checkout page | PASS
-Title | Display | "LUVE | Thank you!" is displayed as the title of the page for Checkout Success page | PASS
-Title | Display | "LUVE | Sign Up" is displayed as the title of the page for Sign Up page | PASS
-Title | Display | "LUVE | Log In" is displayed as the title of the page for Log In page | PASS
-Title | Display | "LUVE | Log Out" is displayed as the title of the page for Log Out page | PASS
+Title | Display | "Contact Us" is displayed as the title of the page for Contact page | PASS
+Title | Display | "Thank you!" is displayed as the title of the page for Contact Success page | PASS
+Title | Display | "Product Management" is displayed as the title of the page for Add Product page | PASS
+Title | Display | "Edit Product" is displayed as the title of the page for Edit Prodcut page | PASS
+Title | Display | "Edit Review" is displayed as the title of the page for Edit Review page | PASS
+Title | Display | "Article Management" is displayed as the title of the page for Add Article page | PASS
+Title | Display | "Edit Article" is displayed as the title of the page for Edit Article page | PASS
+Title | Display | "My Profile" is displayed as the title of the page for My Profile page | PASS
+Title | Display | "Wishlist" is displayed as the title of the page for Wishlist page | PASS
+Title | Display | "Shopping Bag" is displayed as the title of the page for Shopping Bag page | PASS
+Title | Display | "Checkout" is displayed as the title of the page for Checkout page | PASS
+Title | Display | "Thank you!" is displayed as the title of the page for Checkout Success page | PASS
+Title | Display | "Sign Up" is displayed as the title of the page for Sign Up page | PASS
+Title | Display | "Log In" is displayed as the title of the page for Log In page | PASS
+Title | Display | "Log Out" is displayed as the title of the page for Log Out page | PASS
+
+### Navigation Bar
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Navbar Menus | Display | Menus are correctly displayed according to the screen sizes | PASS
+Position | Display | Navbar always stays at the top of the screen | PASS
+Logo | Click | Navigates to Home page | PASS
+Search | Click | Search query functions correctly and display the product listing based on the search query | PASS
+Search | Click | If the search field is left blank, an error message is displayed to notify the user | PASS
+Products Link | Click | Dropdown menu appears and once the selection is made, navigates to the specified product listing | PASS
+Brands Link | Click | Dropdown menu appears and once the selection is made, navigates to the specified product listing | PASS
+Articles Link | Click |Navigates to Articles page | PASS
+Contact Link | Click |Navigates to Contact page | PASS
+Account Link | Click | Dropdown menu appears and once the selection is made, navigates to the specified page | PASS
+Wishlist Link | Click |Navigates to Wishlit page | PASS
+Shopping Bag Link | Click |Navigates to Shopping Bag page | PASS
+Sign Up Link | Display | Only available if the user is not logged in | PASS
+Sign Up Link | Click | Navigates to Sign Up page | PASS
+Log In Link | Display | Only available if the user is not logged in | PASS
+Log In Link | Click | Navigates to Log In page | PASS
+Log Out Link | Display | Only available if the user is logged in | PASS
+Log Out Link | Click | Navigates to Log Out page | PASS
+Product Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
+Product Management Link | Click| Navigates to Add Product page | PASS
+Article Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
+Article Management Link | Click| Navigates to Add Article page | PASS
+Hamburger Menu Closure | Click | Hamburger menu closes when clicked outside the menu | PASS
+All Links | Hover | Colour changes to turquoise or pink with hover effect | PASS
+
+### Delivery Banner
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Delivery Banner | Display | When there is no item in the shopping bag, "Free delivery on orders over €50!" is displayed | PASS
+Delivery Banner | Display | When there is an item/are items in the shopping bag, the remaining order value to qualify for free shipping is displayed in the "Spend €[remaining value] more for free shippping!" messsage | PASS
+Delivery Banner | Display | When the order value reaches the free delivery threshold, "Horray! Free delivery on your order!" is displayed | PASS
+
+### Footer
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Position | Display | Footer always stays at the bottom of the screen  | PASS
+Newsletter Signup | Click | When the user eneters their email address, the email address is registered with Mailchimp account | PASS
+Newsletter Signup | Click | When the user eneters their email address, the user is notified that they have subscribed the the newsletter | PASS
+Newsletter Signup | Click | If the email is already registered, the user is notified that they have already subscribed the the newsletter | PASS
+Newsletter Signup | Click | If the email field is left blank when the form is submitted, the user is notified that the email address is a required field | PASS
+Contact Link | Click |Navigates to Contact page | PASS
+Privacy Policy Link | Click |Navigates to Privacy Policy page | PASS
+Terms & Conditions Link | Click |Navigates to Terms & Conditions page | PASS
+Facebook Link | Click | Opens Facebook in a new tab | PASS
+X Link | Click | Opens X in a new tab | PASS
+Instagram Link | Click | Opens Instagram in a new tab | PASS
+GitHub Link | Click | Opens GitHub in a new tab | PASS
+All Links | Hover | Colour changes to turquoise with hover effect | PASS
+
+### Sign Up Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Email Field | Leave Empty | Form does not submit | PASS
+Email Field | Leave Empty | Error message is displayed | PASS
+Email Field | Enter Invalid Format | Form does not submit | PASS
+Email Field | Enter Invalid Format | Error message is displayed | PASS
+Email Field | Duplicate Email Address | Form does not submit | PASS
+Email Field | Duplicate Email Address | Error message is displayed | PASS
+Username Field | Leave Empty | Form does not submit | PASS
+Username Field | Leave Empty | Error message is displayed | PASS
+Username Field | Enter an Empty String | Form does not submit | PASS
+Username Field | Enter an Empty String | Error message is displayed | PASS
+Username Field | Duplicate Username | Form does not submit | PASS
+Username Field | Duplicate Username | Error message is displayed | PASS
+Password Field | Leave Empty | Form does not submit | PASS
+Password Field | Leave Empty | Error message is displayed | PASS
+Password Field | Enter an Empty String | Form does not submit | PASS
+Password Field | Enter an Empty String | Error message is displayed | PASS
+Password Field | Passwords Not Matched | Form does not submit | PASS
+Password Field | Passwords Not Matched | Error message is displayed | PASS
+Log In Link | Click | Navigates to Log In page | PASS
+Sign Up Link | Click | Once all the required fields are correctly filled in, an email is sent to the user with a link to confirm their email address | PASS
+Sign Up Link | Click | Once all the user confirms their email address, they are registerd as a user in the database | PASS
+Alert | Display | Success message is displayed once the email confirmation with a link is sent to the user  | PASS
+Alert | Display | Success message is displayed once the user confirms their email address | PASS
+
+
+### Log In Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Username Field | Leave Empty | Form does not submit | PASS
+Username Field | Leave Empty | Error message is displayed | PASS
+Username Field | Enter an Empty String | Form does not submit | PASS
+Username Field | Enter an Empty String | Error message is displayed | PASS
+Password Field | Leave Empty | Form does not submit | PASS
+Password Field | Leave Empty | Error message is displayed | PASS
+Password Field | Enter an Empty String | Form does not submit | PASS
+Password Field | Enter an Empty String | Error message is displayed | PASS
+Login Fields | Incorrect Details | Form does not submit | PASS
+Login Fields | Incorrect Details | Error message is displayed | PASS
+Sign Up Link | Click | Navigates to Sign Up page | PASS
+Password Reset | Click | Navigates to Password Rest page | PASS
+Log In Link | Click | Once the required fields are correctly filled in, logs in the user | PASS
+Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
+Alert | Display | Success message is displayed confirming the user has logged in as [username] | PASS
+
+### Password Rest Page
+Email Field | Leave Empty | Form does not submit | PASS
+Email Field | Leave Empty | Error message is displayed | PASS
+Email Field | Enter Invalid Format | Form does not submit | PASS
+Email Field | Enter Invalid Format | Error message is displayed | PASS
+Log In Link | Click | Navigates to Log In page | PASS
+Reset Password Link | Click | Once the correct email is entered, an email containg a link to reset the password is set to the user | PASS
+
+### Change Password Page
+Password Field | Leave Empty | Form does not submit | PASS
+Password Field | Leave Empty | Error message is displayed | PASS
+Password Field | Enter an Empty String | Form does not submit | PASS
+Password Field | Enter an Empty String | Error message is displayed | PASS
+Change Password Link | Once the new password is correctly entered, the user's password is changed.
+Log In Link | Click | Navigates to Log In page | PASS
+Alert | Display | Success message is displayed confirming the password has been changed | PASS
+
+### Logo Out Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Log Out Link | Click | Once the user confirms logout, the user is logged out | PASS
+Log Out Link | Click | Once the user is logged out, navigates to Home page | PASS
+Cancel | Click | Navigates to Home page | PASS
+Alert | Display | Success message is displayed confirming that the user has logged out | PASS
+
