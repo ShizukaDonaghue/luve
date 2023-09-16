@@ -581,8 +581,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 </details>
 
 ## Lighthouse
-Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance.
-Please see the results below for each page.
+Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance. Please see the results below for each page.
 
 <details>
   <summary>Home Page</summary>
@@ -873,3 +872,57 @@ Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/
   
 </details>
 
+## Device Testing
+The application was tested manually on the following devices and no issues were found:
+
+<details>
+  <summary>iPhone 12</summary>
+
+  <img src="docs/images/testing/device-iphone-12.PNG" width=300>
+  
+</details>
+
+<details>
+  <summary>iPad 8</summary>
+
+  <img src="docs/images/testing/device-ipad.png" width=700>
+  
+</details>
+
+<details>
+  <summary>HP Elitebook 840</summary>
+
+  <img src="docs/images/testing/hp.png">
+  
+</details>
+
+## Browser Compatibility
+Browser compatibility was checked for the following browsers and no issues were found:
+
+<details>
+  <summary>Google Chrome</summary>
+
+  <img src="docs/images/testing/chrome.png">
+  
+</details>
+
+<details>
+  <summary>Microsoft Edge</summary>
+
+  <img src="docs/images/testing/edge.png">
+  
+</details>
+
+<details>
+  <summary>Mozilla Firefox</summary>
+
+  <img src="docs/images/testing/firefox.png">
+  
+</details>
+
+<details>
+  <summary>Opera</summary>
+
+  <img src="docs/images/testing/opera.png">
+  
+</details>
