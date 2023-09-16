@@ -638,14 +638,14 @@ footer i:hover,
 #mc-embedded-subscribe.button {
     height: 42px;
     font-size: 90%;
-    color: var(--grey);
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     margin-bottom: 0;
 }
 
 #mc-embedded-subscribe.button:hover {
-    background-color: var(--turquoise);
+    background-color: var(--pink) !important;
+    color: var(--white) !important;
 }
 
 /* Error pages */
