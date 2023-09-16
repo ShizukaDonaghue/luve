@@ -223,7 +223,7 @@ JavaScript codes used in the application were validated using [JSHint](https://j
 
 </details>
 
-Undefined variable "checkout" was identified for the order form. This calls for `checkout()` function in checkout/views.py and not defined within the file. This was necessary as jQuery validation would submit the form before Stripe could processs the payment, causing the payment to fail (please see issue #86).
+Undefined variable "checkout" was identified for the order form. This calls for `checkout()` function in checkout/views.py and not defined within the file. This was necessary as jQuery validation would submit the form before Stripe could processs the payment, causing the payment to fail (more details in [#86](https://github.com/ShizukaDonaghue/luve/issues/86)).
 
 <details>
   <summary>Countryfield JavaScript Codes - No issues or errors</summary> 
@@ -579,3 +579,87 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
   <img src="docs/images/testing/wishlist-views.png">
 
 </details>
+
+## Lighthouse
+Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance.
+Please see the results below for each page.
+
+<details>
+  <summary>Home Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/home-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/home-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Articles Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/articles-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/articles-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Article Detail Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/article-detail-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/article-detail-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Add Article Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/add-article-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/add-article-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Shopping Bag Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/bag-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/bag-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Checkout Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/checkout-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/checkout-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Checkout Success Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/checkout-success-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/checkout-success-mobile.png">
+	
+</details>
+
+
+
