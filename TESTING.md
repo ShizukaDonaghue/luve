@@ -629,6 +629,17 @@ Please see the results below for each page.
 </details>
 
 <details>
+  <summary>Edit Article Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/edit-article-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/edit-article-mobile.png">
+	
+</details>
+
+<details>
   <summary>Shopping Bag Page</summary>
   
   Desktop:  
@@ -661,5 +672,204 @@ Please see the results below for each page.
 	
 </details>
 
+<details>
+  <summary>Contact Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/contact-desktop.png">
 
+  Mobile:  
+  <img src="docs/images/testing/contact-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Contact Success Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/contact-success-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/contact-success-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Products Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/products-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/products-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Product Detail Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/product-detail-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/product-detail-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Add Product Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/add-product-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/add-product-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Edit Product Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/edit-product-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/edit-produt-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Edit Product Review Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/edit-review-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/edit-review-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Profile Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/profile-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/profile-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Wishlit Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/wishlist-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/wishlist-mobile.png">
+	
+</details>
+
+## Responsiveness
+Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found. This included the following devices:
+
+
+<details>
+  <summary>iPhone 5/SE</summary>
+
+  <img src="docs/images/testing/iphone-5-se.png" width=250>
+  
+</details>
+
+<details>
+  <summary>iPhone 6/7/8</summary>
+
+  <img src="docs/images/testing/iphone-6-7-8.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone 6/7/8 Plus</summary>
+
+  <img src="docs/images/testing/iphone-6-7-8-plus.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone SE</summary>
+
+  <img src="docs/images/testing/iphone-se.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone XR</summary>
+
+  <img src="docs/images/testing/iphone-xr.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone 12 Pro</summary>
+
+  <img src="docs/images/testing/iphone-12-pro.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPad Air</summary>
+
+  <img src="docs/images/testing/ipad-air.png" width=600>
+  
+</details>
+
+<details>
+  <summary>iPad Mini</summary>
+
+  <img src="docs/images/testing/ipad-mini.png" width=600>
+  
+</details>
+
+<details>
+  <summary>Samsung Galaxy S8+</summary>
+
+  <img src="docs/images/testing/samsung-galaxy-s8-plus.png" width=350>
+  
+</details>
+
+<details>
+  <summary>Samsung Galaxy S9+</summary>
+
+  <img src="docs/images/testing/samsung-galaxy-s9-plus.png" width=350>
+  
+</details>
+
+<details>
+  <summary>Microsoft Surface Pro 7</summary>
+
+  <img src="docs/images/testing/surface-pro-7.png" width=600>
+  
+</details>
+
+<details>
+  <summary>Microsoft Surface Duo</summary>
+
+  <img src="docs/images/testing/surface-duo.png" width=500>
+  
+</details>
+
+<details>
+  <summary>Nest Hub</summary>
+
+  <img src="docs/images/testing/nest-hub.png">
+  
+</details>
+
+<details>
+  <summary>Nest Hub Max</summary>
+
+  <img src="docs/images/testing/nest-hub-max.png">
+  
+</details>
 
