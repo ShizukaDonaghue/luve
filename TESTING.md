@@ -1120,10 +1120,11 @@ Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | P
 #### Add to Bag 
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Add to Bag Link | Click | Once clicked, the item is added to the shopping bag | PASS
+Add to Bag Link | Click | Once clicked, the item is added to the shopping bag if the total order quantity of the item is not greater than the maximum order quantity of 20 | PASS
+Add to Bag Link | Click | If the total order quantity of the item is already at the maximum order quantity of 20, the item is not added to the shopping bag | PASS
 Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
 Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
-Alert | Display | If the order quantity exceeds the maximum order quantity, an error message is displayed to the user | PASS
+Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 
 #### Add to or Remove from Wishlist
 Feature | Action | Expected Result | PASS/FAIL
@@ -1134,4 +1135,89 @@ Remove from Wishlist | Click | If the user is logged in and if the item is alrea
 Alert | Display | If the user is not logged in, an alert is display to the user to let them know that they need to log in to add the item to their wishlist | PASS
 Alert | Display | Once the item is added to the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been added to the wishlist | PASS
 Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
-Wishlist Count | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
+Wishlist Count | Display | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
+
+### Product Details Page
+#### Product Image
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Product Image | Display | When a Product image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Product Image | Click | Once clicked, the larger size of the image is displayed from Cloudinary | PASS
+
+#### Add to or Remove from Wishlist
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Add to Wishlist | Click | If the user is not logged in, navigates to the Login page | PASS 
+Add to Wishlist | Click | If the user is logged in and if the item is not already in their wishlist, the item is added to the wishlist | PASS
+Remove from Wishlist | Click | If the user is logged in and if the item is already in their wishlist, the item is removed from the wishlist | PASS
+Alert | Display | If the user is not logged in, an alert is display to the user to let them know that they need to log in to add the item to their wishlist | PASS
+Alert | Display | Once the item is added to the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been added to the wishlist | PASS
+Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
+Wishlist Count | Display | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
+
+#### Product Information
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Product Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Product Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
+
+#### Edit & Delete Product Links
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Edit Link | Click | Navigates to Edit Product page | PASS
+Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+
+#### Order Quantity & Add to Bag
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Order Quantity | Select | Decrement and increment buttons only allow a quantity between 1 and the maximum order quantity of 20 | PASS
+Add to Bag | Click | If the total order quantity of the item is between 1 and the maximum order quantity of 20, the selected quantity of the item is added to the shopping bag | PASS
+Add to Bag | Click | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, the item is not added to the shopping bag | PASS
+Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
+Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
+Alert | Display | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
+
+#### Links to Other Pages
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+All Products Link | Click | Navigates to Products page | PASS
+Continue Shopping Link | Click | Navigates back to the Products page | PASS
+
+#### Customer Reviews
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Reviews | Display | If there are no reviews, "Be the first to review or rate this product!" is displayed | PASS
+Reviews | Display | If there are reviews, displays them in ascending order based on posting dates | PASS
+Ratings | Display | The star ratings are correctly displayed based on the rating selected | PASS
+Post Review | Display | If the user is not logged in, "Please log in to leave a review!" is displayed | PASS
+Post Review | Display | If the user is logged in, the review form is available to post a review | PASS
+Post Review | Display | First letter is always capitalised regardless of whether the content entered is capitalised | PASS
+Post Review | Leave Empty | The content field can be left blank if the user would like to rate the product only | PASS
+Post Review | Submit | Once the form is submitted, review and/or rating is/are added to the database and displayed in the review section | PASS
+Alert | Display | Success message is displayed confirming the Review has been added successfully | PASS
+Edit/Delete Review Dropdown Menu | Display | Edit/Delete menu is available if the user is logged in and is the author of the review | PASS
+Edit Review Button | Click | Navigates to Edit Review page | PASS
+Delete Review Button | Click | a modal is displayed to confirm deletion | PASS
+
+### Edit Review Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Not Logged-in and Try to Access the Page by Changing URL | Navigates the user to Log In page | PASS
+Defensive Measure | Logged-in and Try to Access Another User's Review by Changing URL | An error message is displayed notifying the user that they are not authorised to edit the review | PASS
+Edit Review| Display | Edit review form contains the original details from the database | PASS
+Review Field | Leave Empty | The content field can be left blank if the user would like to rate the product only | PASS
+Edite Review | Click | Review is updated and displayed in the review section | PASS
+Alert | Display | Success message is displayed confirming that the review has been updated successfully | PASS
+Cancel Button | Click | Navigates back to Product Detail page | PASS
+
+### Delete Review Modal
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Delete Review| Submit | Once the user confirms deletion in the modal, the review is deleted | PASS
+Alert | Display | Success message is displayed confirming that the review has been deleted | PASS
+Cancel Button | Click | Modal is closed | PASS
+Modal Closure | Click Outside Menu | Modal is closed | PASS 
+
