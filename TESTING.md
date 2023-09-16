@@ -1430,5 +1430,31 @@ Contact Form | Submit | Once the completed form is submitted, a confirmation ema
 Contact Form | Submit | Once the completed form is submitted, a notification email is sent to the business owner/staff notifying that a new message has been received | PASS
 Alert | Display | Success message is displayed confirming that the user's message has been received | PASS
 
+### Profile Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Profile Page by Entering the URL | Navigates the user to Login page | PASS
+Delivery Adress | Entry | If the delivery address is not already saved, the logged-in user can populate and save the delivery address | PASS
+Delivery Adress | Entry | If the delivery address is not already saved and if the logged-in user places an order with "Save this information to my profile" box ticked, the delivery address is saved into their profile | PASS
+Delivery Adress | Update | If the delivery address is already saved, the user can update and save the delivery address | PASS
+Order History | Display | If the user has placed orders, the order details are displayed in descending order based on the order dates | PASS
+Order Number Link | Click | Once clicked, the order confirmation is displayed | PASS
+Alert | Display | When the delivery address is updated, a success message is displayed confirming that the user profile has been updated | PASS
+
+### Wishlist Page
+Defensive Measure | Click | If the user is not logged in and try to access the Wishlist page, navigates to the Login page | PASS 
+Wishlist Items | Display | Displays items the user has added to their wishlist | PASS
+Remove Button | Click | Removes the item from the wishlist | PASS
+Remove Button | Click | Once the item is removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
+Add to Bag Button | Click | Once clicked, the item is added to the shopping bag if the total order quantity of the item is not greater than the maximum order quantity of 20 | PASS
+Add to Bag Button | Click | If the total order quantity of the item is already at the maximum order quantity of 20, the item is not added to the shopping bag | PASS
+Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
+Alert | Display | Once the item is removed from the wishlist, a success toast is displayed confirming that the item has been removed from the wishlist | PASS
+Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
+Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
+
+
+
+
 
 
