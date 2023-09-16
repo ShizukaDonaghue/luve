@@ -549,6 +549,10 @@ label.error,
     overflow-y: auto;
 }
 
+.free-delivery-text {
+    color: #098598 !important;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
