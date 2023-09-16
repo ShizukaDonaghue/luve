@@ -1017,24 +1017,24 @@ All Links | Hover | Colour changes to turquoise with hover effect | PASS
 ### Sign Up Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Email Field | Leave Empty | Form does not submit | PASS
-Email Field | Leave Empty | Error message is displayed | PASS
-Email Field | Enter Invalid Format | Form does not submit | PASS
-Email Field | Enter Invalid Format | Error message is displayed | PASS
-Email Field | Duplicate Email Address | Form does not submit | PASS
-Email Field | Duplicate Email Address | Error message is displayed | PASS
-Username Field | Leave Empty | Form does not submit | PASS
-Username Field | Leave Empty | Error message is displayed | PASS
-Username Field | Enter an Empty String | Form does not submit | PASS
-Username Field | Enter an Empty String | Error message is displayed | PASS
-Username Field | Duplicate Username | Form does not submit | PASS
-Username Field | Duplicate Username | Error message is displayed | PASS
-Password Field | Leave Empty | Form does not submit | PASS
-Password Field | Leave Empty | Error message is displayed | PASS
-Password Field | Enter an Empty String | Form does not submit | PASS
-Password Field | Enter an Empty String | Error message is displayed | PASS
-Password Field | Passwords Not Matched | Form does not submit | PASS
-Password Field | Passwords Not Matched | Error message is displayed | PASS
+Email Field | Leave Empty | The sign up form does not submit | PASS
+Email Field | Leave Empty | An error message is displayed | PASS
+Email Field | Enter Invalid Format | The sign up form does not submit | PASS
+Email Field | Enter Invalid Format | An error message is displayed | PASS
+Email Field | Duplicate Email Address | The sign up form does not submit | PASS
+Email Field | Duplicate Email Address | An error message is displayed | PASS
+Username Field | Leave Empty | The sign up form does not submit | PASS
+Username Field | Leave Empty | An error message is displayed | PASS
+Username Field | Enter an Empty String | The sign up form does not submit | PASS
+Username Field | Enter an Empty String | An error message is displayed | PASS
+Username Field | Duplicate Username | The sign up form does not submit | PASS
+Username Field | Duplicate Username | An error message is displayed | PASS
+Password Field | Leave Empty | The sign up form does not submit | PASS
+Password Field | Leave Empty | An error message is displayed | PASS
+Password Field | Enter an Empty String | The sign up form does not submit | PASS
+Password Field | Enter an Empty String | An error message is displayed | PASS
+Password Field | Passwords Not Matched | The sign up form does not submit | PASS
+Password Field | Passwords Not Matched | An error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
 Sign Up Link | Click | Once all the required fields are correctly filled in, an email is sent to the user with a link to confirm their email address | PASS
 Sign Up Link | Click | Once all the user confirms their email address, they are registerd as a user in the database | PASS
@@ -1045,16 +1045,16 @@ Alert | Display | Success message is displayed once the user confirms their emai
 ### Log In Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Username Field | Leave Empty | Form does not submit | PASS
-Username Field | Leave Empty | Error message is displayed | PASS
-Username Field | Enter an Empty String | Form does not submit | PASS
-Username Field | Enter an Empty String | Error message is displayed | PASS
-Password Field | Leave Empty | Form does not submit | PASS
-Password Field | Leave Empty | Error message is displayed | PASS
-Password Field | Enter an Empty String | Form does not submit | PASS
-Password Field | Enter an Empty String | Error message is displayed | PASS
-Login Fields | Incorrect Details | Form does not submit | PASS
-Login Fields | Incorrect Details | Error message is displayed | PASS
+Username Field | Leave Empty | The login form does not submit | PASS
+Username Field | Leave Empty | An error message is displayed | PASS
+Username Field | Enter an Empty String | The login form does not submit | PASS
+Username Field | Enter an Empty String | An error message is displayed | PASS
+Password Field | Leave Empty | The login form does not submit | PASS
+Password Field | Leave Empty | An error message is displayed | PASS
+Password Field | Enter an Empty String | The login form does not submit | PASS
+Password Field | Enter an Empty String | An error message is displayed | PASS
+Login Fields | Incorrect Details | The login form does not submit | PASS
+Login Fields | Incorrect Details | An error message is displayed | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Password Reset | Click | Navigates to Password Rest page | PASS
 Log In Link | Click | Once the required fields are correctly filled in, logs in the user | PASS
@@ -1064,20 +1064,20 @@ Alert | Display | Success message is displayed confirming the user has logged in
 ### Password Rest Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Email Field | Leave Empty | Form does not submit | PASS
-Email Field | Leave Empty | Error message is displayed | PASS
-Email Field | Enter Invalid Format | Form does not submit | PASS
-Email Field | Enter Invalid Format | Error message is displayed | PASS
+Email Field | Leave Empty | The password rest form does not submit | PASS
+Email Field | Leave Empty | An error message is displayed | PASS
+Email Field | Enter Invalid Format | The password rest form does not submit | PASS
+Email Field | Enter Invalid Format | An error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
 Reset Password Link | Click | Once the correct email is entered, an email containg a link to reset the password is set to the user | PASS
 
 ### Change Password Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Password Field | Leave Empty | Form does not submit | PASS
-Password Field | Leave Empty | Error message is displayed | PASS
-Password Field | Enter an Empty String | Form does not submit | PASS
-Password Field | Enter an Empty String | Error message is displayed | PASS
+Password Field | Leave Empty | The change password form does not submit | PASS
+Password Field | Leave Empty | An error message is displayed | PASS
+Password Field | Enter an Empty String | The change password form does not submit | PASS
+Password Field | Enter an Empty String | An error message is displayed | PASS
 Change Password Link | Once the new password is correctly entered, the user's password is changed.
 Log In Link | Click | Navigates to Log In page | PASS
 Alert | Display | Success message is displayed confirming the password has been changed | PASS
@@ -1291,16 +1291,144 @@ Cancel Button | Navigates back to Product Detail page | PASS
 ### Delete Product Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Delete Product from Products Page | Submit | Once the user confirms deletion in the modal, the Product is deleted | PASS
-Delete Product from Product Detail Page | Submit | Once the user confirms deletion in the modal, the Product is deleted | PASS
+Delete Product from Products Page | Submit | Once the user confirms deletion in the modal, the product is deleted | PASS
+Delete Product from Product Detail Page | Submit | Once the user confirms deletion in the modal, the product is deleted | PASS
 Delete Product | Submit | Once the product is deleted, navigates back to Products page | PASS
-Alert | Display | Success message is displayed confirming that the Product has been deleted | PASS
+Alert | Display | Success message is displayed confirming that the product has been deleted | PASS
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS
 
+### Articles Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Article Card | Hover | Box shadow is applied with hover effect | PASS
+Article Card Height | Display | Article cards are displayed at the same height for each row regardless of the height of the card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Article Card Width | Display | Article cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
+Article Image | Display | When an article image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Article Image | Display | When an article image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Article Image | Click | Navigates to the Article Detail page (stretched link applied for users without superuser or staff permission so they can navigate easily to the Article Detail page) | PASS
+Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
+Article Name | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Article Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
+Article Description | Display | The article description is truncated after 115 letters | PASS
+Article Name Link | Click | Navigates to the Article Detail page (for users with superuser or staff permisision) | PASS
+Number of Likes | Display | The number of likes for the article is displayed next to the article title | PASS 
+Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Edit Link | Click | Navigates to Edit Article page | PASS
+Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
 
+### Article Details Page
 
+#### Article Image
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Article Image | Display | When an Article image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Article Image | Display | When a Article image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 
+#### Number of Likes
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Number of Likes | Display | The number of likes for the article is next to the article title | PASS 
+Like Button | Click | If the user is not logged in, an error message is displayed notifying the user that they need to log in to like the article | PASS
+Like Button | Click | If the user is logged in and if the article is not yet liked, the article is liked by the user | PASS
+Like Button | Click | If the user is logged in and if the article is already liked, the article is un-liked by the user | PASS
+
+#### Article Information
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Article Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Article Author | Display | The author of the article is displayed | PASS
+
+#### Edit & Delete Article Links
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Edit Link | Click | Navigates to Edit Article page | PASS
+Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+
+### Add Article Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Add Article Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | Logged-in and Try to Access the Add Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add articles | PASS
+Article Title | Leave Empty | The article form does not submit | PASS
+Article Title | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Article Title | Enter an Empty String | The article form does not submit | PASS
+Article Title | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Leave Empty | The article form does not submit | PASS
+Description | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Enter an Empty String | The form does not submit | PASS
+Description | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Content | Leave Empty | The article form does not submit | PASS
+Content | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Content | Enter an Empty String | The form does not submit | PASS
+Content | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Image | Not Uploaded | The article form submits as this is not a required field | PASS
+Image | Click to Upload | Opens a file explorer to select an image from | PASS
+Image | Click to Upload | The name of the image selected is displayed under the "Select Image" button | PASS
+Add Article | Submit | Displays the Article Details page which has been generated | PASS
+Alert | Display | Success message is displayed confirming [Article Title] has been added successfully | PASS
+Cancel Button | Click | Navigates back to Articles page | PASS
+
+### Edit Article Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Edit Article Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | Logged-in and Try to Access the Edit Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to edit articles | PASS
+Edit Article Form | Display | The details in the form are populated from the database | PASS
+Article Title | Leave Empty | The article form does not submit | PASS
+Article Title | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Article Title | Enter an Empty String | The article form does not submit | PASS
+Article Title | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Leave Empty | The article form does not submit | PASS
+Description | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Description | Enter an Empty String | The form does not submit | PASS
+Description | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Content | Leave Empty | The article form does not submit | PASS
+Content | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
+Content | Enter an Empty String | The form does not submit | PASS
+Content | Enter an Empty String | An error message is displayed to the user notifying them that this is a required field | PASS
+Image | Not Uploaded | The article form submits as this is not a required field | PASS
+Image | Click to Upload | Opens a file explorer to select an image from | PASS
+Image | Click to Upload | The name of the image selected is displayed under the "Select Image" button | PASS
+Edit Article | Submit | Displays the Article Details page which has been updated | PASS
+Alert | Display | Success message is displayed confirming [Article Title] has been update successfully | PASS
+Cancel Button | Click | Navigates back to Articles page | PASS
+
+### Delete Article Modal
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Delete Article from Articles Page | Submit | Once the user confirms deletion in the modal, the article is deleted | PASS
+Delete Article from Article Detail Page | Submit | Once the user confirms deletion in the modal, the article is deleted | PASS
+Delete Article | Submit | Once the article is deleted, navigates back to Articles page | PASS
+Alert | Display | Success message is displayed confirming that the article has been deleted | PASS
+Cancel Button | Click | Modal is closed | PASS
+Modal Closure | Click Outside Menu | Modal is closed | PASS
+
+### Contact Us Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Query Type | Not Selected | The contact form does not submit | PASS
+Query Type  | Not Selected | An error message is displayed to the user notifying them that this is a required field | PASS
+Full Name | Leave Empty | The contact form does not submit | PASS
+Full Name | Leave Empty | An error message is displayed | PASS
+Full Name | Enter an Empty String | The contact form does not submit | PASS
+Full Name | Enter an Empty String | An error message is displayed | PASS
+Full Name | Entry | If the user is logged in, their name is populated from the database | PASS
+Email Field | Leave Empty | The contact form does not submit | PASS
+Email Field | Leave Empty | An error message is displayed | PASS
+Email Field | Enter Invalid Format | The contact form does not submit | PASS
+Email Field | Enter Invalid Format | An error message is displayed | PASS
+Email Field | Entry | If the user is logged in, their email address is populated from the database | PASS
+Message | Leave Empty | The contact form does not submit | PASS
+Message | Leave Empty | An error message is displayed | PASS
+Message | Enter an Empty String | The contact form does not submit | PASS
+Message | Enter an Empty String | An error message is displayed | PASS
+Contact Form | Submit | Once the completed form is submitted, a confirmation email is sent to the user notifying that their message has been received | PASS
+Contact Form | Submit | Once the completed form is submitted, a notification email is sent to the business owner/staff notifying that a new message has been received | PASS
+Alert | Display | Success message is displayed confirming that the user's message has been received | PASS
 
 
 
