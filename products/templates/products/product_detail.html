@@ -122,7 +122,7 @@
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-main decrement-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}">
+                                            data-item_id="{{ product.id }}" aria-label="Decrement quantity button">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
@@ -130,10 +130,10 @@
                                     </div>
                                     <input class="form-control qty_input id_qty_{{ product.id }} text-center"
                                         type="number" name="quantity" value="1" min="1" max="20"
-                                        data-item_id="{{ product.id }}">
+                                        data-item_id="{{ product.id }}" aria-label="Order quantity">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-main increment-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}">
+                                            data-item_id="{{ product.id }}" aria-label="Increment quantity button">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
