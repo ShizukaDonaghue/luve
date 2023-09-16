@@ -926,3 +926,12 @@ Browser compatibility was checked for the following browsers and no issues were 
   <img src="docs/images/testing/opera.png">
   
 </details>
+
+## User Stories Testing
+User stories were tested and addressed as follows.
+
+### **EPIC: User Account & Profile**
+* **_As a Site User, I can log out of my account so that I can keep my account secure._**  
+
+The following user stories were not implemented.
+
