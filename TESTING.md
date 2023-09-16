@@ -984,9 +984,9 @@ Log In Link | Click | Navigates to Log In page | PASS
 Log Out Link | Display | Only available if the user is logged in | PASS
 Log Out Link | Click | Navigates to Log Out page | PASS
 Product Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
-Product Management Link | Click| Navigates to Add Product page | PASS
+Product Management Link | Click | Navigates to Add Product page | PASS
 Article Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
-Article Management Link | Click| Navigates to Add Article page | PASS
+Article Management Link | Click | Navigates to Add Article page | PASS
 Hamburger Menu Closure | Click | Hamburger menu closes when clicked outside the menu | PASS
 All Links | Hover | Colour changes to turquoise or pink with hover effect | PASS
 
@@ -1062,6 +1062,8 @@ Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
 Alert | Display | Success message is displayed confirming the user has logged in as [username] | PASS
 
 ### Password Rest Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
 Email Field | Leave Empty | Form does not submit | PASS
 Email Field | Leave Empty | Error message is displayed | PASS
 Email Field | Enter Invalid Format | Form does not submit | PASS
@@ -1070,6 +1072,8 @@ Log In Link | Click | Navigates to Log In page | PASS
 Reset Password Link | Click | Once the correct email is entered, an email containg a link to reset the password is set to the user | PASS
 
 ### Change Password Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
 Password Field | Leave Empty | Form does not submit | PASS
 Password Field | Leave Empty | Error message is displayed | PASS
 Password Field | Enter an Empty String | Form does not submit | PASS
@@ -1086,3 +1090,48 @@ Log Out Link | Click | Once the user is logged out, navigates to Home page | PAS
 Cancel | Click | Navigates to Home page | PASS
 Alert | Display | Success message is displayed confirming that the user has logged out | PASS
 
+### Home Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Shop Now Link | Click | Navigates to Products page | PASS
+Articles Link | Click | Navigates to Articles page | PASS
+
+### Products Page
+#### Product Cards
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Product Card | Display | Products are displayed in alphabetial order unless product sorting is applied | PASS
+Product Card | Hover | Box shadow is applied with hover effect | PASS
+Product Card Height | Display | Product cards are displayed at the same height for each row regardless of the height of the card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Product Card Width | Display | Product cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
+Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Product Image | Display | When a Product image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Product Image | Click | When clicked, navigates to the Product Detail page | PASS
+Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
+Product Name | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Product Name Link | Click | Navigates to the Product Detail page | PASS
+Brand Name Link | Click | Displays the product listing by the selected brand | PASS
+Application Type Link | Click | Displays the product listing by the selected application type | PASS
+Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Edit Link | Click | Navigates to Edit Product page | PASS
+Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+
+#### Add to Bag 
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Add to Bag Link | Click | Once clicked, the item is added to the shopping bag | PASS
+Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
+Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
+Alert | Display | If the order quantity exceeds the maximum order quantity, an error message is displayed to the user | PASS
+
+#### Add to or Remove from Wishlist
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Add to Wishlist | Click | If the user is not logged in, navigates to the Login page | PASS 
+Add to Wishlist | Click | If the user is logged in and if the item is not already in their wishlist, the item is added to the wishlist | PASS
+Remove from Wishlist | Click | If the user is logged in and if the item is already in their wishlist, the item is removed from the wishlist | PASS
+Alert | Display | If the user is not logged in, an alert is display to the user to let them know that they need to log in to add the item to their wishlist | PASS
+Alert | Display | Once the item is added to the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been added to the wishlist | PASS
+Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
+Wishlist Count | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
