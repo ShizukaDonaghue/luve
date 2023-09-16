@@ -32,12 +32,14 @@
                     <div class="col-12 col-sm-6 mb-2 mb-sm-4">
                         <!-- Product image -->
                         {% if "placeholder" in item.product.image.url %}
-                        <a href="{% url 'product_detail' item.product.id %}">
+                        <a href="{% url 'product_detail' item.product.id %}"
+                            aria-label="Link to the product detail page">
                             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1686206490/placeholder.png"
                                 class="card-img-top img-fluid list-image product-img" alt="Placeholder image">
                         </a>
                         {% else %}
-                        <a href="{% url 'product_detail' item.product.id %}">
+                        <a href="{% url 'product_detail' item.product.id %}"
+                            aria-label="Link to the product detail page">
                             <img src=" {{ item.product.image.url }}"
                                 class="card-img-top img-fluid list-image product-img"
                                 alt="Image of {{ item.product.name }}">
@@ -51,19 +53,21 @@
                                 <div class="mb-1 mb-sm-2 mb-md-0 mb-lg-2">
                                     <div class="my-1 mb-md-0">
                                         <a class="text-decoration-none bag-item-link"
-                                            href="{% url 'product_detail' item.product.id %}">
+                                            href="{% url 'product_detail' item.product.id %}"
+                                            aria-label="Link to the product detail page">
                                             <p class="product-name-bag mb-0 mb-sm-2 mb-md-0 mb-lg-2">
                                                 {{ item.product.name }}</p>
                                         </a>
                                     </div>
                                     <div class="my-0 small">
-                                        <a class="text-muted"
-                                            href="{% url 'products' %}?brand={{ item.product.brand }}">
+                                        <a class="text-muted" href="{% url 'products' %}?brand={{ item.product.brand }}"
+                                            aria-label="Link to the products listing by the brand">
                                             <span class="icon"><i
                                                     class="fa-brands fa-gratipay"></i></span>{{ item.product.brand.display_name }}</a>
                                     </div>
                                     <div class="my-0 small">
-                                        <a class="text-muted" href="{% url 'products' %}?type={{ item.product.type }}">
+                                        <a class="text-muted" href="{% url 'products' %}?type={{ item.product.type }}"
+                                            aria-label="Link to the product listing by application type">
                                             <span class="icon"> <i
                                                     class="fa-solid fa-hand-dots mr-1"></i></span>{{ item.product.type.display_name }}
                                         </a>
@@ -100,7 +104,7 @@
                                             <div class="input-group-prepend">
                                                 <button
                                                     class="decrement-qty btn btn-sm btn-main decrement-qty_{{ item.item_id }}"
-                                                    data-item_id="{{ item.item_id }}" aria-label="Button to decrement order quantity">
+                                                    data-item_id="{{ item.item_id }}">
                                                     <span>
                                                         <i class="fas fa-minus fa-sm"></i>
                                                     </span>
@@ -109,11 +113,11 @@
                                             <input
                                                 class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} text-center"
                                                 type="number" name="quantity" value="{{ item.quantity }}" min="1"
-                                                max="20" data-item_id="{{ item.item_id }}" aria-label="Order quantity field">
+                                                max="20" data-item_id="{{ item.item_id }}">
                                             <div class="input-group-append">
                                                 <button
                                                     class="increment-qty btn btn-sm btn-main increment-qty_{{ item.item_id }}"
-                                                    data-item_id="{{ item.item_id }}" aria-labe="Button to increment order quantity">
+                                                    data-item_id="{{ item.item_id }}">
                                                     <span>
                                                         <i class="fas fa-plus fa-sm"></i>
                                                     </span>
@@ -128,10 +132,9 @@
                             <div class="col-12">
                                 <!-- Quantity refresh and item delete buttons -->
                                 <div class="d-flex justify-content-between text-center my-auto px-1">
-                                    <a class="update-link text-info"><i class="fa-solid fa-rotate"
-                                            aria-label="Button to update order quantity"></i></a>
-                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}"
-                                        aria-label="Button to delete the item"><i class="fa-solid fa-trash-can"></i></a>
+                                    <a class="update-link text-info"><i class="fa-solid fa-rotate"></i></a>
+                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><i
+                                            class="fa-solid fa-trash-can"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +175,8 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6 col-md-12 mb-2">
-                            <a href="{% url 'products' %}" class="btn btn-outline-turquoise w-100">
+                            <a href="{% url 'products' %}" class="btn btn-outline-turquoise w-100"
+                                aria-label="Link to the products page">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -180,7 +184,8 @@
                             </a>
                         </div>
                         <div class="col-md-6 col-md-12">
-                            <a href="{% url 'checkout' %}" class="btn btn-main w-100">
+                            <a href="{% url 'checkout' %}" class="btn btn-main w-100"
+                                aria-label="Link to the checkout page">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -204,7 +209,7 @@
     <div class="row">
         <div class="col-12 text-center text-md-left">
             <p class="lead mt-3 mb-4 mb-md-5 ">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-main mb-5">
+            <a href="{% url 'products' %}" class="btn btn-main mb-5" aria-label="Link to the products page">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
