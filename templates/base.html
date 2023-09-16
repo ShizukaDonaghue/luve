@@ -72,14 +72,13 @@
                         alt="LUVE logo" class="luve-logo">
                 </a>
             </div>
-            <div class="col-12 col-md-5 my-auto">
+            <div class="col-12 col-md-5 my-auto" aria-labelledby="Search">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border-main" type="text" name="q" placeholder="Search..."
-                            aria-label="Search">
+                        <input class="form-control border-main" aria-label="Search" type="text" name="q"
+                            placeholder="Search...">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-main border-main" type="submit"
-                                aria-label="Search Button">
+                            <button class="form-control btn btn-main border-main" type="submit" aria-label="Search">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -88,7 +87,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-md-4 my-auto">
+            <div class="col-12 col-md-4 my-auto" aria-labelledby="user-options">
                 <ul class="list-inline list-unstyled text-center text-md-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-main nav-link" href="#" id="user-options" data-toggle="dropdown"
@@ -221,9 +220,9 @@
                                         <div class="row">
                                             <div class="col-12 col-md-9 col-lg-7 col-xl-6 pl-0 pr-0">
                                                 <div class="mc-field-group pb-2"><label for="mce-EMAIL">Email Address
-                                                        <span class="asterisk text-white">*</span></label><input type="email"
-                                                        name="EMAIL" class="required email" id="mce-EMAIL" required=""
-                                                        value="">
+                                                        <span class="asterisk text-white">*</span></label><input
+                                                        type="email" name="EMAIL" class="required email" id="mce-EMAIL"
+                                                        required="" value="">
                                                 </div>
                                                 <div id="mce-responses" class="clear foot">
                                                     <div class="response" id="mce-error-response"
@@ -232,7 +231,7 @@
                                                         style="display: none;"></div>
                                                 </div>
                                                 <!-- Real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                                <div aria-hidden="true" style="position: absolute; left: -5000px;" aria-label="Hidden field to prevent bot signups">
                                                     <input type="text" name="b_c75e3811c020113c35451bffe_330c1a3d34"
                                                         tabindex="-1" value="">
                                                 </div>
