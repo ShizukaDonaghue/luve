@@ -638,6 +638,7 @@ footer i:hover,
 #mc-embedded-subscribe.button {
     height: 42px;
     font-size: 90%;
+    background-color: #92e9f7 !important;
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     margin-bottom: 0;
