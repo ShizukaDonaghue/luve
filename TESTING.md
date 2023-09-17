@@ -223,7 +223,7 @@ JavaScript codes used in the application were validated using [JSHint](https://j
 
 </details>
 
-Undefined variable "checkout" was identified for the order form. This calls for `checkout()` function in checkout/views.py and not defined within the file. This was necessary as jQuery validation would submit the form before Stripe could processs the payment, causing the payment to fail (more details in [#86](https://github.com/ShizukaDonaghue/luve/issues/86)).
+The undefined variable "checkout" was identified for the order form. This calls for `checkout()` function in checkout/views.py and is not defined within the file. This was necessary as jQuery validation would submit the form before Stripe could process the payment, causing the payment to fail (more details in [#86](https://github.com/ShizukaDonaghue/luve/issues/86)).
 
 <details>
   <summary>Countryfield JavaScript Codes - No issues or errors</summary> 
@@ -239,7 +239,7 @@ Undefined variable "checkout" was identified for the order form. This calls for 
 
 </details>
 
-Undefined variable "Stripe" was identified, however, this was addressed as it belongs to the external Stripe API. 
+The undefined variable "Stripe" was identified, however, this was addressed as it belongs to the external Stripe API. 
 
 ### Python
 Python codes used throughout the application were validated using [CI Python Linter](https://pep8ci.herokuapp.com/) and no issues or errors were found.
@@ -944,12 +944,12 @@ Favicon | Display | Favicon is displayed correctly in the browser tab | PASS
 Title | Display | "Safe Sunblock" is displayed as the title of the page for Home page | PASS
 Title | Display | "Products" is displayed as the title of the page for Products and Brands page | PASS
 Title | Display | The name of the product is displayed as the title of the page for each Product Details page | PASS
-Title | Display | "Articles" is displayed as the title of the page for Articels | PASS
+Title | Display | "Articles" is displayed as the title of the page for Articles | PASS
 Title | Display | The name of the article is displayed as the title of the page for each Article Details page | PASS
 Title | Display | "Contact Us" is displayed as the title of the page for Contact page | PASS
 Title | Display | "Thank you!" is displayed as the title of the page for Contact Success page | PASS
 Title | Display | "Product Management" is displayed as the title of the page for Add Product page | PASS
-Title | Display | "Edit Product" is displayed as the title of the page for Edit Prodcut page | PASS
+Title | Display | "Edit Product" is displayed as the title of the page for Edit Product page | PASS
 Title | Display | "Edit Review" is displayed as the title of the page for Edit Review page | PASS
 Title | Display | "Article Management" is displayed as the title of the page for Add Article page | PASS
 Title | Display | "Edit Article" is displayed as the title of the page for Edit Article page | PASS
@@ -975,14 +975,14 @@ Brands Link | Click | Dropdown menu appears and once the selection is made, navi
 Articles Link | Click |Navigates to Articles page | PASS
 Contact Link | Click |Navigates to Contact page | PASS
 Account Link | Click | Dropdown menu appears and once the selection is made, navigates to the specified page | PASS
-Wishlist Link | Click |Navigates to Wishlit page | PASS
+Wishlist Link | Click |Navigates to Wishlist page | PASS
 Shopping Bag Link | Click |Navigates to Shopping Bag page | PASS
 Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Display | Only available if the user is not logged in | PASS
-Log In Link | Click | Navigates to Log In page | PASS
+Log In Link | Click | Navigates to Login page | PASS
 Log Out Link | Display | Only available if the user is logged in | PASS
-Log Out Link | Click | Navigates to Log Out page | PASS
+Log Out Link | Click | Navigates to Logout page | PASS
 Product Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
 Product Management Link | Click | Navigates to Add Product page | PASS
 Article Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
@@ -994,15 +994,15 @@ All Links | Hover | Colour changes to turquoise or pink with hover effect | PASS
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Delivery Banner | Display | When there is no item in the shopping bag, "Free delivery on orders over €50!" is displayed | PASS
-Delivery Banner | Display | When there is an item/are items in the shopping bag, the remaining order value to qualify for free shipping is displayed in the "Spend €[remaining value] more for free shippping!" messsage | PASS
+Delivery Banner | Display | When there is an item/are items in the shopping bag, the remaining order value to qualify for free shipping is displayed in the "Spend €[remaining value] more for free shipping!" message | PASS
 Delivery Banner | Display | When the order value reaches the free delivery threshold, "Horray! Free delivery on your order!" is displayed | PASS
 
 ### Footer
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Position | Display | Footer always stays at the bottom of the screen  | PASS
-Newsletter Signup | Click | When the user eneters their email address, the email address is registered with Mailchimp account | PASS
-Newsletter Signup | Click | When the user eneters their email address, the user is notified that they have subscribed the the newsletter | PASS
+Newsletter Signup | Click | When the user enters their email address, the email address is registered with Mailchimp account | PASS
+Newsletter Signup | Click | When the user enters their email address, the user is notified that they have subscribed the the newsletter | PASS
 Newsletter Signup | Click | If the email is already registered, the user is notified that they have already subscribed the the newsletter | PASS
 Newsletter Signup | Click | If the email field is left blank when the form is submitted, the user is notified that the email address is a required field | PASS
 Contact Link | Click |Navigates to Contact page | PASS
@@ -1017,27 +1017,27 @@ All Links | Hover | Colour changes to turquoise with hover effect | PASS
 ### Sign Up Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Email Field | Leave Empty | The sign up form does not submit | PASS
+Email Field | Leave Empty | The signup form does not submit | PASS
 Email Field | Leave Empty | An error message is displayed | PASS
-Email Field | Enter Invalid Format | The sign up form does not submit | PASS
+Email Field | Enter Invalid Format | The signup form does not submit | PASS
 Email Field | Enter Invalid Format | An error message is displayed | PASS
-Email Field | Duplicate Email Address | The sign up form does not submit | PASS
+Email Field | Duplicate Email Address | The signup form does not submit | PASS
 Email Field | Duplicate Email Address | An error message is displayed | PASS
-Username Field | Leave Empty | The sign up form does not submit | PASS
+Username Field | Leave Empty | The signup form does not submit | PASS
 Username Field | Leave Empty | An error message is displayed | PASS
-Username Field | Enter an Empty String | The sign up form does not submit | PASS
+Username Field | Enter an Empty String | The signup form does not submit | PASS
 Username Field | Enter an Empty String | An error message is displayed | PASS
-Username Field | Duplicate Username | The sign up form does not submit | PASS
+Username Field | Duplicate Username | The signup form does not submit | PASS
 Username Field | Duplicate Username | An error message is displayed | PASS
-Password Field | Leave Empty | The sign up form does not submit | PASS
+Password Field | Leave Empty | The signup form does not submit | PASS
 Password Field | Leave Empty | An error message is displayed | PASS
-Password Field | Enter an Empty String | The sign up form does not submit | PASS
+Password Field | Enter an Empty String | The signup form does not submit | PASS
 Password Field | Enter an Empty String | An error message is displayed | PASS
-Password Field | Passwords Not Matched | The sign up form does not submit | PASS
+Password Field | Passwords Not Matched | The signup form does not submit | PASS
 Password Field | Passwords Not Matched | An error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
 Sign Up Link | Click | Once all the required fields are correctly filled in, an email is sent to the user with a link to confirm their email address | PASS
-Sign Up Link | Click | Once all the user confirms their email address, they are registerd as a user in the database | PASS
+Sign Up Link | Click | Once all the user confirms their email address, they are registered as a user in the database | PASS
 Alert | Display | Success message is displayed once the email confirmation with a link is sent to the user  | PASS
 Alert | Display | Success message is displayed once the user confirms their email address | PASS
 
@@ -1061,15 +1061,15 @@ Log In Link | Click | Once the required fields are correctly filled in, logs in 
 Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
 Alert | Display | Success message is displayed confirming the user has logged in as [username] | PASS
 
-### Password Rest Page
+### Password Reset Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Email Field | Leave Empty | The password rest form does not submit | PASS
+Email Field | Leave Empty | The password reset form does not submit | PASS
 Email Field | Leave Empty | An error message is displayed | PASS
-Email Field | Enter Invalid Format | The password rest form does not submit | PASS
+Email Field | Enter Invalid Format | The password reset form does not submit | PASS
 Email Field | Enter Invalid Format | An error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
-Reset Password Link | Click | Once the correct email is entered, an email containg a link to reset the password is set to the user | PASS
+Reset Password Link | Click | Once the correct email is entered, an email containing a link to reset the password is set to the user | PASS
 
 ### Change Password Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -1111,7 +1111,7 @@ Category (Z to A ) | Click | Sorts the product listing by category name in desce
 #### Product Cards
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Product Card | Display | Products are displayed in alphabetial order unless product sorting is applied | PASS
+Product Card | Display | Products are displayed in alphabetical order unless product sorting is applied | PASS
 Product Card | Hover | Box shadow is applied with hover effect | PASS
 Product Card Height | Display | Product cards are displayed at the same height for each row regardless of the height of the card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
 Product Card Width | Display | Product cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
@@ -1134,7 +1134,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Add to Bag Button | Click | Once clicked, the item is added to the shopping bag if the total order quantity of the item is not greater than the maximum order quantity of 20 | PASS
 Add to Bag Button | Click | If the total order quantity of the item is already at the maximum order quantity of 20, the item is not added to the shopping bag | PASS
 Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
-Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
+Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 
 #### Add to or Remove from Wishlist
@@ -1143,7 +1143,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Add to Wishlist | Click | If the user is not logged in, navigates to the Login page | PASS 
 Add to Wishlist | Click | If the user is logged in and if the item is not already in their wishlist, the item is added to the wishlist | PASS
 Remove from Wishlist | Click | If the user is logged in and if the item is already in their wishlist, the item is removed from the wishlist | PASS
-Alert | Display | If the user is not logged in, an alert is display to the user to let them know that they need to log in to add the item to their wishlist | PASS
+Alert | Display | If the user is not logged in, an alert is displayed to the user to let them know that they need to log in to add the item to their wishlist | PASS
 Alert | Display | Once the item is added to the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been added to the wishlist | PASS
 Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
 Wishlist Count | Display | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
@@ -1162,7 +1162,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Add to Wishlist | Click | If the user is not logged in, navigates to the Login page | PASS 
 Add to Wishlist | Click | If the user is logged in and if the item is not already in their wishlist, the item is added to the wishlist | PASS
 Remove from Wishlist | Click | If the user is logged in and if the item is already in their wishlist, the item is removed from the wishlist | PASS
-Alert | Display | If the user is not logged in, an alert is display to the user to let them know that they need to log in to add the item to their wishlist | PASS
+Alert | Display | If the user is not logged in, an alert is displayed to the user to let them know that they need to log in to add the item to their wishlist | PASS
 Alert | Display | Once the item is added to the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been added to the wishlist | PASS
 Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
 Wishlist Count | Display | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
@@ -1188,7 +1188,7 @@ Order Quantity | Select | Decrement and increment buttons only allow a quantity 
 Add to Bag | Click | If the total order quantity of the item is between 1 and the maximum order quantity of 20, the selected quantity of the item is added to the shopping bag | PASS
 Add to Bag | Click | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, the item is not added to the shopping bag | PASS
 Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
-Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
+Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming that the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 
 #### Links to Other Pages
@@ -1211,7 +1211,7 @@ Post Review | Submit | Once the form is submitted, review and/or rating is/are a
 Alert | Display | Success message is displayed confirming the Review has been added successfully | PASS
 Edit/Delete Review Dropdown Menu | Display | Edit/Delete menu is available if the user is logged in and is the author of the review | PASS
 Edit Review Button | Click | Navigates to Edit Review page | PASS
-Delete Review Button | Click | a modal is displayed to confirm deletion | PASS
+Delete Review Button | Click | A modal is displayed to confirm deletion | PASS
 
 ### Edit Review Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -1311,7 +1311,7 @@ Image Size | Display | Images are displayed in the same height and width regardl
 Article Name | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Article Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 Article Description | Display | The article description is truncated after 115 letters | PASS
-Article Name Link | Click | Navigates to the Article Detail page (for users with superuser or staff permisision) | PASS
+Article Name Link | Click | Navigates to the Article Detail page (for users with superuser or staff permission) | PASS
 Number of Likes | Display | The number of likes for the article is displayed next to the article title | PASS 
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Edit Link | Click | Navigates to Edit Article page | PASS
@@ -1324,7 +1324,7 @@ Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | P
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Article Image | Display | When an Article image is uploaded, the image is displayed correctly from Cloudinary | PASS
-Article Image | Display | When a Article image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Article Image | Display | When an Article image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 
 #### Number of Likes
 Feature | Action | Expected Result | PASS/FAIL
@@ -1332,7 +1332,8 @@ Feature | Action | Expected Result | PASS/FAIL
 Number of Likes | Display | The number of likes for the article is next to the article title | PASS 
 Like Button | Click | If the user is not logged in, an error message is displayed notifying the user that they need to log in to like the article | PASS
 Like Button | Click | If the user is logged in and if the article is not yet liked, the article is liked by the user | PASS
-Like Button | Click | If the user is logged in and if the article is already liked, the article is un-liked by the user | PASS
+Like Button | Click | If the user is logged in and if the article is already liked, the article is unliked by the user | PASS
+Number of Likes | Display | The number of likes increases or decreases correctly when the article is liked or unliked | PASS
 
 #### Article Information
 Feature | Action | Expected Result | PASS/FAIL
@@ -1394,7 +1395,7 @@ Image | Not Uploaded | The article form submits as this is not a required field 
 Image | Click to Upload | Opens a file explorer to select an image from | PASS
 Image | Click to Upload | The name of the image selected is displayed under the "Select Image" button | PASS
 Edit Article | Submit | Displays the Article Details page which has been updated | PASS
-Alert | Display | Success message is displayed confirming [Article Title] has been update successfully | PASS
+Alert | Display | Success message is displayed confirming [Article Title] has been updated successfully | PASS
 Cancel Button | Click | Navigates back to Articles page | PASS
 
 ### Delete Article Modal
@@ -1407,7 +1408,7 @@ Alert | Display | Success message is displayed confirming that the article has b
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS
 
-### Contact Us Page
+### Contact Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Query Type | Not Selected | The contact form does not submit | PASS
@@ -1426,9 +1427,15 @@ Message | Leave Empty | The contact form does not submit | PASS
 Message | Leave Empty | An error message is displayed | PASS
 Message | Enter an Empty String | The contact form does not submit | PASS
 Message | Enter an Empty String | An error message is displayed | PASS
-Contact Form | Submit | Once the completed form is submitted, a confirmation email is sent to the user notifying that their message has been received | PASS
+Contact Form | Submit | Once the completed form is submitted, a confirmation email is sent to the user notifying them that their message has been received | PASS
 Contact Form | Submit | Once the completed form is submitted, a notification email is sent to the business owner/staff notifying that a new message has been received | PASS
 Alert | Display | Success message is displayed confirming that the user's message has been received | PASS
+
+### Contact Success Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Home Button | Click | Navigates to the Home page | PASS
+Continue Shopping Button | Click | Navigates to the Products page | PASS
 
 ### Profile Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -1442,7 +1449,9 @@ Order Number Link | Click | Once clicked, the order confirmation is displayed | 
 Alert | Display | When the delivery address is updated, a success message is displayed confirming that the user profile has been updated | PASS
 
 ### Wishlist Page
-Defensive Measure | Click | If the user is not logged in and try to access the Wishlist page, navigates to the Login page | PASS 
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Defensive Measure | Click | If the user is not logged in and tries to access the Wishlist page, navigates to the Login page | PASS 
 Wishlist Items | Display | Displays items the user has added to their wishlist | PASS
 Remove Button | Click | Removes the item from the wishlist | PASS
 Remove Button | Click | Once the item is removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
@@ -1450,8 +1459,135 @@ Add to Bag Button | Click | Once clicked, the item is added to the shopping bag 
 Add to Bag Button | Click | If the total order quantity of the item is already at the maximum order quantity of 20, the item is not added to the shopping bag | PASS
 Order Value | Display | Once the item is added to the shopping bag, the order value is displayed under the Bag icon in the navbar | PASS
 Alert | Display | Once the item is removed from the wishlist, a success toast is displayed confirming that the item has been removed from the wishlist | PASS
-Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the the item has been added to the shopping bag | PASS
+Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming that the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
+
+### Shopping Bag Page
+
+#### Product Information
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Product Image | Display | When a Product image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Product Image | Click | When clicked, navigates to the Product Detail page | PASS
+Product Name Link | Click | Navigates to the Product Detail page | PASS
+Brand Name Link | Click | Displays the product listing by the selected brand | PASS
+Application Type Link | Click | Displays the product listing by the selected application type | PASS
+
+#### Order Quantity Adjustments
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Order Quantity | Select | Decrement and increment buttons only allow a quantity between 1 and the maximum order quantity of 20 | PASS
+Update Quantity Button | Submit | If the total order quantity of the item is between 1 and the maximum order quantity of 20, the order quantity is updated to the selected quantity | PASS
+Update Quantity Button | Submit | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, the order quantity is not updated | PASS
+Delete Button | Submit | When clicked, the item is deleted from the shopping bag | PASS
+Subtotal | Display | When the order quantity is adjusted, the subtotal is updated to reflect the change | PASS
+Order Value | Display | When the shopping bag is adjusted, the order value is recalculated and displayed under the Bag icon in the navbar | PASS
+Alert | Display | Once the order quantity is updated, a success toast is displayed with the order details, confirming that the order quantity has been updated | PASS
+Alert | Display | When an item is deleted, a success toast is displayed, confirming that the item has been removed from the bag | PASS
+Alert | Display | When a shipping fee is applied, the success toast displays the fee as well as the remaining order value to quality for free shpping | PASS
+Alert | Display | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
+Continue Shopping Button | Click | Navigates to Products page | PASS
+Secure Checkout Button | Click | Navigates to Checkout page | PASS
+
+### Checkout Page
+
+#### Checkout Form
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Full Name | Leave Empty | The checkout form does not submit | PASS
+Full Name | Leave Empty | An error message is displayed | PASS
+Full Name | Enter an Empty String | The checkout form does not submit | PASS
+Full Name | Enter an Empty String | An error message is displayed | PASS
+Full Name | Entry | If the user is logged in and their name is saved in their profile, it is populated from the database | PASS
+Email Field | Leave Empty | The checkout form does not submit | PASS
+Email Field | Leave Empty | An error message is displayed | PASS
+Email Field | Enter Invalid Format | The checkout form does not submit | PASS
+Email Field | Enter Invalid Format | An error message is displayed | PASS
+Email Field | Entry | If the user is logged in and their email address is saved in their profile, it is populated from the database | PASS
+Street Address 1 | Leave Empty | The checkout form does not submit | PASS
+Street Address 1 | Leave Empty | An error message is displayed | PASS
+Street Address 1 | Enter an Empty String | The checkout form does not submit | PASS
+Street Address 1 | Enter an Empty String | An error message is displayed | PASS
+Street Address 1 | Entry | If the user is logged in and their street address 1 is saved in their profile, it is populated from the database | PASS
+Street Address 2 | Not Entered | The checkout form submits as this is not a required field | PASS
+Street Address 2 | Entry | If the user is logged in and their street address 2 is saved in their profile, it is populated from the database | PASS
+Town or City | Leave Empty | The checkout form does not submit | PASS
+Town or City | Leave Empty | An error message is displayed | PASS
+Town or City | Enter an Empty String | The checkout form does not submit | PASS
+Town or City | Enter an Empty String | An error message is displayed | PASS
+Town or City | Entry | If the user is logged in and their town or city is saved in their profile, it is populated from the database | PASS
+County, State or Locality | Not Entered | The checkout form submits as this is not a required field | PASS
+County, State or Locality | Entry | If the user is logged in and their county, state or locality is saved in their profile, it is populated from the database | PASS
+Postal Code | Not Entered | The checkout form submits as this is not a required field | PASS
+Postal Code | Entry | If the user is logged in and their postal code is saved in their profile, it is populated from the database | PASS
+Country | Not Selected | The checkout form does not submit | PASS
+Country | Not Selected | An error message is displayed | PASS
+Country | Entry | If the user is logged in and their country is saved in their profile, it is populated from the database | PASS
+Phone Number | Leave Empty | The checkout form does not submit | PASS
+Phone Number | Leave Empty | An error message is displayed | PASS
+Phone Number | Enter Invalid Format | The checkout form does not submit | PASS
+Phone Number | Enter Invalid Format | An error message is displayed | PASS
+Phone Number | Entry | If the user is logged in and their phone number is saved in their profile, it is populated from the database | PASS
+Card Number | Leave Empty | The checkout form does not submit | PASS
+Card Number | Leave Empty | An error message is displayed | PASS
+Card Number | Enter Invalid Format | The checkout form does not submit | PASS
+Card Number | Enter Invalid Format | An error message is displayed | PASS
+
+#### Save Delivery Address
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Create an Account or Login | Display | Signup and login links are displayed if the user is not logged in | PASS
+Save Delivery Information to Profile | Display | If the user is logged in, the tick box is displayed to save their delivery information | PASS
+Save Delivery Information to Profile | Entry | If the user is logged in and the box is ticked, the delivery information is saved in their profile | PASS 
+
+#### Order Summary
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Product Image | Display | When a Product image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Product Image | Click | When clicked, navigates to the Product Detail page | PASS
+Subtotal | Calculate & Display | Subtotal is calculated correctly | PASS
+Shipping Fee | Calculate & Display | Shipping fee is calculated correctly | PASS
+Total | Calculate & Display | Total value is calculated correctly | PASS
+
+#### Strip Payment
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Payment | Submit | Once the checkout form is completed correctly, the payment is processed by Stripe | PASS
+Webhook | Submit | Once the checkout form is completed correctly, webhook is triggered and payment events are notified | PASS
+Alert | Display | When the checkout is completed, a success message is displayed confirming the order has been processed successfully | PASS
+
+### Checkout Success Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Order Confirmation | Display | Once the checkout is completed, the order confirmation is displayed, confirming the user email address entered | PASS
+Order Confirmation | Email | Once the checkout is completed, the order confirmation is emailed to the user | PASS
+Continue Shopping Button | Click | Navigates to the Products page | PASS
+
+### Privacy Policy Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Privacy Policy | Display | Privacy policy is displayed when the link in the footer is selected | PASS
+
+### Terms & Conditions Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Terms & Conditions | Display | Terms & conditions are displayed when the link in the footer is selected | PASS
+
+### 404 Error Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Custom 404 Error Page | Enter URL that does not exist | Custom 404 error message is displayed | PASS
+Return to Shop Button | Click | Navigates to Products page | PASS
+
+### 500 Error Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Custom 500 Error Page | Enter URL that does not exist | Custom 500 error message is displayed | PASS
+Return to Shop Button | Click | Navigates to Products page | PASS
+
+
 
 
 
