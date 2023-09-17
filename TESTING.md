@@ -1107,15 +1107,15 @@ User stories were tested and addressed as follows.
 
     The link to update the product details is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, they are directed to the Edit Product form where they can update the details. Once the complete form is submitted, the product is updated and the user is notified.
 
-    <img src="docs/images/testing/edit-product-button-products.png" width=450>  
+    <img src="docs/images/testing/edit-product-button-products.png" width=250>  
 
-    <img src="docs/images/testing/edit-product-button-product-detail.png" width=680>   
+    <img src="docs/images/testing/edit-product-button-product-detail.png" width=500>   
  
 * **_As a Business Owner/Staff, I can delete a product so that I can remove the product which is no longer for sale._**   
 
     The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm deletion. Once confirmed, the product is deleted and the user is notified.
 
-    <img src="docs/images/testing/product-delete-modal.png" width=600>  
+    <img src="docs/images/testing/product-delete-modal.png" width=350>  
 
 * **_As a Business Owner/Staff, I can see error messages when submitting the product form so that I can understand how the errors can be resolved._**   
 
@@ -1160,7 +1160,7 @@ User stories were tested and addressed as follows.
 
     Credit card payments are accepted in the Checkout page to complete their purchase.  
 
-    <img src="docs/images/testing/card.png" width=500>   
+    <img src="docs/images/testing/card.png" width=300>   
 
 * **_As a Shopper, I can checkout as a guest so that I don't have to register an account to place an order._**  
 
@@ -1184,13 +1184,13 @@ User stories were tested and addressed as follows.
 
     Once the checkout process is completed, an email is sent to the user confirming their order. This includes the order number, the items purchased, total cost and the shipping address.  
 
-    <img src="docs/images/testing/order-confirmation-email.png" width=650>     
+    <img src="docs/images/testing/order-confirmation-email.png" width=380>     
 
 
 * **_As a Shopper, I can see error messages when submitting the checkout form so that I can understand how the errors can be resolved._**   
     If there are any errors in the checkout form, the user is notified of the error before submitting the form. The form is fully validated and does not submit with invalid data.  
 
-    <img src="docs/images/testing/checkout-form-erro.png" width=650>   
+    <img src="docs/images/testing/checkout-form-error.png" width=700>   
     
 
 * **_As a Shopper, I can sign up for the newsletter so that I can receive updates from the business._**
@@ -1212,7 +1212,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/wishlist-heart.png" width=700>   
 
-    <img src="docs/images/testing/edit-product-button-product-detail.png" width=700>   
+    <img src="docs/images/testing/edit-product-button-product-detail.png" width=500>   
 
 * **_As a Shopper, I can view the products in my wishlist so that I can easily find them to purchase them in future._**  
 
@@ -1248,7 +1248,7 @@ User stories were tested and addressed as follows.
 
     Users have the option to edit the reviews that they have posted. The vertical ellipsis is available next to the posting date if they are the author of the review. They can select the edit button here, which directs them to Edit Review page.  
 
-    <img src="docs/images/testing/review-menu.png" width=350>   
+    <img src="docs/images/testing/review-menu.png" width=330>   
 
     Once the changes are made in the edit revie form, the review is updated and the user is notified.  
 
@@ -1259,7 +1259,7 @@ User stories were tested and addressed as follows.
 
     Users can delete the product reviews that they have posted. Once the delete button is selected from the vertical ellipsis, a modal is displayed to confirm deletion. Once confirmed, the review is deleted and the user is notified.  
 
-    <img src="docs/images/testing/delete-review-modal.png" width=600>   
+    <img src="docs/images/testing/delete-review-modal.png" width=350>   
 
 <br>
 
@@ -1272,7 +1272,7 @@ User stories were tested and addressed as follows.
 
     When a query is submitted via the Contact page, an email is set to the business owner or staff to notifying them of the new messasge. This email includes the message and contact details from the customer.    
 
-    <img src="docs/images/testing/query-email-to-store.png" width=600>   
+    <img src="docs/images/testing/query-email-to-store.png" width=330>   
 
 * **_As a Site User, I can see error messages when submitting the contact form so that I can understand how the errors can be resolved._**  
 
@@ -1313,7 +1313,7 @@ User stories were tested and addressed as follows.
 
     The delete button is available to users with superuser or staff permission and they can delete articles from the Articles and the Article Detail pages. Once the button is clicked, a modal is displayed to confirm deletion. Once confirmed, the article is deleted from the site and the user is notified. 
 
-    <img src="docs/images/testing/delete-article-modal.png" width=600>  
+    <img src="docs/images/testing/delete-article-modal.png" width=350>  
 
 * **_As a Site User, I can see error messages when submitting article form so that I can understand how the errors can be resolved._**
 
@@ -1358,12 +1358,12 @@ User stories were tested and addressed as follows.
 
     Sitemap.xml has been included to improve SEO ranking.  
 
-    <img src="docs/images/testing/sitemap-robots.png" width=100>  
+    <img src="docs/images/testing/sitemap-robots.png" width=130>  
 
 * **_As a Developer, I include robots.txt so that it defines where search engines are not allowed to go within the site._**
 
     robots.txt has also been included.  
-    
+
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
