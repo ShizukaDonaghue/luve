@@ -1029,7 +1029,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for._**  
 
-    A navigation bar is available on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. 
+    A navbar is available on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. 
 
     <img src="docs/images/testing/navbar.png" width=700>  
 
