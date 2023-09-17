@@ -30,6 +30,14 @@ During the research, it was found that the word "sunscreen" and "sunblock" were 
 
 In order to consistently create useful, engating content that will attract, engage and convert the target makert into customers, the business owner and staff can post articles relevant to the site. These articals intend to provide useful and meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
 
+### Social Media Marketing
+
+<img src="docs/images/facebook-1.png" width=800>
+<img src="docs/images/facebook-2.png" width=800>
+
+
+
+
 
 ### Credit
 
