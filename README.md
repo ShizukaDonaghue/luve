@@ -102,7 +102,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 * As a Shopper, I can sign up for the newsletter so that I can receive updates from the business.  
 
-### EPIC: Wish List  
+### EPIC: Wishlist  
 
 * As a Shopper, I can save products to my wishlist so that I can easily find them in future to purchase.  
  
@@ -154,7 +154,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 ### User Stories Not Implemented
 
-The following User Stories were not implemented for EPIC: Customer Queries. The decision was made not to implement a Customer Queries page as I felt it would be easier for the business owner to manage customer queries in their email inbox, rather than having to manage them both in their inbox and the dashboard within the site. Queries posted via the contact form are emailed to the business owner and they can respond to the customers directly from there.   
+The following User Stories were not implemented for EPIC: Customer Queries. The decision was made not to create a Customer Queries page as I felt it would be easier for the business owner to manage customer queries in their email inbox, rather than having to manage them both in their inbox and the dashboard within the site. The queries posted using the contact form are emailed to the business owner and they can respond to the customers directly from their inbox and keep track of all the email correspondence.   
 
 * As a Business Owner/Staff, I can **view customer queries posted via the contact form within the site ** so that I can keep track of queries from customers.
 
@@ -164,16 +164,12 @@ The following User Stories were not implemented for EPIC: Customer Queries. The 
 
 The following User Stories were not implemented. Please see the details in the Features Left to Implement section.
 
-EPIC: User Acount & Profile:
 * As a Site User, I can delete my user profile so that I can remove my personal information from the site.
 
-EPIC: Business Admin:
 * As a Business owner/staff, I can edit delivery charge and free delivery threshold so that I can update them as required.
 
-EPIC: Product Management:
 * As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
 
-EPIC: Product Review:
 * As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
 
 ## Agile Methodology
@@ -212,6 +208,59 @@ but this is due to the design choices made during the development process.
 An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to visualise the relationships between the data structures. 
 
 The intention was to utilise Django-AllAuth for the user authentication system and create other custom models. 
+
+
+
+## Security Features and Defensive Design
+
+### User Authentication
+Django-AllAuth is used to authenticate users. Certain pages within the application can only be accessed by users who are logged in. These pages are secured with Django's @login_required decorator, which provides role-based access to the central dataset within the application.
+If a user tries to access these pages without having logged in, they are directed to the Login page instead.
+
+### User Authorisation
+Users can only edit or delete their own records in the application. If a user tries to edit or delete other users' records, an error message is displayed to the user explaining the issue. This forbidden error prevents the user from editing or deleting the record.
+
+### Form Validation
+Django's built-in form validation is used to validate the forms within the application. The forms will not submit unless they are completed correctly. If there are errors, error messages are displayed to assist users to fill in all the fields correctly.
+
+In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to the Article form, Contact form, and Product form. This displays a custom error message explaining the error for each field to assist users to fill in the field correctly.
+
+Since Django's build-in form validation does not catch empty strings in the Summernote fields used in the Article form, additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty. 
+
+As for the Checkout form, regular expression is built into the form to validate the fields as jQuery validation caused issues with Stripe payment process, which is documented under issue [#92](https://github.com/ShizukaDonaghue/luve/issues/92).
+
+With these measures combined, all the forms within the site are fully validated for each submission.
+
+### Security-Sensitive Information
+Environment variables are stored in env.py for local development to ensure security-sensitive information is not pushed to the GitHub repository. For the production environment, these variables are added to Config Vars for the application in Heroku. 
+
+## Design
+
+### Colour Scheme
+The design of the site is intended to be simple and clean so as not to distract users from colourful images of products. [Coolors](https://coolors.co) was used to create the colour pallet.
+
+* #FFFFFF White is used for the background colour.
+* #474D53 Outer Space is used for the main text colour to ensure a good contrast against the background colour.
+* #DDF8FC Light Cyan is used as the background colour for the order summary section in the Shopping Bag page.  
+* #17A2B8 Moonstone is used as an accent colour throughout the site and also for the hover effect on buttons.
+* #F56B8E Bright Pink is used for the Wishlist related objects.
+
+The logo for the site was created using the same colour palette to be consistent. 
+
+<img src="docs/images/color.png" width=600>
+
+### Typography
+The font used throughout the site is Signika which is imported from [Google Fonts](https://fonts.google.com/). Sans-serif is the backup font in case the main font is not available.
+
+<img src="docs/images/font.png" width=180>
+
+
+# Features
+## Existing Features
+### Browser Tabs
+
+
+
 
 
 
@@ -261,6 +310,19 @@ In order to consistently create useful, engating content that will attract, enga
 
 
 
+### Features Left to Implement
+
+EPIC: User Acount & Profile:
+* As a Site User, I can delete my user profile so that I can remove my personal information from the site.
+
+EPIC: Business Admin:
+* As a Business owner/staff, I can edit delivery charge and free delivery threshold so that I can update them as required.
+
+EPIC: Product Management:
+* As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
+
+EPIC: Product Review:
+* As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
 
 
 
