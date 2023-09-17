@@ -977,7 +977,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can recover my password in case I forget it so that recover access to my account._**  
 
-    The link to "Forgot Password?" link is available on the Log-in page in case the user needs to recover their password. Once they complete this form, they will receive an email with a link to reset their password. 
+    The link to "Forgot Password?" is available on the Log-in page in case the user needs to recover their password. Once they complete this form, they will receive an email with a link to reset their password. 
 
 * **_As a Site User, I can log out of my account so that I can keep my account secure._**   
 
