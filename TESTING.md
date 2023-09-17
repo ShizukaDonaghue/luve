@@ -966,7 +966,7 @@ User stories were tested and addressed as follows.
 
     Once the user completes the sign up form with their details, they will receive an email confirming the registration and a link to confirm their email address.  
     
-    <img src="docs/images/testing/registration-confirmation.png" width=550>   
+    <img src="docs/images/testing/registration-confirmation.png" width=650>   
 
 
 * **_As a Site User, I can easily log into my account so that I can access my personal account information._**  
@@ -1099,13 +1099,13 @@ User stories were tested and addressed as follows.
     
     <img src="docs/images/testing/product-mgt-link.png" width=700>  
 
-    The business owner and staff can add a product to the site from here by completing the Product form.  
+    The business owner and staff can add a product to the site from here by completing the Product form. Once the form is completed, the product is added and the user is notified.   
 
     <img src="docs/images/testing/add-product.png" width=700>   
 
 * **_As a Business Owner/Staff, I can update product details so that I can change product prices, description, image and other details._**   
 
-    The link to update the product details is available on the Products page as well as the Product Details page for users with superuser or staff permission. Once the link is selected. they are directed to the Edit Product form where they can update the details.  
+    The link to update the product details is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, they are directed to the Edit Product form where they can update the details. Once the complete form is submitted, the product is updated and the user is notified.
 
     <img src="docs/images/testing/edit-product-button-products.png" width=450>  
 
@@ -1113,13 +1113,13 @@ User stories were tested and addressed as follows.
  
 * **_As a Business Owner/Staff, I can delete a product so that I can remove the product which is no longer for sale._**   
 
-    The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm deletion. Once confirmed, the product is deleted.
+    The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm deletion. Once confirmed, the product is deleted and the user is notified.
 
     <img src="docs/images/testing/product-delete-modal.png" width=600>  
 
 * **_As a Business Owner/Staff, I can see error messages when submitting the product form so that I can understand how the errors can be resolved._**   
 
-    If there are any errors in the Add Product form, error messages are displayed explaing the error. This aims to assist users in filling in the form correctly. This also prevents the form from being submitted with invalid data.
+    If there are any errors in the Add Product form, error messages are displayed explaing the error. This aims to assist users in filling in the form correctly. The form is fully validated and does not submit with invalid data.  
     
     <img src="docs/images/testing/add-product-error.png" width=700> 
 
@@ -1128,112 +1128,242 @@ User stories were tested and addressed as follows.
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
 
 
-
 ### **EPIC: Purchasing & Checkout**
 
-* **_As a Shopper, I can add a product to my shopping bag so that I may decide to purchase the item later._**
+* **_As a Shopper, I can add a product to my shopping bag so that I may decide to purchase the item later._**   
 
-* **_As a Shopper, I can view items in my shopping bag so that I can identify the total cost of my purchases and verify the items to be purchased._**
+    Users can add a product to the shopping bag from the Products, Product Detail and Wishlist pages.  
+    
+* **_As a Shopper, I can view items in my shopping bag so that I can identify the total cost of my purchases and verify the items to be purchased._**  
 
-* **_As a Shopper, I can edit the shopping bag so that I can make changes to the contents of my bag before checkout._**
+    Users can access their shopping bag from the bag icon in the navbar.   
 
-* **_As a Shopper, I can see how much more I need to spend to get free delivery so that I can take advantage of the free shipping offered._**
+    <img src="docs/images/testing/search-bar.png" width=700>   
 
-* **_As a Shopper, I can easily view the total of my purchases at any time so that I can keep track of what I'm spending._**
+    The Shopping Bag page lists the items in the shopping bag and users can view the total cost in the order summary.  
 
-* **_As a Shopper, I can pay for my order with a card so that I can complete my order and receive it from the business._**
+    <img src="docs/images/testing/bag.png" width=720>  
 
-* **_As a Shopper, I can checkout as a guest so that I don't have to register an account to place an order._**
+* **_As a Shopper, I can edit the shopping bag so that I can make changes to the contents of my bag before checkout._**  
 
-* **_As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased._**
+    Users can eaisly adjust the order quantity of items in the Shopping Bag page. Items can also be removed from this page.  
 
-* **_As a Shopper, I can have my details auto-filled at checkout so that I can place an order quicker and easier._**
+* **_As a Shopper, I can see how much more I need to spend to get free delivery so that I can take advantage of the free shipping offered._**   
 
-* **_As a Shopper, I can receive an email confirmation once my order is placed so that I can keep the confirmation of what I have purchased for my records._**
+    The order summary section in the Shopping Bag shows the remaining spend to qualify for free shipping. This information is also available in the delivery banner under the navbar which is visible from all pages so that users can check the remaining value while they shop.  
+
+* **_As a Shopper, I can easily view the total of my purchases at any time so that I can keep track of what I'm spending._**  
+
+    When there is an item or are items in the bag, the total value is displayed under the Bag icon in the navbar. This is visible from all pages also so the users can keep track of their spend as they shop.  
+
+* **_As a Shopper, I can pay for my order with a card so that I can complete my order and receive it from the business._**  
+
+    Credit card payments are accepted in the Checkout page to complete their purchase.  
+
+    <img src="docs/images/testing/card.png" width=500>   
+
+* **_As a Shopper, I can checkout as a guest so that I don't have to register an account to place an order._**  
+
+    Users don't need to register as a user to purchase from the store.  
+
+* **_As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased._**  
+
+    Once the checkout process is completed, the order confirmation is displayed for the user.  
+
+    <img src="docs/images/testing/order-confirmation-page.png" width=700>    
+
+* **_As a Shopper, I can have my details auto-filled at checkout so that I can place an order quicker and easier._**   
+
+    For users who are logged in and have their details saved in the profile, the details are auto-filled in the checkout form from the database.
+
+    If the details are not yet saved, they have the option to save their details when completing the checkout form by selecting the "Save this information to my profile" box.   
+
+    <img src="docs/images/testing/checkout-form.png" width=700>    
+
+* **_As a Shopper, I can receive an email confirmation once my order is placed so that I can keep the confirmation of what I have purchased for my records._**    
+
+    Once the checkout process is completed, an email is sent to the user confirming their order. This includes the order number, the items purchased, total cost and the shipping address.  
+
+    <img src="docs/images/testing/order-confirmation-email.png" width=650>     
 
 
-* **_As a Shopper, I can see error messages when submitting the checkout form so that I can understand how the errors can be resolved._**
+* **_As a Shopper, I can see error messages when submitting the checkout form so that I can understand how the errors can be resolved._**   
+    If there are any errors in the checkout form, the user is notified of the error before submitting the form. The form is fully validated and does not submit with invalid data.  
+
+    <img src="docs/images/testing/checkout-form-erro.png" width=650>   
+    
 
 * **_As a Shopper, I can sign up for the newsletter so that I can receive updates from the business._**
 
+    Users can sign up for newsletters by completing the signup form in the footer so that they can receive updates from the store.   
+
+    <img src="docs/images/testing/footer.png" width=700>   
 
 <br>
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 
 ### **EPIC: Wish List**
 
-* **_As a Shopper, I can save products to my wish list so that I can easily find them in future to purchase._**
+* **_As a Shopper, I can save products to my wishlist so that I can easily find them in future to purchase._**  
 
-* **_As a Shopper, I can view the products in my wish list so that I can easily find them to purchase them in future._**
+    Users can add items to their wishlist from the Products and the Product Details pages by clicking on the pink love heart. When an item is added to the wishlist, the love heart is coloured in pink and the user is notified.
 
-* **_As a Shopper, I can remove products from my wish list so that I can maintain my wish list._**
+    <img src="docs/images/testing/wishlist-heart.png" width=700>   
+
+    <img src="docs/images/testing/edit-product-button-product-detail.png" width=700>   
+
+* **_As a Shopper, I can view the products in my wishlist so that I can easily find them to purchase them in future._**  
+
+    Users can access the Wishlist page from the love heart icon in the navbar. They can view the contents of their wishlist from there.  
+
+    <img src="docs/images/testing/search-bar.png" width=700>   
+
+* **_As a Shopper, I can remove products from my wishlist so that I can maintain my wishlist._**   
+
+    Users can remove items from their wishlist by clicking on the pink heart in the Product or the Product Details page. When the item is removed from the wishlist, the pink love heart changes back to pink outline and the user is notified.  
+
+    Users can also remove items from the Wishlist page by clicking on the "X".  
+
+    <img src="docs/images/testing/wishlist-page.png" width=700>   
 
 
-### **EPIC: Product Review**
+### **EPIC: Product Review**  
 
-* **_As a Shopper, I can post a product review so that I can share my feedback for the product with others._**
+* **_As a Shopper, I can view the reviews posted by others so that I can see the feedback from others which may help my purchasing decision._**  
 
-* **_As a Shopper, I can view the reviews posted by others so that I can see the feedback from others which may help my purchasing decision._**
+    Users can view the reviews posted by others in the Product Details page. 
 
-* **_As a Shopper, I can edit the product review I posted so that make changes to my review._**
+    <img src="docs/images/testing/product-review-not-logged-in.png" width=700>   
 
+
+* **_As a Shopper, I can post a product review so that I can share my feedback for the product with others._**   
+
+    The product review form is available for users who are logged in next to the review section. Users have the option to add comments or just rate the product. Once the form is completed, the review is posted on the site and the user is notified.  
+
+    <img src="docs/images/testing/product-review.png" width=700>   
+
+* **_As a Shopper, I can edit the product review I posted so that make changes to my review._**  
+
+    Users have the option to edit the reviews that they have posted. The vertical ellipsis is available next to the posting date if they are the author of the review. They can select the edit button here, which directs them to Edit Review page.  
+
+    <img src="docs/images/testing/review-menu.png" width=350>   
+
+    Once the changes are made in the edit revie form, the review is updated and the user is notified.  
+
+    <img src="docs/images/testing/edit-review-page.png" width=700>   
+
+  
 * **_As a Shopper, I can delete the product review I posted so that I can remove it from the product details page._**
 
+    Users can delete the product reviews that they have posted. Once the delete button is selected from the vertical ellipsis, a modal is displayed to confirm deletion. Once confirmed, the review is deleted and the user is notified.  
+
+    <img src="docs/images/testing/delete-review-modal.png" width=600>   
 
 <br>
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 
 ### **EPIC: Customer Queries**
 
-* **_As a Business Owner/Staff, I can receive an email when a query is posted via the contact form so that I can respond to their query in a timely manner._**
+* **_As a Business Owner/Staff, I can receive an email when a query is posted via the contact form so that I can respond to their query in a timely manner._**   
 
-* **_As a Site User, I can see error messages when submitting the contact form so that I can understand how the errors can be resolved._**
+    When a query is submitted via the Contact page, an email is set to the business owner or staff to notifying them of the new messasge. This email includes the message and contact details from the customer.    
 
+    <img src="docs/images/testing/query-email-to-store.png" width=600>   
+
+* **_As a Site User, I can see error messages when submitting the contact form so that I can understand how the errors can be resolved._**  
+
+    If there are errors in the contact form, error messages are displayed to the user explaing the errors. The form is fully validated and does not submit with invalid data. 
+
+    <img src="docs/images/testing/contact-form-error.png" width=700>   
 
 <br>
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 
 ### **EPIC: Article Posts**
 
-* **_As a Business Owner/Staff, I can post an article so that I can provide relevant and useful information to customers._**
+* **_As a Business Owner/Staff, I can post an article so that I can provide relevant and useful information to customers._**   
 
-* **_As a Business Owner/Staff, I can edit a blog article so that I can make changes to the article as required._**
+    The link to Article Management is available from the Account menu to users with superuser or staff permission. 
 
-* **_As a Business Owner/Staff, I can delete a blog article so that I can remove the article from the site._**
+    <img src="docs/images/testing/add-article-link.png" width=700>    
+
+    The business owner or staff can add articles by completing the Add Article form.  
+
+    <img src="docs/images/testing/add-article-form.png" width=700>    
+
+* **_As a Business Owner/Staff, I can edit a blog article so that I can make changes to the article as required._**   
+
+    For users with superuser or staff permission, the link to Edit Article page is available from the Articles and the Article Details page.  
+
+    <img src="docs/images/testing/articles-page.png" width=700>   
+
+    <img src="docs/images/testing/article-detail-page.png" width=700>   
+
+    Once the changes are made in the edit article form, the article is updated and the user is notified.  
+
+    <img src="docs/images/testing/edit-article-page.png" width=700>  
+
+* **_As a Business Owner/Staff, I can delete a blog article so that I can remove the article from the site._**   
+
+    The delete button is available to users with superuser or staff permission and they can delete articles from the Articles and the Article Detail pages. Once the button is clicked, a modal is displayed to confirm deletion. Once confirmed, the article is deleted from the site and the user is notified. 
+
+    <img src="docs/images/testing/delete-article-modal.png" width=600>  
 
 * **_As a Site User, I can see error messages when submitting article form so that I can understand how the errors can be resolved._**
 
+    If there are any errors in the article form, the user is notified explaining the errors. The form is fully validated and does not submit with invalid data.  
+
+    <img src="docs/images/testing/article-form-error.png" width=600>  
 
 <br>
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
 
 
+### **EPIC: Business Admin**  
 
-### **EPIC: Business Admin**
+* **_As a Business Owner, I can easily email special deals and updates to customers so that I can promote the business._**  
 
-* **_As a Business Owner, I can easily email special deals and updates to customers so that I can promote the business._**
+    Users can sign up for newsletters by completing the signup form in the footer. Once they are signed up, their email addresses are stored in Mailchimp account where the business owner or staff can send emails promoting thier business. 
 
-* **_As a Business Owner, I can include a privacy policy in the site so that we are compliant with GDPR requirements._**
+    <img src="docs/images/testing/mailchimp.png" width=700>  
 
-* **_As a the Business Owner, I can provide terms & conditions so that I can inform the customers the rules and regulations for the use of the site._**
+    
+* **_As a Business Owner/Staff, I can have a Facebook page to share special deals and updates so that I can promote the business*._**   
 
-* **_As a Developer, I include a site map so that it improves the search engine ranking and potential customers can find the site when they search online._**
+    Facebook page has been created to promote the business on the social media platform.   
+
+    <img src="docs/images/testing/facebook-1.png" width=800>   
+    <img src="docs/images/testing/facebook-2.png" width=800>   
+
+* **_As a Business Owner, I can include a privacy policy in the site so that we are compliant with GDPR requirements._**  
+
+    The privacy policy is available from the link in the footer.  
+
+    <img src="docs/images/testing/privacy-policy.png" width=700>  
+
+* **_As a the Business Owner, I can provide terms & conditions so that I can inform the customers the rules and regulations for the use of the site._**   
+
+    Terms & Conditions are also available from the link in the footer.  
+
+    <img src="docs/images/testing/terms-conditions.png" width=700>  
+
+* **_As a Developer, I include a site map so that it improves the search engine ranking and potential customers can find the site when they search online._**  
+
+    Sitemap.xml has been included to improve SEO ranking.  
+
+    <img src="docs/images/testing/sitemap-robots.png" width=100>  
 
 * **_As a Developer, I include robots.txt so that it defines where search engines are not allowed to go within the site._**
 
-* **_As a Business Owner/Staff, I can have a Facebook page to share special deals and updates so that I can promote the business*._**
-
-
+    robots.txt has also been included.  
+    
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  

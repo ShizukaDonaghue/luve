@@ -38,6 +38,31 @@ In order to consistently create useful, engating content that will attract, enga
 
 
 
+The following User Stories were not implemented for XXXX. Please see the details in the Features Left to Implement section.
+
+EPIC: User Ccount & Profile:
+* As a Site User, I can delete my user profile so that I can remove my personal information from the site.
+
+EPIC: Business Admin:
+* As a Business owner/staff, I can edit delivery charge and free delivery threshold so that I can update them as required.
+
+EPIC: Product Management:
+* As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
+
+EPIC: Product Review:
+* As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
+
+INCLUDE NOT IMPLEMENTED STORIEST BELOW
+
+EPIC: Customer Queries: 
+* As a Business Owner/Staff, I can **view customer queries posted via the contact form within the site ** so that I can keep track of queries from customers.
+
+* As a Business Owner/Staff, I can delete customer queries received from the customer queries page so that I can keep the database clean.
+
+
+
+
+
 
 ### Credit
 
