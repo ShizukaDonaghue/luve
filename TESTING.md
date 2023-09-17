@@ -760,7 +760,7 @@ Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) wa
 </details>
 
 <details>
-  <summary>Wishlit Page</summary>
+  <summary>Wishlist Page</summary>
   
   Desktop:  
   <img src="docs/images/testing/wishlist-desktop.png">
@@ -1078,7 +1078,7 @@ Password Field | Leave Empty | The change password form does not submit | PASS
 Password Field | Leave Empty | An error message is displayed | PASS
 Password Field | Enter an Empty String | The change password form does not submit | PASS
 Password Field | Enter an Empty String | An error message is displayed | PASS
-Change Password Link | Once the new password is correctly entered, the user's password is changed.
+Change Password Link | Submit | Once the new password is correctly entered, the user's password is changed.
 Log In Link | Click | Navigates to Log In page | PASS
 Alert | Display | Success message is displayed confirming the password has been changed | PASS
 
@@ -1216,11 +1216,11 @@ Delete Review Button | Click | A modal is displayed to confirm deletion | PASS
 ### Edit Review Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Access the Edit Review Page by Entering the URL | Navigates the user to Login page | PASS
-Defensive Measure | Logged-in and Try to Access Another User's Review by Entering the URL | An error message is displayed notifying the user that they are not authorised to edit the review | PASS
+Defensive Measure | If the User is Not Logged in and Try to Access the Edit Review Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Logged in and Try to Access Another User's Review by Entering the URL | An error message is displayed notifying the user that they are not authorised to edit the review | PASS
 Edit Review Form | Display | The details in the form are populated from the database | PASS
 Review Field | Leave Empty | The content field can be left blank if the user would like to rate the product only | PASS
-Edite Review | Click | Review is updated and displayed in the review section | PASS
+Edit Review | Click | Review is updated and displayed in the review section | PASS
 Alert | Display | Success message is displayed confirming that the review has been updated successfully | PASS
 Cancel Button | Click | Navigates back to Product Detail page | PASS
 
@@ -1235,8 +1235,8 @@ Modal Closure | Click Outside Menu | Modal is closed | PASS
 ### Add Product Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Acess the Add Product Page by Entering the URL | Navigates the user to Login page | PASS
-Defensive Measure | Logged-in and Try to Access the Add Product Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add products | PASS
+Defensive Measure | If the User is Not Logged in and Try to Access the Add Product Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Logged in and Try to Access the Add Product Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add products | PASS
 Category | Not Selected | Defaults to "Baby & Kids and Kids" and the product form submits as this is not a required field | PASS
 Brand | Leave Empty | The product form submits as this is not a required field | PASS
 Type | Leave Empty | The product form submits as this is not a required field | PASS
@@ -1261,8 +1261,8 @@ Cancel Button | Click | Navigates back to Products page | PASS
 ### Edit Product Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Access the Edit Product Page by Entering the URL | Navigates the user to Login page | PASS
-Defensive Measure | Logged-in and Try to Access the Edit Product Page by Entering the URL without Superuser or Staff Permission | An error message is displayed notifying the user that they are not authorised to edit products | PASS
+Defensive Measure | If the User is Not Logged in and Try to Access the Edit Product Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Logged in and Try to Access the Edit Product Page by Entering the URL without Superuser or Staff Permission | An error message is displayed notifying the user that they are not authorised to edit products | PASS
 Edit Product Form | Display | The details in the form are populated from the database | PASS
 Category | Not Selected | Defaults to "Baby & Kids and Kids" and the product form submits as this is not a required field | PASS
 Brand | Leave Empty | The product form submits as this is not a required field | PASS
@@ -1286,7 +1286,7 @@ Alert | Display | Success message is displayed confirming [Product Name] has bee
 Cancel Button | Click | Navigates back to Products page | PASS
 Update Product | Submit | Displays the Product Details page which has been updated | PASS
 Alert | Submit | Success message is displayed confirming the [Product title] has been updated successfully | PASS
-Cancel Button | Navigates back to Product Detail page | PASS
+Cancel Button | Click | Navigates back to Product Detail page | PASS
 
 ### Delete Product Modal
 Feature | Action | Expected Result | PASS/FAIL
@@ -1352,8 +1352,8 @@ Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | P
 ### Add Article Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Acess the Add Article Page by Entering the URL | Navigates the user to Login page | PASS
-Defensive Measure | Logged-in and Try to Access the Add Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add articles | PASS
+Defensive Measure | If the User is Not Logged in and Try to Access the Add Article Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Logged in and Try to Access the Add Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add articles | PASS
 Article Title | Leave Empty | The article form does not submit | PASS
 Article Title | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
 Article Title | Enter an Empty String | The article form does not submit | PASS
@@ -1376,8 +1376,8 @@ Cancel Button | Click | Navigates back to Articles page | PASS
 ### Edit Article Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Acess the Edit Article Page by Entering the URL | Navigates the user to Login page | PASS
-Defensive Measure | Logged-in and Try to Access the Edit Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to edit articles | PASS
+Defensive Measure | If the User is Not Logged in and Try to Access the Edit Article Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Logged in and Try to Access the Edit Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to edit articles | PASS
 Edit Article Form | Display | The details in the form are populated from the database | PASS
 Article Title | Leave Empty | The article form does not submit | PASS
 Article Title | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
@@ -1440,10 +1440,10 @@ Continue Shopping Button | Click | Navigates to the Products page | PASS
 ### Profile Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Acess the Profile Page by Entering the URL | Navigates the user to Login page | PASS
-Delivery Adress | Entry | If the delivery address is not already saved, the logged-in user can populate and save the delivery address | PASS
-Delivery Adress | Entry | If the delivery address is not already saved and if the logged-in user places an order with "Save this information to my profile" box ticked, the delivery address is saved into their profile | PASS
-Delivery Adress | Update | If the delivery address is already saved, the user can update and save the delivery address | PASS
+Defensive Measure | If the User is Not Logged in and Try to Access the Profile Page by Entering the URL | Navigates the user to Login page | PASS
+Delivery Address | Entry | If the delivery address is not already saved, the user can populate and save the delivery address | PASS
+Delivery Address | Entry | If the delivery address is not already saved and if the user places an order with "Save this information to my profile" box ticked, the delivery address is saved into their profile | PASS
+Delivery Address | Update | If the delivery address is already saved, the user can update and save the delivery address | PASS
 Order History | Display | If the user has placed orders, the order details are displayed in descending order based on the order dates | PASS
 Order Number Link | Click | Once clicked, the order confirmation is displayed | PASS
 Alert | Display | When the delivery address is updated, a success message is displayed confirming that the user profile has been updated | PASS
@@ -1485,7 +1485,7 @@ Subtotal | Display | When the order quantity is adjusted, the subtotal is update
 Order Value | Display | When the shopping bag is adjusted, the order value is recalculated and displayed under the Bag icon in the navbar | PASS
 Alert | Display | Once the order quantity is updated, a success toast is displayed with the order details, confirming that the order quantity has been updated | PASS
 Alert | Display | When an item is deleted, a success toast is displayed, confirming that the item has been removed from the bag | PASS
-Alert | Display | When a shipping fee is applied, the success toast displays the fee as well as the remaining order value to quality for free shpping | PASS
+Alert | Display | When a shipping fee is applied, the success toast displays the fee as well as the remaining order value to quality for free shipping | PASS
 Alert | Display | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 Continue Shopping Button | Click | Navigates to Products page | PASS
 Secure Checkout Button | Click | Navigates to Checkout page | PASS
@@ -1587,10 +1587,75 @@ Feature | Action | Expected Result | PASS/FAIL
 Custom 500 Error Page | Enter URL that does not exist | Custom 500 error message is displayed | PASS
 Return to Shop Button | Click | Navigates to Products page | PASS
 
+## Bugs
+### Resolved Bugs
+
+* **Modal for Delete Product Review [#84](https://github.com/ShizukaDonaghue/luve/issues/84)**  
+
+  ***Issue:***  
+  When a user tris to delete a product review, a modal is displayed to confirm deletion. Where there were multiple product reviews for a product by the same user, when the user confirmed to delete a product review in the modal displayed, the first review by the user was deleted regardless of which review the user was trying to delete.
+
+  ***Solution:***  
+  This issue was caused by the modal having the same ID for all product reviews for the user.
+  It was resolved by giving each modal a separate ID, containing the review ID and then calling that specific modal to delete the review. This solution was found in [Stackoverflow](https://stackoverflow.com/questions/70346755/django-deleting-using-modal-show-and-delete-only-the-first-item-from-the-tabl).  
+
+  <img src="docs/images/testing/bug-1.png" width=700>     
+
+    
+* **Negative Product Price [#85](https://github.com/ShizukaDonaghue/luve/issues/85)**  
+
+  ***Issue:***  
+  When adding a product to the site, the product price field accepted prices that were less than 0.01 euro.  
+
+  <img src="docs/images/testing/negative-product-price.png" width=300>     
+       
+  ***Solution:***  
+  In order to validate the product price field, MinValueValidator has been added to the model to accept prices that are 0.01 and above. JQuery plug in has also been added to raise an error message if a price lower than 0.01 is entered.  
+
+  <img src="docs/images/testing/minvaluevalidator.png" width=520>   
+
+  <img src="docs/images/testing/negative-product-price-fix.png" width=700>     
+
+
+* **Stripe Payments Failure [#86](https://github.com/ShizukaDonaghue/luve/issues/86)**  
+
+  ***Issue:***  
+  Strip payment failed due to the payment method not being provided.   
+   
+  ***Solution:***  
+  This issue resulted from jQuery plug-in validation that was added to validate the checkout form. It was firing the form submission before Stripe could finish processing payment. Once the validation was removed, payments were successful. The final solution applied was to update the jQuery validation to call the checkout function instead of form.submit function, which resolved the issue. This solution was found in [Stackoverflow](https://stackoverflow.com/questions/47332825/jquery-functions-not-firing-with-stripe-elements).
+
+
+* **Brand Names with Space [#90](https://github.com/ShizukaDonaghue/luve/issues/90)**  
+
+  ***Issue:***  
+  The business owner/staff could add new brands to the store by entering a new brand name into the database without having to update the model itself. This functionality functioned as expected, however, when a brand name with a space is entered, it created an HTML validation error as space is not allowed.  
+   
+  ***Solution:***  
+  The brand model has been updated to include display_name field so that the business owner/staff can enter a brand name as they would like to see it on their site. However, they will need to enter the name without space in the brand name field, so this is not an ideal solution. 
+  
+  For future development, a frond end panel will be created so that the business owner/staff can just enter the brand name as they would like to see it on their site and it will be converted to an acceptable format and stored in the database. Due to time constrains, this proposed solution will not be implemented for PP5 submission, and therefore, [#91](https://github.com/ShizukaDonaghue/luve/issues/91) has been created to track this issue.
+
+
+* **Checkout Form Accepts Invalid Fields [#92](https://github.com/ShizukaDonaghue/luve/issues/92)**  
+
+  ***Issue:***  
+  Checkout form was submitted for Stripe payments even when the form was invalid. It allowed whitespace in fields other than the card details and created 500 error when it submited for payment. 
+   
+  ***Solution:***  
+  First, in order to prevent the form from being submitted for payments before the form is completed correctly, the jQuery validation which called the checkout function (resultig from [#86](https://github.com/ShizukaDonaghue/luve/issues/86) above) was removed as it did alert the user that the details were incomplete but still allowed the form to be submitted for payment once the card details were entered correctly. 
+  
+  Instead, regular expressions were added to the form to prevent invalid forms from being submitted for payment. This soluction was found in [PP5-Fresh-Nest](https://github.com/AliOKeeffe/PP5-Fresh-Nest/blob/main/checkout/forms.py) repository.
+
+### Unresolved Bugs
+There are no other known bugs at present.
 
 
 
+  
+
+  
 
 
 
-
+  
