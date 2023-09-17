@@ -299,7 +299,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 <details>
   <summary>urls.py - No issues or errors</summary> 
   
-  <img src="docs/images/testing/articles-urls.png" width=700
+  <img src="docs/images/testing/articles-urls.png" width=700>
 
 </details>
 
