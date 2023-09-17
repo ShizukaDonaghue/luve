@@ -1021,7 +1021,7 @@ User stories were tested and addressed as follows.
 
 ### **EPIC: Site Navigation**
 
-* **_As a Site User I can understand the purpose of the site clearly so that I can decide the contents are right for me to browse._**   
+* **_As a Site User, I can edit my user profile so that I can keep my information up to date._**   
 
     The landing page introduces the site and its purpose. This page also includes "Shop Now" button so that the user can easily navigate to the store to purchase safe sunblocks and also "Article" button so that they can read more about the risks and impact of sunscreens.
 
@@ -1268,6 +1268,12 @@ User stories were tested and addressed as follows.
 
 ### **EPIC: Customer Queries**
 
+* **_As a Site User, I can submit a query via the site so that I can easily ask questions to the business._** 
+
+    Users can submit a query using the contact form within the site. 
+
+    <img src="docs/images/testing/contact-form.png" width=700>  
+
 * **_As a Business Owner/Staff, I can receive an email when a query is posted via the contact form so that I can respond to their query in a timely manner._**   
 
     When a query is submitted via the Contact page, an email is sent to the business owner or staff to notify them of the new messages. This email includes the message and contact details of the customer.    
@@ -1335,7 +1341,7 @@ User stories were tested and addressed as follows.
     <img src="docs/images/testing/mailchimp.png" width=700>  
 
     
-* **_As a Business Owner/Staff, I can have a Facebook page to share special deals and updates so that I can promote the business*._**   
+* **_As a Business Owner/Staff, I can have a Facebook page to share special deals and updates so that I can promote the business._**   
 
     Facebook page has been created to promote the business on the social media platform.   
 
@@ -2093,11 +2099,4 @@ There are no other known bugs at present.
 
 <br>  
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-  
-
-  
-
-
-
-  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)    
