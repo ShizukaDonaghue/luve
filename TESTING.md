@@ -181,6 +181,11 @@ One error was identified for the image field, which was related to clearable_fil
 
 </details>
 
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
 ### CSS
 CSS codes used in the application were validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no issues or errors were found.
 
@@ -214,16 +219,14 @@ CSS codes used in the application were validated using [W3C CSS Validator](https
 
 
 ### JavaScript
-JavaScript codes used in the application were validated using [JSHint](https://jshint.com/). While there were 2 undefined variables identified, there were no critical errors. Please see the results below for each file.
+JavaScript codes used in the application were validated using [JSHint](https://jshint.com/). There was one undefined variable identified for Stripe. Please see the results below for each file.
 
 <details>
-  <summary>Base JavaScript Codes - Undefined variable identified </summary> 
+  <summary>Base JavaScript Codes - No issues or errors </summary> 
   
   <img src="docs/images/testing/js-base.png">
 
 </details>
-
-The undefined variable "checkout" was identified for the order form. This calls for `checkout()` function in checkout/views.py and is not defined within the file. This was necessary as jQuery validation would submit the form before Stripe could process the payment, causing the payment to fail (more details in [#86](https://github.com/ShizukaDonaghue/luve/issues/86)).
 
 <details>
   <summary>Countryfield JavaScript Codes - No issues or errors</summary> 
@@ -580,6 +583,11 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
 ## Lighthouse
 Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance. Please see the results below for each page.
 
@@ -768,7 +776,12 @@ Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) wa
   Mobile:  
   <img src="docs/images/testing/wishlist-mobile.png">
 	
-</details>
+</details>   
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
 
 ## Responsiveness
 Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found. This included the following devices:
@@ -932,7 +945,300 @@ Browser compatibility was checked for the following browsers and no issues were 
 
   <img src="docs/images/testing/opera.png">
   
-</details>
+</details>   
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+
+## User Stories Testing
+User stories were tested and addressed as follows.
+
+### **EPIC: User Account & Profile**
+
+* **_As a Site User, I can easily register and receive an email confirmation after registering so that I can verify that registration was successful and confirm my email address._**  
+
+    Signu link is available in the navbar for users who are yet to register with the site and it uses Django-allauth to manage the process.  
+
+    <img src="docs/images/testing/signup.png" width=700>  
+
+    Once the user completes the sign up form with their details, they will receive an email confirming the registration and a link to confirm their email address.  
+    
+    <img src="docs/images/testing/registration-confirmation.png" width=550>   
+
+
+* **_As a Site User, I can easily log into my account so that I can access my personal account information._**  
+
+    Once the user confirms their email address, they can log into their account from the login link in the navbar. The link is available for users who are not logged in already.
+
+    <img src="docs/images/testing/login.png" width=700>   
+
+* **_As a Site User, I can recover my password in case I forget it so that recover access to my account._**  
+
+    The link to "Forgot Password?" link is available in the Login page in case the user needs to recover their password. Once they complete this form, they will receive an email with a link to reset their password. 
+
+* **_As a Site User, I can log out of my account so that I can keep my account secure._**   
+
+    Logout link is available in the navbar for users who are already logged in.
+
+    <img src="docs/images/testing/logout.png" width=700>  
+
+* **_As a Site User, I can create an account so that I don't have to enter my details every time I place an order._**  
+
+    If the user is logged in, they can save their details in their Profile page. 
+
+    <img src="docs/images/testing/profile.png" width=700>  
+
+    Alternatively, if the user is logged in and a placing an order, the tick box is available in the checkout form to save the delivery details into their profile automatically. 
+
+    <img src="docs/images/testing/checkout-form.png" width=700>  
+
+* **_As a Site User, I can create a personalised user profile so that I can view my order history and confirmation._**   
+
+    Order history and confirmation is avaiable in the Profile page for users who are logged in.
+
+    <img src="docs/images/testing/order-history.png" width=700>   
+
+* **_As a Site User, I can view my user profile so that I can review the details stored on my account._**  
+
+    The link to the Profile page is available in the navbar for users who are logged in. They can access the Profile page from here to view the details stored on their account.    
+
+    <img src="docs/images/testing/profile-link.png" width=700>  
+
+* **_As a Site User, I can edit my user profile so that I can keep my information up to date._**  
+
+    Once the user in the Profile page, they can easily update their details stored on their account by overwrting the details and saving them. 
+
+    <img src="docs/images/testing/profile.png" width=700>  
+
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+### **EPIC: Site Navigation**
+
+* **_As a Site User I can understand the purpose of the site clearly so that I can decide the contents are right for me to browse._**   
+
+    The landing page introduces the site and its purpose. This page also includes "Shop Now" button so that the user can easily navigate to the store to purchase safe sunblocks and also "Article" button so that they can read more about the risks and impact of sunscreens.
+
+    <img src="docs/images/testing/landing-page.png" width=700>   
+
+* **_As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for._**  
+
+    A navigation bar is available on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. 
+
+    <img src="docs/images/testing/navbar.png" width=700>  
+
+* **_As a Site User, I can browse a list of products so that I can select a product to view._**   
+
+    Users can browse a list of products on the Products page. 
+    
+    <img src="docs/images/testing/all-products.png" width=700>  
+ 
+* **_As a Shopper, I can select a product from the list so that I can view the full details of a product._**  
+
+    On the Products page, users can select a product to view by clicking on the product image or the name of the product, which directs them to the Product Details page.
+
+* **_As a Shopper, I can search for a product by name or description so that I can find a specific product quickly._**  
+
+    The search bar is available at the top where users can enter a keyword to search products by their name or description so that they are find what they are looking for quickly.
+
+    <img src="docs/images/testing/search-bar.png" width=700>  
+
+* **_As a Shopper, I can view a specific category or type of products so that I can easily browse the category or type of products I'm looking for._**  
+
+    Users can choose a product category from the Products menu to find a specific category of products.  
+
+    <img src="docs/images/testing/product-category.png" width=700>   
+
+    They can also choose a brand from the Brands menu for ease of use.  
+    
+    <img src="docs/images/testing/product-brand.png" width=700>    
+    
+* **_As a Shopper, I can sort the list of available products so that I can easily view a list of products based on the sorting option selected._**  
+
+    The sorting options are available on the Products page so that users can sort the product listing.   
+
+    <img src="docs/images/testing/products-page-sorting.png" width=700>  
+
+* **_As a Site User, I can see a message confirming my action so that I am notified when my action was successfully executed._**   
+
+    Users are notified when an action has been executed. 
+
+    <img src="docs/images/testing/success-toast.png" width=700>   
+
+* **_As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the site._**  
+
+    A custom error page is available in case of 400, 403, 404 or 500 error. The page includes "Return to Shop" button so that users can easily navigate back to the store. 
+
+    <img src="docs/images/testing/error-page.png" width=700>   
+    
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+### **EPIC: Site Admin**
+
+* **_As a Site Admin I can create, update and delete the contents of the site so that I can manage the contents of the site._**  
+
+    The Site Admin role has full CRUD functionality in the admin panel to manage all the contents of the site fully.
+
+    <img src="docs/images/testing/site-admin.png" width=700> 
+
+
+### **EPIC: Product Management**
+
+* **_As a Business Owner/Staff, I can add a product to the site so that I can add new items to sell._**   
+
+    The Product Management link is available from the Account menu for users with superuser or staff permission.
+    
+    <img src="docs/images/testing/product-mgt-link.png" width=700>  
+
+    The business owner and staff can add a product to the site from here by completing the Product form.  
+
+    <img src="docs/images/testing/add-product.png" width=700>   
+
+* **_As a Business Owner/Staff, I can update product details so that I can change product prices, description, image and other details._**   
+
+    The link to update the product details is available on the Products page as well as the Product Details page for users with superuser or staff permission. Once the link is selected. they are directed to the Edit Product form where they can update the details.  
+
+    <img src="docs/images/testing/edit-product-button-products.png" width=450>  
+
+    <img src="docs/images/testing/edit-product-button-product-detail.png" width=680>   
+ 
+* **_As a Business Owner/Staff, I can delete a product so that I can remove the product which is no longer for sale._**   
+
+    The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm deletion. Once confirmed, the product is deleted.
+
+    <img src="docs/images/testing/product-delete-modal.png" width=600>  
+
+* **_As a Business Owner/Staff, I can see error messages when submitting the product form so that I can understand how the errors can be resolved._**   
+
+    If there are any errors in the Add Product form, error messages are displayed explaing the error. This aims to assist users in filling in the form correctly. This also prevents the form from being submitted with invalid data.
+    
+    <img src="docs/images/testing/add-product-error.png" width=700> 
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+
+### **EPIC: Purchasing & Checkout**
+
+* **_As a Shopper, I can add a product to my shopping bag so that I may decide to purchase the item later._**
+
+* **_As a Shopper, I can view items in my shopping bag so that I can identify the total cost of my purchases and verify the items to be purchased._**
+
+* **_As a Shopper, I can edit the shopping bag so that I can make changes to the contents of my bag before checkout._**
+
+* **_As a Shopper, I can see how much more I need to spend to get free delivery so that I can take advantage of the free shipping offered._**
+
+* **_As a Shopper, I can easily view the total of my purchases at any time so that I can keep track of what I'm spending._**
+
+* **_As a Shopper, I can pay for my order with a card so that I can complete my order and receive it from the business._**
+
+* **_As a Shopper, I can checkout as a guest so that I don't have to register an account to place an order._**
+
+* **_As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased._**
+
+* **_As a Shopper, I can have my details auto-filled at checkout so that I can place an order quicker and easier._**
+
+* **_As a Shopper, I can receive an email confirmation once my order is placed so that I can keep the confirmation of what I have purchased for my records._**
+
+
+* **_As a Shopper, I can see error messages when submitting the checkout form so that I can understand how the errors can be resolved._**
+
+* **_As a Shopper, I can sign up for the newsletter so that I can receive updates from the business._**
+
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+
+### **EPIC: Wish List**
+
+* **_As a Shopper, I can save products to my wish list so that I can easily find them in future to purchase._**
+
+* **_As a Shopper, I can view the products in my wish list so that I can easily find them to purchase them in future._**
+
+* **_As a Shopper, I can remove products from my wish list so that I can maintain my wish list._**
+
+
+### **EPIC: Product Review**
+
+* **_As a Shopper, I can post a product review so that I can share my feedback for the product with others._**
+
+* **_As a Shopper, I can view the reviews posted by others so that I can see the feedback from others which may help my purchasing decision._**
+
+* **_As a Shopper, I can edit the product review I posted so that make changes to my review._**
+
+* **_As a Shopper, I can delete the product review I posted so that I can remove it from the product details page._**
+
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+
+### **EPIC: Customer Queries**
+
+* **_As a Business Owner/Staff, I can receive an email when a query is posted via the contact form so that I can respond to their query in a timely manner._**
+
+* **_As a Site User, I can see error messages when submitting the contact form so that I can understand how the errors can be resolved._**
+
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+
+### **EPIC: Article Posts**
+
+* **_As a Business Owner/Staff, I can post an article so that I can provide relevant and useful information to customers._**
+
+* **_As a Business Owner/Staff, I can edit a blog article so that I can make changes to the article as required._**
+
+* **_As a Business Owner/Staff, I can delete a blog article so that I can remove the article from the site._**
+
+* **_As a Site User, I can see error messages when submitting article form so that I can understand how the errors can be resolved._**
+
+
+<br>
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
+
+### **EPIC: Business Admin**
+
+* **_As a Business Owner, I can easily email special deals and updates to customers so that I can promote the business._**
+
+* **_As a Business Owner, I can include a privacy policy in the site so that we are compliant with GDPR requirements._**
+
+* **_As a the Business Owner, I can provide terms & conditions so that I can inform the customers the rules and regulations for the use of the site._**
+
+* **_As a Developer, I include a site map so that it improves the search engine ranking and potential customers can find the site when they search online._**
+
+* **_As a Developer, I include robots.txt so that it defines where search engines are not allowed to go within the site._**
+
+* **_As a Business Owner/Staff, I can have a Facebook page to share special deals and updates so that I can promote the business*._**
+
+
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
+
 
 ## Features Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
@@ -1555,7 +1861,7 @@ Total | Calculate & Display | Total value is calculated correctly | PASS
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Payment | Submit | Once the checkout form is completed correctly, the payment is processed by Stripe | PASS
-Webhook | Submit | Once the checkout form is completed correctly, webhook is triggered and payment events are notified | PASS
+Webhook | Submit | Once the checkout form is completed correctly, webhook is triggered and payment and other events are notified | PASS
 Alert | Display | When the checkout is completed, a success message is displayed confirming the order has been processed successfully | PASS
 
 ### Checkout Success Page
@@ -1586,6 +1892,11 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Custom 500 Error Page | Enter URL that does not exist | Custom 500 error message is displayed | PASS
 Return to Shop Button | Click | Navigates to Products page | PASS
+
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+
 
 ## Bugs
 ### Resolved Bugs
@@ -1650,8 +1961,9 @@ Return to Shop Button | Click | Navigates to Products page | PASS
 ### Unresolved Bugs
 There are no other known bugs at present.
 
+<br>  
 
-
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
   
 
   
