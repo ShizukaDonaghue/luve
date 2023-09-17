@@ -910,7 +910,7 @@ The application was tested manually on the following devices and no issues were 
 </details>
 
 <details>
-  <summary>HP Elitebook 840</summary>
+  <summary>HP EliteBook 840</summary>
 
   <img src="docs/images/testing/hp.png">
   
@@ -960,7 +960,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can easily register and receive an email confirmation after registering so that I can verify that registration was successful and confirm my email address._**  
 
-    Signup link is available in the navbar for users who are yet to register with the site and it uses Django-allauth to manage the process.  
+    Signup link is available in the navbar for users who are yet to register with the site, and it uses Django-allauth to manage the process.  
 
     <img src="docs/images/testing/signup.png" width=700>  
 
@@ -1172,9 +1172,9 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/order-confirmation-page.png" width=700>    
 
-* **_As a Shopper, I can have my details auto-filled at checkout so that I can place an order quickly and easily._**   
+* **_As a Shopper, I can have my details auto filled at checkout so that I can place an order quickly and easily._**   
 
-    For users who are logged in and have their details saved in the profile, the details are auto-filled in the checkout form from the database.
+    For users who are logged in and have their details saved in the profile, the details are auto filled in the checkout form from the database.
 
     If the details are not yet saved, they have the option to save their details when completing the checkout form by selecting the "Save this information to my profile" box.   
 
@@ -1204,7 +1204,7 @@ User stories were tested and addressed as follows.
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
 
 
-### **EPIC: Wish List**
+### **EPIC: Wishist**
 
 * **_As a Shopper, I can save products to my wishlist so that I can easily find them in future to purchase._**  
 
@@ -1437,7 +1437,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Delivery Banner | Display | When there is no item in the shopping bag, "Free delivery on orders over €50!" is displayed | PASS
 Delivery Banner | Display | When there is an item/are items in the shopping bag, the remaining order value to qualify for free shipping is displayed in the "Spend €[remaining value] more for free shipping!" message | PASS
-Delivery Banner | Display | When the order value reaches the free delivery threshold, "Horray! Free delivery on your order!" is displayed | PASS
+Delivery Banner | Display | When the order value reaches the free delivery threshold, "Hooray! Free delivery on your order!" is displayed | PASS
 
 ### Footer
 Feature | Action | Expected Result | PASS/FAIL
@@ -1445,7 +1445,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Position | Display | Footer always stays at the bottom of the screen  | PASS
 Newsletter Signup | Click | When the user enters their email address, the email address is registered with Mailchimp account | PASS
 Newsletter Signup | Click | When the user enters their email address, the user is notified that they have subscribed the the newsletter | PASS
-Newsletter Signup | Click | If the email is already registered, the user is notified that they have already subscribed the the newsletter | PASS
+Newsletter Signup | Click | If the email is already registered, the user is notified that they have already subscribed to the newsletter | PASS
 Newsletter Signup | Click | If the email field is left blank when the form is submitted, the user is notified that the email address is a required field | PASS
 Contact Link | Click |Navigates to Contact page | PASS
 Privacy Policy Link | Click |Navigates to Privacy Policy page | PASS
@@ -2087,7 +2087,7 @@ Return to Shop Button | Click | Navigates to Products page | PASS
 * **Checkout Form Accepts Invalid Fields [#92](https://github.com/ShizukaDonaghue/luve/issues/92)**  
 
   ***Issue:***  
-  Checkout form was submitted for Stripe payments even when the form was invalid. It allowed whitespace in fields other than the card details and created a 500 error when it was submited for payment. 
+  Checkout form was submitted for Stripe payments even when the form was invalid. It allowed whitespace in fields other than the card details and created a 500 error when it was submitted for payment. 
    
   ***Solution:***  
   First, in order to prevent the form from being submitted for payments before the form is completed correctly, the jQuery validation which called the checkout function (resulting from [#86](https://github.com/ShizukaDonaghue/luve/issues/86) above) was removed as it did alert the user that the details were incomplete but still allowed the form to be submitted for payment once the card details were entered correctly. 
