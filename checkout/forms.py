@@ -37,3 +37,17 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+
+        """
+        To prevent the form from being submitted with whitespace
+        Code source:
+        https://github.com/AliOKeeffe/PP5-Fresh-Nest/blob/main/checkout/forms.py
+        """
+        self.fields['phone_number'].widget.attrs[
+            'pattern'] = "[0-9]{1,15}"
+        self.fields['full_name'].widget.attrs[
+            'pattern'] = "([^\\s][A-z0-9À-ž\x27\\s]+)"
+        self.fields['street_address1'].widget.attrs[
+            'pattern'] = "([^\\s][A-z0-9À-ž\x27\\s]+)"
+        self.fields['town_or_city'].widget.attrs[
+            'pattern'] = "([^\\s][A-z0-9À-ž\x27\\s]+)"
