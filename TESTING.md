@@ -741,7 +741,7 @@ Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) wa
   <img src="docs/images/testing/edit-product-desktop.png" width=340>
 
   Mobile:  
-  <img src="docs/images/testing/edit-produt-mobile.png" width=340>
+  <img src="docs/images/testing/edit-product-mobile.png" width=340>
 	
 </details>
 
