@@ -960,28 +960,28 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can easily register and receive an email confirmation after registering so that I can verify that registration was successful and confirm my email address._**  
 
-    Signup link is available in the navbar for users who are yet to register with the site, and it uses Django-allauth to manage the process.  
+    Sign-up link is available in the navbar for users who are yet to register with the site, and it uses Django-allauth to manage the process.  
 
     <img src="docs/images/testing/signup.png" width=700>  
 
-    Once the user completes the signup form with their details, they will receive an email confirming the registration and a link to confirm their email address.  
+    Once the user completes the sign-up form with their details, they will receive an email confirming the registration and a link to confirm their email address.  
     
     <img src="docs/images/testing/registration-confirmation.png" width=650>   
 
 
 * **_As a Site User, I can easily log into my account so that I can access my personal account information._**  
 
-    Once the user confirms their email address, they can log into their account from the login link in the navbar. The link is available for users who are not logged in already.
+    Once the user confirms their email address, they can log into their account from the log-in link in the navbar. The link is available for users who are not logged in already.
 
     <img src="docs/images/testing/login.png" width=700>   
 
 * **_As a Site User, I can recover my password in case I forget it so that recover access to my account._**  
 
-    The link to "Forgot Password?" link is available on the Login page in case the user needs to recover their password. Once they complete this form, they will receive an email with a link to reset their password. 
+    The link to "Forgot Password?" link is available on the Log-in page in case the user needs to recover their password. Once they complete this form, they will receive an email with a link to reset their password. 
 
 * **_As a Site User, I can log out of my account so that I can keep my account secure._**   
 
-    Logout link is available in the navbar for users who are already logged in.
+    Log-out link is available in the navbar for users who are already logged in.
 
     <img src="docs/images/testing/logout.png" width=700>  
 
@@ -1195,7 +1195,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Shopper, I can sign up for the newsletter so that I can receive updates from the business._**
 
-    Users can sign up for newsletters by completing the signup form in the footer so that they can receive updates from the store.   
+    Users can sign up for newsletters by completing the sign-up form in the footer so that they can receive updates from the store.   
 
     <img src="docs/images/testing/footer.png" width=700>   
 
@@ -1336,7 +1336,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Business Owner, I can easily email special deals and updates to customers so that I can promote the business._**  
 
-    Users can sign up for newsletters by completing the signup form in the footer. Once they are signed up, their email addresses are stored in a Mailchimp account where the business owner or staff can send emails promoting their business. 
+    Users can sign up for newsletters by completing the sign-up form in the footer. Once they are signed up, their email addresses are stored in a Mailchimp account where the business owner or staff can send emails promoting their business. 
 
     <img src="docs/images/testing/mailchimp.png" width=700>  
 
@@ -1422,9 +1422,9 @@ Shopping Bag Link | Click |Navigates to Shopping Bag page | PASS
 Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Display | Only available if the user is not logged in | PASS
-Log In Link | Click | Navigates to Login page | PASS
+Log In Link | Click | Navigates to Log-in page | PASS
 Log Out Link | Display | Only available if the user is logged in | PASS
-Log Out Link | Click | Navigates to Logout page | PASS
+Log Out Link | Click | Navigates to Log-out page | PASS
 Product Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
 Product Management Link | Click | Navigates to Add Product page | PASS
 Article Management Link | Display | Only available under Account menu if the user has superuser or staff permission | PASS
@@ -1443,10 +1443,10 @@ Delivery Banner | Display | When the order value reaches the free delivery thres
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Position | Display | Footer always stays at the bottom of the screen  | PASS
-Newsletter Signup | Click | When the user enters their email address, the email address is registered with Mailchimp account | PASS
-Newsletter Signup | Click | When the user enters their email address, the user is notified that they have subscribed the the newsletter | PASS
-Newsletter Signup | Click | If the email is already registered, the user is notified that they have already subscribed to the newsletter | PASS
-Newsletter Signup | Click | If the email field is left blank when the form is submitted, the user is notified that the email address is a required field | PASS
+Newsletter Sign-up | Click | When the user enters their email address, the email address is registered with Mailchimp account | PASS
+Newsletter Sign-up | Click | When the user enters their email address, the user is notified that they have subscribed the the newsletter | PASS
+Newsletter Sign-up | Click | If the email is already registered, the user is notified that they have already subscribed to the newsletter | PASS
+Newsletter Sign-up | Click | If the email field is left blank when the form is submitted, the user is notified that the email address is a required field | PASS
 Contact Link | Click |Navigates to Contact page | PASS
 Privacy Policy Link | Click |Navigates to Privacy Policy page | PASS
 Terms & Conditions Link | Click |Navigates to Terms & Conditions page | PASS
@@ -1459,23 +1459,23 @@ All Links | Hover | Colour changes to turquoise with hover effect | PASS
 ### Sign Up Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Email Field | Leave Empty | The signup form does not submit | PASS
+Email Field | Leave Empty | The sign-up form does not submit | PASS
 Email Field | Leave Empty | An error message is displayed | PASS
-Email Field | Enter Invalid Format | The signup form does not submit | PASS
+Email Field | Enter Invalid Format | The sign-up form does not submit | PASS
 Email Field | Enter Invalid Format | An error message is displayed | PASS
-Email Field | Duplicate Email Address | The signup form does not submit | PASS
+Email Field | Duplicate Email Address | The sign-up form does not submit | PASS
 Email Field | Duplicate Email Address | An error message is displayed | PASS
-Username Field | Leave Empty | The signup form does not submit | PASS
+Username Field | Leave Empty | The sign-up form does not submit | PASS
 Username Field | Leave Empty | An error message is displayed | PASS
-Username Field | Enter an Empty String | The signup form does not submit | PASS
+Username Field | Enter an Empty String | The sign-up form does not submit | PASS
 Username Field | Enter an Empty String | An error message is displayed | PASS
-Username Field | Duplicate Username | The signup form does not submit | PASS
+Username Field | Duplicate Username | The sign-up form does not submit | PASS
 Username Field | Duplicate Username | An error message is displayed | PASS
-Password Field | Leave Empty | The signup form does not submit | PASS
+Password Field | Leave Empty | The sign-up form does not submit | PASS
 Password Field | Leave Empty | An error message is displayed | PASS
-Password Field | Enter an Empty String | The signup form does not submit | PASS
+Password Field | Enter an Empty String | The sign-up form does not submit | PASS
 Password Field | Enter an Empty String | An error message is displayed | PASS
-Password Field | Passwords Not Matched | The signup form does not submit | PASS
+Password Field | Passwords Not Matched | The sign-up form does not submit | PASS
 Password Field | Passwords Not Matched | An error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
 Sign Up Link | Click | Once all the required fields are correctly filled in, an email is sent to the user with a link to confirm their email address | PASS
@@ -1487,16 +1487,16 @@ Alert | Display | Success message is displayed once the user confirms their emai
 ### Log In Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Username Field | Leave Empty | The login form does not submit | PASS
+Username Field | Leave Empty | The log-in form does not submit | PASS
 Username Field | Leave Empty | An error message is displayed | PASS
-Username Field | Enter an Empty String | The login form does not submit | PASS
+Username Field | Enter an Empty String | The log-in form does not submit | PASS
 Username Field | Enter an Empty String | An error message is displayed | PASS
-Password Field | Leave Empty | The login form does not submit | PASS
+Password Field | Leave Empty | The log-in form does not submit | PASS
 Password Field | Leave Empty | An error message is displayed | PASS
-Password Field | Enter an Empty String | The login form does not submit | PASS
+Password Field | Enter an Empty String | The log-in form does not submit | PASS
 Password Field | Enter an Empty String | An error message is displayed | PASS
-Login Fields | Incorrect Details | The login form does not submit | PASS
-Login Fields | Incorrect Details | An error message is displayed | PASS
+Log-in Fields | Incorrect Details | The log-in form does not submit | PASS
+Log-in Fields | Incorrect Details | An error message is displayed | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Password Reset | Click | Navigates to Password Rest page | PASS
 Log In Link | Click | Once the required fields are correctly filled in, logs in the user | PASS
@@ -1527,7 +1527,7 @@ Alert | Display | Success message is displayed confirming the password has been 
 ### Logo Out Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Log Out Link | Click | Once the user confirms logout, the user is logged out | PASS
+Log Out Link | Click | Once the user confirms log-out, the user is logged out | PASS
 Log Out Link | Click | Once the user is logged out, navigates to Home page | PASS
 Cancel | Click | Navigates to Home page | PASS
 Alert | Display | Success message is displayed confirming that the user has logged out | PASS
@@ -1582,7 +1582,7 @@ Alert | Display | If the total order quantity of the item is already at the maxi
 #### Add to or Remove from Wishlist
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Add to Wishlist | Click | If the user is not logged in, navigates to the Login page | PASS 
+Add to Wishlist | Click | If the user is not logged in, navigates to the Log-in page | PASS 
 Add to Wishlist | Click | If the user is logged in and if the item is not already in their wishlist, the item is added to the wishlist | PASS
 Remove from Wishlist | Click | If the user is logged in and if the item is already in their wishlist, the item is removed from the wishlist | PASS
 Alert | Display | If the user is not logged in, an alert is displayed to the user to let them know that they need to log in to add the item to their wishlist | PASS
@@ -1601,7 +1601,7 @@ Product Image | Click | Once clicked, the larger size of the image is displayed 
 #### Add to or Remove from Wishlist
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Add to Wishlist | Click | If the user is not logged in, navigates to the Login page | PASS 
+Add to Wishlist | Click | If the user is not logged in, navigates to the Log-in page | PASS 
 Add to Wishlist | Click | If the user is logged in and if the item is not already in their wishlist, the item is added to the wishlist | PASS
 Remove from Wishlist | Click | If the user is logged in and if the item is already in their wishlist, the item is removed from the wishlist | PASS
 Alert | Display | If the user is not logged in, an alert is displayed to the user to let them know that they need to log in to add the item to their wishlist | PASS
@@ -1658,7 +1658,7 @@ Delete Review Button | Click | A modal is displayed to confirm deletion | PASS
 ### Edit Review Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Review Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Review Page by Entering the URL | Navigates the user to Log-in page | PASS
 Defensive Measure | If the User is Logged in and Tries to Access Another User's Review by Entering the URL | An error message is displayed notifying the user that they are not authorised to edit the review | PASS
 Edit Review Form | Display | The details in the form are populated from the database | PASS
 Review Field | Leave Empty | The content field can be left blank if the user would like to rate the product only | PASS
@@ -1677,7 +1677,7 @@ Modal Closure | Click Outside Menu | Modal is closed | PASS
 ### Add Product Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | If the User is Not Logged in and Tries to Access the Add Product Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Not Logged in and Tries to Access the Add Product Page by Entering the URL | Navigates the user to Log-in page | PASS
 Defensive Measure | If the User is Logged in and Tries to Access the Add Product Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add products | PASS
 Category | Not Selected | Defaults to "Baby & Kids and Kids" and the product form submits as this is not a required field | PASS
 Brand | Leave Empty | The product form submits as this is not a required field | PASS
@@ -1703,7 +1703,7 @@ Cancel Button | Click | Navigates back to Products page | PASS
 ### Edit Product Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Product Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Product Page by Entering the URL | Navigates the user to Log-in page | PASS
 Defensive Measure | If the User is Logged in and Tries to Access the Edit Product Page by Entering the URL without Superuser or Staff Permission | An error message is displayed notifying the user that they are not authorised to edit products | PASS
 Edit Product Form | Display | The details in the form are populated from the database | PASS
 Category | Not Selected | Defaults to "Baby & Kids and Kids" and the product form submits as this is not a required field | PASS
@@ -1794,7 +1794,7 @@ Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | P
 ### Add Article Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | If the User is Not Logged in and Tries to Access the Add Article Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Not Logged in and Tries to Access the Add Article Page by Entering the URL | Navigates the user to Log-in page | PASS
 Defensive Measure | If the User is Logged in and Tries to Access the Add Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to add articles | PASS
 Article Title | Leave Empty | The article form does not submit | PASS
 Article Title | Leave Empty | An error message is displayed to the user notifying them that this is a required field | PASS
@@ -1818,7 +1818,7 @@ Cancel Button | Click | Navigates back to Articles page | PASS
 ### Edit Article Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Article Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Article Page by Entering the URL | Navigates the user to Log-in page | PASS
 Defensive Measure | If the User is Logged in and Tries to Access the Edit Article Page by Entering the URL without Superuser or Staff Permission  | An error message is displayed notifying the user that they are not authorised to edit articles | PASS
 Edit Article Form | Display | The details in the form are populated from the database | PASS
 Article Title | Leave Empty | The article form does not submit | PASS
@@ -1882,7 +1882,7 @@ Continue Shopping Button | Click | Navigates to the Products page | PASS
 ### Profile Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | If the User is Not Logged in and Tries to Access the Profile Page by Entering the URL | Navigates the user to Login page | PASS
+Defensive Measure | If the User is Not Logged in and Tries to Access the Profile Page by Entering the URL | Navigates the user to Log-in page | PASS
 Delivery Address | Entry | If the delivery address is not already saved, the user can populate and save the delivery address | PASS
 Delivery Address | Entry | If the delivery address is not already saved and if the user places an order with "Save this information to my profile" box ticked, the delivery address is saved into their profile | PASS
 Delivery Address | Update | If the delivery address is already saved, the user can update and save the delivery address | PASS
@@ -1893,7 +1893,7 @@ Alert | Display | When the delivery address is updated, a success message is dis
 ### Wishlist Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Click | If the user is not logged in and tries to access the Wishlist page, navigates to the Login page | PASS 
+Defensive Measure | Click | If the user is not logged in and tries to access the Wishlist page, navigates to the Log-in page | PASS 
 Wishlist Items | Display | Displays items the user has added to their wishlist | PASS
 Remove Button | Click | Removes the item from the wishlist | PASS
 Remove Button | Click | Once the item is removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
@@ -1979,7 +1979,7 @@ Card Number | Enter Invalid Format | An error message is displayed | PASS
 #### Save Delivery Address
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Create an Account or Login | Display | Signup and login links are displayed if the user is not logged in | PASS
+Create an Account or Log-in | Display | Sign-up and log-in links are displayed if the user is not logged in | PASS
 Save Delivery Information to Profile | Display | If the user is logged in, the tick box is displayed to save their delivery information | PASS
 Save Delivery Information to Profile | Entry | If the user is logged in and the box is ticked, the delivery information is saved in their profile | PASS 
 
