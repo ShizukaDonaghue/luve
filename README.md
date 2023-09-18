@@ -6,9 +6,9 @@ Users can search for products with a keyword, filter by a product category or a 
 
 For the business owner or staff, the full CRUD functionality is available to add, edit and delete products and articles without having to access the admin panel. 
 
-The application implements user authenticaion to provide role-based access to its centrally-owned dataset, and user authorisation to allow users to manipulate the data based on their permission. 
+The application implements user authentication to provide role-based access to its centrally-owned dataset, and user authorisation to allow users to manipulate the data based on their permission. 
 
-The application also provides the admin dashbord where the site admin has the full CRUD functionality to manage all the contents for the site.
+The application also provides the admin dashboard where the site admin has the full CRUD functionality to manage all the contents of the site.
 
 Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in a new browser tab).  
 
@@ -18,7 +18,7 @@ Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in 
 
 ## User Stories
 
-Based on the concept of an online B2C store, the following 10 Epics were created for the application's features. These epics were then further developed into 60 User Stories. 54 of these were implemented, 4 remainig open for future development, and 2 were not implemented.
+Based on the concept of an online B2C store, the following 10 Epics were created for the application's features. These epics were then further developed into 60 User Stories. 54 of these were implemented, 4 remaining open for future development, and 2 were not implemented.
 
 ### EPIC: User Account & Profile  
 
@@ -60,7 +60,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 ### EPIC: Site Admin  
 
-* As a Site Admin I can create, update and delete the contents of the site so that I can manage the contents of the site.
+* As a Site Admin, I can create, update and delete the contents of the site so that I can manage the contents of the site.
 
 ### EPIC: Product Management  
 
@@ -88,7 +88,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 * As a Shopper, I can checkout as a guest so that I don't have to register an account to place an order.  
 
-* As a Shopper, I can have my details auto filled at checkout so that I can place an order quickly and easily.  
+* As a Shopper, I can have my details auto-filled at checkout so that I can place an order quickly and easily.  
 
 * As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased.  
 
@@ -110,7 +110,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 * As a Shopper, I can view the reviews posted by others so that I can see the feedback from others which may help my purchasing decision.   
 
-* As a Shopper, I can post a product review so that I can share my feedback for the product with others.  
+* As a Shopper, I can post a product review so that I can share my feedback on the product with others.  
 
 * As a Shopper, I can edit the product review I posted so that make changes to my review.  
 
@@ -132,7 +132,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 * As a Business Owner/Staff, I can delete a blog article so that I can remove the article from the site.  
 
-* As a Site User, I can see error messages when submitting article form so that I can understand how the errors can be resolved.  
+* As a Site User, I can see error messages when submitting the article form so that I can understand how the errors can be resolved.  
 
 ### EPIC: Business Admin  
 
@@ -140,7 +140,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 * As a Business Owner/Staff, I can have a Facebook page to share special deals and updates so that I can promote the business.  
 
-* As a Business Owner, I can include a privacy policy in the site so that we are compliant with GDPR requirements.  
+* As a Business Owner, I can include a privacy policy on the site so that we are compliant with GDPR requirements.  
 
 * As a Business Owner, I can provide terms & conditions so that I can inform the customers of the rules and regulations for the use of the site.  
 
@@ -162,7 +162,7 @@ The following User Stories were not implemented. Please see the details in the F
 
 * As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
 
-* As a Business owner/staff, I can edit delivery charge and free delivery threshold so that I can update them as required.
+* As a Business owner/staff, I can edit delivery charges and free delivery threshold so that I can update them as required.
 
 * As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
 
@@ -209,6 +209,8 @@ An Entity Relationship Diagram was created using [Figma](https://www.figma.com/)
 
 The intention was to utilise Django-AllAuth for the user authentication system and create other custom models. 
 
+<img src="docs/images/database.png">
+
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -223,11 +225,11 @@ If a user tries to access these pages without having logged in, they are directe
 Users can only edit or delete their own records in the application. If a user tries to edit or delete other users' records, an error message is displayed to the user explaining the issue. A custom 403 error page is also available which explains the error and contains a link to the store so that users can easily navigate back.
 
 ### Form Validation
-Django's built-in form validation is used to validate the forms within the application. The forms will not submit unless they are completed correctly. If there are errors, error messages are displayed to notify the user of the errors.
+Django's built-in form validation is used to validate the forms within the application. The forms will not be submitted unless they are completed correctly. If there are errors, error messages are displayed to notify the user of the errors.
 
-In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to the Article form, Contact form, and Product form. This displays a custom error message explaining the error for each field to assist users to fill in the field correctly.
+In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to the Article form, Contact form, and Product form. This displays a custom error message explaining the error for each field to assist users in filling in the field correctly.
 
-Since Django's build-in form validation does not catch empty strings in the Summernote fields used in the Article form, additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty. 
+Since Django's built-in form validation does not catch empty strings in the Summernote fields used in the Article form, an additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty. 
 
 As for the Checkout form, regular expression is built into the form to validate the fields as jQuery validation caused issues with Stripe payment process, which is documented under issue [#92](https://github.com/ShizukaDonaghue/luve/issues/92).
 
@@ -243,7 +245,7 @@ The design of the site is intended to be simple and clean so as not to distract 
 
 * #FFFFFF White is used for the background colour.
 * #474D53 Outer Space is used for the main text colour to ensure a good contrast against the background colour.
-* #DDF8FC Light Cyan is used as the background colour for the order summary section in the Shopping Bag page.  
+* #DDF8FC Light Cyan is used as the background colour for the order summary section on the Shopping Bag page.  
 * #17A2B8 Moonstone is used as an accent colour throughout the site and also for the hover effect on buttons.
 * #F56B8E Bright Pink is used for the Wishlist related objects.
 
@@ -266,9 +268,9 @@ The font used throughout the site is Signika which is imported from [Google Font
 
 ### Keywords
 
-Keyword research was performed using Google search results and [Wordtracker](https://www.wordtracker.com/). A mixture of short tail and long tail keywords were considered based on their relevance, authority and volume, aiming to identify keywords that are high enough volumes and low enough competition. 
+Keyword research was performed using Google search results and [Wordtracker](https://www.wordtracker.com/). A mixture of short tail and long tail keywords were considered based on their relevance, authority and volume, aiming to identify keywords that have high enough volumes and low enough competition. 
 
-During the research, it was found that the word "sunscreen" and "sunblock" were used interchangeably (although they are technically different based on their purpose) and that the volume of searches was much higher for the word "sunscreen." Therefore, both words have been included in the keywords which have been added to the site's keywords and description sections in the head element. 
+During the research, it was found that the words "sunscreen" and "sunblock" were used interchangeably (although they are technically different based on their purpose) and that the volume of searches was much higher for the word "sunscreen." Therefore, both words have been included in the keywords which have been added to the site's keywords and description sections in the head element. 
 
 <details>
   <summary>Wordtracker results for "safe sunscreen"</summary>
@@ -295,7 +297,7 @@ robots.txt has been created to control which pages within the site are accessed 
 
 ## Content Marketing
 
-In order to consistently create useful and helpful content that will attract and convert the target makert into customers, the business can post articles relevant to the site. These articals intend to provide useful and meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
+In order to consistently create useful and helpful content that will attract and convert the target market into customers, the business can post articles relevant to the site. These articles intend to provide useful and meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
 
 ## Social Media Marketing
 
@@ -335,14 +337,14 @@ The navbar is fixed at the top of every page and includes links to other pages.
 
 This section contains the search bar in which the user can enter a keyword to search products by their name or description so that they can find what they are looking for quickly.
 
-The Wishlist icon displays the number of items in the wishlist, and the Shopping Bag icons displays the total value of items currently in the bag. These are available on all pages so that users can keep track of their spend while they shop.
+The Wishlist icon displays the number of items in the wishlist, and the Shopping Bag icon displays the total value of items currently in the bag. These are available on all pages so that users can keep track of their spending while they shop.
 
 The delivery banner is also fixed under the navbar displaying the remaining order value to qualify for free shipping. 
 
 ### Footer
 The footer contains the newsletter sign-up form so that users can receive updates from the business and the business can use the newsletter to promote their store. 
 
-This section also includes the privacy policy and terms & condition. The social media icons are available here so users can easily access the business's social media accounts. Clicking on any of these icons opens a new browser tab so that users will still have LUVE open to navigate back easily.
+This section also includes the privacy policy and terms & conditions. The social media icons are available here so users can easily access the business's social media accounts. Clicking on any of these icons opens a new browser tab so that users will still have LUVE open to navigate back easily.
 
 <img src="docs/images/testing/footer.png" width=700>
 
@@ -360,7 +362,7 @@ The Sign-up link is available from the Account menu in the navbar for users who 
 The Log-in link is available from the Account menu in the navbar for users who are not logged in already. Returning users can enter their details here to log in to avail of all the features.
 Once logged in, a success message is displayed to notify the user, and the user is redirected to the Home page.
 
-This page contains a link to reset password. Users can reset their password from here if required. Once they complete the form, they will receive an email with a link to reset their password. 
+This page contains a link to reset the password. Users can reset their password from here if required. Once they complete the form, they will receive an email with a link to reset their password. 
 
 ### Log Out Page
 
@@ -378,25 +380,25 @@ The Home page introduces the site and its purpose. This page also includes "Shop
 
 <img src="docs/images/products-page.png" width=700>  
 
-Users can browse a list of products in the Products page. They have the option to choose a product category from the Product menu or choose a brand from the Brand menu to narrow down their search. They can also select a sorting option from the dropdown menu to sort the products in a specific order.
+Users can browse a list of products on the Products page. They have the option to choose a product category from the Product menu or choose a brand from the Brand menu to narrow down their search. They can also select a sorting option from the dropdown menu to sort the products in a specific order.
 
-The "Add to Bag" is available for each product so that users can easily add products to their shopping bag. Once product are added to their bag, the user is notified and the total order value is displayed under the Bag icon in the navbar.
+The "Add to Bag" is available for each product so that users can easily add products to their shopping bag. Once products are added to their bag, the user is notified and the total order value is displayed under the Bag icon in the navbar.
 
 Users can also add products to their wishlist by clicking on the pink outline heart. Once added, the user is notified and the love heart is coloured in pink. They can also remove the product from their wishlist by clicking on the pink heart as it toggles between "add" and "remove" for their wishlist.
 
-For users with superuser or staff permission, the links for Edit Product and Delet Products are displayed on the product cards. The business owner and staff can easily access these options from here. 
+For users with superuser or staff permission, the links for Edit Product and Delete Products are displayed on the product cards. The business owner and staff can easily access these options from here. 
 
 ### Product Details Page
 
 <img src="docs/images/product-detail.png" width=700>  
 
-Users can access the Product Details page by clicking on the product image or the product name in the Products page as well as the Wishlist page. This page displays the product information, contains the quantity selector and the buttons to "Add to Bag" or "Continue Shopping" to return to the Products page. 
+Users can access the Product Details page by clicking on the product image or the product name on the Products page as well as the Wishlist page. This page displays the product information and contains the quantity selector and the buttons to "Add to Bag" or "Continue Shopping" to return to the Products page. 
 
 Users can select the quantity of the products to add to their shopping bag. If the total order quantity of a product exceeds the maximum order quantity of 20, the user is notified of the error. Otherwise, products are added to the bag, and the total order value is displayed under the Bag icon in the navbar. 
 
 The Wishlist heart is available here also to toggle between "add" and "remove" for their wishlist. The number of items in the wishlist is displayed by the Wishlist heart in the navbar.
 
-For users with superuser or staff permission, the links for Edit Product and Delet Products are displayed on the product image. The business owner and staff can easily access these options from here. 
+For users with superuser or staff permission, the links for Edit Product and Delete Products are displayed on the product image. The business owner and staff can easily access these options from here. 
 
 Under the Product Details section on this page, users can view product reviews posted by other users. If the user is logged in, the product review form is available to post a review and/or rate the product. Once the form is submitted, the user is notified and the review is added to the site in ascending order. 
 
@@ -448,7 +450,7 @@ Users can access the Shopping Bag page from the bag icon in the navbar. The Shop
 
 If there is a shipping fee, the fee is displayed in the order summary section. The remaining order value to qualify for free shipping is also displayed here. 
 
-Users can either use the "Continue Shopping" button to return to the store, or select the "Secure Checkout" button to complete their order. 
+Users can either use the "Continue Shopping" button to return to the store or select the "Secure Checkout" button to complete their order. 
 
 ### Checkout Page
 
@@ -479,9 +481,9 @@ An email confirmation is also sent to the user, confirming the order.
 
 <img src="docs/images/profile-page.png" width=700> 
 
-If the user is logged in, My Profile link is availabe from the Accout menu in the navbar. This is where the user can save their details for a faster checkout process. Alternatively, if the user is logged in and placing an order, the tick box is available in the checkout form to save the delivery details into their profile. They can also update their details here if they are already saved.  
+If the user is logged in, the My Profile link is available from the Account menu in the navbar. This is where the user can save their details for a faster checkout process. Alternatively, if the user is logged in and placing an order, the tick box is available in the checkout form to save the delivery details into their profile. They can also update their details here if they are already saved.  
 
-This page also displays their order history. Orders placed by the user are listed in descending order based on the order dates. This include the link to the order confirmation if they would like to check the details. 
+This page also displays their order history. Orders placed by the user are listed in descending order based on the order dates. This includes the link to the order confirmation if they would like to check the details. 
 
 ### Articles Page 
 
@@ -491,19 +493,19 @@ Users can view articles posted by the business from the Articles menu in the nav
 
 The number of likes for each article is displayed on the article card here.
 
-For users with superuser or staff permission, the links for Edit Article and Delet Article are displayed on the product cards. The business owner and staff can easily access these options from here. 
+For users with superuser or staff permission, the links for Edit Article and Delete Article are displayed on the product cards. The business owner and staff can easily access these options from here. 
 
 ### Article Details Page
 
 <img src="docs/images/article-detail.png" width=700>  
 
-Users can access the Article Details page by selecting the article card on the Articles page. This page displays the article contents as well as the number of likes for the article. If the user is logged in, the icon functions as a button to toggle between "like" and "unlike" the article. 
+Users can access the Article Details page by selecting the article card on the Articles page. This page displays the article's contents as well as the number of likes for the article. If the user is logged in, the icon functions as a button to toggle between "like" and "unlike" the article. 
 
 ### Add Article Page
 
 <img src="docs/images/add-article.png" width=700>   
 
-The link to Article Management is available from the Account menu to users with superuser or staff permission. The business owner or staff can add articles by completing the tihs form. Once the form is submitted, the article is added and the user is notified.
+The link to Article Management is available from the Account menu to users with superuser or staff permission. The business owner or staff can add articles by completing the this form. Once the form is submitted, the article is added and the user is notified.
 
 ### Edit Article Page
 
@@ -529,7 +531,7 @@ Users can submit a query using the contact form within the site. Once the form i
 
 The Contact Success page confirms that a query has been received from the user. 
 
-An email confirmation is also sent to the user, notifying that their message has been received. 
+An email confirmation is also sent to the user, notifying them that their message has been received. 
 
 <img src="docs/images/contact-thank-you.png" width=300>  
 
@@ -549,7 +551,7 @@ The following features are from the 4 x User Stories which are yet to be impleme
 
 ### Brand Name Entry 
 
-Currently, a new brand name can only be added from the admin panel. It would be essential for the business to have this functionality without having to access the admin panel so that they can easily broden the range of products they offer. This is from User Story [#91](https://github.com/ShizukaDonaghue/luve/issues/91).
+Currently, a new brand name can only be added from the admin panel. It would be essential for the business to have this functionality without having to access the admin panel so that they can easily broaden the range of products they offer. This is from User Story [#91](https://github.com/ShizukaDonaghue/luve/issues/91).
 
 ### Delivery Fee Updates
 
@@ -561,7 +563,7 @@ It would be a nice feature if the business could respond to product reviews post
 
 ### User Profile Deletion
 
-An option for users to be able to delete their own profile would be a good addtion so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
+An option for users to be able to delete their own profile would be a good addition so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
 
 <br>  
 
@@ -579,7 +581,7 @@ An option for users to be able to delete their own profile would be a good addti
 * [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
 * [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
 * [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used for the forms within the site.
-* [Bootstrap](https://getbootstrap.com/) was used for general layout and styling for the application.
+* [Bootstrap](https://getbootstrap.com/) was used for the general layout and styling of the application.
 * [jQuery](https://jquery.com/) was used to close the hamburger menu.
 * [jQuery Validation Plugin](https://jqueryvalidation.org/) was used to validate the forms used in the site and raise error messages where necessary.
 * [ElephantSQL](https://www.elephantsql.com/) was used for the Production database.
@@ -839,12 +841,12 @@ Information on sunscreen was from:
     
 
 ## Media
-* Hero image is from [Freepik](https://www.freepik.com/).
+* The hero image is from [Freepik](https://www.freepik.com/).
 * Placeholder image is from [Adobe Stock](https://stock.adobe.com/fi/search?k=photo%20coming%20soon).
 * Loading Spinner is from [SpinKit](https://tobiasahlin.com/spinkit/).
 
 ## Code
-* Solution for the issue [#84](https://github.com/ShizukaDonaghue/luve/issues/84) related to product reviews deletion was from [Stackoverflow](https://stackoverflow.com/questions/70346755/django-deleting-using-modal-show-and-delete-only-the-first-item-from-the-tabl).
+* Solution for the issue [#84](https://github.com/ShizukaDonaghue/luve/issues/84) related to product review deletion was from [Stackoverflow](https://stackoverflow.com/questions/70346755/django-deleting-using-modal-show-and-delete-only-the-first-item-from-the-tabl).
 
 * Solution for the issue [#86](https://github.com/ShizukaDonaghue/luve/issues/86) related to jQuery validation for the checkout form was from [Stackoverflow](https://stackoverflow.com/questions/47332825/jquery-functions-not-firing-with-stripe-elements).
 
@@ -853,7 +855,7 @@ Information on sunscreen was from:
 # Acknowledgements
 LUVE was created as a portfolio 5 project for the Full Stack Software Development course at UCD Professional Academy and Code Institute.
 
-I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance, and for his patience and time answering all the questions during the class and also in Slack!
+I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance and for his patience and time in answering all the questions during the class and also in Slack!
 
 
 <br>  
