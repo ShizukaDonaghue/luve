@@ -474,6 +474,35 @@ Another email is sent to the business to notify them of the new message. This em
 
 <img src="docs/images/testing/query-email-to-store.png" width=330>  
 
+### Error Pages
+
+<img src="docs/images/testing/error-page.png" width=700> 
+
+Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. Each error page contains a link to the Products page so that users can easily navigate back to the site.
+
+## Features Left to Implement
+
+The following features are from the 4 x User Stories which are yet to be implemented. 
+
+### Brand Name Entry 
+
+Currently, a new brand name can only be added from the admin panel. It would be essential for the business to have this functionality without having to access the admin panel so that they can easily broden the range of products they offer. This is from User Story [#91](https://github.com/ShizukaDonaghue/luve/issues/91).
+
+### Delivery Fee Updates
+
+The free delivery threshold and the delivery fee are both coded in settings.py and therefore, if any changes are to be made, the codes will need to be updated. It would be beneficial for the business to be able to update the threshold and the fee on a front end panel without having to update the codes or accessing the admin panel. This is from User Story [#72](https://github.com/ShizukaDonaghue/luve/issues/72).
+
+### Product Review Response
+
+It would be a nice feature if the business could respond to product reviews posted by users so that they can provide clarification or feedback where appropriate. This is from User Story [#40](https://github.com/ShizukaDonaghue/luve/issues/40).
+
+### User Profile Deletion
+
+An option for users to be able to delete their own profile would be a good addtion so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
+
+
+
+
 
 
 
@@ -529,19 +558,7 @@ In order to consistently create useful, engating content that will attract, enga
 
 
 
-### Features Left to Implement
 
-EPIC: User Acount & Profile:
-* As a Site User, I can delete my user profile so that I can remove my personal information from the site.
-
-EPIC: Business Admin:
-* As a Business owner/staff, I can edit delivery charge and free delivery threshold so that I can update them as required.
-
-EPIC: Product Management:
-* As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
-
-EPIC: Product Review:
-* As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
 
 
 
