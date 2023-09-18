@@ -254,7 +254,7 @@ The following User Stories are not yet implemented. Please see the details in th
 
 * As a Site User, I can delete my user profile so that I can remove my personal information from the site.    
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)  
 
 ## Agile Methodology
 
@@ -349,7 +349,7 @@ The intention was to utilise Django-AllAuth for the user authentication system a
 
 <img src="docs/images/database.png">    
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)  
 
 ## Security Features and Defensive Design
 
@@ -394,7 +394,7 @@ The font used throughout the site is Signika which is imported from [Google Font
 
 <img src="docs/images/font.png" width=180>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)  
 
 # Web Marketing Strategy
 
@@ -444,7 +444,7 @@ A Facebook Business page has been created to promote the business. The business 
 
 [Mailchimp](https://mailchimp.com/) was used to set up the newsletter sign-up form embedded in the footer. Users just need their email address to sign up and the business can use this mailing list to share information about their business to existing and potential customers directly, including special offers and sales. 
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)  
 
 
 # Features
@@ -696,7 +696,7 @@ It would be a nice feature if the business could respond to product reviews post
 
 An option for users to be able to delete their own profile would be a good addition so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).  
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)  
 
 # Technologies Used
 
@@ -750,7 +750,7 @@ An option for users to be able to delete their own profile would be a good addit
 # Testing
 For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md).  
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)  
 
 # Deployment
 The live deployed application - [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in a new browser tab).
@@ -981,4 +981,4 @@ LUVE was created as a portfolio 5 project for the Full Stack Software Developmen
 
 I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance and for his patience and time in answering all the questions during the class and also in Slack! 
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)    
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve#luve)    
