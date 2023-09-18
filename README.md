@@ -14,6 +14,93 @@ Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in 
 
 <img src="docs/images/site-image.png">  
 
+# Contents
+
+- [LUVE](#luve)
+- [UXD - User Experience Design](#uxd---user-experience-design)
+  * [User Stories](#user-stories)
+    + [EPIC: User Account & Profile](#epic--user-account---profile)
+    + [EPIC: Site Navigation](#epic--site-navigation)
+    + [EPIC: Site Admin](#epic--site-admin)
+    + [EPIC: Product Management](#epic--product-management)
+    + [EPIC: Purchasing & Checkout](#epic--purchasing---checkout)
+    + [EPIC: Wishlist](#epic--wishlist)
+    + [EPIC: Product Review](#epic--product-review)
+    + [EPIC: Customer Queries](#epic--customer-queries)
+    + [EPIC: Article Posts](#epic--article-posts)
+    + [EPIC: Business Admin](#epic--business-admin)
+    + [User Stories Not Implemented](#user-stories-not-implemented)
+    + [User Stories for Future Development](#user-stories-for-future-development)
+  * [Agile Methodology](#agile-methodology)
+  * [Wireframes](#wireframes)
+  * [Database Design](#database-design)
+  * [Security Features and Defensive Design](#security-features-and-defensive-design)
+    + [User Authentication](#user-authentication)
+    + [User Authorisation](#user-authorisation)
+    + [Form Validation](#form-validation)
+    + [Security-Sensitive Information](#security-sensitive-information)
+  * [Design](#design)
+    + [Colour Scheme](#colour-scheme)
+    + [Typography](#typography)
+- [Marketing Strategy](#marketing-strategy)
+  * [Search Engine Optimisation (SEO)](#search-engine-optimisation--seo-)
+    + [Keywords](#keywords)
+    + [Sitemap](#sitemap)
+    + [Robots](#robots)
+  * [Content Marketing](#content-marketing)
+  * [Social Media Marketing](#social-media-marketing)
+  * [Email Marketing](#email-marketing)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+    + [Browser Tabs](#browser-tabs)
+    + [Logo](#logo)
+    + [Navigation Bar](#navigation-bar)
+    + [Footer](#footer)
+    + [Sign Up Page](#sign-up-page)
+    + [Log In Page](#log-in-page)
+    + [Log Out Page](#log-out-page)
+    + [Home Page](#home-page)
+    + [Products Page](#products-page)
+    + [Product Details Page](#product-details-page)
+    + [Edit Review Page](#edit-review-page)
+    + [Delete Review Modal](#delete-review-modal)
+    + [Add Product Page](#add-product-page)
+    + [Edit Product Page](#edit-product-page)
+    + [Delete Product Modal](#delete-product-modal)
+    + [Wishlist Page](#wishlist-page)
+    + [Shopping Bag Page](#shopping-bag-page)
+    + [Checkout Page](#checkout-page)
+    + [Checkout Success Page](#checkout-success-page)
+    + [My Profile Page](#my-profile-page)
+    + [Articles Page](#articles-page)
+    + [Article Details Page](#article-details-page)
+    + [Add Article Page](#add-article-page)
+    + [Edit Article Page](#edit-article-page)
+    + [Delete Article Modal](#delete-article-modal)
+    + [Contact Page](#contact-page)
+    + [Contact Success Page](#contact-success-page)
+    + [Error Pages](#error-pages)
+  * [Features Left to Implement](#features-left-to-implement)
+    + [Brand Name Entry](#brand-name-entry)
+    + [Delivery Fee Updates](#delivery-fee-updates)
+    + [Product Review Response](#product-review-response)
+    + [User Profile Deletion](#user-profile-deletion)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Frameworks, Libraries and Tools Used within the Application](#frameworks--libraries-and-tools-used-within-the-application)
+  * [Other Online Tools used](#other-online-tools-used)
+  * [Validators](#validators)
+- [Testing](#testing)
+- [Deployment](#deployment)
+    + [Deployment - Heroku](#deployment---heroku)
+    + [Local Deployment](#local-deployment)
+- [Credit](#credit)
+  * [Content](#content)
+  * [Media](#media)
+  * [Code](#code)
+- [Acknowledgements](#acknowledgements)
+
+
 # UXD - User Experience Design
 
 ## User Stories
@@ -166,8 +253,7 @@ The following User Stories were not implemented. Please see the details in the F
 
 * As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
 
-* As a Site User, I can delete my user profile so that I can remove my personal information from the site.
-<br>  
+* As a Site User, I can delete my user profile so that I can remove my personal information from the site.    
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
@@ -200,7 +286,61 @@ Wireframes were created using [Balsamiq](https://balsamiq.com/) to visualise the
 The structure of the finished product is slightly different from the wireframes, 
 but this is due to the design choices made during the development process. 
 
+<details>
+  <summary>Home Page</summary>
+  
+  <img src="docs/images/home.png" width=700>
 
+</details>
+
+<details>
+  <summary>Products Page</summary>
+  
+  <img src="docs/images/products.png" width=700>
+
+</details>
+
+<details>
+  <summary>Product Details Page</summary>
+  
+  <img src="docs/images/product-details.png" width=700>
+
+</details>
+
+<details>
+  <summary>Shopping Bag</summary>
+  
+  <img src="docs/images/bag.png" width=700>
+
+</details>
+
+<details>
+  <summary>Checkout Page</summary>
+  
+  <img src="docs/images/checkout.png" width=700>
+
+</details>
+
+<details>
+  <summary>Articles Page</summary>
+  
+  <img src="docs/images/articles.png" width=700>
+
+</details>
+
+<details>
+  <summary>Article Details Page</summary>
+  
+  <img src="docs/images/article-details.png" width=700>
+
+</details>
+
+<details>
+  <summary>Profile Page</summary>
+  
+  <img src="docs/images/profile.png" width=700>
+
+</details>
 
 
 ## Database Design
@@ -208,8 +348,7 @@ An Entity Relationship Diagram was created using [Figma](https://www.figma.com/)
 
 The intention was to utilise Django-AllAuth for the user authentication system and create other custom models. 
 
-<img src="docs/images/database.png">  
-<br>  
+<img src="docs/images/database.png">    
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
@@ -255,7 +394,6 @@ The logo for the site was created using the same colour palette to be consistent
 The font used throughout the site is Signika which is imported from [Google Fonts](https://fonts.google.com/). Sans-serif is the backup font in case the main font is not available.
 
 <img src="docs/images/font.png" width=180>   
-<br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
@@ -306,7 +444,6 @@ A Facebook Business page has been created to promote the business. The business 
 ## Email Marketing
 
 [Mailchimp](https://mailchimp.com/) was used to set up the newsletter sign-up form embedded in the footer. Users just need their email address to sign up and the business can use this mailing list to share information about their business to existing and potential customers directly, including special offers and sales. 
-<br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
@@ -558,8 +695,7 @@ It would be a nice feature if the business could respond to product reviews post
 
 ### User Profile Deletion
 
-An option for users to be able to delete their own profile would be a good addition so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
-<br>  
+An option for users to be able to delete their own profile would be a good addition so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
@@ -610,8 +746,7 @@ An option for users to be able to delete their own profile would be a good addit
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes.
 
 # Testing
-For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md).
-<br>  
+For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md).  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
@@ -842,6 +977,6 @@ Information on sunscreen was from:
 # Acknowledgements
 LUVE was created as a portfolio 5 project for the Full Stack Software Development course at UCD Professional Academy and Code Institute.
 
-I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance and for his patience and time in answering all the questions during the class and also in Slack!<br>  
+I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance and for his patience and time in answering all the questions during the class and also in Slack! 
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)    
