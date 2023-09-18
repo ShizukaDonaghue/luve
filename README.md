@@ -603,7 +603,7 @@ For the full details of the testing executed, please see [TESTING.md](https://gi
 
 
 # Deployment
-The live deployed application - [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Click to open in a new browser tab).
+The live deployed application - [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in a new browser tab).
 
 ### Deployment - Heroku
 The following are the steps to deploy the application on Heroku.
@@ -804,27 +804,27 @@ Cloning the Repository on GitHub:
 4. Type "git clone" and then paste the URL copied from GitHub
 5. Press "Enter" and the local clone will be created
 
-# Credits
+
+
+# Credit
+
 ## Content
+Information on sunscreen was from:  
+* [EWG](https://www.ewg.org/sunscreen/report/the-trouble-with-sunscreen-chemicals/)  
+* [Forbes](https://www.forbes.com/health/body/natural-sunscreen/)
+* [David Suzuki Foundation](https://davidsuzuki.org/living-green/best-sun-and-sunscreen-choices-for-you-and-the-planet/)
+* [National Ocean Service](https://oceanservice.noaa.gov/news/sunscreen-corals.html)
+    
 
+## Media
+* Hero image is from [Freepik](https://www.freepik.com/).
+* Placeholder image is from [Adobe Stock](https://stock.adobe.com/fi/search?k=photo%20coming%20soon).
+* Loading Spinner is from [SpinKit](https://tobiasahlin.com/spinkit/).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Credit
-
-* Solution for the issue [#84](https://github.com/ShizukaDonaghue/luve/issues/84) related to product reviews deletion was from [Stackoverflow](https://stackoverflow.com/questions/70346755/django-deleting-using-modal-show-and-delete-only-the-first-item-from-the-tabl)
+## Code
+* Solution for the issue [#84](https://github.com/ShizukaDonaghue/luve/issues/84) related to product reviews deletion was from [Stackoverflow](https://stackoverflow.com/questions/70346755/django-deleting-using-modal-show-and-delete-only-the-first-item-from-the-tabl).
 
 * Solution for the issue [#86](https://github.com/ShizukaDonaghue/luve/issues/86) related to jQuery validation for the checkout form was from [Stackoverflow](https://stackoverflow.com/questions/47332825/jquery-functions-not-firing-with-stripe-elements).
 
 * Solution for the issue [#92](https://github.com/ShizukaDonaghue/luve/issues/92) related to the checkout form was found in [PP5-Fresh-Nest](https://github.com/AliOKeeffe/PP5-Fresh-Nest/blob/main/checkout/forms.py) repository.
+
