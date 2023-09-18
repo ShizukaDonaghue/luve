@@ -152,7 +152,7 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 The following User Stories were not implemented for EPIC: Customer Queries. The decision was made not to create a Customer Queries page as I felt it would be easier for the business owner to manage customer queries in their email inbox, rather than having to manage them both in their inbox and the dashboard within the site. The queries posted using the contact form are emailed to the business owner and they can respond to the customers directly from their inbox and keep track of all the email correspondence.   
 
-* As a Business Owner/Staff, I can **view customer queries posted via the contact form within the site ** so that I can keep track of queries from customers.
+* As a Business Owner/Staff, I can view customer queries posted via the contact form within the site so that I can keep track of queries from customers.
 
 * As a Business Owner/Staff, I can delete customer queries received from the customer queries page so that I can keep the database clean.
 
@@ -160,13 +160,13 @@ The following User Stories were not implemented for EPIC: Customer Queries. The 
 
 The following User Stories were not implemented. Please see the details in the Features Left to Implement section.
 
-* As a Site User, I can delete my user profile so that I can remove my personal information from the site.
+* As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
 
 * As a Business owner/staff, I can edit delivery charge and free delivery threshold so that I can update them as required.
 
-* As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
-
 * As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
+
+* As a Site User, I can delete my user profile so that I can remove my personal information from the site.
 
 ## Agile Methodology
 
@@ -460,7 +460,7 @@ Once the checkout is processed, the user is navigated to the Checkout Success pa
 
 An email confirmation is also sent to the user, confirming the order.  
 
-<img src="docs/images/testing/order-confirmation-email.png" width=380>   
+<img src="docs/images/testing/order-confirmation-email.png" width=420>   
 
 
 ### My Profile Page
@@ -519,11 +519,11 @@ The Contact Success page confirms that a query has been received from the user.
 
 An email confirmation is also sent to the user, notifying that their message has been received. 
 
-<img src="docs/images/contact-thank-you.png" width=280>  
+<img src="docs/images/contact-thank-you.png" width=300>  
 
 Another email is sent to the business to notify them of the new message. This email includes the message and contact details of the customer, so they can respond to the customer directly from their inbox.  
 
-<img src="docs/images/testing/query-email-to-store.png" width=330>  
+<img src="docs/images/testing/query-email-to-store.png" width=350>  
 
 ### Error Pages
 
@@ -552,10 +552,54 @@ It would be a nice feature if the business could respond to product reviews post
 An option for users to be able to delete their own profile would be a good addtion so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
 
 
+# Technologies Used
 
+## Languages
+* [HTML](https://html.spec.whatwg.org/) was used to create the content and structure for the application.
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) was used to add styling to the application.
+* [Python](https://www.python.org/) was used to add functionality to the application.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive content for the application.
 
+## Frameworks, Libraries and Tools Used within the Application
+* [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
+* [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used for the forms within the site.
+* [Bootstrap](https://getbootstrap.com/) was used for general layout and styling for the application.
+* [jQuery](https://jquery.com/) was used to close the hamburger menu.
+* [jQuery Validation Plugin](https://jqueryvalidation.org/) was used to validate the forms used in the site and raise error messages where necessary.
+* [ElephantSQL](https://www.elephantsql.com/) was used for the Production database.
+* [Cloudinary](https://cloudinary.com/) was used to store all static files and images.
+* [Summernote](https://summernote.org/) editor was used on the Add Article form.
+* [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
+* [GitHub](https://github.com/) was used to store the repository and the codes.
+* [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during the development.
+* [Heroku](https://id.heroku.com/login) was used to deploy the application.
+* [Google Fonts](https://fonts.google.com/) was used for the Signika font.
+* [Font Awesome](https://fontawesome.com/) was used for all the icons.
+* [XML-Sitemaps](https://www.xml-sitemaps.com/) was used to generate sitemap.xml
+* [Mailchimp](https://mailchimp.com/) was used for the newsletter signup form.
+* [Wix](https://www.wix.com/) was used to design the logo.
+* [RealFaviconGenerator](https://realfavicongenerator.net/) was used to generate the favicon.
 
+## Other Online Tools used
+* [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the application.
+* [Figma](https://www.figma.com/) was used to generate the database schema.
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the site for different screen sizes.
+* [Coolors](https://coolors.co) was used to generate the colour palette.
+* [Remove Background](https://www.remove.bg/) was used to remove the background from the favicon.
+* [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) was used to generate the mockup image showing the application on various screen sizes.
+* [Compressor.io](https://compressor.io/) was used to compress the images used in the application and README.
+* [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the application, README.md and TESTING.md files.
+* [Wordtracker](https://www.wordtracker.com) was used for the keyword searches.
 
+## Validators
+* [W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes.
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS codes.
+* [JSHint](https://jshint.com/) was used to validate JavaScript codes.
+* [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes.
+
+# Testing
+For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md).
 
 
 
