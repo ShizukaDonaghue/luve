@@ -93,9 +93,9 @@ Return to [README](https://github.com/ShizukaDonaghue/luve)
     + [Resolved Bugs](#resolved-bugs)
     + [Unresolved Bugs](#unresolved-bugs)
 
-## Code Validation
+# Code Validation
 
-### HTML
+## HTML
 All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/) to check for any issues or syntax errors. The only errors identified were related to Summernote fields and Clearable_file_input widget. Please see the results below for each page.
 
 <details>
@@ -275,7 +275,7 @@ One error was identified for the image field, which was related to clearable_fil
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 
-### CSS
+## CSS
 CSS codes used in the application were validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no issues or errors were found.
 
 <details>
@@ -307,7 +307,7 @@ CSS codes used in the application were validated using [W3C CSS Validator](https
 </details>
 
 
-### JavaScript
+## JavaScript
 JavaScript codes used in the application were validated using [JSHint](https://jshint.com/). There was one undefined variable identified for Stripe. Please see the results below for each file.
 
 <details>
@@ -333,11 +333,11 @@ JavaScript codes used in the application were validated using [JSHint](https://j
 
 The undefined variable "Stripe" was identified, however, this was addressed as it belongs to the external Stripe API. 
 
-### Python
+## Python
 Python codes used throughout the application were validated using [CI Python Linter](https://pep8ci.herokuapp.com/) and no issues or errors were found.
 Please see the results for each page.
 
-#### LUVE Project
+### LUVE Project
 
 <details>
   <summary>settings.py - No issues or errors</summary> 
@@ -362,7 +362,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Articles App
+### Articles App
 
 <details>
   <summary>admin.py - No issues or errors</summary> 
@@ -413,7 +413,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Bag App
+### Bag App
 
 <details>
   <summary>bag_tools.py - No issues or errors</summary> 
@@ -443,7 +443,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Checkout App
+### Checkout App
 
 <details>
   <summary>admin.py - No issues or errors</summary> 
@@ -501,7 +501,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Contact App
+### Contact App
 
 <details>
   <summary>admin.py - No issues or errors</summary> 
@@ -538,7 +538,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Home App
+### Home App
 
 <details>
   <summary>contexts.py - No issues or errors</summary> 
@@ -561,7 +561,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Products App
+### Products App
 
 <details>
   <summary>admin.py - No issues or errors</summary> 
@@ -605,7 +605,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-#### Profiles App
+### Profiles App
 
 <details>
   <summary>forms.py - No issues or errors</summary> 
@@ -675,7 +675,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 
-## Lighthouse
+# Lighthouse
 Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance. Please see the results below for each page.
 
 <details>
@@ -868,7 +868,7 @@ Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) wa
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 
-## Responsiveness
+# Responsiveness
 Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found. This included the following devices:
 
 
@@ -970,7 +970,7 @@ Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/
   
 </details>
 
-## Device Testing
+# Device Testing
 The application was tested manually on the following devices and no issues were found:
 
 <details>
@@ -1001,7 +1001,7 @@ The application was tested manually on the following devices and no issues were 
   
 </details>
 
-## Browser Compatibility
+# Browser Compatibility
 Browser compatibility was checked for the following browsers and no issues were found:
 
 <details>
@@ -1034,10 +1034,10 @@ Browser compatibility was checked for the following browsers and no issues were 
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-## User Stories Testing
+# User Stories Testing
 User stories were tested and addressed as follows.
 
-### **EPIC: User Account & Profile**
+## **EPIC: User Account & Profile**
 
 * **_As a Site User, I can easily register and receive an email confirmation after registering so that I can verify that registration was successful and confirm my email address._**  
 
@@ -1096,7 +1096,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Site Navigation**
+## **EPIC: Site Navigation**
 
 * **_As a Site User, I can edit my user profile so that I can keep my information up to date._**   
 
@@ -1156,7 +1156,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Site Admin**
+## **EPIC: Site Admin**
 
 * **_As a Site Admin I can create, update and delete the contents of the site so that I can manage the contents of the site._**  
 
@@ -1165,7 +1165,7 @@ User stories were tested and addressed as follows.
     <img src="docs/images/testing/site-admin.png" width=700> 
 
 
-### **EPIC: Product Management**
+## **EPIC: Product Management**
 
 * **_As a Business Owner/Staff, I can add a product to the site so that I can add new items to sell._**   
 
@@ -1199,7 +1199,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Purchasing & Checkout**
+## **EPIC: Purchasing & Checkout**
 
 * **_As a Shopper, I can add a product to my shopping bag so that I may decide to purchase the item later._**   
 
@@ -1272,7 +1272,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Wishist**
+## **EPIC: Wishist**
 
 * **_As a Shopper, I can save products to my wishlist so that I can easily find them in future to purchase._**  
 
@@ -1297,7 +1297,7 @@ User stories were tested and addressed as follows.
     <img src="docs/images/testing/wishlist-page.png" width=700>   
 
 
-### **EPIC: Product Review**  
+## **EPIC: Product Review**  
 
 * **_As a Shopper, I can view the reviews posted by others so that I can see the feedback from others which may help my purchasing decision._**  
 
@@ -1331,7 +1331,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Customer Queries**
+## **EPIC: Customer Queries**
 
 * **_As a Site User, I can submit a query via the site so that I can easily ask questions to the business._** 
 
@@ -1353,7 +1353,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Article Posts**
+## **EPIC: Article Posts**
 
 * **_As a Business Owner/Staff, I can post an article so that I can provide relevant and useful information to customers._**   
 
@@ -1391,7 +1391,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-### **EPIC: Business Admin**  
+## **EPIC: Business Admin**  
 
 * **_As a Business Owner, I can easily email special deals and updates to customers so that I can promote the business._**  
 
@@ -1431,10 +1431,10 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-## Features Testing
+# Features Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
 
-### Browser Tab
+## Browser Tab
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Favicon | Display | Favicon is displayed correctly in the browser tab | PASS
@@ -1459,7 +1459,7 @@ Title | Display | "Sign Up" is displayed as the title of the page for Sign Up pa
 Title | Display | "Log In" is displayed as the title of the page for Log In page | PASS
 Title | Display | "Log Out" is displayed as the title of the page for Log Out page | PASS
 
-### Navigation Bar
+## Navigation Bar
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Navbar Menus | Display | Menus are correctly displayed according to the screen sizes | PASS
@@ -1487,14 +1487,14 @@ Article Management Link | Click | Navigates to Add Article page | PASS
 Hamburger Menu Closure | Click | Hamburger menu closes when clicked outside the menu | PASS
 All Links | Hover | Colour changes to turquoise or pink with hover effect | PASS
 
-### Delivery Banner
+## Delivery Banner
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Delivery Banner | Display | When there is no item in the shopping bag, "Free delivery on orders over €50!" is displayed | PASS
 Delivery Banner | Display | When there is an item/are items in the shopping bag, the remaining order value to qualify for free shipping is displayed in the "Spend €[remaining value] more for free shipping!" message | PASS
 Delivery Banner | Display | When the order value reaches the free delivery threshold, "Hooray! Free delivery on your order!" is displayed | PASS
 
-### Footer
+## Footer
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Position | Display | Footer always stays at the bottom of the screen  | PASS
@@ -1511,7 +1511,7 @@ Instagram Link | Click | Opens Instagram in a new tab | PASS
 GitHub Link | Click | Opens GitHub in a new tab | PASS
 All Links | Hover | Colour changes to turquoise with hover effect | PASS
 
-### Sign Up Page
+## Sign Up Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Email Field | Leave Empty | The sign-up form does not submit | PASS
@@ -1539,7 +1539,7 @@ Alert | Display | Success message is displayed once the email confirmation with 
 Alert | Display | Success message is displayed once the user confirms their email address | PASS
 
 
-### Log In Page
+## Log In Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Username Field | Leave Empty | The log-in form does not submit | PASS
@@ -1558,7 +1558,7 @@ Log In Link | Click | Once the required fields are correctly filled in, logs in 
 Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
 Alert | Display | Success message is displayed confirming the user has logged in as [username] | PASS
 
-### Password Reset Page
+## Password Reset Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Email Field | Leave Empty | The password reset form does not submit | PASS
@@ -1568,7 +1568,7 @@ Email Field | Enter Invalid Format | An error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
 Reset Password Link | Click | Once the correct email is entered, an email containing a link to reset the password is set to the user | PASS
 
-### Change Password Page
+## Change Password Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Password Field | Leave Empty | The change password form does not submit | PASS
@@ -1579,7 +1579,7 @@ Change Password Link | Submit | Once the new password is correctly entered, the 
 Log In Link | Click | Navigates to Log In page | PASS
 Alert | Display | Success message is displayed confirming the password has been changed | PASS
 
-### Logo Out Page
+## Logo Out Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Log Out Link | Click | Once the user confirms log-out, the user is logged out | PASS
@@ -1587,15 +1587,15 @@ Log Out Link | Click | Once the user is logged out, navigates to Home page | PAS
 Cancel | Click | Navigates to Home page | PASS
 Alert | Display | Success message is displayed confirming that the user has logged out | PASS
 
-### Home Page
+## Home Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Shop Now Link | Click | Navigates to Products page | PASS
 Articles Link | Click | Navigates to Articles page | PASS
 
-### Products Page
+## Products Page
 
-#### Sorting Functionality
+### Sorting Functionality
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Price (Low to High) | Click | Sorts the product listing by price in ascending order | PASS
@@ -1605,7 +1605,7 @@ Name (Z to A) | Click | Sorts the product listing by product name in descending 
 Category (A to Z ) | Click | Sorts the product listing by category name in ascending order | PASS
 Category (Z to A ) | Click | Sorts the product listing by category name in descending order | PASS
 
-#### Product Cards
+### Product Cards
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Product Card | Display | Products are displayed in alphabetical order unless product sorting is applied | PASS
@@ -1625,7 +1625,7 @@ Edit Link | Click | Navigates to Edit Product page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
-#### Add to Bag 
+### Add to Bag 
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Add to Bag Button | Click | Once clicked, the item is added to the shopping bag if the total order quantity of the item is not greater than the maximum order quantity of 20 | PASS
@@ -1634,7 +1634,7 @@ Order Value | Display | Once the item is added to the shopping bag, the order va
 Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 
-#### Add to or Remove from Wishlist
+### Add to or Remove from Wishlist
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Add to Wishlist | Click | If the user is not logged in, navigates to the Log-in page | PASS 
@@ -1645,15 +1645,15 @@ Alert | Display | Once the item is added to the wishlist, a success toast is dis
 Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
 Wishlist Count | Display | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
 
-### Product Details Page
-#### Product Image
+## Product Details Page
+### Product Image
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
 Product Image | Display | When a Product image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 Product Image | Click | Once clicked, the larger size of the image is displayed from Cloudinary | PASS
 
-#### Add to or Remove from Wishlist
+### Add to or Remove from Wishlist
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Add to Wishlist | Click | If the user is not logged in, navigates to the Log-in page | PASS 
@@ -1664,13 +1664,13 @@ Alert | Display | Once the item is added to the wishlist, a success toast is dis
 Alert | Display | Once the item is removed from the wishlist, a success toast is displayed with the wishlist details, confirming that the item has been removed from the wishlist | PASS
 Wishlist Count | Display | Once an item is added to or removed from the wishlist, the number of items in the wishlist is updated next to the Wishlist icon in the navbar | PASS
 
-#### Product Information
+### Product Information
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Product Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Product Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 
-#### Edit & Delete Product Links
+### Edit & Delete Product Links
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
@@ -1678,7 +1678,7 @@ Edit Link | Click | Navigates to Edit Product page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
-#### Order Quantity & Add to Bag
+### Order Quantity & Add to Bag
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Order Quantity | Select | Decrement and increment buttons only allow a quantity between 1 and the maximum order quantity of 20 | PASS
@@ -1688,13 +1688,13 @@ Order Value | Display | Once the item is added to the shopping bag, the order va
 Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming that the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is not between 1 and the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 
-#### Links to Other Pages
+### Links to Other Pages
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 All Products Link | Click | Navigates to Products page | PASS
 Continue Shopping Button | Click | Navigates back to the Products page | PASS
 
-#### Customer Reviews
+### Customer Reviews
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Reviews | Display | If there are no reviews, "Be the first to review or rate this product!" is displayed | PASS
@@ -1710,7 +1710,7 @@ Edit/Delete Review Dropdown Menu | Display | Edit/Delete menu is available if th
 Edit Review Button | Click | Navigates to Edit Review page | PASS
 Delete Review Button | Click | A modal is displayed to confirm the deletion | PASS
 
-### Edit Review Page
+## Edit Review Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Review Page by Entering the URL | Navigates the user to Log-in page | PASS
@@ -1721,7 +1721,7 @@ Edit Review | Click | Review is updated and displayed in the review section | PA
 Alert | Display | Success message is displayed confirming that the review has been updated successfully | PASS
 Cancel Button | Click | Navigates back to Product Detail page | PASS
 
-### Delete Review Modal
+## Delete Review Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Delete Review| Submit | Once the user confirms the deletion in the modal, the review is deleted | PASS
@@ -1729,7 +1729,7 @@ Alert | Display | Success message is displayed confirming that the review has be
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS 
 
-### Add Product Page
+## Add Product Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | If the User is Not Logged in and Tries to Access the Add Product Page by Entering the URL | Navigates the user to Log-in page | PASS
@@ -1755,7 +1755,7 @@ Add Product | Submit | Displays the Product Details page which has been generate
 Alert | Display | Success message is displayed confirming [Product Name] has been added successfully | PASS
 Cancel Button | Click | Navigates back to Products page | PASS
 
-### Edit Product Page
+## Edit Product Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Product Page by Entering the URL | Navigates the user to Log-in page | PASS
@@ -1785,7 +1785,7 @@ Update Product | Submit | Displays the Product Details page which has been updat
 Alert | Submit | Success message is displayed confirming the [Product title] has been updated successfully | PASS
 Cancel Button | Click | Navigates back to Product Detail page | PASS
 
-### Delete Product Modal
+## Delete Product Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Delete Product from Products Page | Submit | Once the user confirms the deletion in the modal, the product is deleted | PASS
@@ -1795,7 +1795,7 @@ Alert | Display | Success message is displayed confirming that the product has b
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS
 
-### Articles Page
+## Articles Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Article Card | Hover | Box shadow is applied with hover effect | PASS
@@ -1815,15 +1815,15 @@ Edit Link | Click | Navigates to Edit Article page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
-### Article Details Page
+## Article Details Page
 
-#### Article Image
+### Article Image
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Article Image | Display | When an Article image is uploaded, the image is displayed correctly from Cloudinary | PASS
 Article Image | Display | When an Article image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 
-#### Number of Likes
+### Number of Likes
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Number of Likes | Display | The number of likes for the article is next to the article title | PASS 
@@ -1832,13 +1832,13 @@ Like Button | Click | If the user is logged in and if the article is not yet lik
 Like Button | Click | If the user is logged in and if the article is already liked, the article is unliked by the user | PASS
 Number of Likes | Display | The number of likes increases or decreases correctly when the article is liked or unliked | PASS
 
-#### Article Information
+### Article Information
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Article Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Article Author | Display | The author of the article is displayed | PASS
 
-#### Edit & Delete Article Links
+### Edit & Delete Article Links
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
@@ -1846,7 +1846,7 @@ Edit Link | Click | Navigates to Edit Article page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
-### Add Article Page
+## Add Article Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | If the User is Not Logged in and Tries to Access the Add Article Page by Entering the URL | Navigates the user to Log-in page | PASS
@@ -1870,7 +1870,7 @@ Add Article | Submit | Displays the Article Details page which has been generate
 Alert | Display | Success message is displayed confirming [Article Title] has been added successfully | PASS
 Cancel Button | Click | Navigates back to Articles page | PASS
 
-### Edit Article Page
+## Edit Article Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | If the User is Not Logged in and Tries to Access the Edit Article Page by Entering the URL | Navigates the user to Log-in page | PASS
@@ -1895,7 +1895,7 @@ Edit Article | Submit | Displays the Article Details page which has been updated
 Alert | Display | Success message is displayed confirming [Article Title] has been updated successfully | PASS
 Cancel Button | Click | Navigates back to Articles page | PASS
 
-### Delete Article Modal
+## Delete Article Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Delete Article from Articles Page | Submit | Once the user confirms the deletion in the modal, the article is deleted | PASS
@@ -1905,7 +1905,7 @@ Alert | Display | Success message is displayed confirming that the article has b
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS
 
-### Contact Page
+## Contact Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Query Type | Not Selected | The contact form does not submit | PASS
@@ -1928,13 +1928,13 @@ Contact Form | Submit | Once the completed form is submitted, a confirmation ema
 Contact Form | Submit | Once the completed form is submitted, a notification email is sent to the business owner/staff notifying that a new message has been received | PASS
 Alert | Display | Success message is displayed confirming that the user's message has been received | PASS
 
-### Contact Success Page
+## Contact Success Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Home Button | Click | Navigates to the Home page | PASS
 Continue Shopping Button | Click | Navigates to the Products page | PASS
 
-### Profile Page
+## Profile Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | If the User is Not Logged in and Tries to Access the Profile Page by Entering the URL | Navigates the user to Log-in page | PASS
@@ -1945,7 +1945,7 @@ Order History | Display | If the user has placed orders, the order details are d
 Order Number Link | Click | Once clicked, the order confirmation is displayed | PASS
 Alert | Display | When the delivery address is updated, a success message is displayed confirming that the user profile has been updated | PASS
 
-### Wishlist Page
+## Wishlist Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Click | If the user is not logged in and tries to access the Wishlist page, navigates to the Log-in page | PASS 
@@ -1959,9 +1959,9 @@ Alert | Display | Once the item is removed from the wishlist, a success toast is
 Alert | Display | Once the item is added to the shopping bag, a success toast is displayed with the order details, confirming that the item has been added to the shopping bag | PASS
 Alert | Display | If the total order quantity of the item is already at the maximum order quantity of 20, an error message is displayed notifying the user of the error | PASS
 
-### Shopping Bag Page
+## Shopping Bag Page
 
-#### Product Information
+### Product Information
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
@@ -1971,7 +1971,7 @@ Product Name Link | Click | Navigates to the Product Detail page | PASS
 Brand Name Link | Click | Displays the product listing by the selected brand | PASS
 Application Type Link | Click | Displays the product listing by the selected application type | PASS
 
-#### Order Quantity Adjustments
+### Order Quantity Adjustments
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Order Quantity | Select | Decrement and increment buttons only allow a quantity between 1 and the maximum order quantity of 20 | PASS
@@ -1987,9 +1987,9 @@ Alert | Display | If the total order quantity of the item is not between 1 and t
 Continue Shopping Button | Click | Navigates to Products page | PASS
 Secure Checkout Button | Click | Navigates to Checkout page | PASS
 
-### Checkout Page
+## Checkout Page
 
-#### Checkout Form
+### Checkout Form
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Full Name | Leave Empty | The checkout form does not submit | PASS
@@ -2031,14 +2031,14 @@ Card Number | Leave Empty | An error message is displayed | PASS
 Card Number | Enter Invalid Format | The checkout form does not submit | PASS
 Card Number | Enter Invalid Format | An error message is displayed | PASS
 
-#### Save Delivery Address
+### Save Delivery Address
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Create an Account or Log-in | Display | Sign-up and log-in links are displayed if the user is not logged in | PASS
 Save Delivery Information to Profile | Display | If the user is logged in, the tick box is displayed to save their delivery information | PASS
 Save Delivery Information to Profile | Entry | If the user is logged in and the box is ticked, the delivery information is saved in their profile | PASS 
 
-#### Order Summary
+### Order Summary
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Product Image | Display | When a Product image is uploaded, the image is displayed correctly from Cloudinary | PASS
@@ -2048,37 +2048,37 @@ Subtotal | Calculate & Display | Subtotal is calculated correctly | PASS
 Shipping Fee | Calculate & Display | Shipping fee is calculated correctly | PASS
 Total | Calculate & Display | Total value is calculated correctly | PASS
 
-#### Strip Payment
+### Strip Payment
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Payment | Submit | Once the checkout form is completed correctly, the payment is processed by Stripe | PASS
 Webhook | Submit | Once the checkout form is completed correctly, webhook is triggered and payment and other events are notified | PASS
 Alert | Display | When the checkout is completed, a success message is displayed confirming the order has been processed successfully | PASS
 
-### Checkout Success Page
+## Checkout Success Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Order Confirmation | Display | Once the checkout is completed, the order confirmation is displayed, confirming the user email address entered | PASS
 Order Confirmation | Email | Once the checkout is completed, the order confirmation is emailed to the user | PASS
 Continue Shopping Button | Click | Navigates to the Products page | PASS
 
-### Privacy Policy Page
+## Privacy Policy Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Privacy Policy | Display | Privacy policy is displayed when the link in the footer is selected | PASS
 
-### Terms & Conditions Page
+## Terms & Conditions Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Terms & Conditions | Display | Terms & conditions are displayed when the link in the footer is selected | PASS
 
-### 404 Error Page
+## 404 Error Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Custom 404 Error Page | Enter URL that does not exist | Custom 404 error message is displayed | PASS
 Return to Shop Button | Click | Navigates to Products page | PASS
 
-### 500 Error Page
+## 500 Error Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Custom 500 Error Page | Enter URL that does not exist | Custom 500 error message is displayed | PASS
@@ -2086,8 +2086,8 @@ Return to Shop Button | Click | Navigates to Products page | PASS
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-## Bugs
-### Resolved Bugs
+# Bugs
+## Resolved Bugs
 
 * **Modal for Delete Product Review [#84](https://github.com/ShizukaDonaghue/luve/issues/84)**  
 
@@ -2146,7 +2146,7 @@ Return to Shop Button | Click | Navigates to Products page | PASS
   
   Instead, regular expressions were added to the form to prevent invalid forms from being submitted for payment. This solution was found in [PP5-Fresh-Nest](https://github.com/AliOKeeffe/PP5-Fresh-Nest/blob/main/checkout/forms.py) repository.
 
-### Unresolved Bugs
+## Unresolved Bugs
 There are no other known bugs at present.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)    
