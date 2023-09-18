@@ -1166,19 +1166,19 @@ User stories were tested and addressed as follows.
 
     Users don't need to register as a user to purchase from the store.  
 
-* **_As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased._**  
-
-    Once the checkout process is completed, the order confirmation is displayed for the user.  
-
-    <img src="docs/images/testing/order-confirmation-page.png" width=700>    
-
 * **_As a Shopper, I can have my details auto filled at checkout so that I can place an order quickly and easily._**   
 
     For users who are logged in and have their details saved in the profile, the details are auto filled in the checkout form from the database.
 
     If the details are not yet saved, they have the option to save their details when completing the checkout form by selecting the "Save this information to my profile" box.   
 
-    <img src="docs/images/testing/checkout-form.png" width=700>    
+    <img src="docs/images/testing/checkout-form.png" width=700>  
+
+* **_As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased._**  
+
+    Once the checkout process is completed, the order confirmation is displayed for the user.  
+
+    <img src="docs/images/testing/order-confirmation-page.png" width=700>     
 
 * **_As a Shopper, I can receive an email confirmation once my order is placed so that I can keep the confirmation of what I have purchased for my records._**    
 
