@@ -1041,7 +1041,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can easily register and receive an email confirmation after registering so that I can verify that registration was successful and confirm my email address._**  
 
-    Sign-up link is available in the navbar for users who are yet to register with the site, and it uses Django-allauth to manage the process.  
+    The sign-up link is available in the navbar for users who are yet to register with the site, and it uses Django-allauth to manage the process.  
 
     <img src="docs/images/testing/signup.png" width=700>  
 
@@ -1150,7 +1150,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the site._**  
 
-    A custom error page is available in case of 400, 403, 404 or 500 errors. The page includes "Return to Shop" button so that users can easily navigate back to the store. 
+    A custom error page is available in case of 400, 403, 404 or 500 errors. The page includes the "Return to Shop" button so that users can easily navigate back to the store. 
 
     <img src="docs/images/testing/error-page.png" width=700>   
 
@@ -1158,7 +1158,7 @@ User stories were tested and addressed as follows.
 
 ## **EPIC: Site Admin**
 
-* **_As a Site Admin I can create, update and delete the contents of the site so that I can manage the contents of the site._**  
+* **_As a Site Admin, I can create, update and delete the contents of the site so that I can manage the contents of the site._**  
 
     The Site Admin role has full CRUD functionality in the admin panel to manage all the contents of the site fully.
 
@@ -1193,7 +1193,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Business Owner/Staff, I can see error messages when submitting the product form so that I can understand how the errors can be resolved._**   
 
-    If is any error in the Add Product form, an error message is displayed, explaining the issue. This aims to assist users in filling in the form correctly. The form is fully validated and does not submit with invalid data.  
+    If there is any error in the Add Product form, an error message is displayed, explaining the issue. This aims to assist users in filling in the form correctly. The form is fully validated and does not submit with invalid data.  
     
     <img src="docs/images/testing/add-product-error.png" width=700> 
 
@@ -1225,7 +1225,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Shopper, I can easily view the total of my purchases at any time so that I can keep track of what I'm spending._**  
 
-    When there is an item or are items in the bag, the total value is displayed under the Bag icon in the navbar. This is visible on all pages also so the users can keep track of their spend as they shop.  
+    When there is an item or are items in the bag, the total value is displayed under the Bag icon in the navbar. This is visible on all pages also so the users can keep track of their spending as they shop.  
 
 * **_As a Shopper, I can pay for my order with a card so that I can complete my order and receive it from the business._**  
 
@@ -1237,9 +1237,9 @@ User stories were tested and addressed as follows.
 
     Users don't need to register as a user to purchase from the store.  
 
-* **_As a Shopper, I can have my details auto filled at checkout so that I can place an order quickly and easily._**   
+* **_As a Shopper, I can have my details auto-filled at checkout so that I can place an order quickly and easily._**   
 
-    For users who are logged in and have their details saved in the profile, the details are auto filled in the checkout form from the database.
+    For users who are logged in and have their details saved in the profile, the details are auto-filled in the checkout form from the database.
 
     If the details are not yet saved, they have the option to save their details when completing the checkout form by selecting the "Save this information to my profile" box.   
 
@@ -1272,7 +1272,7 @@ User stories were tested and addressed as follows.
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
-## **EPIC: Wishist**
+## **EPIC: Wishlist**
 
 * **_As a Shopper, I can save products to my wishlist so that I can easily find them in future to purchase._**  
 
@@ -1306,7 +1306,7 @@ User stories were tested and addressed as follows.
     <img src="docs/images/testing/product-review-not-logged-in.png" width=700>   
 
 
-* **_As a Shopper, I can post a product review so that I can share my feedback for the product with others._**   
+* **_As a Shopper, I can post a product review so that I can share my feedback on the product with others._**   
 
     The product review form is available for users who are logged in next to the review section. Users have the option to add a review and/or rate the product. Once the form is completed, the review is posted on the site and the user is notified.  
 
@@ -1314,7 +1314,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Shopper, I can edit the product review I posted so that make changes to my review._**  
 
-    Users have the option to edit the reviews that they have posted. The vertical ellipsis is available next to the posting date if they are the author of the review. They can select the edit button here, which directs them to Edit Review page.  
+    Users have the option to edit the reviews that they have posted. The vertical ellipsis is available next to the posting date if they are the author of the review. They can select the edit button here, which directs them to the Edit Review page.  
 
     <img src="docs/images/testing/review-menu.png" width=330>   
 
@@ -1383,7 +1383,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/delete-article-modal.png" width=350>  
 
-* **_As a Site User, I can see error messages when submitting article form so that I can understand how the errors can be resolved._**
+* **_As a Site User, I can see error messages when submitting the article form so that I can understand how the errors can be resolved._**
 
     If there is any error in the article form, the user is notified of the error, explaining the issue. The form is fully validated and does not submit with invalid data.  
 
@@ -1407,7 +1407,7 @@ User stories were tested and addressed as follows.
     <img src="docs/images/testing/facebook-1.png" width=800>   
     <img src="docs/images/testing/facebook-2.png" width=800>   
 
-* **_As a Business Owner, I can include a privacy policy in the site so that we are compliant with GDPR requirements._**  
+* **_As a Business Owner, I can include a privacy policy on the site so that we are compliant with GDPR requirements._**  
 
     The privacy policy is available from the link in the footer.  
 
