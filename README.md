@@ -251,6 +251,57 @@ The font used throughout the site is Signika which is imported from [Google Font
 <img src="docs/images/font.png" width=180>
 
 
+# Marketing Strategy
+
+## Search Engine Optimisation (SEO)
+
+### Keywords
+
+Keyword research was performed using Google search results and [Wordtracker](https://www.wordtracker.com/). A mixture of short tail and long tail keywords were considered based on their relevance, authority and volume, aiming to identify keywords that are high enough volumes and low enough competition. 
+
+During the research, it was found that the word "sunscreen" and "sunblock" were used interchangeably (although they are technically different based on their purpose) and that the volume of searches was much higher for the word "sunscreen." Therefore, both words have been included in the keywords which have been added to the site's keywords and description sections in the head element. 
+
+<details>
+  <summary>Wordtracker results for "safe sunscreen"</summary>
+  
+  <img src="docs/images/keyword-sunscreen.jpg" width=800>
+
+</details>
+
+<details>
+  <summary>Wordtracker results for "safe sunblock"</summary>
+  
+  <img src="docs/images/keyword-sunblock.jpg" width=800>
+
+</details>
+
+### Sitemap 
+
+A sitemap was generated using [XML-Sitemaps](https://www.xml-sitemaps.com/) to list the site's important page urls, ensuring that search engines can find and crawl through them easily. This helps the search engines to understand the site's structure. [sitemap.xml](https://github.com/ShizukaDonaghue/luve/blob/main/sitemap.xml) has been added to the repository.
+
+### Robots 
+
+robots.txt has been created to control which pages within the site are accessed by search engines. This has also been added to the repository. 
+
+
+## Content Marketing
+
+In order to consistently create useful and helpful content that will attract and convert the target makert into customers, the business can post articles relevant to the site. These articals intend to provide useful and meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
+
+## Social Media Marketing
+
+A Facebook Business page has been created to promote the business. The business owner and staff can post relevant and useful information here to help increase their reach with a minimal marketing cost. They can share information about their special offers and sales which may help to convert the potential customers into actual sales.
+
+<img src="docs/images/facebook-1.png" width=800>
+<img src="docs/images/facebook-2.png" width=800>
+
+## Email Marketing
+
+[Mailchimp](https://mailchimp.com/) was used to set up the newsletter sign-up form embedded in the footer. Users just need their email address to sign up and the business can use this mailing list to share information about their business to existing and potential customers directly, including special offers and sales. 
+
+
+
+
 # Features
 
 ## Existing Features
@@ -510,51 +561,6 @@ An option for users to be able to delete their own profile would be a good addti
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-## Search Engine Optimisation (SEO) & Web Marketing
-
-### Keywords
-
-Keyword research was performed using Google search results and [Wordtracker](https://www.wordtracker.com/). A mixture of short tail and long tail keywords were considered based on their relevance, authority and volume, aiming to identify keywords that are high enough volumes and low enough competition. 
-
-During the research, it was found that the word "sunscreen" and "sunblock" were used interchangeably (although they are technically different based on their purpose) and that the volume of searches was much higher for the word "sunscreen." Therefore, both words have been included in the keywords which have been added to the site's keywords and description sections in the head element. 
-
-<details>
-  <summary>Wordtracker results for "safe sunscreen"</summary>
-  
-  <img src="docs/images/keyword-sunscreen.jpg" width=800>
-
-</details>
-
-<details>
-  <summary>Wordtracker results for "safe sunblock"</summary>
-  
-  <img src="docs/images/keyword-sunblock.jpg" width=800>
-
-</details>
-
-### Sitemap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD DETAILS HERE XXXXXXXXXXXXX
-
-### Robots   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD DETAILS HERE XXXXXXXXXXXXX
-
-### Content Marketing
-
-In order to consistently create useful, engating content that will attract, engage and convert the target makert into customers, the business owner and staff can post articles relevant to the site. These articals intend to provide useful and meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
-
-### Social Media Marketing
-
-<img src="docs/images/facebook-1.png" width=800>
-<img src="docs/images/facebook-2.png" width=800>
 
 
 
