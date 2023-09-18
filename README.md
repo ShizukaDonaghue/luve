@@ -167,7 +167,6 @@ The following User Stories were not implemented. Please see the details in the F
 * As a Business Owner/Staff, I can respond to a product review posted by a shopper so that I can provide clarification or feedback where appropriate.
 
 * As a Site User, I can delete my user profile so that I can remove my personal information from the site.
-
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -209,8 +208,7 @@ An Entity Relationship Diagram was created using [Figma](https://www.figma.com/)
 
 The intention was to utilise Django-AllAuth for the user authentication system and create other custom models. 
 
-<img src="docs/images/database.png">
-
+<img src="docs/images/database.png">  
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -256,8 +254,7 @@ The logo for the site was created using the same colour palette to be consistent
 ### Typography
 The font used throughout the site is Signika which is imported from [Google Fonts](https://fonts.google.com/). Sans-serif is the backup font in case the main font is not available.
 
-<img src="docs/images/font.png" width=180>
-
+<img src="docs/images/font.png" width=180>   
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -309,8 +306,6 @@ A Facebook Business page has been created to promote the business. The business 
 ## Email Marketing
 
 [Mailchimp](https://mailchimp.com/) was used to set up the newsletter sign-up form embedded in the footer. Users just need their email address to sign up and the business can use this mailing list to share information about their business to existing and potential customers directly, including special offers and sales. 
-
-
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -464,7 +459,7 @@ Once the checkout form is completed correctly, the payment is processed by Strip
 
 In order to test the payment process, the following card details were used. 
 
-<img src="docs/images/stripe-test-card.png" width=570>  
+<img src="docs/images/stripe-test-card.png" width=630>  
 
 ### Checkout Success Page
 
@@ -474,7 +469,7 @@ Once the checkout is processed, the user is navigated to the Checkout Success pa
 
 An email confirmation is also sent to the user, confirming the order.  
 
-<img src="docs/images/testing/order-confirmation-email.png" width=420>   
+<img src="docs/images/testing/order-confirmation-email.png" width=440>   
 
 
 ### My Profile Page
@@ -533,11 +528,11 @@ The Contact Success page confirms that a query has been received from the user.
 
 An email confirmation is also sent to the user, notifying them that their message has been received. 
 
-<img src="docs/images/contact-thank-you.png" width=300>  
+<img src="docs/images/contact-thank-you.png" width=310>  
 
 Another email is sent to the business to notify them of the new message. This email includes the message and contact details of the customer, so they can respond to the customer directly from their inbox.  
 
-<img src="docs/images/testing/query-email-to-store.png" width=350>  
+<img src="docs/images/testing/query-email-to-store.png" width=365>  
 
 ### Error Pages
 
@@ -564,7 +559,6 @@ It would be a nice feature if the business could respond to product reviews post
 ### User Profile Deletion
 
 An option for users to be able to delete their own profile would be a good addition so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
-
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -615,12 +609,8 @@ An option for users to be able to delete their own profile would be a good addit
 * [JSHint](https://jshint.com/) was used to validate JavaScript codes.
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes.
 
-<br>
-
 # Testing
 For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md).
-
-
 <br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
@@ -827,9 +817,6 @@ Cloning the Repository on GitHub:
 4. Type "git clone" and then paste the URL copied from GitHub
 5. Press "Enter" and the local clone will be created
 
-<br>
-
-
 # Credit
 
 ## Content
@@ -855,9 +842,6 @@ Information on sunscreen was from:
 # Acknowledgements
 LUVE was created as a portfolio 5 project for the Full Stack Software Development course at UCD Professional Academy and Code Institute.
 
-I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance and for his patience and time in answering all the questions during the class and also in Slack!
-
-
-<br>  
+I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance and for his patience and time in answering all the questions during the class and also in Slack!<br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)    
