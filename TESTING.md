@@ -1193,7 +1193,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Business Owner/Staff, I can see error messages when submitting the product form so that I can understand how the errors can be resolved._**   
 
-    If there are any errors in the Add Product form, error messages are displayed explaining the error. This aims to assist users in filling in the form correctly. The form is fully validated and does not submit with invalid data.  
+    If is any error in the Add Product form, an error message is displayed, explaining the issue. This aims to assist users in filling in the form correctly. The form is fully validated and does not submit with invalid data.  
     
     <img src="docs/images/testing/add-product-error.png" width=700> 
 
@@ -1255,11 +1255,11 @@ User stories were tested and addressed as follows.
 
     Once the checkout process is completed, an email is sent to the user confirming their order. This includes the order number, the items purchased, the total cost and the shipping address.  
 
-    <img src="docs/images/testing/order-confirmation-email.png" width=380>     
+    <img src="docs/images/testing/order-confirmation-email.png" width=415>     
 
 
 * **_As a Shopper, I can see error messages when submitting the checkout form so that I can understand how the errors can be resolved._**   
-    If there are any errors in the checkout form, the user is notified of the error before submitting the form. The form is fully validated and does not submit with invalid data.  
+    If there is any error in the checkout form, the user is notified of the error before submitting the form. The form is fully validated and does not submit with invalid data.  
 
     <img src="docs/images/testing/checkout-form-error.png" width=700>   
     
@@ -1347,7 +1347,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can see error messages when submitting the contact form so that I can understand how the errors can be resolved._**  
 
-    If there are errors in the contact form, error messages are displayed to the user explaining the errors. The form is fully validated and does not submit with invalid data. 
+    If there is any error in the contact form, an error message is displayed to the user explaining the errors. The form is fully validated and does not submit with invalid data. 
 
     <img src="docs/images/testing/contact-form-error.png" width=700>   
 
@@ -1385,7 +1385,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can see error messages when submitting article form so that I can understand how the errors can be resolved._**
 
-    If there are any errors in the article form, the user is notified explaining the errors. The form is fully validated and does not submit with invalid data.  
+    If there is any error in the article form, the user is notified of the error, explaining the issue. The form is fully validated and does not submit with invalid data.  
 
     <img src="docs/images/testing/article-form-error.png" width=600>  
 
