@@ -168,6 +168,10 @@ The following User Stories were not implemented. Please see the details in the F
 
 * As a Site User, I can delete my user profile so that I can remove my personal information from the site.
 
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
+
 ## Agile Methodology
 
 This application was developed using agile methodology. [LUVE Kanban Board](https://github.com/users/ShizukaDonaghue/projects/12/) was created using GitHub Projects and was used to manage the entire development process. 
@@ -205,7 +209,9 @@ An Entity Relationship Diagram was created using [Figma](https://www.figma.com/)
 
 The intention was to utilise Django-AllAuth for the user authentication system and create other custom models. 
 
+<br>  
 
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
 ## Security Features and Defensive Design
 
@@ -250,6 +256,9 @@ The font used throughout the site is Signika which is imported from [Google Font
 
 <img src="docs/images/font.png" width=180>
 
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
 # Marketing Strategy
 
@@ -300,6 +309,9 @@ A Facebook Business page has been created to promote the business. The business 
 [Mailchimp](https://mailchimp.com/) was used to set up the newsletter sign-up form embedded in the footer. Users just need their email address to sign up and the business can use this mailing list to share information about their business to existing and potential customers directly, including special offers and sales. 
 
 
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
 
 # Features
@@ -551,6 +563,9 @@ It would be a nice feature if the business could respond to product reviews post
 
 An option for users to be able to delete their own profile would be a good addtion so that users can remove their personal information from the site. This would also clean up the database for easier maintenance. This is from User Story [#52](https://github.com/ShizukaDonaghue/luve/issues/52).
 
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
 # Technologies Used
 
@@ -598,9 +613,15 @@ An option for users to be able to delete their own profile would be a good addti
 * [JSHint](https://jshint.com/) was used to validate JavaScript codes.
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes.
 
+<br>
+
 # Testing
 For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md).
 
+
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
 # Deployment
 The live deployed application - [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in a new browser tab).
@@ -804,6 +825,7 @@ Cloning the Repository on GitHub:
 4. Type "git clone" and then paste the URL copied from GitHub
 5. Press "Enter" and the local clone will be created
 
+<br>
 
 
 # Credit
@@ -828,3 +850,12 @@ Information on sunscreen was from:
 
 * Solution for the issue [#92](https://github.com/ShizukaDonaghue/luve/issues/92) related to the checkout form was found in [PP5-Fresh-Nest](https://github.com/AliOKeeffe/PP5-Fresh-Nest/blob/main/checkout/forms.py) repository.
 
+# Acknowledgements
+LUVE was created as a portfolio 5 project for the Full Stack Software Development course at UCD Professional Academy and Code Institute.
+
+I would like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his valuable feedback and guidance, and for his patience and time answering all the questions during the class and also in Slack!
+
+
+<br>  
+
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)    
