@@ -272,7 +272,7 @@ One error was identified for the image field, which was related to clearable_fil
 
 </details>
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 
 ### CSS
@@ -672,7 +672,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 
 ## Lighthouse
@@ -865,7 +865,7 @@ Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) wa
 	
 </details>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 
 ## Responsiveness
@@ -1032,7 +1032,7 @@ Browser compatibility was checked for the following browsers and no issues were 
   
 </details>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ## User Stories Testing
 User stories were tested and addressed as follows.
@@ -1094,7 +1094,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/profile.png" width=700>  
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Site Navigation**
 
@@ -1154,7 +1154,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/error-page.png" width=700>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Site Admin**
 
@@ -1197,7 +1197,7 @@ User stories were tested and addressed as follows.
     
     <img src="docs/images/testing/add-product-error.png" width=700> 
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Purchasing & Checkout**
 
@@ -1270,7 +1270,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/footer.png" width=700>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Wishist**
 
@@ -1329,7 +1329,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/delete-review-modal.png" width=350>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Customer Queries**
 
@@ -1351,7 +1351,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/contact-form-error.png" width=700>   
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Article Posts**
 
@@ -1389,7 +1389,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/article-form-error.png" width=600>  
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ### **EPIC: Business Admin**  
 
@@ -1429,7 +1429,7 @@ User stories were tested and addressed as follows.
 
     robots.txt has also been included.  
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ## Features Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
@@ -2084,7 +2084,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Custom 500 Error Page | Enter URL that does not exist | Custom 500 error message is displayed | PASS
 Return to Shop Button | Click | Navigates to Products page | PASS
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)  
 
 ## Bugs
 ### Resolved Bugs
@@ -2149,4 +2149,4 @@ Return to Shop Button | Click | Navigates to Products page | PASS
 ### Unresolved Bugs
 There are no other known bugs at present.
 
-[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)    
+[Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md#luve--testing)    
