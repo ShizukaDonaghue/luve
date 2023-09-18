@@ -1240,7 +1240,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Shopper, I can post a product review so that I can share my feedback for the product with others._**   
 
-    The product review form is available for users who are logged in next to the review section. Users have the option to add comments or just rate the product. Once the form is completed, the review is posted on the site and the user is notified.  
+    The product review form is available for users who are logged in next to the review section. Users have the option to add a review and/or rate the product. Once the form is completed, the review is posted on the site and the user is notified.  
 
     <img src="docs/images/testing/product-review.png" width=700>   
 
