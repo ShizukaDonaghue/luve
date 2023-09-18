@@ -2,7 +2,7 @@
 
 LUVE is a full-stack web application built with Django. It is a B2C e-commerce store for safe sunblocks. The site is targeted towards anyone who is interested in safe sunblocks for their skin and the environment.
 
-Users can search for products with a keyword, filter by a product category or a brand, or browse through the range of safe sunblocks and purchase them from the site. Registered users have the ability to add items to their wishlist, like articles, save their details to the profile, and view their order history. They also have the full CRUD functionality to post, edit and delete product reviews within the site. 
+Users of the site can search for products with a keyword, filter the products by a product category or a brand, or browse through the range of safe sunblocks and purchase them from the site. Registered users have the ability to add items to their wishlist, like articles, save their details to the profile, and view their order history. They also have the full CRUD functionality to post, edit and delete product reviews within the site. 
 
 For the business owner or staff, the full CRUD functionality is available to add, edit and delete products and articles without having to access the admin panel. 
 
@@ -16,7 +16,6 @@ Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in 
 
 # Contents
 
-- [LUVE](#luve)
 - [UXD - User Experience Design](#uxd---user-experience-design)
   * [User Stories](#user-stories)
     + [EPIC: User Account & Profile](#epic-user-account--profile)
@@ -245,7 +244,7 @@ The following User Stories were not implemented for EPIC: Customer Queries. The 
 
 ### User Stories for Future Development 
 
-The following User Stories were not implemented. Please see the details in the Features Left to Implement section.
+The following User Stories are not yet implemented. Please see the details in the Features Left to Implement section.
 
 * As a Business Owner/Staff, I can easily add a new brand to the store so that I can broaden the range of products that we offer.
 
@@ -263,7 +262,7 @@ This application was developed using agile methodology. [LUVE Kanban Board](http
 
 <img src="docs/images/kanban-board.png">
 
-The 10 Epics listed for the application's features above were included as Milestones in the Kanban Board. A GitHub issue was created for each User Story using my own User Story templates. Each User Story contained detailed acceptance criteria and they were broken down into tasks necessary to satisfy those acceptance criteria.
+The 10 Epics listed above for the application's features were included as Milestones in the Kanban Board. A GitHub issue was created for each User Story using my own User Story templates. Each User Story contained detailed acceptance criteria and they were broken down into tasks necessary to satisfy those acceptance criteria.
 
 MoSCoW Prioritisation technique was applied to each User Story and each User Story was labelled based on their prioritisation level as follows:
 
@@ -274,7 +273,7 @@ MoSCoW Prioritisation technique was applied to each User Story and each User Sto
 
 The User Stories were prioritised based on their prioritisation levels and tracked through the Kanban Board until they were executed fully.
 
-The Kanban Board also contained 10 other Epics, which were not related to the application's features. These were included so that the entire project was tracked and managed through the Kanban Board.
+The Kanban Board also contained 3 other Epics, which were not related to the application's features. These were included so that the entire project was tracked and managed through the Kanban Board.
 
 * EPIC: Project Setup
 * EPIC: Testing
@@ -362,7 +361,7 @@ If a user tries to access these pages without having logged in, they are directe
 Users can only edit or delete their own records in the application. If a user tries to edit or delete other users' records, an error message is displayed to the user explaining the issue. A custom 403 error page is also available which explains the error and contains a link to the store so that users can easily navigate back.
 
 ### Form Validation
-Django's built-in form validation is used to validate the forms within the application. The forms will not be submitted unless they are completed correctly. If there are errors, error messages are displayed to notify the user of the errors.
+Django's built-in form validation is used to validate the forms within the application. The forms will not be submitted unless they are completed correctly. If there is any error, an error message is displayed to notify the user of the error.
 
 In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to the Article form, Contact form, and Product form. This displays a custom error message explaining the error for each field to assist users in filling in the field correctly.
 
@@ -432,7 +431,7 @@ robots.txt has been created to control which pages within the site are accessed 
 
 ## Content Marketing
 
-In order to consistently create useful and engaging content that will attract and convert the target market into customers, the business can post articles relevant to the site. These articles intend to provide meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
+In order to consistently create useful and engaging content that will attract and convert the target market into customers, the business can post articles relevant to the site. These articles intend to provide meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as position the business as a reliable source of information.
 
 ## Social Media Marketing
 
@@ -476,7 +475,7 @@ The delivery banner is also fixed under the navbar displaying the remaining orde
 ### Footer
 The footer contains the newsletter sign-up form so that users can receive updates from the business and the business can use the newsletter to promote their store. 
 
-This section also includes the privacy policy and terms & conditions. The social media icons are available here so users can easily access the business's social media accounts. Clicking on any of these icons opens a new browser tab so that users will still have LUVE open to navigate back easily.
+This section also includes the privacy policy and terms & conditions. The social media icons are available here so users can easily access and follow the business's social media accounts. Clicking on any of these icons opens a new browser tab so that users will still have LUVE open to navigate back easily.
 
 <img src="docs/images/testing/footer.png" width=700>
 
@@ -506,7 +505,7 @@ The Log-out link is available from the Account menu in the navbar for users who 
 
 <img src="docs/images/homepage.png" width=700>
 
-The Home page introduces the site and its purpose. This page also includes "Shop Now" button so that the user can easily navigate to the store to purchase safe sunblocks and also "Article" button so that they can read more about the risks and impact of sunscreens.
+The Home page introduces the site and its purpose. This page includes the large "Shop Now" button so that the user can easily navigate to the store to purchase safe sunblocks. The "Articles" button is also placed under the introduction so that they can effortlessly navigate to the Articles page to read more about the risks and impact of sunscreens.
 
 ### Products Page
 
@@ -516,7 +515,7 @@ Users can browse a list of products on the Products page. They have the option t
 
 The "Add to Bag" is available for each product so that users can easily add products to their shopping bag. Once products are added to their bag, the user is notified and the total order value is displayed under the Bag icon in the navbar.
 
-Users can also add products to their wishlist by clicking on the pink outline heart. Once added, the user is notified and the love heart is coloured in pink. They can also remove the product from their wishlist by clicking on the pink heart as it toggles between "add" and "remove" for their wishlist.
+Users can also add products to their wishlist by clicking on the pink outline heart. Once added, the love heart is coloured in pink and the user is notified. They can also remove the product from their wishlist by clicking on the pink heart as it toggles between "add" and "remove" for their wishlist.
 
 For users with superuser or staff permission, the links for Edit Product and Delete Products are displayed on the product cards. The business owner and staff can easily access these options from here. 
 
@@ -536,7 +535,7 @@ Under the Product Details section on this page, users can view product reviews p
 
 <img src="docs/images/product-review.png" width=700>  
 
-If the user is the author of the review, the vertical ellipsis is available next to the posting date. The "edit" button navigates the user to Edit Review page, and the "delete" button triggers a model to confirm the deletion. 
+If the user is the author of the review, the vertical ellipsis is available next to the posting date. The "edit" button navigates the user to the Edit Review page, and the "delete" button triggers a model to confirm the deletion. 
 
 ### Edit Review Page
 
@@ -572,7 +571,7 @@ The link to delete a product is available on the Products page as well as the Pr
 
 <img src="docs/images/wishlist-page.png" width=700> 
 
-Users can access the Wishlist page from the love heart icon in the navbar. The Wishlist page lists the items in their wishlist. Users can easily add items to the shopping bag using the "Add to Bag" button. They can also remove the items from the wishlist by clicking on the "X" on the product card. 
+Users can access the Wishlist page from the love heart icon in the navbar. The Wishlist page lists the items in their wishlist. Users can easily add items to the shopping bag from this page using the "Add to Bag" button. They can also remove the items from the wishlist by clicking on the "X" on the product card. 
 
 ### Shopping Bag Page
 
@@ -588,15 +587,15 @@ Users can either use the "Continue Shopping" button to return to the store or se
 
 <img src="docs/images/checkout-page.png" width=700>  
 
-Users can place the order by completing the checkout form. If the user details are saved in the profile, the details are populated from the database. Alternatively, if the user is logged in and placing an order, they can save their details to the profile by selecting the "Save this information to my profile" box. 
+The user can place the order by completing the checkout form. If the user details are saved in the profile, the details are populated from the database. Alternatively, if the user is logged in and placing an order, they can save their details to the profile by selecting the "Save this information to my profile" box. 
 
-This page contains the order summary so that users can verify what the items they are purchasing and the total cost before submitting their order.
+This page contains the order summary so that users can verify the items they are purchasing and the total cost before submitting their order.
 
 Once the checkout form is completed correctly, the payment is processed by Stripe. A webhook is also triggered and payment and other events are notified by Stripe.  
 
 In order to test the payment process, the following card details were used. 
 
-<img src="docs/images/stripe-test-card.png" width=630>  
+<img src="docs/images/stripe-test-card.png" width=700>  
 
 ### Checkout Success Page
 
@@ -604,9 +603,9 @@ In order to test the payment process, the following card details were used.
 
 Once the checkout is processed, the user is navigated to the Checkout Success page. This page displays the order confirmation. 
 
-An email confirmation is also sent to the user, confirming the order.  
+An email is also sent to the user, confirming the order.  
 
-<img src="docs/images/testing/order-confirmation-email.png" width=440>   
+<img src="docs/images/testing/order-confirmation-email.png" width=460>   
 
 
 ### My Profile Page
@@ -637,7 +636,7 @@ Users can access the Article Details page by selecting the article card on the A
 
 <img src="docs/images/add-article.png" width=700>   
 
-The link to Article Management is available from the Account menu to users with superuser or staff permission. The business owner or staff can add articles by completing the this form. Once the form is submitted, the article is added and the user is notified.
+The link to Article Management is available from the Account menu to users with superuser or staff permission. The business owner or staff can add articles by completing this form. Once the form is submitted, the article is added and the user is notified.
 
 ### Edit Article Page
 
@@ -655,7 +654,7 @@ The link to delete a product is available on the Articles page as well as the Ar
 
 <img src="docs/images/contact-page.png" width=700> 
 
-Users can submit a query using the contact form within the site. Once the form is submitted, they are navigated to the Contact Success page. 
+Users can submit a query using the contact form within the site. If the user is logged in, their name and email address are populated from the database. Once the form is submitted, they are navigated to the Contact Success page. 
 
 ### Contact Success Page
 
@@ -665,21 +664,21 @@ The Contact Success page confirms that a query has been received from the user.
 
 An email confirmation is also sent to the user, notifying them that their message has been received. 
 
-<img src="docs/images/contact-thank-you.png" width=310>  
+<img src="docs/images/contact-thank-you.png" width=340>  
 
 Another email is sent to the business to notify them of the new message. This email includes the message and contact details of the customer, so they can respond to the customer directly from their inbox.  
 
-<img src="docs/images/testing/query-email-to-store.png" width=365>  
+<img src="docs/images/testing/query-email-to-store.png" width=380>  
 
 ### Error Pages
 
 <img src="docs/images/testing/error-page.png" width=700> 
 
-Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. Each error page contains a link to the Products page so that users can easily navigate back to the site.
+Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. Each error page explains the error and contains a link to the Products page so that users can easily navigate back to the site.
 
 ## Features Left to Implement
 
-The following features are from the 4 x User Stories which are yet to be implemented. 
+The following are from the 4 x User Stories which are yet to be implemented. 
 
 ### Brand Name Entry 
 
@@ -687,7 +686,7 @@ Currently, a new brand name can only be added from the admin panel. It would be 
 
 ### Delivery Fee Updates
 
-The free delivery threshold and the delivery fee are both coded in settings.py and therefore, if any changes are to be made, the codes will need to be updated. It would be beneficial for the business to be able to update the threshold and the fee on a front end panel without having to update the codes or accessing the admin panel. This is from User Story [#72](https://github.com/ShizukaDonaghue/luve/issues/72).
+The free delivery threshold and the delivery fee are both coded in settings.py and therefore, if any changes are to be made, the codes will need to be updated. It would be beneficial for the business to be able to update the free delivery threshold and the fee on the front end of the application without having to update the codes or access the admin panel. This is from User Story [#72](https://github.com/ShizukaDonaghue/luve/issues/72).
 
 ### Product Review Response
 
@@ -711,9 +710,10 @@ An option for users to be able to delete their own profile would be a good addit
 * [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
 * [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
 * [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used for the forms within the site.
+* [Stripe](https://stripe.com/ie) was used to process payments.
 * [Bootstrap](https://getbootstrap.com/) was used for the general layout and styling of the application.
 * [jQuery](https://jquery.com/) was used to close the hamburger menu.
-* [jQuery Validation Plugin](https://jqueryvalidation.org/) was used to validate the forms used in the site and raise error messages where necessary.
+* [jQuery Validation Plugin](https://jqueryvalidation.org/) was used to validate the forms used on the site and raise error messages where necessary.
 * [ElephantSQL](https://www.elephantsql.com/) was used for the Production database.
 * [Cloudinary](https://cloudinary.com/) was used to store all static files and images.
 * [Summernote](https://summernote.org/) editor was used on the Add Article form.
@@ -735,6 +735,8 @@ An option for users to be able to delete their own profile would be a good addit
 * [Coolors](https://coolors.co) was used to generate the colour palette.
 * [Remove Background](https://www.remove.bg/) was used to remove the background from the favicon.
 * [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) was used to generate the mockup image showing the application on various screen sizes.
+* [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate the privacy policy. 
+* [Terms and Conditions Generator](https://www.termsandconditionsgenerator.com/) was used to generate the terms and conditions.
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the application and README.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the application, README.md and TESTING.md files.
 * [Wordtracker](https://www.wordtracker.com) was used for the keyword searches.
