@@ -10,10 +10,6 @@ The application implements user authenticaion to provide role-based access to it
 
 The application also provides the admin dashbord where the site admin has the full CRUD functionality to manage all the contents for the site.
 
-The payments are processed using Stripe. In order to test the payment process, the following card details were used. 
-
-<img src="docs/images/stripe-test-card.png" width=520>  
-
 Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in a new browser tab).  
 
 <img src="docs/images/site-image.png">  
@@ -92,9 +88,9 @@ Based on the concept of an online B2C store, the following 10 Epics were created
 
 * As a Shopper, I can checkout as a guest so that I don't have to register an account to place an order.  
 
-* As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased.  
+* As a Shopper, I can have my details auto filled at checkout so that I can place an order quickly and easily.  
 
-* As a Shopper, I can have my details auto-filled at checkout so that I can place an order quickly and easily.  
+* As a Shopper, I can view an order confirmation after checkout so that I know that my order was placed successfully and I can verify what I have purchased.  
 
 * As a Shopper, I can receive an email confirmation once my order is placed so that I can keep the confirmation of what I have purchased for my records.  
 
@@ -215,13 +211,13 @@ The intention was to utilise Django-AllAuth for the user authentication system a
 
 ### User Authentication
 Django-AllAuth is used to authenticate users. Certain pages within the application can only be accessed by users who are logged in. These pages are secured with Django's @login_required decorator, which provides role-based access to the central dataset within the application.
-If a user tries to access these pages without having logged in, they are directed to the Login page instead.
+If a user tries to access these pages without having logged in, they are directed to the Log-in page instead.
 
 ### User Authorisation
-Users can only edit or delete their own records in the application. If a user tries to edit or delete other users' records, an error message is displayed to the user explaining the issue. This forbidden error prevents the user from editing or deleting the record.
+Users can only edit or delete their own records in the application. If a user tries to edit or delete other users' records, an error message is displayed to the user explaining the issue. A custom 403 error page is also available which explains the error and contains a link to the store so that users can easily navigate back.
 
 ### Form Validation
-Django's built-in form validation is used to validate the forms within the application. The forms will not submit unless they are completed correctly. If there are errors, error messages are displayed to assist users to fill in all the fields correctly.
+Django's built-in form validation is used to validate the forms within the application. The forms will not submit unless they are completed correctly. If there are errors, error messages are displayed to notify the user of the errors.
 
 In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to the Article form, Contact form, and Product form. This displays a custom error message explaining the error for each field to assist users to fill in the field correctly.
 
@@ -256,8 +252,231 @@ The font used throughout the site is Signika which is imported from [Google Font
 
 
 # Features
+
 ## Existing Features
+
 ### Browser Tabs
+The browser tab contains LUVE's favicon and the title of the page to clearly indicate which page is open. The favicon was generated from the logo using [RealFaviconGenerator](https://realfavicongenerator.net/). 
+
+<img src="docs/images/browser-tab.png" width=800>
+
+### Logo
+The logo was created using [Wix](https://www.wix.com/). The logo on the navigation bar functions as a link back to the Home page for ease of navigation.  
+
+<img src="docs/images/logo.jpg" width=150>
+
+### Navigation Bar
+The navbar is fixed at the top of every page and includes links to other pages.  
+
+<img src="docs/images/navbar.png" width=700>  
+
+This section contains the search bar in which the user can enter a keyword to search products by their name or description so that they can find what they are looking for quickly.
+
+The Wishlist icon displays the number of items in the wishlist, and the Shopping Bag icons displays the total value of items currently in the bag. These are available on all pages so that users can keep track of their spend while they shop.
+
+The delivery banner is also fixed under the navbar displaying the remaining order value to qualify for free shipping. 
+
+### Footer
+The footer contains the newsletter sign-up form so that users can receive updates from the business and the business can use the newsletter to promote their store. 
+
+This section also includes the privacy policy and terms & condition. The social media icons are available here so users can easily access the business's social media accounts. Clicking on any of these icons opens a new browser tab so that users will still have LUVE open to navigate back easily.
+
+<img src="docs/images/testing/footer.png" width=700>
+
+
+### Sign Up Page
+
+<img src="docs/images/signup.png" width=700>
+
+The Sign-up link is available from the Account menu in the navbar for users who are not logged in already. Users can enter their details here to register with the site. When the form is submitted, they will receive an email with a link to confirm their email address. Once the email address is confirmed, a success message is displayed to notify the user, and the user is redirected to the Home page.
+
+### Log In Page
+
+<img src="docs/images/login.png" width=700>
+
+The Log-in link is available from the Account menu in the navbar for users who are not logged in already. Returning users can enter their details here to log in to avail of all the features.
+Once logged in, a success message is displayed to notify the user, and the user is redirected to the Home page.
+
+This page contains a link to reset password. Users can reset their password from here if required. Once they complete the form, they will receive an email with a link to reset their password. 
+
+### Log Out Page
+
+<img src="docs/images/logout.png" width=700>
+
+The Log-out link is available from the Account menu in the navbar for users who are logged in already. Users can log out from here by clicking on the "Log Out" button. Once logged out, a success message is displayed to confirm that the user has logged out, and the user is redirected to the Home page.
+
+### Home Page
+
+<img src="docs/images/homepage.png" width=700>
+
+The Home page introduces the site and its purpose. This page also includes "Shop Now" button so that the user can easily navigate to the store to purchase safe sunblocks and also "Article" button so that they can read more about the risks and impact of sunscreens.
+
+### Products Page
+
+<img src="docs/images/products-page.png" width=700>  
+
+Users can browse a list of products in the Products page. They have the option to choose a product category from the Product menu or choose a brand from the Brand menu to narrow down their search. They can also select a sorting option from the dropdown menu to sort the products in a specific order.
+
+The "Add to Bag" is available for each product so that users can easily add products to their shopping bag. Once product are added to their bag, the user is notified and the total order value is displayed under the Bag icon in the navbar.
+
+Users can also add products to their wishlist by clicking on the pink outline heart. Once added, the user is notified and the love heart is coloured in pink. They can also remove the product from their wishlist by clicking on the pink heart as it toggles between "add" and "remove" for their wishlist.
+
+For users with superuser or staff permission, the links for Edit Product and Delet Products are displayed on the product cards. The business owner and staff can easily access these options from here. 
+
+### Product Details Page
+
+<img src="docs/images/product-detail.png" width=700>  
+
+Users can access the Product Details page by clicking on the product image or the product name in the Products page as well as the Wishlist page. This page displays the product information, contains the quantity selector and the buttons to "Add to Bag" or "Continue Shopping" to return to the Products page. 
+
+Users can select the quantity of the products to add to their shopping bag. If the total order quantity of a product exceeds the maximum order quantity of 20, the user is notified of the error. Otherwise, products are added to the bag, and the total order value is displayed under the Bag icon in the navbar. 
+
+The Wishlist heart is available here also to toggle between "add" and "remove" for their wishlist. The number of items in the wishlist is displayed by the Wishlist heart in the navbar.
+
+For users with superuser or staff permission, the links for Edit Product and Delet Products are displayed on the product image. The business owner and staff can easily access these options from here. 
+
+Under the Product Details section on this page, users can view product reviews posted by other users. If the user is logged in, the product review form is available to post a review and/or rate the product. Once the form is submitted, the user is notified and the review is added to the site in ascending order. 
+
+<img src="docs/images/product-review.png" width=700>  
+
+If the user is the author of the review, the vertical ellipsis is available next to the posting date. The "edit" button navigates the user to Edit Review page, and the "delete" button triggers a model to confirm the deletion. 
+
+### Edit Review Page
+
+<img src="docs/images/edit-review.png" width=700>   
+
+When the "edit" button is selected from the vertical ellipsis, the user is navigated to the Edit Review page where they can make changes to the review they have posted. Once the changes are submitted, the review is updated and the user is notified. 
+
+### Delete Review Modal
+
+When the "delete" button is selected from the vertical ellipsis, a modal is displayed to confirm the deletion. Once confirmed, the review is deleted and the user is notified.
+
+<img src="docs/images/testing/delete-review-modal.png" width=350> 
+
+### Add Product Page
+
+<img src="docs/images/add-product.png" width=700>   
+
+The Product Management link is available from the Account menu for users with superuser or staff permission. The business owner and staff can add a product to the site from here by completing the Product form. Once the form is completed, the product is added and the user is notified.  
+
+### Edit Product Page
+
+<img src="docs/images/edit-product.png" width=700> 
+
+The link to update the product details is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, they are directed to the Edit Product form where they can update the details. Once the complete form is submitted, the product is updated and the user is notified.
+
+### Delete Product Modal
+
+The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm the deletion. Once confirmed, the product is deleted and the user is notified.
+
+<img src="docs/images/testing/product-delete-modal.png" width=350>  
+
+### Wishlist Page
+
+<img src="docs/images/wishlist-page.png" width=700> 
+
+Users can access the Wishlist page from the love heart icon in the navbar. The Wishlist page lists the items in their wishlist. Users can easily add items to the shopping bag using the "Add to Bag" button. They can also remove the items from the wishlist by clicking on the "X" on the product card. 
+
+### Shopping Bag Page
+
+<img src="docs/images/bag-page.png" width=700>  
+
+Users can access the Shopping Bag page from the bag icon in the navbar. The Shopping Bag page lists the items in the bag as well as the quantity selector. Users can adjust the quantity of the products or remove them from the bag on this page. If the total order quantity of a product exceeds the maximum order quantity of 20, the user is notified of the error. Otherwise, the order quantity is adjusted and the total order value is updated on the page and under the Bag icon in the navbar. 
+
+If there is a shipping fee, the fee is displayed in the order summary section. The remaining order value to qualify for free shipping is also displayed here. 
+
+Users can either use the "Continue Shopping" button to return to the store, or select the "Secure Checkout" button to complete their order. 
+
+### Checkout Page
+
+<img src="docs/images/checkout-page.png" width=700>  
+
+Users can place the order by completing the checkout form. If the user details are saved in the profile, the details are populated from the database. Alternatively, if the user is logged in and placing an order, they can save their details to the profile by selecting the "Save this information to my profile" box. 
+
+This page contains the order summary so that users can verify what the items they are purchasing and the total cost before submitting their order.
+
+Once the checkout form is completed correctly, the payment is processed by Stripe. A webhook is also triggered and payment and other events are notified by Stripe.  
+
+In order to test the payment process, the following card details were used. 
+
+<img src="docs/images/stripe-test-card.png" width=570>  
+
+### Checkout Success Page
+
+<img src="docs/images/checkout-success.png" width=700>  
+
+Once the checkout is processed, the user is navigated to the Checkout Success page. This page displays the order confirmation. 
+
+An email confirmation is also sent to the user, confirming the order.  
+
+<img src="docs/images/testing/order-confirmation-email.png" width=380>   
+
+
+### My Profile Page
+
+<img src="docs/images/profile-page.png" width=700> 
+
+If the user is logged in, My Profile link is availabe from the Accout menu in the navbar. This is where the user can save their details for a faster checkout process. Alternatively, if the user is logged in and placing an order, the tick box is available in the checkout form to save the delivery details into their profile. They can also update their details here if they are already saved.  
+
+This page also displays their order history. Orders placed by the user are listed in descending order based on the order dates. This include the link to the order confirmation if they would like to check the details. 
+
+### Articles Page 
+
+<img src="docs/images/articles-page.png" width=700>   
+
+Users can view articles posted by the business from the Articles menu in the navbar. This is where the business can post relevant and useful information for users that may help to promote their business. 
+
+The number of likes for each article is displayed on the article card here.
+
+For users with superuser or staff permission, the links for Edit Article and Delet Article are displayed on the product cards. The business owner and staff can easily access these options from here. 
+
+### Article Details Page
+
+<img src="docs/images/article-detail.png" width=700>  
+
+Users can access the Article Details page by selecting the article card on the Articles page. This page displays the article contents as well as the number of likes for the article. If the user is logged in, the icon functions as a button to toggle between "like" and "unlike" the article. 
+
+### Add Article Page
+
+<img src="docs/images/add-article.png" width=700>   
+
+The link to Article Management is available from the Account menu to users with superuser or staff permission. The business owner or staff can add articles by completing the tihs form. Once the form is submitted, the article is added and the user is notified.
+
+### Edit Article Page
+
+<img src="docs/images/edit-article.png" width=700>   
+
+The link to update the article details is available on the Articles page as well as the Article Details page for users with superuser or staff permission. When the link is selected, they are directed to the Edit Article form where they can edit the details. Once the complete form is submitted, the article is updated and the user is notified.
+
+### Delete Article Modal
+
+The link to delete a product is available on the Articles page as well as the Article Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm the deletion. Once confirmed, the article is deleted and the user is notified.
+
+<img src="docs/images/testing/delete-article-modal.png" width=350>   
+
+### Contact Page
+
+<img src="docs/images/contact-page.png" width=700> 
+
+Users can submit a query using the contact form within the site. Once the form is submitted, they are navigated to the Contact Success page. 
+
+### Contact Success Page
+
+<img src="docs/images/contact-success.png" width=700> 
+
+The Contact Success page confirms that a query has been received from the user. 
+
+An email confirmation is also sent to the user, notifying that their message has been received. 
+
+<img src="docs/images/contact-thank-you.png" width=280>  
+
+Another email is sent to the business to notify them of the new message. This email includes the message and contact details of the customer, so they can respond to the customer directly from their inbox.  
+
+<img src="docs/images/testing/query-email-to-store.png" width=330>  
+
+
+
+
 
 
 
