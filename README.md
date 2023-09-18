@@ -19,16 +19,16 @@ Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in 
 - [LUVE](#luve)
 - [UXD - User Experience Design](#uxd---user-experience-design)
   * [User Stories](#user-stories)
-    + [EPIC: User Account & Profile](#epic--user-account---profile)
-    + [EPIC: Site Navigation](#epic--site-navigation)
-    + [EPIC: Site Admin](#epic--site-admin)
-    + [EPIC: Product Management](#epic--product-management)
-    + [EPIC: Purchasing & Checkout](#epic--purchasing---checkout)
-    + [EPIC: Wishlist](#epic--wishlist)
-    + [EPIC: Product Review](#epic--product-review)
-    + [EPIC: Customer Queries](#epic--customer-queries)
-    + [EPIC: Article Posts](#epic--article-posts)
-    + [EPIC: Business Admin](#epic--business-admin)
+    + [EPIC: User Account & Profile](#epic-user-account--profile)
+    + [EPIC: Site Navigation](#epic-site-navigation)
+    + [EPIC: Site Admin](#epic-site-admin)
+    + [EPIC: Product Management](#epic-product-management)
+    + [EPIC: Purchasing & Checkout](#epic-purchasing--checkout)
+    + [EPIC: Wishlist](#epic-wishlist)
+    + [EPIC: Product Review](#epic-product-review)
+    + [EPIC: Customer Queries](#epic-customer-queries)
+    + [EPIC: Article Posts](#epic-article-posts)
+    + [EPIC: Business Admin](#epic-business-admin)
     + [User Stories Not Implemented](#user-stories-not-implemented)
     + [User Stories for Future Development](#user-stories-for-future-development)
   * [Agile Methodology](#agile-methodology)
@@ -42,8 +42,8 @@ Click here to view [LUVE](https://luve.herokuapp.com/) (CTRL + Click to open in 
   * [Design](#design)
     + [Colour Scheme](#colour-scheme)
     + [Typography](#typography)
-- [Marketing Strategy](#marketing-strategy)
-  * [Search Engine Optimisation (SEO)](#search-engine-optimisation--seo-)
+- [Web Marketing Strategy](#web-marketing-strategy)
+  * [Search Engine Optimisation (SEO)](#search-engine-optimisation-seo-)
     + [Keywords](#keywords)
     + [Sitemap](#sitemap)
     + [Robots](#robots)
@@ -397,7 +397,7 @@ The font used throughout the site is Signika which is imported from [Google Font
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/tree/main)  
 
-# Marketing Strategy
+# Web Marketing Strategy
 
 ## Search Engine Optimisation (SEO)
 
@@ -432,7 +432,7 @@ robots.txt has been created to control which pages within the site are accessed 
 
 ## Content Marketing
 
-In order to consistently create useful and helpful content that will attract and convert the target market into customers, the business can post articles relevant to the site. These articles intend to provide useful and meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
+In order to consistently create useful and engaging content that will attract and convert the target market into customers, the business can post articles relevant to the site. These articles intend to provide meaningful information on safe sunblock, which in turn helps to build trust and loyalty as well as positioning the business as a reliable source of information.
 
 ## Social Media Marketing
 
