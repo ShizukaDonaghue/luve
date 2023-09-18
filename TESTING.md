@@ -2,6 +2,97 @@
 
 Return to [README](https://github.com/ShizukaDonaghue/luve)
 
+# Contents
+
+- [LUVE | Testing](#luve---testing)
+  * [Code Validation](#code-validation)
+    + [HTML](#html)
+    + [CSS](#css)
+    + [JavaScript](#javascript)
+    + [Python](#python)
+      - [LUVE Project](#luve-project)
+      - [Articles App](#articles-app)
+      - [Bag App](#bag-app)
+      - [Checkout App](#checkout-app)
+      - [Contact App](#contact-app)
+      - [Home App](#home-app)
+      - [Products App](#products-app)
+      - [Profiles App](#profiles-app)
+    + [Wishlist App](#wishlist-app)
+  * [Lighthouse](#lighthouse)
+  * [Responsiveness](#responsiveness)
+  * [Device Testing](#device-testing)
+  * [Browser Compatibility](#browser-compatibility)
+  * [User Stories Testing](#user-stories-testing)
+    + [EPIC: User Account & Profile](#epic-user-account--profile)
+    + [EPIC: Site Navigation](#epic-site-navigation)
+    + [EPIC: Site Admin](#epic-site-admin)
+    + [EPIC: Product Management](#epic-product-management)
+    + [EPIC: Purchasing & Checkout](#epic-purchasing--checkout)
+    + [EPIC: Wishist](#epic-wishist)
+    + [EPIC: Product Review](#epic-product-review)
+    + [EPIC: Customer Queries](#epic-customer-queries)
+    + [EPIC: Article Posts](#epic-article-posts)
+    + [EPIC: Business Admin](#epic-business-admin)
+  * [Features Testing](#features-testing)
+    + [Browser Tab](#browser-tab)
+    + [Navigation Bar](#navigation-bar)
+    + [Delivery Banner](#delivery-banner)
+    + [Footer](#footer)
+    + [Sign Up Page](#sign-up-page)
+    + [Log In Page](#log-in-page)
+    + [Password Reset Page](#password-reset-page)
+    + [Change Password Page](#change-password-page)
+    + [Logo Out Page](#logo-out-page)
+    + [Home Page](#home-page)
+    + [Products Page](#products-page)
+      - [Sorting Functionality](#sorting-functionality)
+      - [Product Cards](#product-cards)
+      - [Add to Bag](#add-to-bag)
+      - [Add to or Remove from Wishlist](#add-to-or-remove-from-wishlist)
+    + [Product Details Page](#product-details-page)
+      - [Product Image](#product-image)
+      - [Add to or Remove from Wishlist](#add-to-or-remove-from-wishlist-1)
+      - [Product Information](#product-information)
+      - [Edit & Delete Product Links](#edit---delete-product-links)
+      - [Order Quantity & Add to Bag](#order-quantity---add-to-bag)
+      - [Links to Other Pages](#links-to-other-pages)
+      - [Customer Reviews](#customer-reviews)
+    + [Edit Review Page](#edit-review-page)
+    + [Delete Review Modal](#delete-review-modal)
+    + [Add Product Page](#add-product-page)
+    + [Edit Product Page](#edit-product-page)
+    + [Delete Product Modal](#delete-product-modal)
+    + [Articles Page](#articles-page)
+    + [Article Details Page](#article-details-page)
+      - [Article Image](#article-image)
+      - [Number of Likes](#number-of-likes)
+      - [Article Information](#article-information)
+      - [Edit & Delete Article Links](#edit---delete-article-links)
+    + [Add Article Page](#add-article-page)
+    + [Edit Article Page](#edit-article-page)
+    + [Delete Article Modal](#delete-article-modal)
+    + [Contact Page](#contact-page)
+    + [Contact Success Page](#contact-success-page)
+    + [Profile Page](#profile-page)
+    + [Wishlist Page](#wishlist-page)
+    + [Shopping Bag Page](#shopping-bag-page)
+      - [Product Information](#product-information-1)
+      - [Order Quantity Adjustments](#order-quantity-adjustments)
+    + [Checkout Page](#checkout-page)
+      - [Checkout Form](#checkout-form)
+      - [Save Delivery Address](#save-delivery-address)
+      - [Order Summary](#order-summary)
+      - [Strip Payment](#strip-payment)
+    + [Checkout Success Page](#checkout-success-page)
+    + [Privacy Policy Page](#privacy-policy-page)
+    + [Terms & Conditions Page](#terms---conditions-page)
+    + [404 Error Page](#404-error-page)
+    + [500 Error Page](#500-error-page)
+  * [Bugs](#bugs)
+    + [Resolved Bugs](#resolved-bugs)
+    + [Unresolved Bugs](#unresolved-bugs)
+
 ## Code Validation
 
 ### HTML
@@ -180,8 +271,6 @@ One error was identified for the image field, which was related to clearable_fil
   <img src="docs/images/testing/html-terms-conditions-page.png" width=700>
 
 </details>
-
-<br>
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
 
@@ -583,8 +672,6 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 </details>
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
 
 
@@ -778,8 +865,6 @@ Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) wa
 	
 </details>   
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
 
 
@@ -947,11 +1032,7 @@ Browser compatibility was checked for the following browsers and no issues were 
   
 </details>   
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
-
 
 ## User Stories Testing
 User stories were tested and addressed as follows.
@@ -1013,11 +1094,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/profile.png" width=700>  
 
-
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Site Navigation**
 
@@ -1076,11 +1153,8 @@ User stories were tested and addressed as follows.
     A custom error page is available in case of 400, 403, 404 or 500 errors. The page includes "Return to Shop" button so that users can easily navigate back to the store. 
 
     <img src="docs/images/testing/error-page.png" width=700>   
-    
-<br>
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Site Admin**
 
@@ -1123,10 +1197,7 @@ User stories were tested and addressed as follows.
     
     <img src="docs/images/testing/add-product-error.png" width=700> 
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Purchasing & Checkout**
 
@@ -1199,10 +1270,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/footer.png" width=700>   
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Wishist**
 
@@ -1261,10 +1329,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/delete-review-modal.png" width=350>   
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Customer Queries**
 
@@ -1286,10 +1351,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/contact-form-error.png" width=700>   
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Article Posts**
 
@@ -1327,10 +1389,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/article-form-error.png" width=600>  
 
-<br>
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ### **EPIC: Business Admin**  
 
@@ -1370,11 +1429,7 @@ User stories were tested and addressed as follows.
 
     robots.txt has also been included.  
 
-<br>  
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
-
 
 ## Features Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
@@ -2029,10 +2084,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Custom 500 Error Page | Enter URL that does not exist | Custom 500 error message is displayed | PASS
 Return to Shop Button | Click | Navigates to Products page | PASS
 
-<br>  
-
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)  
-
 
 ## Bugs
 ### Resolved Bugs
@@ -2096,7 +2148,5 @@ Return to Shop Button | Click | Navigates to Products page | PASS
 
 ### Unresolved Bugs
 There are no other known bugs at present.
-
-<br>  
 
 [Back to top &uarr;](https://github.com/ShizukaDonaghue/luve/blob/main/TESTING.md)    
