@@ -1113,7 +1113,7 @@ User stories were tested and addressed as follows.
  
 * **_As a Business Owner/Staff, I can delete a product so that I can remove the product which is no longer for sale._**   
 
-    The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm deletion. Once confirmed, the product is deleted and the user is notified.
+    The link to delete a product is available on the Products page as well as the Product Details page for users with superuser or staff permission. When the link is selected, a modal appears to confirm the deletion. Once confirmed, the product is deleted and the user is notified.
 
     <img src="docs/images/testing/product-delete-modal.png" width=350>  
 
@@ -1317,7 +1317,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Business Owner/Staff, I can delete a blog article so that I can remove the article from the site._**   
 
-    The delete button is available to users with superuser or staff permission and they can delete articles from the Articles and the Article Detail pages. Once the button is clicked, a modal is displayed to confirm deletion. Once confirmed, the article is deleted from the site and the user is notified. 
+    The link to delete a product is available on the Articles page as well as the Article Details page for users with superuser or staff permission. When the link is selected, a modal is displayed to confirm the deletion. Once confirmed, the article is deleted from the site and the user is notified. 
 
     <img src="docs/images/testing/delete-article-modal.png" width=350>  
 
@@ -1568,7 +1568,7 @@ Application Type Link | Click | Displays the product listing by the selected app
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Edit Link | Click | Navigates to Edit Product page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
-Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
 #### Add to Bag 
 Feature | Action | Expected Result | PASS/FAIL
@@ -1621,7 +1621,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Edit Link | Click | Navigates to Edit Product page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
-Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
 #### Order Quantity & Add to Bag
 Feature | Action | Expected Result | PASS/FAIL
@@ -1653,7 +1653,7 @@ Post Review | Submit | Once the form is submitted, review and/or rating is/are a
 Alert | Display | Success message is displayed confirming the Review has been added successfully | PASS
 Edit/Delete Review Dropdown Menu | Display | Edit/Delete menu is available if the user is logged in and is the author of the review | PASS
 Edit Review Button | Click | Navigates to Edit Review page | PASS
-Delete Review Button | Click | A modal is displayed to confirm deletion | PASS
+Delete Review Button | Click | A modal is displayed to confirm the deletion | PASS
 
 ### Edit Review Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -1669,7 +1669,7 @@ Cancel Button | Click | Navigates back to Product Detail page | PASS
 ### Delete Review Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Delete Review| Submit | Once the user confirms deletion in the modal, the review is deleted | PASS
+Delete Review| Submit | Once the user confirms the deletion in the modal, the review is deleted | PASS
 Alert | Display | Success message is displayed confirming that the review has been deleted | PASS
 Cancel Button | Click | Modal is closed | PASS
 Modal Closure | Click Outside Menu | Modal is closed | PASS 
@@ -1733,8 +1733,8 @@ Cancel Button | Click | Navigates back to Product Detail page | PASS
 ### Delete Product Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Delete Product from Products Page | Submit | Once the user confirms deletion in the modal, the product is deleted | PASS
-Delete Product from Product Detail Page | Submit | Once the user confirms deletion in the modal, the product is deleted | PASS
+Delete Product from Products Page | Submit | Once the user confirms the deletion in the modal, the product is deleted | PASS
+Delete Product from Product Detail Page | Submit | Once the user confirms the deletion in the modal, the product is deleted | PASS
 Delete Product | Submit | Once the product is deleted, navigates back to Products page | PASS
 Alert | Display | Success message is displayed confirming that the product has been deleted | PASS
 Cancel Button | Click | Modal is closed | PASS
@@ -1758,7 +1758,7 @@ Number of Likes | Display | The number of likes for the article is displayed nex
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Edit Link | Click | Navigates to Edit Article page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
-Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
 ### Article Details Page
 
@@ -1789,7 +1789,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Edit Link | Display | Displayed only if the user has superuser or staff permission | PASS
 Edit Link | Click | Navigates to Edit Article page | PASS
 Delete Link | Display | Displayed only if the user has superuser or staff permission | PASS
-Delete Link | Click | Once clicked, a modal is displayed to confirm deletion | PASS
+Delete Link | Click | Once clicked, a modal is displayed to confirm the deletion | PASS
 
 ### Add Article Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -1843,8 +1843,8 @@ Cancel Button | Click | Navigates back to Articles page | PASS
 ### Delete Article Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Delete Article from Articles Page | Submit | Once the user confirms deletion in the modal, the article is deleted | PASS
-Delete Article from Article Detail Page | Submit | Once the user confirms deletion in the modal, the article is deleted | PASS
+Delete Article from Articles Page | Submit | Once the user confirms the deletion in the modal, the article is deleted | PASS
+Delete Article from Article Detail Page | Submit | Once the user confirms the deletion in the modal, the article is deleted | PASS
 Delete Article | Submit | Once the article is deleted, navigates back to Articles page | PASS
 Alert | Display | Success message is displayed confirming that the article has been deleted | PASS
 Cancel Button | Click | Modal is closed | PASS
@@ -2040,7 +2040,7 @@ Return to Shop Button | Click | Navigates to Products page | PASS
 * **Modal for Delete Product Review [#84](https://github.com/ShizukaDonaghue/luve/issues/84)**  
 
   ***Issue:***  
-  When a user tries to delete a product review, a modal is displayed to confirm deletion. Where there were multiple product reviews for a product by the same user, when the user confirmed to delete a product review in the modal displayed, the first review by the user was deleted regardless of which review the user was trying to delete.
+  When a user tries to delete a product review, a modal is displayed to confirm the deletion. Where there were multiple product reviews for a product by the same user, when the user confirmed to delete a product review in the modal displayed, the first review by the user was deleted regardless of which review the user was trying to delete.
 
   ***Solution:***  
   This issue was caused by the modal having the same ID for all product reviews for the user.
